@@ -118,8 +118,8 @@ export default function App() {
       <header className="sticky top-0 z-50 glass-nav">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
           {/* Logo / Monograma */}
-          <a href="#inicio" className="flex items-center gap-3 group">
-            <div className="h-11 w-11 rounded-xl bg-gradient-to-tr from-blue-600 to-indigo-500 flex items-center justify-center font-bold text-white shadow-lg shadow-blue-500/25 group-hover:scale-105 transition-transform duration-200">
+          <a href="#inicio" className="flex items-center gap-3 group" aria-label="Rogério Maciel - Ir para o início da página">
+            <div className="h-11 w-11 rounded-xl bg-gradient-to-tr from-blue-600 to-indigo-500 flex items-center justify-center font-bold text-white shadow-lg shadow-blue-500/25 group-hover:scale-105 transition-transform duration-200" aria-hidden="true">
               <span className="font-mono text-lg font-extrabold tracking-tighter">RM</span>
             </div>
             <div className="flex flex-col">
