@@ -8,7 +8,7 @@ Mapeamento dos objetivos estratégicos, aspirações, crenças fundamentais e pr
 1. **Entregar sites que realmente geram vendas reais:** Construir ativos digitais de alta performance onde cada linha de código e cada bloco de copy existam exclusivamente para transformar visitantes anônimos em compradores decididos.
 2. **Eliminar o amadorismo e a lentidão do mercado web:** Provar para o mercado brasileiro que sites lentos, poluídos e cheios de plugins pesados destroem a receita das empresas, substituindo-os por arquitetura estática moderna em React.
 3. **Multiplicar o retorno sobre o investimento (ROI) dos clientes:** Fazer com que cada centavo investido pelo cliente em tráfego ou tempo seja maximizado por uma página de conversão cirúrgica.
-4. **Democratizar a união entre Ciência da Computação e Psicologia de Vendas:** Integrar engenharia de software de ponta, inteligência artificial e os princípios do livro *"Vídeos que Vendem"* em uma solução acessível para empreendedores e especialistas.
+4. **Democratizar a união entre Ciência da Computação e Psicologia de Vendas:** Integrar engenharia de software de ponta, inteligência artificial e a premissa *"Vender é um discurso e compra é uma ação"* em uma solução acessível para empreendedores e especialistas.
 5. **Oferecer clareza e transparência radical:** Eliminar caixas-pretas e jargões técnicos, permitindo que o cliente aprove o roteiro exato (`07-roteiro-site.md`) antes da programação e tenha um ativo 100% estático e seguro.
 
 ---

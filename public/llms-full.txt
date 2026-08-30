@@ -4,8 +4,8 @@
 Rogério Marinho Maciel é Engenheiro de Produto, CTO e Arquiteto de Software com mais de 20 anos de trajetória sólida na união entre Ciência da Computação, Inteligência Artificial e Psicologia Comportamental de Vendas.
 Seu foco de mercado é a criação de **Máquinas de Aquisição de Clientes & One Page Sites de Alta Conversão**, desenvolvidos para substituir os tradicionais "panfletos digitais" da internet por estruturas comerciais ativas que atraem, educam, quebram objeções e entregam leads qualificados prontos para comprar no WhatsApp.
 
-## 2. A Metodologia "Vídeos que Vendem"
-Criada e documentada por Rogério Maciel em seu livro autoral, a metodologia parte do axioma:
+## 2. A Metodologia de Alta Conversão
+Criada e aplicada por Rogério Maciel em projetos de engenharia e marketing, a metodologia parte do axioma:
 > *"Vender é um discurso e compra é uma ação."*
 
 A compra é o resultado previsível de uma série de microdecisões influenciadas por um discurso estruturado. A esteira estratégica aplicada aos sites de alta conversão contém as seguintes etapas:
@@ -27,7 +27,6 @@ A compra é o resultado previsível de uma série de microdecisões influenciada
 - **Neoway Business Solutions:** Atuou como Head de Aplicação Digital em uma das maiores referências de Big Data e inteligência de mercado da América Latina, liderando aquisição de dados e automação B2B.
 - **CoreAutoCRM:** Solo Founder e arquiteto de SaaS B2B conversacional operando com Máquina de Estados Finitos (FSM) de 28 módulos cognitivos de IA e custo de telemetria otimizado abaixo de R$ 0,10/loja/mês.
 - **Livros Publicados:**
-  - *Vídeos que Vendem — O Guia Definitivo para Criar Vídeos que Vendem Todos os Dias*
   - *A Vantagem Injusta — O Sistema que Trabalha Enquanto Você Dorme (Método CORE™)*
   - *CoreAutoCRM — O Sistema Operacional de Fricção Zero*
   - *As 5 Atitudes Diárias do Empreendedor de Sucesso*

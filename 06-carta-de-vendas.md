@@ -26,7 +26,7 @@ No mundo atual, se a sua página demora para abrir, o cliente clica em "voltar".
 
 ### O Segredo: Vender é um Discurso e Compra é uma Ação
 
-Em meu livro *"Vídeos que Vendem"*, eu detalho uma premissa que transformou a forma como enxergamos vendas no ambiente digital:
+Em minha trajetória de engenharia e consultoria de marketing, desenvolvi uma premissa que transformou a forma como enxergamos vendas no ambiente digital:
 
 > **Vender é a narrativa que você constrói ao redor do seu valor. A compra é a ação natural resultante dessa narrativa bem elaborada.**
 

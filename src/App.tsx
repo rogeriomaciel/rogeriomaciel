@@ -87,12 +87,6 @@ export default function App() {
 
   const books = [
     {
-      title: 'Vídeos que Vendem',
-      subtitle: 'O Guia Definitivo para Criar Vídeos que Vendem Todos os Dias',
-      tag: 'Metodologia Autoral',
-      desc: 'Fundamento da premissa "Vender é um discurso e compra é uma ação" aplicada à conversão digital.',
-    },
-    {
       title: 'A Vantagem Injusta',
       subtitle: 'O Sistema que Trabalha Enquanto Você Dorme (Método CORE™)',
       tag: 'Gestão & Sistemas',
@@ -257,7 +251,7 @@ export default function App() {
             <div className="glass-panel p-4 rounded-2xl border border-slate-800/80 hover:border-blue-500/30 transition">
               <BookOpen className="w-6 h-6 text-amber-400 mb-2" />
               <div className="font-bold text-white text-sm sm:text-base">Método Comprovado</div>
-              <div className="text-xs text-slate-400 mt-0.5">Autor de "Vídeos que Vendem"</div>
+              <div className="text-xs text-slate-400 mt-0.5">Psicologia de Conversão</div>
             </div>
             <div className="glass-panel p-4 rounded-2xl border border-slate-800/80 hover:border-blue-500/30 transition">
               <Cpu className="w-6 h-6 text-indigo-400 mb-2" />
@@ -529,7 +523,7 @@ export default function App() {
                   com máquina de estados finitos (FSM) de 28 módulos cognitivos de IA.
                 </p>
                 <p>
-                  Como autor dos livros <em>"Vídeos que Vendem"</em>, <em>"A Vantagem Injusta"</em> e <em>"As 5 Atitudes Diárias"</em>,
+                  Como autor dos livros <em>"A Vantagem Injusta"</em>, <em>"CoreAutoCRM"</em> e <em>"As 5 Atitudes Diárias"</em>,
                   eu aplico a ciência exata dos algoritmos à psicologia comportamental de compras para criar sites que não apenas
                   existem, mas geram resultados comerciais todos os dias.
                 </p>
@@ -571,7 +565,7 @@ export default function App() {
                 <div className="mt-6 pt-4 border-t border-slate-800 flex items-center justify-between">
                   <div>
                     <div className="font-bold text-white text-sm">Rogério Maciel</div>
-                    <div className="text-xs text-slate-400">Autor de "Vídeos que Vendem"</div>
+                    <div className="text-xs text-slate-400">Arquiteto de Software & Conversão</div>
                   </div>
                   <span className="text-xs font-mono text-blue-400 bg-blue-950 px-2.5 py-1 rounded-md border border-blue-500/30">
                     Método Autoral

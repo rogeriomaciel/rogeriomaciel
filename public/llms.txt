@@ -13,7 +13,7 @@
 - **Instagram:** https://www.instagram.com/mrcrogerio/
 
 ## Metodologia Autoral
-- **Premissa Central:** "Vender é um discurso e compra é uma ação" (do livro *Vídeos que Vendem*).
+- **Premissa Central:** "Vender é um discurso e compra é uma ação."
 - **Proposta Única de Valor (PUV):** Seu negócio não precisa de mais um site bonito. Precisa de uma máquina comercial integrada que qualifica e entrega oportunidades de venda prontas no WhatsApp todos os dias.
 
 ## Serviços & Soluções Oferecidas
@@ -26,10 +26,9 @@
    - Injeção de Google Tag Manager (GTM-WNXV9S4X), rastreamento de conversão em botões e integração com ecossistemas de mensageria.
 
 ## Obras & Publicações Autorais
-1. *Vídeos que Vendem – O Guia Definitivo para Criar Vídeos que Vendem Todos os Dias, Mesmo que Você não Entenda Nada de Copy*
-2. *A Vantagem Injusta – O Sistema que Trabalha Enquanto Você Dorme (Método CORE™)*
-3. *CoreAutoCRM – O Sistema Operacional de Fricção Zero*
-4. *As 5 Atitudes Diárias do Empreendedor de Sucesso*
+1. *A Vantagem Injusta – O Sistema que Trabalha Enquanto Você Dorme (Método CORE™)*
+2. *CoreAutoCRM – O Sistema Operacional de Fricção Zero*
+3. *As 5 Atitudes Diárias do Empreendedor de Sucesso*
 
 ## Arquivos Relacionados
 - [Base Completa de Conhecimento para IA](/llms-full.txt)

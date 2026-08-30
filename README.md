@@ -1,6 +1,6 @@
 # 🌐 Criar Sites Base — Template Mestre de One Page Sites
 
-Template oficial e padronizado para criação de **One Page Sites / Landing Pages de Alta Conversão em React**, integrando inteligência artificial e a metodologia do livro **"Vídeos que Vendem"** de Rogério Maciel (*"Vender é um discurso e compra é uma ação"*).
+Template oficial e padronizado para criação de **One Page Sites / Landing Pages de Alta Conversão em React**, integrando inteligência artificial e a premissa de que *"Vender é um discurso e compra é uma ação"*.
 
 ---
 

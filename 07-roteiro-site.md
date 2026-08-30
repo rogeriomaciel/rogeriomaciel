@@ -30,7 +30,7 @@ Este documento é a **Fonte Única da Verdade** para o desenvolvimento do Site d
   - **CTA Secundário:** `Conhecer o Método` → Rola para `#problema`
 - **Badges de Autoridade e Performance:**
   - 🚀 **Carregamento < 1s:** Arquitetura React estática com nota 98+ no PageSpeed
-  - 🧠 **Método Comprovado:** Autor do livro *"Vídeos que Vendem"*
+  - 🧠 **Método Comprovado:** Psicologia comportamental de alta conversão
   - 🛠️ **20+ Anos de Engenharia:** Ciência da Computação (UFPB) & MBA Marketing
   - 📈 **GTM & Métricas:** Rastreamento total de conversão nativo
 
@@ -79,7 +79,7 @@ Este documento é a **Fonte Única da Verdade** para o desenvolvimento do Site d
   - Bacharel em **Ciências da Computação (UFPB)** e pós-graduado com **MBA em Consultoria e Marketing**.
   - Ex-Head de Aplicação Digital na **Neoway** (uma das maiores empresas de Big Data e Inteligência de Mercado da América Latina).
   - Criador e arquiteto do **CoreAutoCRM** (SaaS B2B conversacional multi-tenant com FSM de 28 módulos cognitivos de IA).
-  - Autor de 4 livros, incluindo o aclamado *"Vídeos que Vendem — O Guia Definitivo para Criar Vídeos que Vendem Todos os Dias"*, *"A Vantagem Injusta (Método CORE™)"* e *"As 5 Atitudes Diárias do Empreendedor de Sucesso"*.
+  - Autor dos livros *"A Vantagem Injusta (Método CORE™)"*, *"CoreAutoCRM – O Sistema Operacional de Fricção Zero"* e *"As 5 Atitudes Diárias do Empreendedor de Sucesso"* .
 - **Citação Destacada (Quote):**  
   > *"Vender é um discurso e compra é uma ação. Quando a sua engenharia de software remove todo o atrito técnico e o seu discurso remove toda a dúvida, o cliente toma a decisão de compra naturalmente."*
 
