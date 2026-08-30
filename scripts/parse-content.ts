@@ -1,0 +1,204 @@
+import fs from 'fs';
+import path from 'path';
+
+const rootDir = process.cwd();
+const dataDir = path.join(rootDir, 'src', 'data');
+const outputFile = path.join(dataDir, 'site-content.generated.json');
+
+if (!fs.existsSync(dataDir)) {
+  fs.mkdirSync(dataDir, { recursive: true });
+}
+
+// Conteúdo base padrão
+const content = {
+  meta: {
+    title: "Rogério Maciel — Máquinas de Aquisição & One Page Sites",
+    description: "Seu negócio não precisa de mais um site bonito. Precisa de uma máquina de aquisição comercial no WhatsApp.",
+    gtmId: "GTM-WNXV9S4X",
+    whatsappNumber: "5562996232227",
+    whatsappMessage: "Olá Rogério! Vi o seu site e quero transformar minha página em uma máquina de aquisição no WhatsApp.",
+    logoText: "RM",
+    brandName: "Rogério Maciel",
+    socialLinks: {
+      linkedin: "https://www.linkedin.com/in/macrogerio/",
+      instagram: "https://www.instagram.com/mrcrogerio/"
+    }
+  },
+  hero: {
+    badge: "MÁQUINA DE AQUISIÇÃO COMERCIAL",
+    headline: "Seu negócio não precisa de mais um site bonito.",
+    headlineHighlight: "Precisa de uma máquina que coloca clientes prontos no seu WhatsApp.",
+    subheadline: "Pare de perder visitantes em páginas lentas e genéricas. Nós construímos uma operação integrada com discurso estruturado, rastreamento profissional e foco absoluto em fechamentos diários.",
+    primaryCtaText: "Quero Minha Máquina no WhatsApp",
+    secondaryCtaText: "Ver Como Funciona",
+    stats: [
+      { value: "100%", label: "Deploy Estático Ultrarrápido" },
+      { value: "GTM + GA4", label: "Rastreamento & Conversão" },
+      { value: "WhatsApp", label: "Canal Direto de Fechamento" }
+    ]
+  },
+  problem: {
+    tag: "O GRANDE ERRO DO MERCADO",
+    title: "Por que a maioria dos sites na internet não vende nada?",
+    subtitle: "A maioria das agências entrega páginas estéticas que parecem vitrines abandonadas. Sem um discurso persuasivo e um mecanismo de conversão, seu tráfego é desperdiçado.",
+    cards: [
+      {
+        title: "Discurso Institucional Vazio",
+        description: "Falam apenas sobre a empresa e esquecem de falar sobre a dor, o desejo e a transformação que o cliente realmente busca."
+      },
+      {
+        title: "Sem Mecanismo de Ação",
+        description: "Formulários complexos que ninguém preenche em vez de direcionar o lead quente direto para uma conversa humana no WhatsApp."
+      },
+      {
+        title: "Zero Rastreamento e Inteligência",
+        description: "Não sabem de onde vêm os cliques nem quais anúncios estão trazendo retorno financeiro real para o negócio."
+      }
+    ]
+  },
+  mechanism: {
+    tag: "A ENGENHARIA DA MÁQUINA",
+    title: "Como Funciona o Mecanismo de Vendas",
+    subtitle: "Uma esteira inteligente projetada para conduzir o visitante do ceticismo até o contato pronto para fechar.",
+    steps: [
+      {
+        number: "01",
+        title: "Atração & Discurso Estruturado",
+        description: "Uma mensagem que prende a atenção em 3 segundos, abordando exatamente o que o cliente ideal quer ouvir com base na metodologia do livro Vídeos que Vendem."
+      },
+      {
+        number: "02",
+        title: "Qualificação & Quebra de Objeções",
+        description: "Apresentação clara dos diferenciais, provas do método e desconstrução das crenças limitantes antes mesmo do primeiro contato."
+      },
+      {
+        number: "03",
+        title: "Conversão Direta no WhatsApp",
+        description: "O lead chega no seu WhatsApp qualificado, ciente do valor do seu trabalho e pronto para receber sua proposta comercial."
+      }
+    ]
+  },
+  services: {
+    tag: "O QUE ESTÁ INCLUSO",
+    title: "O Sistema Completo que Construímos para Você",
+    subtitle: "Não vendemos apenas páginas soltas. Entregamos a operação completa de aquisição pronta para rodar.",
+    items: [
+      {
+        title: "One Page Site de Alta Conversão",
+        description: "Desenvolvido em React + Vite, ultra leve, responsivo e com carregamento instantâneo para não perder nenhum clique."
+      },
+      {
+        title: "Engenharia de Copy & Discurso",
+        description: "Roteiro persuasivo completo com Headline de impacto, quebra de objeções e Proposta Única de Valor (PUV) irrefutável."
+      },
+      {
+        title: "Rastreamento com GTM e GA4",
+        description: "Google Tag Manager e Google Analytics 4 integrados para você mensurar cada clique, conversão e retorno sobre investimento."
+      },
+      {
+        title: "Otimização para SEO e Busca por IA (GEO)",
+        description: "Estruturação com llms.txt e Schema JSON-LD para seu negócio ser encontrado e citado no Google e nas IAs (ChatGPT, Perplexity)."
+      }
+    ]
+  },
+  authority: {
+    tag: "QUEM CONSTRÓI A SUA MÁQUINA",
+    name: "Rogério Marinho Maciel",
+    role: "Arquiteto de Software & Especialista em Discurso de Vendas",
+    bio: "Autor do livro 'Vídeos que Vendem' e especialista em unir engenharia de software moderna com psicologia de conversão. Não terceirizamos sua estratégia: desenhamos e garantimos o mecanismo funcionando para que você foque apenas em atender seus clientes e fechar contratos.",
+    quote: "Vender é um discurso e compra é uma ação."
+  },
+  faqs: [
+    {
+      question: "Por que um One Page Site vende mais que um site tradicional?",
+      answer: "Sites tradicionais dispersam a atenção do visitante em dezenas de páginas e menus. O One Page Site conduz o lead por uma narrativa linear contínua onde cada seção aumenta o desejo até a ação final de compra."
+    },
+    {
+      question: "Como funciona a entrega do site e onde ele fica hospedado?",
+      answer: "O site é compilado em um pacote 100% estático (HTML, CSS e JS minificados). Ele pode ser hospedado na sua própria VPS ou servidor em nuvem com custo praticamente zero de manutenção."
+    },
+    {
+      question: "O que acontece se eu quiser alterar um texto ou serviço depois?",
+      answer: "O projeto utiliza o conceito de Content-as-Code. Você pode atualizar o conteúdo em texto puro e o site se recompila automaticamente sem complicação."
+    },
+    {
+      question: "O Google Tag Manager e o WhatsApp já vêm configurados?",
+      answer: "Sim! Toda a parte técnica de rastreamento (GTM/GA4/Pixel) e os botões inteligentes de WhatsApp já são entregues integrados e testados."
+    }
+  ],
+  cta: {
+    tag: "COMECE AGORA",
+    title: "Vamos colocar sua máquina de vendas para funcionar?",
+    subtitle: "Dê adeus aos sites que não vendem nada. Converse diretamente comigo no WhatsApp e vamos estruturar a presença que seu negócio merece.",
+    buttonText: "Falar com Rogério Maciel no WhatsApp",
+    badges: ["WhatsApp Direto: (62) 99623-2227", "Diagnóstico Estratégico", "Deploy Rápido"]
+  }
+};
+
+// Parser de 00-dados-projeto.md
+const dadosFile = path.join(rootDir, '00-dados-projeto.md');
+if (fs.existsSync(dadosFile)) {
+  const text = fs.readFileSync(dadosFile, 'utf-8');
+  const gtmMatch = text.match(/GTM-[A-Z0-9]+/i);
+  if (gtmMatch) content.meta.gtmId = gtmMatch[0];
+
+  const zapMatch = text.match(/(?:55\d{10,11}|\(\d{2}\)\s*\d{4,5}-?\d{4})/);
+  if (zapMatch) {
+    const raw = zapMatch[0].replace(/\D/g, '');
+    content.meta.whatsappNumber = raw.startsWith('55') ? raw : `55${raw}`;
+  }
+
+  const nameMatch = text.match(/(?:Nome da Empresa|Especialista|Nome):\s*([^\n\r]+)/i);
+  if (nameMatch && nameMatch[1].trim()) {
+    content.meta.brandName = nameMatch[1].trim();
+  }
+}
+
+// Parser inteligente de 07-roteiro-site.md
+const roteiroFile = path.join(rootDir, '07-roteiro-site.md');
+if (fs.existsSync(roteiroFile)) {
+  const roteiro = fs.readFileSync(roteiroFile, 'utf-8');
+  
+  // Extrai Headline
+  const headlineMatch = roteiro.match(/Headline Principal[^:]*:\s*\*\*?"?([^\n\r"]+)"?\*\*?/i) ||
+                        roteiro.match(/Headline:\s*\*\*?"?([^\n\r"]+)"?\*\*?/i);
+  if (headlineMatch && headlineMatch[1]) {
+    content.hero.headline = headlineMatch[1].trim();
+  }
+
+  // Extrai Subheadline
+  const subMatch = roteiro.match(/Sub-headline[^:]*:\s*\*\*?"?([^\n\r"]+)"?\*\*?/i) ||
+                   roteiro.match(/Subheadline:\s*\*\*?"?([^\n\r"]+)"?\*\*?/i);
+  if (subMatch && subMatch[1]) {
+    content.hero.subheadline = subMatch[1].trim();
+  }
+
+  // Extrai CTA Hero
+  const ctaMatch = roteiro.match(/CTA Principal[^:]*:\s*\*\*?"?\[?([^\n\r"\]]+)\]?"?\*\*?/i);
+  if (ctaMatch && ctaMatch[1]) {
+    content.hero.primaryCtaText = ctaMatch[1].replace(/\[|\]/g, '').trim();
+  }
+
+  // Extrai FAQs
+  const faqBlocks = roteiro.match(/(?:###|\*\*)\s*(?:Pergunta|FAQ|\d+\.)\s*[:\-]?\s*([^\n\r]+)[\s\S]*?(?:Resposta|R:)\s*([^\n\r#]+)/gi);
+  if (faqBlocks && faqBlocks.length > 0) {
+    const parsedFaqs: Array<{ question: string; answer: string }> = [];
+    for (const block of faqBlocks) {
+      const qMatch = block.match(/(?:###|\*\*)\s*(?:Pergunta|FAQ|\d+\.)\s*[:\-]?\s*([^\n\r*]+)/i);
+      const aMatch = block.match(/(?:Resposta|R:)\s*([^\n\r*]+)/i);
+      if (qMatch && aMatch) {
+        parsedFaqs.push({
+          question: qMatch[1].replace(/^\*\*|\*\*$/g, '').trim(),
+          answer: aMatch[1].replace(/^\*\*|\*\*$/g, '').trim()
+        });
+      }
+    }
+    if (parsedFaqs.length > 0) {
+      content.faqs = parsedFaqs;
+    }
+  }
+}
+
+// Salva o arquivo de dados compilado
+fs.writeFileSync(outputFile, JSON.stringify(content, null, 2), 'utf-8');
+console.log(`⚡ [Content-as-Code] Dados extraídos e compilados em: ${outputFile}`);
