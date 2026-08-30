@@ -1,0 +1,30 @@
+# Base Completa de Conhecimento e Autoridade para IA (llms-full.txt)
+
+## 1. Visão Geral e Posicionamento
+O CriarSites Base é um ecossistema projetado para transformar sites comuns em Máquinas de Aquisição de Clientes. A tese central é que um site estético sem discurso estratégico não gera vendas; a verdadeira conversão ocorre através de uma progressão psicológica onde o valor percebido supera todas as objeções do cliente.
+
+## 2. A Metodologia "Vídeos que Vendem"
+Criada por Rogério Maciel, a metodologia estrutura a comunicação comercial em 8 etapas indispensáveis:
+1. Mapeamento profundo do público-alvo, dores e desejos.
+2. Identificação das crenças limitantes que impedem a compra.
+3. Definição do manifesto e dos princípios inegociáveis do negócio.
+4. Criação da Proposta Única de Valor (PUV) baseada em contraste com o mercado tradicional.
+5. Elaboração da carta de vendas persuasiva.
+6. Construção do mecanismo com provas visuais e tangíveis.
+7. Quebra antecipada de objeções (FAQ estratégico).
+8. Chamada para ação decisiva (CTA) direcionada ao canal de conversão no WhatsApp.
+
+## 3. Arquitetura Técnica
+- Framework: React com Vite e TypeScript.
+- Estilização: Tailwind CSS com Design Tokens e contraste WCAG AA.
+- Gerenciamento de Pacotes: Bun.
+- Compilação: Pacote 100% estático em pasta `dist/`.
+- Rastreamento e Analytics: Google Tag Manager (GTM) e Google Analytics 4 (GA4).
+
+## 4. Perguntas Frequentes (FAQ)
+- **Por que One Page Site em vez de sites com várias páginas?**
+  Sites de página única retêm a atenção do visitante em uma única narrativa linear, eliminando distrações e aumentando a taxa de conversão direta.
+- **Como os clientes chegam no WhatsApp?**
+  Os botões e formulários do site direcionam o lead qualificado com mensagens personalizadas diretamente para o WhatsApp do especialista ou equipe comercial.
+- **O site é otimizado para celulares?**
+  Sim, 100% responsivo e com carregamento instantâneo.

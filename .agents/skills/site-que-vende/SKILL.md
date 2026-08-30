@@ -89,6 +89,8 @@ Assim que as respostas forem fornecidas, o agente executará a esteira estratég
      - **FAQ Estratégico:** Respostas diretas para as últimas dúvidas e objeções do lead.
      - **CTA Final de Fechamento de Círculo:** Chamada decisiva alinhada com a promessa da Hero (*"Quero colocar minha máquina de clientes no WhatsApp para rodar"*).
      - **Footer:** Redes sociais, copyright, links rápidos e termos.
+9. **`public/llms.txt` & `public/llms-full.txt`** 🤖:
+   - Resumo e base de conhecimento estruturados para robôs de IA (ChatGPT Search, Perplexity, Claude, Gemini, Copilot, Google AI Overviews), contendo o posicionamento, manifesto, PUV, serviços e FAQs.
 
 ---
 
@@ -111,6 +113,8 @@ Quando o usuário der o comando **"AGORA VAMOS PROGRAMAR"** ou pedir para criar/
    - Utiliza **React + Vite** com **TypeScript** e **Tailwind CSS**.
    - Aplica os tokens visuais e boas práticas da skill `ui-design-system` (estética tech/performance, contraste WCAG AA, dark mode com acentos precisos).
    - Injeta o container do **Google Tag Manager** no `index.html`.
+   - Gera e injeta os **Dados Estruturados Schema.org JSON-LD** (`ProfessionalService`, `Person`, `FAQPage`, `WebSite`) no `index.html`.
+   - Gera/atualiza o `public/llms.txt` e `public/llms-full.txt` refletindo as informações do cliente.
    - Implementa navegação suave (*smooth scrolling*) por âncoras (`#id`).
 3. **Build Estático via `bun`:**
    - Roda `bun run build`.

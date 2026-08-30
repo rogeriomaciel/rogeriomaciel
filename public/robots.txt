@@ -1,0 +1,38 @@
+# Robots.txt — Otimizado para Motores de Busca e Robôs de IA (GEO / LLMs)
+User-agent: *
+Allow: /
+
+# Robôs de Inteligência Artificial / LLM Crawlers
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+User-agent: Amazonbot
+Allow: /
+
+User-agent: meta-externalagent
+Allow: /
+
+# Arquivos de Conhecimento Estruturado para IA
+# Para documentação do padrão llms.txt, consulte: https://llmstxt.org/
+# llms.txt: /llms.txt
+# llms-full.txt: /llms-full.txt
+
+Sitemap: https://seusite.com.br/sitemap.xml
