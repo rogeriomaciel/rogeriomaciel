@@ -6,8 +6,8 @@ export function useTheme() {
   const [theme, setTheme] = useState<Theme>(() => {
     if (typeof window !== 'undefined') {
       const saved = localStorage.getItem('theme') as Theme | null;
-      if (saved === 'dark' || saved === 'light') return saved;
-      return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      if (saved === 'light' || saved === 'dark') return saved;
+      return 'dark'; // Dark mode por padrão para alta conversão tech
     }
     return 'dark';
   });
@@ -23,7 +23,7 @@ export function useTheme() {
   }, [theme]);
 
   const toggleTheme = () => {
-    setTheme(prev => (prev === 'dark' ? 'light' : 'dark'));
+    setTheme((prev) => (prev === 'dark' ? 'light' : 'dark'));
   };
 
   return { theme, toggleTheme, setTheme };

@@ -6,55 +6,32 @@
   html {
     scroll-behavior: smooth;
   }
+  
   body {
     @apply bg-slate-50 text-slate-900 min-h-screen overflow-x-hidden transition-colors duration-200;
   }
+  
   html.dark body {
     @apply bg-slate-950 text-slate-100;
   }
 }
 
-/* Efeito Glassmorphism Dinâmico */
 .glass-nav {
-  background: rgba(255, 255, 255, 0.85);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  border-bottom: 1px solid rgba(226, 232, 240, 0.8);
+  @apply bg-white/85 dark:bg-slate-950/85 backdrop-blur-xl border-b border-slate-200 dark:border-slate-800/80;
 }
 
-html.dark .glass-nav {
-  background: rgba(2, 6, 23, 0.85);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  border-bottom: 1px solid rgba(30, 41, 59, 0.8);
-}
-
-.glass-panel {
-  background: rgba(255, 255, 255, 0.85);
-  backdrop-filter: blur(12px);
-  border: 1px solid rgba(226, 232, 240, 0.8);
-  box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.05);
-}
-
-html.dark .glass-panel {
-  background: rgba(15, 23, 42, 0.75);
-  backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.3);
+.glass-panel, .glass-card {
+  @apply bg-white/95 dark:bg-slate-900/80 backdrop-blur-xl border border-slate-200/90 dark:border-slate-800/80 shadow-md dark:shadow-2xl transition-all duration-200;
 }
 
 .gradient-text {
-  @apply bg-clip-text text-transparent bg-gradient-to-r from-blue-600 via-indigo-600 to-teal-600;
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-blue-600 via-indigo-600 to-teal-600 dark:from-blue-400 dark:via-indigo-300 dark:to-teal-300;
 }
 
-html.dark .gradient-text {
-  @apply bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-indigo-300 to-teal-300;
+.glow-blue {
+  box-shadow: 0 0 60px -15px rgba(59, 130, 246, 0.35);
 }
 
-.glow-effect {
-  box-shadow: 0 0 50px -10px rgba(59, 130, 246, 0.15);
-}
-
-html.dark .glow-effect {
-  box-shadow: 0 0 50px -10px rgba(59, 130, 246, 0.3);
+.glow-emerald {
+  box-shadow: 0 0 40px -10px rgba(16, 185, 129, 0.3);
 }
