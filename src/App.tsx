@@ -52,6 +52,7 @@ export default function App() {
     { label: 'O Diagnóstico', href: '#problema' },
     { label: 'Soluções', href: '#servicos' },
     { label: 'Sobre', href: '#sobre' },
+    { label: 'O Manifesto', href: './manifesto.html' },
     { label: 'Diferenciais', href: '#diferenciais' },
     { label: 'Dúvidas', href: '#faq' },
   ];
