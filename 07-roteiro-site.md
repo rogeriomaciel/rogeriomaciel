@@ -1,6 +1,6 @@
 # 07 — Roteiro Mestre do Site (Fonte Única da Verdade)
 
-Este documento é a **Fonte Única da Verdade** para o desenvolvimento do One Page Site de Rogério Maciel em React + Vite. Todas as seções, textos, âncoras, badges e chamadas para ação estão consolidados aqui.
+Este documento é a **Fonte Única da Verdade** para o desenvolvimento do Site do Rogério Maciel em React + Vite. Todas as seções, textos, âncoras, badges e chamadas para ação estão consolidados aqui.
 
 ---
 
@@ -24,7 +24,7 @@ Este documento é a **Fonte Única da Verdade** para o desenvolvimento do One Pa
   # Seu negócio não precisa de mais um site bonito.  
   # Precisa de uma máquina que coloca clientes prontos no seu WhatsApp.
 - **Subheadline (Subtítulo):**  
-  Desenvolvemos One Page Sites ultrarrápidos e persuasivos baseados no método autoral *"Vender é um Discurso e Compra é uma Ação"*. Transforme visitantes anônimos em faturamento real — sem lentidão e sem plugins frágeis.
+  Desenvolvemos Sites ultrarrápidos e persuasivos baseados no método autoral *"Vender é um Discurso e Compra é uma Ação"*. Transforme visitantes anônimos em faturamento real — sem lentidão e sem plugins frágeis.
 - **Botões de Ação (CTAs):**
   - **CTA Primário (Destaque):** `Quero um Site de Alta Conversão` → Abre WhatsApp
   - **CTA Secundário:** `Conhecer o Método` → Rola para `#problema`
@@ -54,7 +54,7 @@ Este documento é a **Fonte Única da Verdade** para o desenvolvimento do One Pa
 - **Subtítulo:** Não criamos apenas páginas web; construímos ativos de conversão com metodologia validada.
 
 ### Cards de Serviços:
-1. **One Page Sites de Alta Conversão (Core Service)**
+1. **Sites de Alta Conversão (Core Service)**
    - *O que é:* Página única contínua com carregamento instantâneo, design executivo premium e funil de microdecisões até o WhatsApp.
    - *Entregáveis:* Estrutura React + Vite estática, copy persuasiva autoral, design responsivo mobile-first, injeção de GTM e botões inteligentes de conversão.
    - *Benefício:* Máxima taxa de conversão do seu tráfego atual e zero custo com servidores pesados.
@@ -91,7 +91,7 @@ Este documento é a **Fonte Única da Verdade** para o desenvolvimento do One Pa
 - **Grid com 4 Pilares de Excelência:**
   1. ⚡ **Velocidade Extrema (React + Vite Puro):** Sem WordPress, sem temas inchados, sem lentidão. O site carrega em fração de segundo no celular mais simples.
   2. 🧠 **Metodologia de Vendas Publicada:** Textos e hierarquia visual baseados em psicologia comportamental e métodos autorais testados.
-  3. 🛡️ **Segurança e Estabilidade Absolutas:** Pacote 100% estático em `dist/`. Zero banco de dados vulnerável a invasões e zero plugins que quebram com o tempo.
+  3. 🛡️ **Segurança e Estabilidade Absolutas:** Pacote 100% estático. Zero banco de dados vulnerável a invasões e zero plugins que quebram com o tempo.
   4. 📊 **Rastreamento de Elite (GTM Integrado):** Saiba com exatidão quem clicou no WhatsApp, de onde veio a campanha e como otimizar seus anúncios.
 
 ---
@@ -102,19 +102,19 @@ Este documento é a **Fonte Única da Verdade** para o desenvolvimento do One Pa
 
 ### Itens do FAQ:
 1. **O que é um One Page Site e por que ele converte mais do que um site tradicional?**  
-   *Resposta:* Um One Page Site concentra toda a jornada de compra em uma única página fluida com navegação suave por âncoras. Isso elimina o atrito cognitivo de menus complexos e múltiplos cliques, guiando o visitante do primeiro impacto até o botão de WhatsApp sem distrações.
+   *Resposta:* Um One Page Site (O tipo de site que criamos para você) concentra toda a jornada de compra em uma única página fluida com navegação suave por âncoras. Isso elimina o atrito cognitivo de menus complexos e múltiplos cliques, guiando o visitante do primeiro impacto até o botão de WhatsApp sem distrações.
 
 2. **Por que vocês usam React e Vite em vez de WordPress?**  
    *Resposta:* O WordPress é pesado, depende de dezenas de plugins que frequentemente quebram, é vulnerável a invasões e costuma ser lento no 4G móvel. Com React + Vite estático, você tem um site com velocidade instantânea (< 1 segundo), segurança impenetrável e zero custo com manutenções caras.
 
 3. **Eu poderei alterar o conteúdo do meu site no futuro?**  
-   *Resposta:* Sim! Todo o conteúdo do site é gerido com clareza através de arquivos de roteiro (`07-roteiro-site.md`). As atualizações são estruturadas e previsíveis.
+   *Resposta:* Sim! Todo o conteúdo do site é gerido com clareza através de arquivos de roteiro. As atualizações são estruturadas e previsíveis.
 
 4. **O site já vem configurado para anúncios no Google e Meta (Facebook/Instagram)?**  
-   *Resposta:* Sim. Integramos nativamente o Google Tag Manager (`GTM-WNXV9S4X`) com rastreamento de cliques no WhatsApp, permitindo que suas campanhas de tráfego sejam mensuradas com máxima precisão.
+   *Resposta:* Sim. Integramos nativamente o Google Tag Manager com possibilidade de rastreamento de cliques no WhatsApp, permitindo que suas campanhas de tráfego sejam mensuradas com máxima precisão.
 
 5. **Como funciona o processo de contratação e entrega?**  
-   *Resposta:* Você entra em contato direto comigo pelo WhatsApp, alinhamos os dados do seu negócio, validamos o roteiro estratégico (`07-roteiro-site.md`) e construímos o seu site com código de alta performance pronto para publicação estática.
+   *Resposta:* Você entra em contato direto comigo pelo WhatsApp, alinhamos os dados do seu negócio, validamos o roteiro estratégico e construímos o seu site com código de alta performance pronto para publicação estática.
 
 ---
 
@@ -132,7 +132,7 @@ Este documento é a **Fonte Única da Verdade** para o desenvolvimento do One Pa
 ---
 
 ## ⚓ 9. Footer (Rodapé)
-- **Monograma & Título:** `Rogério Maciel` — One Page Sites de Alta Conversão.
+- **Monograma & Título:** `Rogério Maciel` — Sites de Alta Conversão.
 - **Copyright:** `© 2026 Rogério Maciel. Todos os direitos reservados.`
 - **Redes Sociais & Contato:**
   - WhatsApp: `(62) 99623-2227`

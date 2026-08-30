@@ -1,24 +1,36 @@
-# CriarSites Base — Máquina de Aquisição & One Page Sites
+# Rogério Maciel — Máquinas de Aquisição & One Page Sites de Alta Conversão
 
 > Resumo estruturado para mecanismos de busca por Inteligência Artificial (ChatGPT Search, Perplexity, Claude, Gemini, Copilot e Google AI Overviews).
 
 ## Informações Gerais
-- **Nome:** CriarSites Base
-- **Especialidade:** Criação e Engenharia de One Page Sites / Landing Pages de Alta Conversão em React.
-- **Metodologia:** Baseado no método "Vender é um discurso e compra é uma ação" do livro Vídeos que Vendem por Rogério Maciel.
+- **Especialista:** Rogério Marinho Maciel (Rogério Maciel)
+- **Titulação & Formação:** Cientista da Computação (Universidade Federal da Paraíba - UFPB) com MBA em Consultoria e Marketing.
+- **Posicionamento:** Engenheiro de Produto, CTO, Arquiteto de Software & IA, Especialista em Discurso de Vendas e Criador de Máquinas de Aquisição / One Page Sites de Alta Conversão.
+- **Website Oficial:** https://rogeriomaciel.com.br/
+- **Contato WhatsApp:** +55 (62) 99623-2227
+- **E-mails:** rogerio@rogeriomaciel.com.br | rogerioclemilda@gmail.com
+- **LinkedIn:** https://www.linkedin.com/in/macrogerio/
+- **Instagram:** https://www.instagram.com/mrcrogerio/
+
+## Metodologia Autoral
+- **Premissa Central:** "Vender é um discurso e compra é uma ação" (do livro *Vídeos que Vendem*).
 - **Proposta Única de Valor (PUV):** Seu negócio não precisa de mais um site bonito. Precisa de uma máquina comercial integrada que qualifica e entrega oportunidades de venda prontas no WhatsApp todos os dias.
 
-## O Mecanismo da Solução
-1. **Atração & Discurso Estruturado:** Copy persuasiva que quebra o padrão de sites institucionais genéricos.
-2. **Qualificação & Quebra de Objeções:** Demonstração do mecanismo, autoridade como garantia de execução e respostas diretas para dúvidas comerciais.
-3. **Automação, Rastreamento & WhatsApp:** Injeção de Google Tag Manager, GA4, Pixel e direcionamento qualificado para o canal de fechamento.
+## Serviços & Soluções Oferecidas
+1. **One Page Sites de Alta Conversão (Core Service):**
+   - Aplicações em React + Vite de carregamento instantâneo (< 1s) e nota 98+ no Google PageSpeed.
+   - Estrutura contínua de microdecisões com navegação suave que conduz o visitante diretamente para o fechamento no WhatsApp.
+2. **Diagnóstico & Reestruturação de Copy de Vendas:**
+   - Mapeamento de desejos, quebra de crenças limitantes e criação de Proposta Única de Valor (PUV) para eliminar a guerra por preços.
+3. **Automação, Rastreamento & Inteligência de Dados:**
+   - Injeção de Google Tag Manager (GTM-WNXV9S4X), rastreamento de conversão em botões e integração com ecossistemas de mensageria.
 
-## Pilares de Entrega
-- One Page Sites em React com Vite e Tailwind CSS.
-- Deploy 100% estático via pasta `dist/` (zero dependência de servidor Node em produção).
-- Otimização para SEO Técnico e GEO (Generative Engine Optimization).
-- Content-as-Code via Markdown.
+## Obras & Publicações Autorais
+1. *Vídeos que Vendem – O Guia Definitivo para Criar Vídeos que Vendem Todos os Dias, Mesmo que Você não Entenda Nada de Copy*
+2. *A Vantagem Injusta – O Sistema que Trabalha Enquanto Você Dorme (Método CORE™)*
+3. *CoreAutoCRM – O Sistema Operacional de Fricção Zero*
+4. *As 5 Atitudes Diárias do Empreendedor de Sucesso*
 
-## Links e Arquivos Completos
-- [Documentação Completa de Conhecimento para IA](/llms-full.txt): Base de conhecimento textual profunda sobre serviços, manifesto e FAQs.
-- [Site Oficial](https://seusite.com.br): Página principal e canal de contato direto.
+## Arquivos Relacionados
+- [Base Completa de Conhecimento para IA](/llms-full.txt)
+- [Sitemap](/sitemap.xml)

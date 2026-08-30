@@ -61,27 +61,27 @@ export default function App() {
     {
       question: 'O que é um One Page Site e por que ele converte mais do que um site tradicional?',
       answer:
-        'Um One Page Site concentra toda a jornada de compra em uma única página contínua e fluida, com navegação suave por âncoras. Isso elimina o atrito cognitivo de menus complexos e múltiplos cliques, guiando o visitante do primeiro impacto até o botão de WhatsApp sem distrações.',
+        'Um One Page Site (O tipo de site que criamos para você) concentra toda a jornada de compra em uma única página fluida com navegação suave por âncoras. Isso elimina o atrito cognitivo de menus complexos e múltiplos cliques, guiando o visitante do primeiro impacto até o botão de WhatsApp sem distrações.',
     },
     {
       question: 'Por que vocês usam React e Vite em vez de WordPress?',
       answer:
-        'O WordPress é pesado, depende de dezenas de plugins que frequentemente quebram, é vulnerável a invasões e costuma demorar 5 a 8 segundos para abrir no 4G do celular. Com React + Vite compilado de forma estática, seu site carrega em fração de segundo (< 1s), possui nota máxima no Google PageSpeed e zero custo de manutenção com plugins.',
+        'O WordPress é pesado, depende de dezenas de plugins que frequentemente quebram, é vulnerável a invasões e costuma ser lento no 4G móvel. Com React + Vite estático, você tem um site com velocidade instantânea (< 1 segundo), segurança impenetrável e zero custo com manutenções caras.',
     },
     {
       question: 'Eu poderei alterar o conteúdo do meu site no futuro?',
       answer:
-        'Sim! Todo o conteúdo do site é gerido com clareza através de arquivos de roteiro estruturados (Content-as-Code). Sempre que desejar alterar qualquer texto ou oferta, o processo de atualização é ágil, limpo e previsível.',
+        'Sim! Todo o conteúdo do site é gerido com clareza através de arquivos de roteiro. As atualizações são estruturadas e previsíveis.',
     },
     {
       question: 'O site já vem configurado para anúncios no Google e Meta (Facebook/Instagram)?',
       answer:
-        'Sim. Integramos nativamente o Google Tag Manager (GTM-WNXV9S4X) e configuramos o disparo de eventos de conversão nos botões de WhatsApp, permitindo que suas campanhas de tráfego pago sejam mensuradas e otimizadas com máxima precisão.',
+        'Sim. Integramos nativamente o Google Tag Manager com possibilidade de rastreamento de cliques no WhatsApp, permitindo que suas campanhas de tráfego sejam mensuradas com máxima precisão.',
     },
     {
       question: 'Como funciona o processo de contratação e entrega?',
       answer:
-        'Você entra em contato direto comigo pelo WhatsApp, analisamos o seu momento e nicho de mercado, estruturamos o roteiro estratégico da sua página com a psicologia do método "Vender é um discurso e compra é uma ação" e desenvolvemos o seu site com código de alta performance pronto para publicação.',
+        'Você entra em contato direto comigo pelo WhatsApp, alinhamos os dados do seu negócio, validamos o roteiro estratégico e construímos o seu site com código de alta performance pronto para publicação estática.',
     },
   ];
 
@@ -207,7 +207,7 @@ export default function App() {
           {/* Badge */}
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-950/80 border border-blue-500/40 text-blue-300 text-xs sm:text-sm font-semibold tracking-wide shadow-inner">
             <Sparkles className="w-4 h-4 text-blue-400 animate-pulse" />
-            Engenharia de Software + Psicologia de Vendas + IA
+            Engenharia de Software + Psicologia de Vendas + Inteligência Artificial
           </div>
 
           {/* Headline */}
@@ -220,7 +220,7 @@ export default function App() {
 
           {/* Subheadline */}
           <p className="text-lg sm:text-xl text-slate-300 max-w-3xl mx-auto leading-relaxed font-normal">
-            Desenvolvemos One Page Sites ultrarrápidos e persuasivos baseados no método autoral{' '}
+            Desenvolvemos Sites ultrarrápidos e persuasivos baseados no método autoral{' '}
             <strong className="text-white font-semibold">"Vender é um Discurso e Compra é uma Ação"</strong>.
             Transforme visitantes anônimos em faturamento real — sem lentidão e sem plugins frágeis.
           </p>
@@ -241,7 +241,7 @@ export default function App() {
               href="#problema"
               className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-4 rounded-2xl bg-slate-900/90 hover:bg-slate-800 text-slate-200 border border-slate-700 font-semibold text-base transition duration-200"
             >
-              Conhecer o Diagnóstico
+              Conhecer o Método
               <ChevronDown className="w-4 h-4" />
             </a>
           </div>
@@ -266,7 +266,7 @@ export default function App() {
             <div className="glass-panel p-4 rounded-2xl border border-slate-800/80 hover:border-blue-500/30 transition">
               <BarChart3 className="w-6 h-6 text-emerald-400 mb-2" />
               <div className="font-bold text-white text-sm sm:text-base">GTM & Rastreamento</div>
-              <div className="text-xs text-slate-400 mt-0.5">Métricas de clique para escala</div>
+              <div className="text-xs text-slate-400 mt-0.5">Rastreamento total nativo</div>
             </div>
           </div>
         </div>
@@ -280,12 +280,12 @@ export default function App() {
               A Realidade do Mercado
             </span>
             <h2 className="text-3xl sm:text-5xl font-extrabold text-white tracking-tight">
-              Por que 90% dos sites na internet <span className="text-red-400">não vendem nada</span>?
+              Por que 90% dos sites na internet <span className="text-red-400">não vendem absolutamente nada</span>?
             </h2>
             <p className="text-slate-300 text-base sm:text-lg leading-relaxed">
-              Muitas empresas investem milhares de reais em anúncios e redes sociais, mas enviam potenciais clientes para
-              páginas lentas, cheias de jargões técnicos e menus que confundem o visitante. Se o seu discurso não capturar o
-              cliente em 3 segundos, ele compra do seu concorrente.
+              Muitas empresas investem caro em tráfego e redes sociais, mas enviam pessoas para páginas lentas, cheias de
+              jargões técnicos e menus que confundem o visitante. Se o seu discurso não capturar o cliente em 3 segundos, ele
+              compra do seu concorrente.
             </p>
           </div>
 
@@ -297,8 +297,8 @@ export default function App() {
               </div>
               <h3 className="text-xl font-bold text-white mb-3">1. Lentidão Oculta no Celular</h3>
               <p className="text-slate-300 text-sm leading-relaxed">
-                Sites pesados em WordPress que demoram 5 a 8 segundos para abrir no 4G fazem mais de 50% dos visitantes
-                desistirem antes mesmo de carregar a primeira imagem.
+                Sites pesados em WordPress que demoram 6 segundos para abrir no 4G fazem 50% dos visitantes desistirem antes
+                de ler uma única linha.
               </p>
             </div>
 
@@ -308,8 +308,8 @@ export default function App() {
               </div>
               <h3 className="text-xl font-bold text-white mb-3">2. Discurso Vazio e Sem Alma</h3>
               <p className="text-slate-300 text-sm leading-relaxed">
-                Textos institucionais genéricos (*"somos uma empresa comprometida com a excelência"*) não geram conexão,
-                não quebram objeções e não mostram por que você é a escolha certa.
+                Textos institucionais genéricos (*"somos uma empresa com excelência..."*) que não geram conexão emocional nem
+                resolvem as dores reais do cliente.
               </p>
             </div>
 
@@ -317,18 +317,17 @@ export default function App() {
               <div className="w-12 h-12 rounded-2xl bg-red-500/10 border border-red-500/30 flex items-center justify-center text-red-400 mb-6">
                 <AlertTriangle className="w-6 h-6" />
               </div>
-              <h3 className="text-xl font-bold text-white mb-3">3. Labirinto Sem Ação Clara</h3>
+              <h3 className="text-xl font-bold text-white mb-3">3. Falta de Caminho Claro</h3>
               <p className="text-slate-300 text-sm leading-relaxed">
-                Páginas com dezenas de botões, abas e caminhos dispersos onde o cliente fica perdido e sai sem tomar a única
-                ação que importa: chamar no WhatsApp para fechar.
+                Páginas com dezenas de botões e links dispersos onde o cliente não sabe qual ação deve tomar para comprar.
               </p>
             </div>
           </div>
 
           <div className="glass-panel p-6 rounded-2xl text-center max-w-2xl mx-auto border-blue-500/30 bg-blue-950/30">
             <p className="text-slate-200 text-sm sm:text-base font-medium">
-              💡 <strong>A Solução:</strong> Substituir o panfleto digital por um <strong>One Page Site contínuo</strong> que
-              conduz o visitante por microdecisões até a compra.
+              💡 <strong>A Solução:</strong> Substituir o panfleto digital por um <strong>Site de Alta Conversão</strong> que
+              conduz o visitante por microdecisões até o WhatsApp.
             </p>
           </div>
         </div>
@@ -350,7 +349,7 @@ export default function App() {
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            {/* Card 1: One Page Sites (Core) */}
+            {/* Card 1: Sites de Alta Conversão (Core) */}
             <div className="glass-panel glass-panel-hover p-8 rounded-3xl border border-blue-500/30 bg-gradient-to-b from-blue-950/40 via-slate-900 to-slate-950 flex flex-col justify-between relative">
               <div className="absolute -top-3 right-6 px-3 py-1 rounded-full bg-blue-600 text-white text-xs font-bold uppercase tracking-wider shadow-md">
                 Principal Serviço
@@ -360,7 +359,7 @@ export default function App() {
                   <Zap className="w-7 h-7" />
                 </div>
                 <div>
-                  <h3 className="text-2xl font-bold text-white mb-2">One Page Sites de Alta Conversão</h3>
+                  <h3 className="text-2xl font-bold text-white mb-2">Sites de Alta Conversão</h3>
                   <p className="text-slate-300 text-sm leading-relaxed">
                     Página única contínua com carregamento instantâneo, design executivo premium e funil de microdecisões
                     planejado para levar o visitante direto ao seu WhatsApp.
@@ -371,19 +370,19 @@ export default function App() {
                   <ul className="space-y-2 text-sm text-slate-300">
                     <li className="flex items-start gap-2">
                       <Check className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" />
-                      <span>Arquitetura React + Vite 100% estática</span>
+                      <span>Estrutura React + Vite estática</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <Check className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" />
-                      <span>Copywriting autoral com método "Vídeos que Vendem"</span>
+                      <span>Copy persuasiva autoral baseada no método</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <Check className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" />
-                      <span>Design mobile-first com nota máxima no PageSpeed</span>
+                      <span>Design responsivo mobile-first</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <Check className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" />
-                      <span>Injeção de GTM e botões de conversão integrados</span>
+                      <span>Injeção de GTM e botões inteligentes de conversão</span>
                     </li>
                   </ul>
                 </div>
@@ -395,7 +394,7 @@ export default function App() {
                   rel="noopener noreferrer"
                   className="w-full inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-semibold text-sm transition shadow-lg shadow-blue-600/30"
                 >
-                  Solicitar One Page Site
+                  Solicitar Site de Alta Conversão
                   <ArrowRight className="w-4 h-4" />
                 </a>
               </div>
@@ -410,8 +409,8 @@ export default function App() {
                 <div>
                   <h3 className="text-2xl font-bold text-white mb-2">Diagnóstico & Copy de Vendas</h3>
                   <p className="text-slate-300 text-sm leading-relaxed">
-                    Aplicação profunda da esteira de desejos, crenças e Proposta Única de Valor (PUV) para remodelar a
-                    narrativa da sua oferta e eliminar a comparação por preços.
+                    Aplicação profunda do método "Vender é um Discurso e Compra é uma Ação" para redesenhar a narrativa do
+                    seu produto/serviço e eliminar a guerra por preços.
                   </p>
                 </div>
                 <div className="space-y-3 pt-2">
@@ -419,19 +418,19 @@ export default function App() {
                   <ul className="space-y-2 text-sm text-slate-300">
                     <li className="flex items-start gap-2">
                       <Check className="w-4 h-4 text-amber-400 shrink-0 mt-0.5" />
-                      <span>Mapeamento de 10+ desejos e crenças do público</span>
+                      <span>Mapeamento de desejos e quebra de crenças limitantes</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <Check className="w-4 h-4 text-amber-400 shrink-0 mt-0.5" />
-                      <span>Criação do Manifesto de Marca e PUV persuasiva</span>
+                      <span>Criação de Proposta Única de Valor (PUV)</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <Check className="w-4 h-4 text-amber-400 shrink-0 mt-0.5" />
-                      <span>Carta de vendas completa para páginas e vídeos</span>
+                      <span>Roteirização completa de páginas e vídeos</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <Check className="w-4 h-4 text-amber-400 shrink-0 mt-0.5" />
-                      <span>Estruturação do Roteiro Mestre de Conversão</span>
+                      <span>Posicionamento de autoridade instantânea</span>
                     </li>
                   </ul>
                 </div>
@@ -456,10 +455,10 @@ export default function App() {
                   <BarChart3 className="w-7 h-7" />
                 </div>
                 <div>
-                  <h3 className="text-2xl font-bold text-white mb-2">Automação & Rastreamento GTM</h3>
+                  <h3 className="text-2xl font-bold text-white mb-2">Automação & Rastreamento Inteligente</h3>
                   <p className="text-slate-300 text-sm leading-relaxed">
-                    Estruturação de dados para negócios que desejam escalar tráfego com precisão matemática, medindo cada
-                    clique no WhatsApp e retorno sobre anúncio.
+                    Configuração avançada de Google Tag Manager, pixels e esteiras de automação para negócios que desejam
+                    escalar com previsibilidade matemática de ROI.
                   </p>
                 </div>
                 <div className="space-y-3 pt-2">
@@ -467,19 +466,19 @@ export default function App() {
                   <ul className="space-y-2 text-sm text-slate-300">
                     <li className="flex items-start gap-2">
                       <Check className="w-4 h-4 text-indigo-400 shrink-0 mt-0.5" />
-                      <span>Configuração nativa de Google Tag Manager (GTM)</span>
+                      <span>Disparo de eventos de conversão no WhatsApp</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <Check className="w-4 h-4 text-indigo-400 shrink-0 mt-0.5" />
-                      <span>Eventos personalizados de clique e conversão</span>
+                      <span>Integração com esteiras de CRM</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <Check className="w-4 h-4 text-indigo-400 shrink-0 mt-0.5" />
-                      <span>Integração com esteiras de CRM e mensageria</span>
+                      <span>Mensuração e auditoria de retorno sobre anúncios</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <Check className="w-4 h-4 text-indigo-400 shrink-0 mt-0.5" />
-                      <span>Auditoria técnica de telemetria e ROI</span>
+                      <span>Previsibilidade matemática de escala</span>
                     </li>
                   </ul>
                 </div>
@@ -508,7 +507,7 @@ export default function App() {
             <div className="lg:col-span-7 space-y-6">
               <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-blue-950 border border-blue-500/30 text-blue-400 text-xs font-semibold uppercase tracking-wider">
                 <Award className="w-3.5 h-3.5" />
-                Autoridade & Experiência
+                Quem Está Por Trás do Seu Projeto
               </div>
               <h2 className="text-3xl sm:text-5xl font-extrabold text-white tracking-tight leading-tight">
                 Rogério Marinho Maciel
@@ -566,7 +565,7 @@ export default function App() {
                 <div className="text-4xl text-blue-400 font-serif leading-none mb-4">“</div>
                 <blockquote className="text-lg text-slate-200 font-medium leading-relaxed italic">
                   Vender é um discurso e compra é uma ação. Quando a sua engenharia de software remove todo o atrito técnico
-                  e a sua narrativa remove toda a dúvida, a compra se torna a única escolha lógica do cliente.
+                  e o seu discurso remove toda a dúvida, o cliente toma a decisão de compra naturalmente.
                 </blockquote>
                 <div className="mt-6 pt-4 border-t border-slate-800 flex items-center justify-between">
                   <div>
@@ -614,7 +613,7 @@ export default function App() {
               Vantagem Competitiva
             </span>
             <h2 className="text-3xl sm:text-5xl font-extrabold text-white tracking-tight">
-              Por que os nossos sites <span className="gradient-text">convertem muito mais</span>?
+              Por que os nossos sites <span className="gradient-text">convertem mais</span>?
             </h2>
             <p className="text-slate-300 text-base sm:text-lg">
               A união de 4 pilares inegociáveis para garantir o máximo retorno sobre o seu investimento digital.
@@ -626,10 +625,9 @@ export default function App() {
               <div className="w-12 h-12 rounded-2xl bg-sky-500/10 border border-sky-500/30 flex items-center justify-center text-sky-400">
                 <Gauge className="w-6 h-6" />
               </div>
-              <h3 className="text-lg font-bold text-white">Velocidade Extrema (React Puro)</h3>
+              <h3 className="text-lg font-bold text-white">Velocidade Extrema (React + Vite Puro)</h3>
               <p className="text-sm text-slate-300 leading-relaxed">
-                Sem WordPress e sem códigos inchados. Seu site carrega em fração de segundo no 4G móvel mais simples,
-                evitando qualquer perda de visitantes por lentidão.
+                Sem WordPress, sem temas inchados, sem lentidão. O site carrega em fração de segundo no celular mais simples.
               </p>
             </div>
 
@@ -637,10 +635,9 @@ export default function App() {
               <div className="w-12 h-12 rounded-2xl bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-400">
                 <BookOpen className="w-6 h-6" />
               </div>
-              <h3 className="text-lg font-bold text-white">Metodologia de Vendas Validada</h3>
+              <h3 className="text-lg font-bold text-white">Metodologia de Vendas Publicada</h3>
               <p className="text-sm text-slate-300 leading-relaxed">
-                Estrutura de copy e hierarquia visual baseadas no método "Vender é um discurso e compra é uma ação",
-                transformando ceticismo em desejo de compra.
+                Textos e hierarquia visual baseados em psicologia comportamental e métodos autorais testados.
               </p>
             </div>
 
@@ -648,10 +645,9 @@ export default function App() {
               <div className="w-12 h-12 rounded-2xl bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-emerald-400">
                 <ShieldCheck className="w-6 h-6" />
               </div>
-              <h3 className="text-lg font-bold text-white">Segurança Estática Imune</h3>
+              <h3 className="text-lg font-bold text-white">Segurança e Estabilidade Absolutas</h3>
               <p className="text-sm text-slate-300 leading-relaxed">
-                Deploy 100% estático em pasta <code className="text-emerald-400">dist/</code>. Sem banco de dados exposto a
-                invasões, sem plugins que quebram e com custo quase nulo de hospedagem.
+                Pacote 100% estático. Zero banco de dados vulnerável a invasões e zero plugins que quebram com o tempo.
               </p>
             </div>
 
@@ -659,10 +655,9 @@ export default function App() {
               <div className="w-12 h-12 rounded-2xl bg-indigo-500/10 border border-indigo-500/30 flex items-center justify-center text-indigo-400">
                 <BarChart3 className="w-6 h-6" />
               </div>
-              <h3 className="text-lg font-bold text-white">Rastreamento Profissional</h3>
+              <h3 className="text-lg font-bold text-white">Rastreamento de Elite (GTM Integrado)</h3>
               <p className="text-sm text-slate-300 leading-relaxed">
-                Google Tag Manager configurado para medir cliques no WhatsApp e alimentar o algoritmo de tráfego com dados
-                reais de conversão para escala segura.
+                Saiba com exatidão quem clicou no WhatsApp, de onde veio a campanha e como otimizar seus anúncios.
               </p>
             </div>
           </div>
@@ -678,7 +673,7 @@ export default function App() {
             </span>
             <h2 className="text-3xl sm:text-5xl font-extrabold text-white tracking-tight">Perguntas Frequentes</h2>
             <p className="text-slate-300 text-base sm:text-lg">
-              Tudo o que você precisa saber sobre o desenvolvimento de One Page Sites de alta performance.
+              Tudo o que você precisa saber sobre o desenvolvimento de Sites de alta conversão.
             </p>
           </div>
 
@@ -723,16 +718,16 @@ export default function App() {
         <div className="max-w-5xl mx-auto glass-panel p-8 sm:p-14 md:p-16 rounded-3xl border border-blue-500/40 bg-gradient-to-b from-blue-950/80 via-slate-900 to-slate-950 text-center space-y-8 shadow-2xl glow-blue">
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-emerald-950/80 border border-emerald-500/40 text-emerald-300 text-xs sm:text-sm font-semibold">
             <Zap className="w-4 h-4 text-emerald-400" />
-            Atendimento Estratégico Direto
+            Próximo Passo
           </div>
 
           <h2 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-white tracking-tight leading-tight max-w-3xl mx-auto">
-            Pronto para transformar seu tráfego em <span className="gradient-text">vendas reais</span>?
+            Pronto para ter um site que transforma visitantes em <span className="gradient-text">clientes reais</span>?
           </h2>
 
           <p className="text-base sm:text-xl text-slate-300 max-w-2xl mx-auto leading-relaxed">
-            Dê adeus aos sites lentos, genéricos e sem resultado. Converse diretamente com Rogério Maciel e coloque uma
-            máquina de alta conversão para trabalhar pelo seu negócio.
+            Dê adeus aos sites lentos e genéricos. Converse diretamente com Rogério Maciel e coloque uma máquina de alta
+            conversão para trabalhar pelo seu negócio.
           </p>
 
           <div className="pt-4 flex flex-col sm:flex-row items-center justify-center gap-4">
@@ -751,15 +746,15 @@ export default function App() {
           <div className="pt-6 border-t border-slate-800/80 flex flex-wrap items-center justify-center gap-6 text-xs sm:text-sm text-slate-400 font-medium">
             <div className="flex items-center gap-2">
               <CheckCircle2 className="w-4 h-4 text-emerald-400" />
-              WhatsApp direto: (62) 99623-2227
+              Atendimento direto e estratégico
             </div>
             <div className="flex items-center gap-2">
               <CheckCircle2 className="w-4 h-4 text-emerald-400" />
-              Diagnóstico de Conversão
+              Análise personalizada da sua presença digital
             </div>
             <div className="flex items-center gap-2">
               <CheckCircle2 className="w-4 h-4 text-emerald-400" />
-              Deploy 100% Estático e Rápido
+              Entrega rápida com alta performance
             </div>
           </div>
         </div>
@@ -774,7 +769,7 @@ export default function App() {
             </div>
             <div>
               <div className="font-bold text-white text-base">Rogério Maciel</div>
-              <div className="text-xs text-slate-400">One Page Sites de Alta Conversão</div>
+              <div className="text-xs text-slate-400">Sites de Alta Conversão</div>
             </div>
           </div>
 
@@ -783,7 +778,7 @@ export default function App() {
               "Vender é um discurso e compra é uma ação."
             </p>
             <p className="text-xs text-slate-500">
-              © {new Date().getFullYear()} Rogério Marinho Maciel. Todos os direitos reservados.
+              © {new Date().getFullYear()} Rogério Maciel. Todos os direitos reservados.
             </p>
           </div>
 

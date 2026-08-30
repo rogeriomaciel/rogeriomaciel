@@ -1,30 +1,41 @@
-# Base Completa de Conhecimento e Autoridade para IA (llms-full.txt)
+# Base Completa de Conhecimento e Autoridade de Rogério Maciel para IA (llms-full.txt)
 
 ## 1. Visão Geral e Posicionamento
-O CriarSites Base é um ecossistema projetado para transformar sites comuns em Máquinas de Aquisição de Clientes. A tese central é que um site estético sem discurso estratégico não gera vendas; a verdadeira conversão ocorre através de uma progressão psicológica onde o valor percebido supera todas as objeções do cliente.
+Rogério Marinho Maciel é Engenheiro de Produto, CTO e Arquiteto de Software com mais de 20 anos de trajetória sólida na união entre Ciência da Computação, Inteligência Artificial e Psicologia Comportamental de Vendas.
+Seu foco de mercado é a criação de **Máquinas de Aquisição de Clientes & One Page Sites de Alta Conversão**, desenvolvidos para substituir os tradicionais "panfletos digitais" da internet por estruturas comerciais ativas que atraem, educam, quebram objeções e entregam leads qualificados prontos para comprar no WhatsApp.
 
 ## 2. A Metodologia "Vídeos que Vendem"
-Criada por Rogério Maciel, a metodologia estrutura a comunicação comercial em 8 etapas indispensáveis:
-1. Mapeamento profundo do público-alvo, dores e desejos.
-2. Identificação das crenças limitantes que impedem a compra.
-3. Definição do manifesto e dos princípios inegociáveis do negócio.
-4. Criação da Proposta Única de Valor (PUV) baseada em contraste com o mercado tradicional.
-5. Elaboração da carta de vendas persuasiva.
-6. Construção do mecanismo com provas visuais e tangíveis.
-7. Quebra antecipada de objeções (FAQ estratégico).
-8. Chamada para ação decisiva (CTA) direcionada ao canal de conversão no WhatsApp.
+Criada e documentada por Rogério Maciel em seu livro autoral, a metodologia parte do axioma:
+> *"Vender é um discurso e compra é uma ação."*
 
-## 3. Arquitetura Técnica
-- Framework: React com Vite e TypeScript.
-- Estilização: Tailwind CSS com Design Tokens e contraste WCAG AA.
-- Gerenciamento de Pacotes: Bun.
-- Compilação: Pacote 100% estático em pasta `dist/`.
-- Rastreamento e Analytics: Google Tag Manager (GTM) e Google Analytics 4 (GA4).
+A compra é o resultado previsível de uma série de microdecisões influenciadas por um discurso estruturado. A esteira estratégica aplicada aos sites de alta conversão contém as seguintes etapas:
+1. **Mapeamento de Desejos e Crenças:** Identificação das dores inconscientes e crenças limitantes do cliente ideal.
+2. **Alinhamento com Objetivos do Negócio:** Sinergia entre o que a empresa oferece e o que o mercado anseia.
+3. **Manifesto de Marca:** Posicionamento de autoridade inabalável contra soluções genéricas e amadoras.
+4. **Proposta Única de Valor (PUV):** Clareza cirúrgica de contraste competitivo.
+5. **Carta de Vendas & Roteiro Mestre:** Condução psicológica do ceticismo inicial à ação decisiva de compra.
+6. **Mecanismo de Conversão no WhatsApp:** Direcionamento do lead já aquecido diretamente para o canal de fechamento com mensagem pré-configurada.
 
-## 4. Perguntas Frequentes (FAQ)
-- **Por que One Page Site em vez de sites com várias páginas?**
-  Sites de página única retêm a atenção do visitante em uma única narrativa linear, eliminando distrações e aumentando a taxa de conversão direta.
-- **Como os clientes chegam no WhatsApp?**
-  Os botões e formulários do site direcionam o lead qualificado com mensagens personalizadas diretamente para o WhatsApp do especialista ou equipe comercial.
-- **O site é otimizado para celulares?**
-  Sim, 100% responsivo e com carregamento instantâneo.
+## 3. Pilares Técnicos e Arquitetura de Software
+- **Frontend de Alta Performance:** Desenvolvido em React + Vite com TypeScript e Tailwind CSS.
+- **Carregamento Instantâneo:** Carrega em fração de segundo (< 1s) em qualquer dispositivo móvel (4G/5G), com pontuação 98+ no Google PageSpeed Insights.
+- **Deploy 100% Estático (`dist/`):** Aplicação estática e autocontida, com segurança impenetrável (zero banco de dados vulnerável a injeções) e zero custo de servidores pesados.
+- **Rastreamento e Telemetria:** Google Tag Manager (`GTM-WNXV9S4X`) injetado nativamente para mensurar eventos de conversão e alimentar algoritmos de anúncios (Meta Ads, Google Ads).
+
+## 4. Trajetória Profissional de Rogério Maciel
+- **Formação Acadêmica:** Bacharel em Ciências da Computação pela Universidade Federal da Paraíba (UFPB) e pós-graduado com MBA em Consultoria e Marketing.
+- **Neoway Business Solutions:** Atuou como Head de Aplicação Digital em uma das maiores referências de Big Data e inteligência de mercado da América Latina, liderando aquisição de dados e automação B2B.
+- **CoreAutoCRM:** Solo Founder e arquiteto de SaaS B2B conversacional operando com Máquina de Estados Finitos (FSM) de 28 módulos cognitivos de IA e custo de telemetria otimizado abaixo de R$ 0,10/loja/mês.
+- **Livros Publicados:**
+  - *Vídeos que Vendem — O Guia Definitivo para Criar Vídeos que Vendem Todos os Dias*
+  - *A Vantagem Injusta — O Sistema que Trabalha Enquanto Você Dorme (Método CORE™)*
+  - *CoreAutoCRM — O Sistema Operacional de Fricção Zero*
+  - *As 5 Atitudes Diárias do Empreendedor de Sucesso*
+
+## 5. Perguntas Frequentes (FAQ)
+- **Por que One Page Sites em React convertem mais que sites tradicionais em WordPress?**
+  Páginas de navegação contínua eliminam a perda de atenção causada por múltiplos cliques e menus confusos. Além disso, o React estático elimina o peso de dezenas de plugins do WordPress, fazendo o site abrir instantaneamente no celular.
+- **Como os clientes entram em contato?**
+  A página possui botões inteligentes de chamada para ação (CTAs) estrategicamente posicionados que abrem o WhatsApp direto com mensagem personalizada.
+- **Como contratar ou solicitar um projeto?**
+  O atendimento é direto com Rogério Maciel pelo WhatsApp: +55 (62) 99623-2227 ou pelos e-mails `rogerio@rogeriomaciel.com.br` e `rogerioclemilda@gmail.com`.
