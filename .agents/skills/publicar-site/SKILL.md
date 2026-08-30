@@ -1,16 +1,16 @@
 ---
 name: publicar-site
 description: >
-  Skill para publicação e deploy automático de One Page Sites estáticos em servidor VPS.
-  Compila o projeto com Bun (`bun run build`), faz commit e push do Git, e envia a pasta estática `dist/`
-  diretamente para o diretório web de destino na VPS usando SSH/SCP seguro.
-version: 1.0.0
+  Skill para publicação e deploy contínuo (CI/CD) de One Page Sites estáticos via GitHub Actions para VPS.
+  Realiza o salvamento, commit e envio (git push) para a branch principal no GitHub,
+  disparando automaticamente a pipeline de CI/CD que compila com Bun e publica os arquivos estáticos na VPS.
+version: 2.0.0
 category: deploy
 ---
 
-# 🚀 Publicar Site — Deploy Estático para VPS
+# 🚀 Publicar Site — Deploy Contínuo (CI/CD via GitHub Actions)
 
-Esta skill automatiza a publicação em produção do site estático para o servidor VPS.
+Esta skill aciona o fluxo oficial de **CI/CD no GitHub Actions** para compilar e publicar o site estático na VPS.
 
 ---
 
@@ -19,25 +19,24 @@ Esta skill automatiza a publicação em produção do site estático para o serv
 Ative esta skill sempre que o usuário disser:
 - "publicar o site"
 - "fazer deploy"
-- "subir para a vps"
-- "enviar para produção"
-- "deploy"
+- "subir para produção"
+- "deploy via github"
+- "disparar ci/cd"
 - "publicar"
 - "atualizar site no ar"
 
 ---
 
-## ⚙️ Variáveis de Ambiente Necessárias (`.env` ou `/rogerio/core/.env`)
+## ⚙️ Configuração dos GitHub Secrets (No Repositório GitHub)
 
-O script `./deploy-vps.sh` busca as credenciais no `.env` da raiz do projeto ou no `.env` global do ambiente (`/rogerio/core/.env`):
+Para que a pipeline do GitHub Actions consiga enviar os arquivos da pasta `dist/` para o seu servidor VPS, configure os seguintes Secrets em **Settings ➔ Secrets and variables ➔ Actions** no GitHub:
 
-| Variável | Descrição | Exemplo |
+| Secret | Descrição | Exemplo |
 |---|---|---|
 | `DEPLOY_VPS_IP` | Endereço IP do servidor VPS | `50.19.157.121` |
-| `DEPLOY_VPS_USER` ou `DEPLOY_USER` | Usuário SSH da VPS | `rogeriomaciel` ou `ubuntu` |
-| `DEPLOY_VPS_PASS` ou `DEPLOY_USERPASSWORD` | Senha SSH (se usar autenticação por senha) | `sua-senha` |
-| `DEPLOY_SSH_KEY` | Caminho da chave SSH privada (se usar chave) | `~/.ssh/id_rsa` |
-| `DEPLOY_REMOTE_DIR` ou `DEPLOY_PATH` | Pasta de destino do site na VPS | `/var/www/seusite` |
+| `DEPLOY_VPS_USER` | Usuário SSH da VPS | `rogeriomaciel` ou `ubuntu` |
+| `DEPLOY_VPS_PASS` ou `DEPLOY_SSH_KEY` | Senha SSH ou Chave Privada | `sua-senha` |
+| `DEPLOY_REMOTE_DIR` *(Opcional)* | Pasta de destino na VPS | `/var/www/nome-do-site` |
 
 ---
 
@@ -45,22 +44,17 @@ O script `./deploy-vps.sh` busca as credenciais no `.env` da raiz do projeto ou 
 
 Quando o usuário pedir para publicar ou fazer deploy do site:
 
-1. **Verificação de Ambiente:**
-   - Garante que a pasta atual é o projeto do site.
-   - Verifica se as variáveis de deploy estão presentes.
+1. **Commit & Push para o GitHub:**
+   - O agente adiciona todas as alterações com `git add -A`.
+   - Cria um commit semântico: `git commit -m "deploy: atualizacao do site para producao"`.
+   - Faz o envio para o repositório remoto: `git push origin main`.
 
-2. **Execução do Script de Deploy:**
-   - Execute via `run_command`:
-     ```bash
-     ./deploy-vps.sh "Sua mensagem de commit opcional"
-     ```
-   - O script executará automaticamente:
-     - 1. Compilação local rápida via `bun run build`.
-     - 2. Git commit & push das alterações.
-     - 3. Compactação da pasta `dist/`.
-     - 4. Criação do diretório de destino na VPS (`mkdir -p`).
-     - 5. Envio e descompactação limpa dos arquivos na pasta da VPS.
-     - 6. Ajuste de permissões para o servidor web (`chmod -R 755`).
+2. **Execução Automática da Pipeline de CI/CD no GitHub:**
+   - O GitHub Actions detecta o push na branch `main`.
+   - Instala as dependências e o Bun na nuvem.
+   - Roda `bun run build` gerando a pasta `dist/`.
+   - Transfere os arquivos estáticos via SCP/SSH diretamente para o diretório de destino na VPS.
+   - Ajusta as permissões de leitura web (`chmod -R 755`).
 
 3. **Confirmação:**
-   - Informe ao usuário que o deploy estático foi concluído com sucesso e confirme o diretório remoto publicado.
+   - O agente informa ao usuário que o envio foi feito e que a pipeline do GitHub Actions está executando o deploy em produção.

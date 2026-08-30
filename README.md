@@ -97,25 +97,28 @@ O assistente irá:
 
 ---
 
-### 6. Como Fazer o Deploy Automático para VPS (Colocar no Ar)
-Com o comando ou skill de publicação, o site é compilado e enviado para o servidor VPS em segundos:
+### 6. Como Fazer o Deploy Automático via GitHub Actions (CI/CD na Nuvem)
+O deploy em produção é **100% automatizado na nuvem** através da pipeline do **GitHub Actions** (`.github/workflows/deploy.yml`):
 
-#### **Opção A: Pelo Chat do Antigravity (Skill `publicar-site`)**
-Basta dizer no chat:
-> **`publicar o site`** ou **`fazer deploy na vps`**
-
-#### **Opção B: Via Terminal (Script Automatizado)**
+#### **Como publicar o site:**
+Basta enviar o código para o GitHub (ou pedir no chat *"publicar o site"* / *"fazer deploy"*):
 ```bash
-./deploy-vps.sh
-# ou
-bun run deploy
+git push origin main
 ```
 
-O script e a skill executam automaticamente:
-1. Compilação local com `bun run build`.
-2. Commit e push das alterações para o GitHub.
-3. Compactação e envio seguro dos arquivos estáticos da pasta `dist/` para a VPS.
-4. Extração na pasta configurada (ex: `/var/www/<nome-do-site>`) com permissões web ajustadas.
+#### **O que a pipeline de CI/CD faz automaticamente na nuvem:**
+1. Detecta o push na branch `main`.
+2. Instala as dependências e o **Bun** nos servidores do GitHub.
+3. Roda `bun run build` gerando a pasta estática **`dist/`**.
+4. Envia os arquivos via SCP/SSH seguro para o servidor VPS.
+5. Ajusta as permissões de leitura web (`chmod -R 755`) na pasta de destino.
+
+#### **Configuração Única de Secrets no GitHub:**
+No repositório do GitHub (em **Settings ➔ Secrets and variables ➔ Actions** ou no nível da sua conta), adicione:
+- `DEPLOY_VPS_IP`: Endereço IP do servidor VPS.
+- `DEPLOY_VPS_USER`: Usuário SSH da VPS (ex: `rogeriomaciel` ou `ubuntu`).
+- `DEPLOY_VPS_PASS` ou `DEPLOY_SSH_KEY`: Senha SSH ou Chave Privada.
+- `DEPLOY_REMOTE_DIR` *(Opcional)*: Diretório na VPS (padrão: `/var/www/<nome-do-site>`).
 
 ---
 
