@@ -1,12 +1,12 @@
 {
   "meta": {
-    "title": "Rogério Maciel — Máquinas de Aquisição & One Page Sites de Alta Conversão",
-    "description": "Seu negócio não precisa de mais um site bonito. Precisa de uma máquina comercial integrada que qualifica e entrega oportunidades de venda prontas no WhatsApp.",
+    "title": "Rogério Maciel — Máquinas de Aquisição & One Page Sites",
+    "description": "Seu negócio não precisa de mais um site bonito. Precisa de uma máquina de aquisição comercial no WhatsApp.",
     "gtmId": "GTM-WNXV9S4X",
     "whatsappNumber": "5562996232227",
     "whatsappMessage": "Olá Rogério! Vi o seu site e quero transformar minha página em uma máquina de aquisição no WhatsApp.",
     "logoText": "RM",
-    "brandName": "Rogério Maciel",
+    "brandName": "** Rogério Maciel (Rogério Marinho Maciel)",
     "socialLinks": {
       "linkedin": "https://www.linkedin.com/in/macrogerio/",
       "instagram": "https://www.instagram.com/mrcrogerio/"
@@ -107,20 +107,8 @@
   },
   "faqs": [
     {
-      "question": "Por que um One Page Site vende mais que um site tradicional?",
-      "answer": "Sites tradicionais dispersam a atenção do visitante em dezenas de páginas e menus. O One Page Site conduz o lead por uma narrativa linear contínua onde cada seção aumenta o desejo até a ação final de compra."
-    },
-    {
-      "question": "Como funciona a entrega do site e onde ele fica hospedado?",
-      "answer": "O site é compilado em um pacote 100% estático (HTML, CSS e JS minificados). Ele pode ser hospedado na sua própria VPS ou servidor em nuvem com custo praticamente zero de manutenção."
-    },
-    {
-      "question": "O que acontece se eu quiser alterar um texto ou serviço depois?",
-      "answer": "O projeto utiliza o conceito de Content-as-Code. Você pode atualizar o conteúdo em texto puro e o site se recompila automaticamente sem complicação."
-    },
-    {
-      "question": "O Google Tag Manager e o WhatsApp já vêm configurados?",
-      "answer": "Sim! Toda a parte técnica de rastreamento (GTM/GA4/Pixel) e os botões inteligentes de WhatsApp já são entregues integrados e testados."
+      "question": "🛑",
+      "answer": ":"
     }
   ],
   "cta": {
