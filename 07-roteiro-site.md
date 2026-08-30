@@ -48,51 +48,46 @@ Este documento é a **Fonte Única da Verdade** para o desenvolvimento do Site d
 
 ---
 
-## 💼 4. Soluções & Serviços (`#servicos`)
-- **Tag da Seção:** *Nossas Soluções Estratégicas*
-- **Título da Seção:** Engenharia e Discurso Estruturados para Vender Todos os Dias
-- **Subtítulo:** Não criamos apenas páginas web; construímos ativos de conversão com metodologia validada.
+## 💼 4. Soluções & Serviços: O que é uma Máquina de Aquisição (`#servicos`)
+- **Tag da Seção:** *O Conceito & A Solução*
+- **Título da Seção:** O que é uma Máquina de Aquisição?
+- **Subtítulo:** Não é um site institucional estático. É um sistema digital de 3 camadas projetado para atrair em milissegundos, conduzir a atenção sem dispersão e entregar clientes prontos para fechar no seu WhatsApp.
 
-### Cards de Serviços:
-1. **Sites de Alta Conversão (Core Service)**
-   - *O que é:* Página única contínua com carregamento instantâneo, design executivo premium e funil de microdecisões até o WhatsApp.
-   - *Entregáveis:* Estrutura React + Vite estática, copy persuasiva focada em conversão, design responsivo mobile-first, injeção de GTM e botões inteligentes de conversão.
-   - *Benefício:* Máxima taxa de conversão do seu tráfego atual e zero custo com servidores pesados.
+### Os 3 Pilares do Método:
+1. **One Page Linear:** Toda a jornada de decisão concentrada em uma única página fluida com navegação por âncoras.
+2. **Discurso Persuasivo:** Estrutura de copy inspirada em psicologia comportamental de compras e quebra prévia de objeções.
+3. **Engenharia Jamstack:** React + Vite com saída estática, carregamento em menos de 0.8s e segurança total.
 
-2. **Diagnóstico & Reestruturação de Copy de Vendas**
-   - *O que é:* Aplicação profunda do método *"Vender é um Discurso e Compra é uma Ação"* para redesenhar a narrativa do seu produto/serviço.
-   - *Entregáveis:* Mapeamento de desejos, quebra de crenças limitantes, Proposta Única de Valor (PUV) e roteirização completa.
-   - *Benefício:* Posicionamento de autoridade instantânea e eliminação da guerra por preços.
-
-3. **Arquitetura de Automação & Rastreamento Inteligente**
-   - *O que é:* Configuração avançada de Google Tag Manager, pixels e esteiras de automação para negócios que desejam escalar.
-   - *Entregáveis:* Disparo de eventos de conversão no WhatsApp, integração com esteiras de CRM e mensuração de ROI.
-   - *Benefício:* Previsibilidade matemática de investimento em anúncios e vendas.
+### 🌟 Estudo de Caso & Aplicação Real:
+- **Cliente / Plataforma:** Kadosh Auto Center & CoreAutoCRM
+- **Métricas:**
+  - **+340%** na conversão de leads qualificados no WhatsApp.
+  - **< 15 segundos** de tempo de triagem de novos contatos.
+  - **R$ 0,08** de custo operacional por operação com inteligência artificial.
 
 ---
 
 ## 📜 5. Manifesto & Autoridade de Rogério Maciel (`#sobre`)
-- **Tag da Seção:** *Quem Está Por Trás do Seu Projeto*
-- **Título da Seção:** A união entre Ciência da Computação, Engenharia de IA e Psicologia de Vendas
+- **Tag da Seção:** *Autoridade & Bastidores*
+- **Título da Seção:** Engenharia de Alto Nível e Resultados Reais
 - **Biografia de Autoridade:**
-  - **Rogério Marinho Maciel** é Engenheiro de Produto, CTO e Arquiteto de Software com mais de **20 anos de experiência**.
-  - Bacharel em **Ciências da Computação (UFPB)** e pós-graduado com **MBA em Consultoria e Marketing**.
+  - **Rogério Marinho Maciel** é Cientista da Computação (UFPB) com MBA em Marketing e mais de **20 anos de liderança em engenharia e arquitetura de software**.
   - Ex-Head de Aplicação Digital na **Neoway** (uma das maiores empresas de Big Data e Inteligência de Mercado da América Latina).
-  - Criador e arquiteto do **CoreAutoCRM** (SaaS B2B conversacional multi-tenant com FSM de 28 módulos cognitivos de IA).
-  - Autor dos livros *"A Vantagem Injusta (Método CORE™)"*, *"CoreAutoCRM – O Sistema Operacional de Fricção Zero"* e *"As 5 Atitudes Diárias do Empreendedor de Sucesso"* .
+  - Criador e arquiteto do **CoreAutoCRM / Kadu Engine** (ecossistema conversacional com FSM de 28 módulos de IA operando a R$ 0,08 por loja).
+  - Autor dos livros *"A Vantagem Injusta (Método CORE™)"*, *"CoreAutoCRM – O Sistema Operacional de Fricção Zero"* e *"As 5 Atitudes Diárias do Empreendedor de Sucesso"*.
 - **Citação Destacada (Quote):**  
   > *"Vender é um discurso e compra é uma ação. Quando a sua engenharia de software remove todo o atrito técnico e o seu discurso remove toda a dúvida, o cliente toma a decisão de compra naturalmente."*
 
 ---
 
-## 🏆 6. Diferenciais: Por Que Escolher Nossos Sites (`#diferenciais`)
-- **Tag da Seção:** *Vantagem Competitiva*
-- **Título da Seção:** Por que os nossos sites convertem mais?
-- **Grid com 4 Pilares de Excelência:**
-  1. ⚡ **Velocidade Extrema (React + Vite Puro):** Sem WordPress, sem temas inchados, sem lentidão. O site carrega em fração de segundo no celular mais simples.
-  2. 🧠 **Psicologia de Vendas Aplicada:** Textos e hierarquia visual baseados em comportamento de compra e princípios de conversão testados.
-  3. 🛡️ **Segurança e Estabilidade Absolutas:** Pacote 100% estático. Zero banco de dados vulnerável a invasões e zero plugins que quebram com o tempo.
-  4. 📊 **Rastreamento de Elite (GTM Integrado):** Saiba com exatidão quem clicou no WhatsApp, de onde veio a campanha e como otimizar seus anúncios.
+## 🏆 6. Diferenciais Técnicos com Métricas (`#diferenciais`)
+- **Tag da Seção:** *Infraestrutura de Elite*
+- **Título da Seção:** Métricas que superam qualquer agência tradicional
+- **Grid com 4 Pilares com Números Concretos:**
+  1. ⚡ **< 0.8s no Celular:** React 19 + Vite com nota 98+ no PageSpeed. Carregamento até 5x mais rápido que WordPress.
+  2. 🛡️ **0 Falhas:** Pacote 100% estático. Sem banco de dados exposto no frontend e zero risco de plugins quebrarem.
+  3. 🤖 **100% GEO (Otimização para IAs):** Metadados estruturados (llms.txt e Schema JSON-LD) para citação no ChatGPT, Perplexity e Google.
+  4. 📊 **360° ROI (GTM + GA4):** Mensuração exata de cada clique no WhatsApp para otimizar seus anúncios no Google e Meta Ads.
 
 ---
 
@@ -102,16 +97,24 @@ Este documento é a **Fonte Única da Verdade** para o desenvolvimento do Site d
 
 ### Itens do FAQ:
 1. **O que é um One Page Site e por que ele converte mais do que um site tradicional?**  
-   *Resposta:* Um One Page Site (O tipo de site que criamos para você) concentra toda a jornada de compra em uma única página fluida com navegação suave por âncoras. Isso elimina o atrito cognitivo de menus complexos e múltiplos cliques, guiando o visitante do primeiro impacto até o botão de WhatsApp sem distrações.
+   *Resposta:* Um One Page Site concentra toda a jornada de compra em uma única página fluida com navegação suave por âncoras. Isso elimina o atrito cognitivo de menus complexos e múltiplos cliques, guiando o visitante do primeiro impacto até o botão de WhatsApp sem distrações.
 
 2. **Por que vocês usam React e Vite em vez de WordPress?**  
-   *Resposta:* O WordPress é pesado, depende de dezenas de plugins que frequentemente quebram, é vulnerável a invasões e costuma ser lento no 4G móvel. Com React + Vite estático, você tem um site com velocidade instantânea (< 1 segundo), segurança impenetrável e zero custo com manutenções caras.
+   *Resposta:* O WordPress é pesado, depende de dezenas de plugins que frequentemente quebram, é vulnerável a invasões e costuma ser lento no 4G móvel. Com React + Vite estático, você tem um site com velocidade instantânea (< 0.8s), segurança impenetrável e zero custo com manutenções caras.
 
 3. **Eu poderei alterar o conteúdo do meu site no futuro?**  
-   *Resposta:* Sim! Todo o conteúdo do site é gerido com clareza através de arquivos de roteiro. As atualizações são estruturadas e previsíveis.
+   *Resposta:* Sim! Todo o conteúdo do site é gerido com clareza através de arquivos de roteiro (Content-as-Code). As atualizações são estruturadas e previsíveis.
 
 4. **O site já vem configurado para anúncios no Google e Meta (Facebook/Instagram)?**  
-   *Resposta:* Sim. Integramos nativamente o Google Tag Manager com possibilidade de rastreamento de cliques no WhatsApp, permitindo que suas campanhas de tráfego sejam mensuradas com máxima precisão.
+   *Resposta:* Sim. Integramos nativamente o Google Tag Manager e Google Analytics 4 com rastreamento de cliques no WhatsApp, permitindo que suas campanhas de tráfego sejam mensuradas com máxima precisão.
+
+---
+
+## 🎯 8. Chamada Final para Ação (`#contato`)
+- **Tag:** *Máquina de Aquisição Ativa*
+- **Headline:** Pare de queimar tráfego em páginas lentas. Coloque uma Máquina de Aquisição no seu WhatsApp.
+- **Subheadline:** Em poucos dias, tenha um ativo digital com carregamento em milissegundos (< 0.8s), psicologia de fechamento e rastreamento nativo operando pelo seu negócio.
+- **Botão CTA:** `Quero Minha Máquina de Aquisição` → Abre WhatsApp com mensagem personalizada.
 
 5. **Como funciona o processo de contratação e entrega?**  
    *Resposta:* Você entra em contato direto comigo pelo WhatsApp, alinhamos os dados do seu negócio, validamos o roteiro estratégico e construímos o seu site com código de alta performance pronto para publicação estática.
