@@ -38,7 +38,7 @@ Este documento é a **Fonte Única da Verdade** para o desenvolvimento do Site d
 
 ## ⚠️ 3. Problema & Empatia: O Diagnóstico do Panfleto Digital (`#problema`)
 - **Tag da Seção:** *O Diagnóstico Crítico*
-- **Título da Seção:** Por que a maioria dos sites na internet não gera vendas?
+- **Título da Seção:** Por que a maioria dos sites na internet não geram vendas?
 - **Descrição de Impacto:**
   A maioria das agências cria páginas estéticas como cartões de visita digitais, mas esquece que um site sem psicologia de conversão é dinheiro jogado fora.
 - **Os 3 Vilões da Conversão:**

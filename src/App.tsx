@@ -279,7 +279,7 @@ export default function App() {
               <AlertTriangle className="w-4 h-4" /> O Diagnóstico Crítico
             </span>
             <h2 className="text-3xl sm:text-5xl font-extrabold text-slate-900 dark:text-white tracking-tight">
-              Por que a maioria dos sites na internet <span className="text-rose-600 dark:text-rose-400">não gera vendas</span>?
+              Por que a maioria dos sites na internet <span className="text-rose-600 dark:text-rose-400">não geram vendas</span>?
             </h2>
             <p className="text-slate-600 dark:text-slate-300 text-base sm:text-lg">
               A maioria das agências cria páginas estéticas como cartões de visita digitais, mas esquece que um site sem psicologia de conversão é dinheiro jogado fora.
