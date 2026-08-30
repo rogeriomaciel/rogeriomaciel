@@ -97,12 +97,25 @@ O assistente irá:
 
 ---
 
-### 6. Como Fazer o Deploy (Colocar no Ar)
-Após o build concluído:
-1. A pasta **`dist/`** estará gerada na raiz do projeto contendo todo o site estático minificado (`index.html`, `assets/`, etc.).
-2. Suba o conteúdo da pasta `dist/` para a sua hospedagem:
-   - **VPS / Nginx:** Aponte a raiz do site para a pasta `dist/`.
-   - **Vercel / Netlify / Cloudflare Pages:** Configure o comando de build como `bun run build` e o diretório de saída (*Output Directory*) como `dist`.
+### 6. Como Fazer o Deploy Automático para VPS (Colocar no Ar)
+Com o comando ou skill de publicação, o site é compilado e enviado para o servidor VPS em segundos:
+
+#### **Opção A: Pelo Chat do Antigravity (Skill `publicar-site`)**
+Basta dizer no chat:
+> **`publicar o site`** ou **`fazer deploy na vps`**
+
+#### **Opção B: Via Terminal (Script Automatizado)**
+```bash
+./deploy-vps.sh
+# ou
+bun run deploy
+```
+
+O script e a skill executam automaticamente:
+1. Compilação local com `bun run build`.
+2. Commit e push das alterações para o GitHub.
+3. Compactação e envio seguro dos arquivos estáticos da pasta `dist/` para a VPS.
+4. Extração na pasta configurada (ex: `/var/www/<nome-do-site>`) com permissões web ajustadas.
 
 ---
 
