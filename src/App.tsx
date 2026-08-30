@@ -211,16 +211,16 @@ export default function App() {
 
           {/* Headline */}
           <h1 className="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight leading-[1.1] text-slate-900 dark:text-white">
-            Seu negócio não precisa de mais um site bonito.{' '}
+            Seu negócio não precisa de mais um site apenas bonito.{' '}
             <span className="gradient-text block mt-2">
-              Precisa de uma máquina que coloca clientes prontos no seu WhatsApp.
+              Precisa de uma máquina que coloque clientes qualificados no seu WhatsApp.
             </span>
           </h1>
 
           {/* Subheadline */}
           <p className="text-lg sm:text-xl text-slate-600 dark:text-slate-300 max-w-3xl mx-auto leading-relaxed font-normal">
-            Desenvolvemos Sites ultrarrápidos e persuasivos baseados no princípio{' '}
-            <strong className="text-slate-900 dark:text-white font-semibold">"Vender é um Discurso e Compra é uma Ação"</strong>.
+            Desenvolvemos sites ultrarrápidos e persuasivos baseados no princípio{' '}
+            <strong className="text-slate-900 dark:text-white font-semibold">"Vender é um discurso e comprar é uma ação"</strong>.
             Transforme visitantes anônimos em faturamento real — sem lentidão e sem plugins frágeis.
           </p>
 
@@ -331,7 +331,7 @@ export default function App() {
               O que é uma <span className="gradient-text">Máquina de Aquisição</span>?
             </h2>
             <p className="text-slate-600 dark:text-slate-300 text-base sm:text-lg leading-relaxed">
-              Não é um site institucional estático. É um <strong>sistema digital de 3 camadas</strong> projetado para atrair em milissegundos, conduzir a atenção sem dispersão e entregar clientes prontos para fechar no seu WhatsApp.
+              Não é um site institucional estático e esquecido. É um <strong>sistema digital de 3 camadas</strong> projetado para atrair em milissegundos, conduzir a atenção sem dispersão e entregar clientes prontos para fechar no seu WhatsApp.
             </p>
           </div>
 
@@ -344,7 +344,7 @@ export default function App() {
                 </div>
                 <h3 className="text-2xl font-bold text-slate-900 dark:text-white">1. One Page Linear</h3>
                 <p className="text-slate-600 dark:text-slate-300 text-sm leading-relaxed">
-                  Toda a jornada de decisão concentrada em uma única página fluida com navegação por âncoras. Elimina menus redundantes e guia o visitante diretamente à compra.
+                  Concentra toda a jornada de decisão em uma única página fluida com navegação suave por âncoras. Elimina menus redundantes e conduz o visitante diretamente à compra.
                 </p>
               </div>
               <ul className="space-y-2 text-xs sm:text-sm text-slate-600 dark:text-slate-300 border-t border-slate-200 dark:border-slate-800/80 pt-4">
@@ -367,12 +367,12 @@ export default function App() {
                 </div>
                 <h3 className="text-2xl font-bold text-slate-900 dark:text-white">2. Discurso Persuasivo</h3>
                 <p className="text-slate-600 dark:text-slate-300 text-sm leading-relaxed">
-                  Estrutura de copy inspirada em psicologia comportamental de compras: Proposta Única de Valor irrefutável, quebra prévia de dúvidas e posicionamento de autoridade.
+                  Estrutura inspirada na psicologia comportamental de compras: Proposta Única de Valor clara, quebra prévia de objeções e posicionamento sólido de autoridade.
                 </p>
               </div>
               <ul className="space-y-2 text-xs sm:text-sm text-slate-600 dark:text-slate-300 border-t border-slate-200 dark:border-slate-800/80 pt-4">
                 <li className="flex items-center gap-2">
-                  <Check className="w-4 h-4 text-emerald-500 dark:text-emerald-400 flex-shrink-0" /> Headlines de alto impacto
+                  <Check className="w-4 h-4 text-emerald-500 dark:text-emerald-400 flex-shrink-0" /> Títulos de alto impacto
                 </li>
                 <li className="flex items-center gap-2">
                   <Check className="w-4 h-4 text-emerald-500 dark:text-emerald-400 flex-shrink-0" /> Alinhamento com a dor do cliente
@@ -390,18 +390,18 @@ export default function App() {
                 </div>
                 <h3 className="text-2xl font-bold text-slate-900 dark:text-white">3. Engenharia Jamstack</h3>
                 <p className="text-slate-600 dark:text-slate-300 text-sm leading-relaxed">
-                  Desenvolvido em React + Vite com saída estática. Zero dependência de servidores pesados, segurança máxima e custo zero de hospedagem básica.
+                  Desenvolvida em React e Vite com arquitetura 100% estática. Sem dependência de servidores pesados, com segurança total e alta disponibilidade.
                 </p>
               </div>
               <ul className="space-y-2 text-xs sm:text-sm text-slate-600 dark:text-slate-300 border-t border-slate-200 dark:border-slate-800/80 pt-4">
                 <li className="flex items-center gap-2">
-                  <Check className="w-4 h-4 text-emerald-500 dark:text-emerald-400 flex-shrink-0" /> Carregamento &lt; 0.8s
+                  <Check className="w-4 h-4 text-emerald-500 dark:text-emerald-400 flex-shrink-0" /> Carregamento em &lt; 0.8s
                 </li>
                 <li className="flex items-center gap-2">
                   <Check className="w-4 h-4 text-emerald-500 dark:text-emerald-400 flex-shrink-0" /> Imune a invasões comuns
                 </li>
                 <li className="flex items-center gap-2">
-                  <Check className="w-4 h-4 text-emerald-500 dark:text-emerald-400 flex-shrink-0" /> Otimizado para SEO e GEO (IAs)
+                  <Check className="w-4 h-4 text-emerald-500 dark:text-emerald-400 flex-shrink-0" /> Otimizada para SEO e GEO (IAs)
                 </li>
               </ul>
             </div>
@@ -427,13 +427,13 @@ export default function App() {
               <div className="space-y-1 p-4 rounded-2xl bg-white/80 dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800">
                 <div className="text-3xl sm:text-4xl font-extrabold text-blue-600 dark:text-blue-400">+340%</div>
                 <div className="text-xs font-bold uppercase tracking-wider text-slate-700 dark:text-slate-300">Conversão de Leads</div>
-                <p className="text-xs text-slate-500 dark:text-slate-400">Aumento no volume de clientes qualificados chamando no WhatsApp.</p>
+                <p className="text-xs text-slate-500 dark:text-slate-400">Aumento no volume de clientes qualificados entrando em contato pelo WhatsApp.</p>
               </div>
 
               <div className="space-y-1 p-4 rounded-2xl bg-white/80 dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800">
                 <div className="text-3xl sm:text-4xl font-extrabold text-indigo-600 dark:text-indigo-400">&lt; 15s</div>
                 <div className="text-xs font-bold uppercase tracking-wider text-slate-700 dark:text-slate-300">Tempo de Triagem</div>
-                <p className="text-xs text-slate-500 dark:text-slate-400">Chegada do lead com interesse no serviço exato e sem perguntas soltas.</p>
+                <p className="text-xs text-slate-500 dark:text-slate-400">O lead chega pronto, interessado no serviço exato e sem dúvidas básicas.</p>
               </div>
 
               <div className="space-y-1 p-4 rounded-2xl bg-white/80 dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800">
@@ -448,7 +448,7 @@ export default function App() {
             </div>
 
             <blockquote className="italic text-sm sm:text-base text-slate-600 dark:text-slate-300 border-l-4 border-blue-500 pl-4 py-1 leading-relaxed">
-              "Saímos de uma página tradicional que quase ninguém interagia para um mecanismo ágil onde o cliente entra, entende o valor do serviço e já clica no WhatsApp pronto para agendar."
+              "Saímos de uma página tradicional com a qual quase ninguém interagia para um mecanismo ágil em que o cliente entra, compreende o valor do serviço e já clica no WhatsApp pronto para agendar."
             </blockquote>
           </div>
         </div>
@@ -507,7 +507,7 @@ export default function App() {
               </h2>
               <div className="space-y-4 text-slate-600 dark:text-slate-300 text-base sm:text-lg leading-relaxed">
                 <p>
-                  Sou <strong>Rogério Marinho Maciel</strong>, Cientista da Computação (UFPB) e MBA em Marketing, com mais de <strong>20 anos de liderança em engenharia e arquitetura de software</strong>.
+                  Sou <strong>Rogério Marinho Maciel</strong>, bacharel em Ciência da Computação (UFPB) e pós-graduado com MBA em Marketing, com mais de <strong>20 anos de liderança em engenharia e arquitetura de software</strong>.
                 </p>
                 <p>
                   Atuei como <strong>Head de Aplicação Digital na Neoway</strong> (uma das maiores empresas de Big Data e Inteligência da América Latina) e projetei o <strong>CoreAutoCRM / Kadu Engine</strong> — um ecossistema com máquina de estados finitos (FSM) de <strong>28 módulos de IA</strong> operando com custo ultraeficiente de <strong>R$ 0,08 por loja</strong>.
@@ -519,7 +519,7 @@ export default function App() {
 
               {/* Livros Publicados */}
               <div className="pt-4 space-y-3">
-                <div className="text-xs font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400">Obras &amp; Publicações do Autor:</div>
+                <div className="text-xs font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400">Obras e Publicações do Autor:</div>
                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
                   {books.map((b, i) => (
                     <div key={i} className="glass-panel p-3 rounded-xl border border-slate-200 dark:border-slate-800/80 space-y-1">
@@ -558,7 +558,7 @@ export default function App() {
               <div className="text-2xl font-extrabold text-blue-600 dark:text-blue-400">&lt; 0.8s</div>
               <h3 className="text-lg font-bold text-slate-900 dark:text-white">Velocidade no Celular</h3>
               <p className="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
-                React 19 + Vite com nota 98+ no PageSpeed. Carregamento até 5x mais veloz que WordPress.
+                React 19 + Vite com nota 98+ no PageSpeed. Carregamento até 5x mais rápido do que no WordPress.
               </p>
             </div>
 
@@ -569,7 +569,7 @@ export default function App() {
               <div className="text-2xl font-extrabold text-emerald-600 dark:text-emerald-400">0 Falhas</div>
               <h3 className="text-lg font-bold text-slate-900 dark:text-white">Segurança &amp; Estabilidade</h3>
               <p className="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
-                Pacote 100% estático. Sem banco de dados exposto no frontend e zero risco de plugins quebrarem.
+                Pacote 100% estático. Sem banco de dados exposto no frontend e com zero risco de quebra por plugins.
               </p>
             </div>
 
@@ -580,7 +580,7 @@ export default function App() {
               <div className="text-2xl font-extrabold text-indigo-600 dark:text-indigo-400">100% GEO</div>
               <h3 className="text-lg font-bold text-slate-900 dark:text-white">Otimização para IAs</h3>
               <p className="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
-                Metadados estruturados (llms.txt e Schema JSON-LD) para citação no ChatGPT, Perplexity e Google.
+                Metadados estruturados (llms.txt e Schema JSON-LD) para citação em robôs de IA como ChatGPT, Perplexity e Google.
               </p>
             </div>
 
@@ -591,7 +591,7 @@ export default function App() {
               <div className="text-2xl font-extrabold text-teal-600 dark:text-teal-400">100% Rastreável</div>
               <h3 className="text-lg font-bold text-slate-900 dark:text-white">Custo por Lead e ROI</h3>
               <p className="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
-                GTM e GA4 nativos para mensurar o custo de cada lead e saber o retorno exato dos anúncios.
+                GTM e GA4 nativos para mensurar o custo de cada lead e acompanhar o retorno exato dos anúncios.
               </p>
             </div>
           </div>
@@ -607,7 +607,7 @@ export default function App() {
             </span>
             <h2 className="text-3xl sm:text-5xl font-extrabold text-slate-900 dark:text-white tracking-tight">Perguntas Frequentes</h2>
             <p className="text-slate-600 dark:text-slate-300 text-base sm:text-lg">
-              Tudo o que você precisa saber sobre o desenvolvimento de Sites de alta conversão.
+              Tudo o que você precisa saber sobre o desenvolvimento de sites de alta conversão.
             </p>
           </div>
 

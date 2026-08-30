@@ -45,7 +45,7 @@ export default function Manifesto() {
           {/* Title */}
           <div className="text-center space-y-4">
             <h1 className="text-4xl sm:text-6xl font-extrabold tracking-tight leading-[1.1] text-slate-900 dark:text-white">
-              Vender é um Discurso e <span className="gradient-text">Compra é uma Ação</span>
+              Vender é um Discurso e <span className="gradient-text">Comprar é uma Ação</span>
             </h1>
             <p className="text-sm sm:text-base text-slate-500 dark:text-slate-400 font-medium">
               A filosofia por trás dos sites que geram faturamento real todos os dias.
@@ -115,7 +115,7 @@ export default function Manifesto() {
                 Vamos construir a sua máquina de aquisição?
               </h2>
               <p className="text-slate-600 dark:text-slate-300 text-sm sm:text-base max-w-xl mx-auto">
-                Dê o próximo passo. Converse diretamente comigo no WhatsApp e vamos estruturar o discurso que seu negócio precisa.
+                Dê o próximo passo. Converse diretamente comigo no WhatsApp e vamos estruturar o discurso de que seu negócio precisa.
               </p>
               <div className="pt-2">
                 <a

@@ -21,49 +21,50 @@ Este documento é a **Fonte Única da Verdade** para o desenvolvimento do Site d
 ## 🚀 2. Hero Section (Seção Principal)
 - **Badge de Topo:** ⚡ *Engenharia de Software + Psicologia de Vendas + Inteligência Artificial*
 - **Headline (Título Principal):**  
-  # Seu negócio não precisa de mais um site bonito.  
-  # Precisa de uma máquina que coloca clientes prontos no seu WhatsApp.
+  # Seu negócio não precisa de mais um site apenas bonito.  
+  # Precisa de uma máquina que coloque clientes qualificados no seu WhatsApp.
 - **Subheadline (Subtítulo):**  
-  Desenvolvemos Sites ultrarrápidos e persuasivos baseados no princípio *"Vender é um Discurso e Compra é uma Ação"*. Transforme visitantes anônimos em faturamento real — sem lentidão e sem plugins frágeis.
+  Desenvolvemos sites ultrarrápidos e persuasivos baseados no princípio *"Vender é um discurso e comprar é uma ação"*. Transforme visitantes anônimos em faturamento real — sem lentidão e sem plugins frágeis.
 - **Botões de Ação (CTAs):**
   - **CTA Primário (Destaque):** `Quero um Site de Alta Conversão` → Abre WhatsApp
   - **CTA Secundário:** `Conhecer o Método` → Rola para `#problema`
 - **Badges de Autoridade e Performance:**
-  - 🚀 **Carregamento < 1s:** Arquitetura React estática com nota 98+ no PageSpeed
-  - 🧠 **Método Comprovado:** Psicologia comportamental de alta conversão
-  - 🛠️ **20+ Anos de Engenharia:** Ciência da Computação (UFPB) & MBA Marketing
-  - 📈 **GTM & Métricas:** Rastreamento total de conversão nativo
+  - 🚀 **< 0.8s no Celular:** Arquitetura React estática com nota 98+ no PageSpeed
+  - 🧠 **Psicologia de Compras:** Discurso focado em fechamento
+  - 🛠️ **20+ Anos de Engenharia:** Ex-Head Neoway & Arquiteto IA
+  - 📈 **Rastreamento de Leads:** Google Tag Manager & GA4 nativos
 
 ---
 
 ## ⚠️ 3. Problema & Empatia: O Diagnóstico do Panfleto Digital (`#problema`)
-- **Tag da Seção:** *A Realidade do Mercado*
-- **Título da Seção:** Por que 90% dos sites na internet não vendem absolutamente nada?
+- **Tag da Seção:** *O Diagnóstico Crítico*
+- **Título da Seção:** Por que a maioria dos sites na internet não gera vendas?
 - **Descrição de Impacto:**
-  Muitas empresas investem caro em tráfego e redes sociais, mas enviam pessoas para páginas lentas, cheias de jargões técnicos e menus que confundem o visitante. Se o seu discurso não capturar o cliente em 3 segundos, ele compra do seu concorrente.
+  A maioria das agências cria páginas estéticas como cartões de visita digitais, mas esquece que um site sem psicologia de conversão é dinheiro jogado fora.
 - **Os 3 Vilões da Conversão:**
-  1. 🛑 **Lentidão Oculta no Celular:** Sites pesados em WordPress que demoram 6 segundos para abrir no 4G fazem 50% dos visitantes desistirem antes de ler uma única linha.
-  2. 🛑 **Discurso Vazio e Sem Alma:** Textos institucionais genéricos (*"somos uma empresa com excelência..."*) que não geram conexão emocional nem resolvem as dores reais do cliente.
-  3. 🛑 **Falta de Caminho Claro para o Fechamento:** Páginas com dezenas de botões e links dispersos onde o cliente não sabe qual ação deve tomar para comprar.
+  1. 🛑 **Lentidão que Queima Anúncios:** Sites em WordPress cheios de plugins demoram mais de 4 segundos para abrir. Cada segundo de atraso derruba até 53% dos seus visitantes antes mesmo de verem sua oferta.
+  2. 🛑 **Discurso Institucional Vazio:** Textos genéricos falando sobre "missão, visão e valores" que não dialogam com a dor do cliente, não quebram objeções e não geram urgência de compra.
+  3. 🛑 **Labirinto de Links Sem Foco:** Menus cheios de páginas dispersas que deixam o cliente perdido em vez de conduzi-lo diretamente ao WhatsApp para fechar negócio.
 
 ---
 
 ## 💼 4. Soluções & Serviços: O que é uma Máquina de Aquisição (`#servicos`)
 - **Tag da Seção:** *O Conceito & A Solução*
 - **Título da Seção:** O que é uma Máquina de Aquisição?
-- **Subtítulo:** Não é um site institucional estático. É um sistema digital de 3 camadas projetado para atrair em milissegundos, conduzir a atenção sem dispersão e entregar clientes prontos para fechar no seu WhatsApp.
+- **Subtítulo:** Não é um site institucional estático e esquecido. É um sistema digital de 3 camadas projetado para atrair em milissegundos, conduzir a atenção sem dispersão e entregar clientes prontos para fechar no seu WhatsApp.
 
 ### Os 3 Pilares do Método:
-1. **One Page Linear:** Toda a jornada de decisão concentrada em uma única página fluida com navegação por âncoras.
-2. **Discurso Persuasivo:** Estrutura de copy inspirada em psicologia comportamental de compras e quebra prévia de objeções.
-3. **Engenharia Jamstack:** React + Vite com saída estática, carregamento em menos de 0.8s e segurança total.
+1. **One Page Linear:** Concentra toda a jornada de decisão em uma única página fluida com navegação suave por âncoras.
+2. **Discurso Persuasivo:** Estrutura inspirada na psicologia comportamental de compras: Proposta Única de Valor clara, quebra prévia de objeções e posicionamento sólido de autoridade.
+3. **Engenharia Jamstack:** Desenvolvida em React e Vite com arquitetura 100% estática, carregamento em menos de 0.8s e segurança total.
 
 ### 🌟 Estudo de Caso & Aplicação Real:
 - **Cliente / Plataforma:** Kadosh Auto Center & CoreAutoCRM
 - **Métricas:**
-  - **+340%** na conversão de leads qualificados no WhatsApp.
+  - **+340%** na conversão de leads qualificados entrando em contato pelo WhatsApp.
   - **< 15 segundos** de tempo de triagem de novos contatos.
   - **R$ 0,08** de custo operacional por operação com inteligência artificial.
+  - **Transformação Operacional:** De atendentes sobrecarregados com dúvidas repetitivas para um mecanismo automatizado que qualifica o cliente e responde em menos de 15 segundos, 24 horas por dia.
 
 ---
 
@@ -71,12 +72,12 @@ Este documento é a **Fonte Única da Verdade** para o desenvolvimento do Site d
 - **Tag da Seção:** *Autoridade & Bastidores*
 - **Título da Seção:** Engenharia de Alto Nível e Resultados Reais
 - **Biografia de Autoridade:**
-  - **Rogério Marinho Maciel** é Cientista da Computação (UFPB) com MBA em Marketing e mais de **20 anos de liderança em engenharia e arquitetura de software**.
+  - **Rogério Marinho Maciel** é bacharel em Ciência da Computação (UFPB) com MBA em Marketing e mais de **20 anos de liderança em engenharia e arquitetura de software**.
   - Ex-Head de Aplicação Digital na **Neoway** (uma das maiores empresas de Big Data e Inteligência de Mercado da América Latina).
   - Criador e arquiteto do **CoreAutoCRM / Kadu Engine** (ecossistema conversacional com FSM de 28 módulos de IA operando a R$ 0,08 por loja).
-  - Autor dos livros *"A Vantagem Injusta (Método CORE™)"*, *"CoreAutoCRM – O Sistema Operacional de Fricção Zero"* e *"As 5 Atitudes Diárias do Empreendedor de Sucesso"*.
+  - Autor das obras: *"A Vantagem Injusta"*, *"CoreAutoCRM – O Sistema Operacional de Fricção Zero"* e *"As 5 Atitudes Diárias do Empreendedor de Sucesso"*.
 - **Citação Destacada (Quote):**  
-  > *"Vender é um discurso e compra é uma ação. Quando a sua engenharia de software remove todo o atrito técnico e o seu discurso remove toda a dúvida, o cliente toma a decisão de compra naturalmente."*
+  > *"Vender é um discurso e comprar é uma ação. Quando a sua engenharia de software remove todo o atrito técnico e o seu discurso remove toda a dúvida, o cliente toma a decisão de compra naturalmente."*
 
 ---
 
@@ -84,10 +85,10 @@ Este documento é a **Fonte Única da Verdade** para o desenvolvimento do Site d
 - **Tag da Seção:** *Infraestrutura de Elite*
 - **Título da Seção:** Métricas que superam qualquer agência tradicional
 - **Grid com 4 Pilares com Números Concretos:**
-  1. ⚡ **< 0.8s no Celular:** React 19 + Vite com nota 98+ no PageSpeed. Carregamento até 5x mais rápido que WordPress.
-  2. 🛡️ **0 Falhas:** Pacote 100% estático. Sem banco de dados exposto no frontend e zero risco de plugins quebrarem.
-  3. 🤖 **100% GEO (Otimização para IAs):** Metadados estruturados (llms.txt e Schema JSON-LD) para citação no ChatGPT, Perplexity e Google.
-  4. 📊 **360° ROI (GTM + GA4):** Mensuração exata de cada clique no WhatsApp para otimizar seus anúncios no Google e Meta Ads.
+  1. ⚡ **< 0.8s no Celular:** React 19 + Vite com nota 98+ no PageSpeed. Carregamento até 5x mais rápido do que no WordPress.
+  2. 🛡️ **0 Falhas:** Pacote 100% estático. Sem banco de dados exposto no frontend e com zero risco de quebra por plugins.
+  3. 🤖 **100% GEO (Otimização para IAs):** Metadados estruturados (llms.txt e Schema JSON-LD) para citação em robôs de IA como ChatGPT, Perplexity e Google.
+  4. 📊 **100% Rastreável (Custo por Lead e ROI):** GTM e GA4 nativos para mensurar o custo de cada lead e acompanhar o retorno exato dos anúncios.
 
 ---
 
