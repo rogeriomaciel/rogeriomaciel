@@ -49,4 +49,13 @@ Este documento estabelece as regras de arquitetura, tecnologia e fluxo de deploy
 - **Arquivos LLM:** Toda compilação e geração deve produzir arquivos `public/llms.txt` e `public/llms-full.txt` estruturados com o resumo de autoridade e serviços do especialista para citação em buscas de IA.
 - **Dados Estruturados JSON-LD:** O `index.html` deve conter tags Schema.org (`ProfessionalService`, `Person`, `FAQPage`, `WebSite`) e metatags OpenGraph/Twitter Cards completas.
 
+---
+
+## 7. Deploy Contínuo Automatizado via GitHub Actions (CI/CD)
+- **Pipeline Oficial (`.github/workflows/deploy.yml`):** A publicação em produção ocorre 100% via GitHub Actions a cada push na branch `main`.
+- **Compilação na Nuvem:** O workflow instala o Bun, compila o pacote estático (`dist/`) e transfere via SSH/SCP diretamente para a pasta de destino na VPS.
+- **Comando do Desenvolvedor / IA:** Basta executar `git push origin main` ou usar a skill `publicar-site` para disparar o deploy automaticamente.
+- **Segurança:** As credenciais da VPS residem exclusivamente nos Secrets do GitHub (`DEPLOY_VPS_IP`, `DEPLOY_VPS_USER`, `DEPLOY_VPS_PASS`/`DEPLOY_SSH_KEY`, `DEPLOY_REMOTE_DIR`).
+
+
 
