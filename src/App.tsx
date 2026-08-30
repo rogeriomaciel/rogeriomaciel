@@ -263,8 +263,8 @@ export default function App() {
             </div>
             <div className="glass-panel p-4 rounded-2xl border border-slate-200 dark:border-slate-800/80 hover:border-blue-500/30 transition">
               <BarChart3 className="w-6 h-6 text-emerald-500 dark:text-emerald-400 mb-2" />
-              <div className="font-bold text-slate-900 dark:text-white text-sm sm:text-base">Rastreamento GTM + GA4</div>
-              <div className="text-xs text-slate-500 dark:text-slate-400 mt-0.5">ROI e métricas de leads reais</div>
+              <div className="font-bold text-slate-900 dark:text-white text-sm sm:text-base">Rastreamento de Leads</div>
+              <div className="text-xs text-slate-500 dark:text-slate-400 mt-0.5">Google Tag Manager &amp; GA4 nativos</div>
             </div>
           </div>
         </div>
@@ -442,6 +442,10 @@ export default function App() {
               </div>
             </div>
 
+            <div className="p-4 rounded-2xl bg-blue-50/60 dark:bg-blue-950/40 border border-blue-200 dark:border-blue-800/60 text-sm leading-relaxed text-slate-700 dark:text-slate-200">
+              ⚡ <strong>Transformação Operacional:</strong> De atendentes sobrecarregados com dúvidas repetitivas para um mecanismo automatizado que qualifica o cliente e responde em menos de 15 segundos, 24 horas por dia.
+            </div>
+
             <blockquote className="italic text-sm sm:text-base text-slate-600 dark:text-slate-300 border-l-4 border-blue-500 pl-4 py-1 leading-relaxed">
               "Saímos de uma página tradicional que quase ninguém interagia para um mecanismo ágil onde o cliente entra, entende o valor do serviço e já clica no WhatsApp pronto para agendar."
             </blockquote>
@@ -583,10 +587,10 @@ export default function App() {
               <div className="h-10 w-10 rounded-xl bg-teal-100 dark:bg-teal-950/80 border border-teal-300 dark:border-teal-500/30 flex items-center justify-center text-teal-600 dark:text-teal-400 mb-4">
                 <BarChart3 className="w-5 h-5" />
               </div>
-              <div className="text-2xl font-extrabold text-teal-600 dark:text-teal-400">360° ROI</div>
-              <h3 className="text-lg font-bold text-slate-900 dark:text-white">Rastreamento GTM + GA4</h3>
+              <div className="text-2xl font-extrabold text-teal-600 dark:text-teal-400">100% Rastreável</div>
+              <h3 className="text-lg font-bold text-slate-900 dark:text-white">Custo por Lead e ROI</h3>
               <p className="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
-                Mensuração exata de cada clique no WhatsApp para otimizar seus anúncios no Google e Meta Ads.
+                GTM e GA4 nativos para mensurar o custo de cada lead e saber o retorno exato dos anúncios.
               </p>
             </div>
           </div>
