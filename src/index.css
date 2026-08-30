@@ -6,22 +6,45 @@
   html {
     scroll-behavior: smooth;
   }
+  
+  /* Padrão Claro (Light Mode) */
   body {
-    @apply bg-slate-950 text-slate-100 min-h-screen overflow-x-hidden;
+    @apply bg-slate-50 text-slate-900 min-h-screen overflow-x-hidden transition-colors duration-200;
+  }
+  
+  /* Modo Escuro (Dark Mode) */
+  html.dark body {
+    @apply bg-slate-950 text-slate-100;
   }
 }
 
-/* Utilitários modernos de UI */
+/* Painéis com Glassmorphism Dinâmico */
 .glass-panel {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(226, 232, 240, 0.8);
+  box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.05);
+}
+
+html.dark .glass-panel {
   background: rgba(15, 23, 42, 0.75);
   backdrop-filter: blur(12px);
   border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.3);
 }
 
 .gradient-text {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-blue-600 via-indigo-600 to-teal-600;
+}
+
+html.dark .gradient-text {
   @apply bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-indigo-300 to-teal-300;
 }
 
 .glow-effect {
+  box-shadow: 0 0 50px -10px rgba(59, 130, 246, 0.15);
+}
+
+html.dark .glow-effect {
   box-shadow: 0 0 50px -10px rgba(59, 130, 246, 0.3);
 }
