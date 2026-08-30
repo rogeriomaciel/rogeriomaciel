@@ -4,8 +4,8 @@
   "version": "1.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "tsc && vite build",
+    "dev": "bun scripts/parse-content.ts && vite",
+    "build": "bun scripts/parse-content.ts && tsc && vite build",
     "preview": "vite preview",
     "sync-base": "./sync-base.sh"
   },
