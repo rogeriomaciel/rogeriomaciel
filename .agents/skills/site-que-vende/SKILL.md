@@ -1,19 +1,19 @@
 ---
 name: site-que-vende
 description: >
-  Skill estratégica para criação e manutenção de One Page Sites de alta conversão em React.
-  Baseada na metodologia do livro "Vídeos que Vendem" de Rogério Maciel ("Vender é um discurso e compra é uma ação").
-  Conduz uma entrevista profunda sobre a especialidade e dados técnicos (GTM, WhatsApp, redes sociais, logo),
-  gera a esteira estratégica completa de arquivos .md (Público, Desejos, Crenças, Manifesto, PUV, Carta de Vendas)
+  Skill estratégica e de alta conversão para criação e manutenção de One Page Sites / Máquinas de Aquisição em React.
+  Baseada rigorosamente na metodologia do livro "Vídeos que Vendem" de Rogério Maciel ("Vender é um discurso e compra é uma ação").
+  Conduz uma entrevista profunda sobre especialidade, dados técnicos, provas e diferenciais,
+  gera a esteira estratégica completa de arquivos .md (Público, Desejos, Crenças, Manifesto, PUV, Carta de Vendas, Mecanismo da Máquina)
   e consolida o roteiro mestre em `07-roteiro-site.md`, que serve como fonte única da verdade para a geração e atualização
   do site React com build estático na pasta dist/.
-version: 1.0.0
+version: 2.0.0
 category: build
 ---
 
-# 🚀 Site que Vende — Gerador Estratégico de One Page Sites
+# 🚀 Site que Vende — Máquina de Aquisição e One Page Sites
 
-Esta skill transforma o método **"Vender é um discurso e compra é uma ação"** em uma esteira automatizada para criação de sites de alta conversão.
+Esta skill transforma a premissa **"Vender é um discurso e compra é uma ação"** em uma esteira de engenharia de conversão. O site não é tratado como uma "vitrine institucional", mas como um **mecanismo comercial integrado** que atrai, qualifica e entrega oportunidades de venda prontas no WhatsApp.
 
 ---
 
@@ -28,59 +28,66 @@ Ative esta skill sempre que o usuário disser:
 - "atualizar site pelo roteiro"
 - "recriar site com base no md"
 - "site que vende"
+- "máquina de aquisição"
 
 ---
 
 ## 📋 Fluxo de Trabalho (Workflows)
 
-### Workflow 1: Diagnóstico e Entrevista do Especialista
+### Workflow 1: Diagnóstico e Entrevista Estratégica
 
-Quando o usuário solicitar o início de um novo site, faça as seguintes perguntas objetivas divididas em dois blocos:
+Quando o usuário solicitar o início de um novo site, faça as seguintes perguntas divididas em dois blocos:
 
-#### **Bloco A: Identidade, Links e Dados Técnicos**
+#### **Bloco A: Identidade, Links, Dados Técnicos e Provas**
 1. **Nome da Empresa / Especialista:**
-2. **Logomarca & Cores da Marca:** (Envio do arquivo/link da logo para extração automática da paleta de cores, códigos hexadecimais existentes, ou preferência de estilo caso ainda não possua logo)
+2. **Logomarca & Cores da Marca:** (Envio do arquivo/link da logo para extração automática da paleta pelo `ui-design-system`, códigos hexadecimais, ou preferência de estilo se não tiver logo)
 3. **ID do Google Tag Manager (GTM):** (Ex: `GTM-XXXXXXX` para injeção no head e body)
-4. **WhatsApp de Conversão:** (Número com DDD e mensagem padrão do botão de contato)
+4. **WhatsApp de Conversão:** (Número com DDD e mensagem inicial que o lead enviará ao clicar)
 5. **Redes Sociais:** (Instagram, LinkedIn, YouTube, Facebook, etc.)
+6. **Provas e Evidências Existentes:** (Cases de sucesso, números de clientes atendidos, prints de conversão/WhatsApp, antes & depois ou métricas; caso ainda não possua prints, a IA gerará o **Diagrama do Fluxo do Mecanismo**)
 
-#### **Bloco B: Especialidade & Negócio (O Coração da Estratégia)**
-6. **Qual é a sua especialidade principal e quais serviços/produtos são oferecidos?**
-7. **Qual é o perfil do cliente ideal que você atende no Brasil?**
-8. **Qual é a grande transformação / benefício final que o seu trabalho proporciona?**
-9. **Quais são os principais diferenciais da sua empresa em relação ao mercado?**
+#### **Bloco B: Especialidade, Negócio & Quebra de Objeções (O Motor do Livro)**
+7. **Qual é a sua especialidade principal e quais serviços/produtos são oferecidos?**
+8. **Qual é o perfil do cliente ideal que você atende no Brasil?**
+9. **Qual é a grande transformação / resultado tangível que o seu trabalho proporciona?** (Fazer o cliente visualizar a cena: *"Você acorda com leads qualificados no seu WhatsApp"*)
+10. **Por que a maioria dos concorrentes falha ou os clientes se frustram com o mercado tradicional?** (Identificação das crenças limitantes)
+11. **Quais são os diferenciais e a sua garantia de capacidade de execução?**
 
 ---
 
 ### Workflow 2: Geração da Esteira Estratégica (.md)
 
-Assim que as respostas forem fornecidas, o agente executará a esteira estratégica e criará na raiz do projeto os seguintes arquivos markdown:
+Assim que as respostas forem fornecidas, o agente executará a esteira estratégica e criará na raiz do projeto os seguintes arquivos:
 
-1. **`00-dados-projeto.md`**: Centraliza os dados técnicos (Nome, GTM, WhatsApp, Redes Sociais, Logo e Cores).
+1. **`00-dados-projeto.md`**: Centraliza os dados técnicos (Nome, GTM, WhatsApp, Redes Sociais, Logo, Cores e Provas).
 2. **`01-publico-alvo-desejos-crencas.md`**:
    - Descrição demográfica e psicográfica profunda do público no Brasil.
-   - Tabela com no mínimo 10 desejos do público, crenças associadas a cada desejo e a solução oferecida pela especialidade.
+   - Tabela com no mínimo 10 desejos do público, crenças limitantes associadas a cada desejo e a solução oferecida pela especialidade.
 3. **`02-desejos-crencas-empresa.md`**:
-   - Lista de desejos/objetivos da empresa do especialista.
-   - Crenças e princípios fundamentais do negócio.
+   - Lista de objetivos da empresa do especialista e princípios inegociáveis.
 4. **`03-tabela-intersecao.md`**:
-   - Tabela comparativa destacando os pontos em comum de desejos e crenças entre a empresa e o cliente ideal.
+   - Tabela comparativa destacando os pontos de alinhamento e empatia entre a empresa e o cliente ideal.
 5. **`04-manifesto.md`**:
-   - Manifesto oficial da marca, declaração de propósito, valores e promessa de impacto.
+   - Manifesto oficial da marca e declaração de compromisso com o resultado do cliente.
 6. **`05-puv.md`**:
-   - Proposta Única de Valor (PUV) persuasiva, direta e memorável.
+   - Proposta Única de Valor baseada em **Contraste de Categoria**:
+     *Exemplo:* *"Seu negócio não precisa de mais um site bonito. Precisa de uma máquina que coloca clientes prontos no seu WhatsApp."*
 7. **`06-carta-de-vendas.md`**:
-   - Carta de vendas completa com narrativa envolvente, quebra de objeções e chamada para ação (CTA).
+   - Carta de vendas completa com narrativa envolvente, quebra das crenças limitantes e chamada para ação (CTA).
 8. **`07-roteiro-site.md`** ⭐ **(Fonte Única da Verdade do Site)**:
-   - Estrutura completa e detalhada de cada seção do One Page Site:
-     - **Navbar:** Logo, links de âncoras (`#inicio`, `#sobre`, `#servicos`, `#diferenciais`, `#faq`, `#contato`) e botão CTA WhatsApp.
-     - **Hero Section:** Headline de impacto baseada na PUV, subheadline com benefício claro, badges de autoridade e CTA principal.
-     - **Problema & Empatia (Desejos & Crenças):** Mostra que a empresa entende a dor do visitante.
-     - **Soluções & Serviços:** Grade com cards dos serviços, benefícios práticos e entregáveis.
-     - **Manifesto & Sobre:** História, propósito e autoridade do especialista.
-     - **Diferenciais / Por que nos escolher:** Pontos de valor e provas de excelência.
-     - **FAQ / Quebra de Objeções:** Respostas para as principais dúvidas e crenças limitantes.
-     - **Chamada Final (CTA) & WhatsApp:** Bloco de alta conversão.
+   - Estrutura completa de cada seção da Landing Page / Máquina de Vendas:
+     - **Navbar:** Logo/Nome, âncoras (`#inicio`, `#mecanismo`, `#servicos`, `#provas`, `#sobre`, `#faq`, `#contato`) e CTA WhatsApp.
+     - **Hero Section (PUV + Contraste):** Headline de impacto que separa "site comum" de "máquina comercial", subheadline que tangibiliza a chegada de leads no WhatsApp, badges de autoridade e CTA principal de alta intenção.
+     - **Quebra de Crença / O Problema:** *"Por que a maioria dos sites na internet não vende nada?"* (conteúdo, discurso e ausência de ação).
+     - **O Mecanismo da Máquina ("Como Funciona"):**
+       - 1. Atração & Discurso Estruturado
+       - 2. Qualificação & Quebra de Objeções
+       - 3. Automação, Rastreamento (GTM/GA4) & Conversão no WhatsApp
+     - **Soluções & Entregáveis:** Grade com os pilares da entrega sem parecer "faz-tudo", mas sim um sistema integrado.
+     - **Seção "Me Mostra" (Provas & Evidências):** Prints, diagramas visuais do fluxo, métricas ou depoimentos comprovando a eficácia do método.
+     - **Autoridade Responsável (Sobre):** A experiência do especialista apresentada como evidência real da capacidade de execução (*"Eu construo a máquina, você recebe os clientes"*).
+     - **FAQ Estratégico:** Respostas diretas para as últimas dúvidas e objeções do lead.
+     - **CTA Final de Fechamento de Círculo:** Chamada decisiva alinhada com a promessa da Hero (*"Quero colocar minha máquina de clientes no WhatsApp para rodar"*).
      - **Footer:** Redes sociais, copyright, links rápidos e termos.
 
 ---
@@ -101,10 +108,10 @@ Quando o usuário der o comando **"AGORA VAMOS PROGRAMAR"** ou pedir para criar/
 1. **Leitura da Fonte da Verdade:**
    - O agente lê o arquivo `07-roteiro-site.md` e `00-dados-projeto.md`.
 2. **Criação / Atualização dos Componentes React:**
-   - Utiliza **React + Vite** com **TypeScript** e **CSS moderno / Tailwind**.
-   - Aplica os tokens visuais e boas práticas da skill `ui-design-system`.
+   - Utiliza **React + Vite** com **TypeScript** e **Tailwind CSS**.
+   - Aplica os tokens visuais e boas práticas da skill `ui-design-system` (estética tech/performance, contraste WCAG AA, dark mode com acentos precisos).
    - Injeta o container do **Google Tag Manager** no `index.html`.
-   - Garante navegação suave (*smooth scrolling*) por âncoras (`#id`).
+   - Implementa navegação suave (*smooth scrolling*) por âncoras (`#id`).
 3. **Build Estático via `bun`:**
    - Roda `bun run build`.
    - Valida a geração completa da pasta estática autocontida **`dist/`**.
@@ -115,7 +122,7 @@ Quando o usuário der o comando **"AGORA VAMOS PROGRAMAR"** ou pedir para criar/
 
 ## 🔄 Princípio de Sincronização e Re-geração
 
-Se o usuário editar qualquer texto em `07-roteiro-site.md` no futuro e solicitar uma atualização, o agente deve:
+Se o usuário editar qualquer texto em `07-roteiro-site.md` no futuro e solicitar uma atualização:
 1. Re-ler `07-roteiro-site.md`.
-2. Atualizar os componentes React correspondentes mantendo o design e a harmonia visual.
+2. Atualizar os componentes React correspondentes mantendo a harmonia visual.
 3. Re-executar o build estático com `bun run build`.
