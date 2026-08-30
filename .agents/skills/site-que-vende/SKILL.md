@@ -67,8 +67,11 @@ Assim que as respostas forem fornecidas, o agente executará a esteira estratég
    - Lista de objetivos da empresa do especialista e princípios inegociáveis.
 4. **`03-tabela-intersecao.md`**:
    - Tabela comparativa destacando os pontos de alinhamento e empatia entre a empresa e o cliente ideal.
-5. **`04-manifesto.md`**:
-   - Manifesto oficial da marca e declaração de compromisso com o resultado do cliente.
+5. **`04-manifesto.md`** ⭐ **(O Manifesto Emocional da Marca)**:
+   - Texto visceral e inspirador com a declaração de princípios, o inimigo comum do mercado e a promessa inegociável de transformação.
+   - **Geração da Página Dedicada (`/manifesto.html` / `src/pages/Manifesto.tsx`):**
+     - O agente cria uma página dedicada de altíssimo impacto emocional com design editorial, ritmo de leitura envolvente, tipografia expressiva e suporte a Dark & Light mode.
+     - Inclui link de volta para o site principal e um botão de ação final conectando o sentimento do leitor com o fechamento no WhatsApp.
 6. **`05-puv.md`**:
    - Proposta Única de Valor baseada em **Contraste de Categoria**:
      *Exemplo:* *"Seu negócio não precisa de mais um site bonito. Precisa de uma máquina que coloca clientes prontos no seu WhatsApp."*
@@ -76,7 +79,7 @@ Assim que as respostas forem fornecidas, o agente executará a esteira estratég
    - Carta de vendas completa com narrativa envolvente, quebra das crenças limitantes e chamada para ação (CTA).
 8. **`07-roteiro-site.md`** ⭐ **(Fonte Única da Verdade do Site)**:
    - Estrutura completa de cada seção da Landing Page / Máquina de Vendas:
-     - **Navbar:** Logo/Nome, âncoras (`#inicio`, `#mecanismo`, `#servicos`, `#provas`, `#sobre`, `#faq`, `#contato`) e CTA WhatsApp.
+     - **Navbar:** Logo/Nome, âncoras (`#inicio`, `#mecanismo`, `#servicos`, `#provas`, `#sobre`, `#faq`, `#contato`), link para `[O Manifesto]` e CTA WhatsApp.
      - **Hero Section (PUV + Contraste):** Headline de impacto que separa "site comum" de "máquina comercial", subheadline que tangibiliza a chegada de leads no WhatsApp, badges de autoridade e CTA principal de alta intenção.
      - **Quebra de Crença / O Problema:** *"Por que a maioria dos sites na internet não vende nada?"* (conteúdo, discurso e ausência de ação).
      - **O Mecanismo da Máquina ("Como Funciona"):**
@@ -88,7 +91,7 @@ Assim que as respostas forem fornecidas, o agente executará a esteira estratég
      - **Autoridade Responsável (Sobre):** A experiência do especialista apresentada como evidência real da capacidade de execução (*"Eu construo a máquina, você recebe os clientes"*).
      - **FAQ Estratégico:** Respostas diretas para as últimas dúvidas e objeções do lead.
      - **CTA Final de Fechamento de Círculo:** Chamada decisiva alinhada com a promessa da Hero (*"Quero colocar minha máquina de clientes no WhatsApp para rodar"*).
-     - **Footer:** Redes sociais, copyright, links rápidos e termos.
+     - **Footer:** Redes sociais, copyright, links rápidos, link para `[O Manifesto]` e termos.
 9. **`public/llms.txt` & `public/llms-full.txt`** 🤖:
    - Resumo e base de conhecimento estruturados para robôs de IA (ChatGPT Search, Perplexity, Claude, Gemini, Copilot, Google AI Overviews), contendo o posicionamento, manifesto, PUV, serviços e FAQs.
 
