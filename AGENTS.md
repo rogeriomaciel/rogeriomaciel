@@ -42,3 +42,11 @@ Este documento estabelece as regras de arquitetura, tecnologia e fluxo de deploy
 ## 5. Sincronização com a Base (`sync-base.sh`)
 - Em projetos forkados deste template, quando o usuário enviar comandos como `sync base`, `atualizar base` ou `sincronizar`, o agente deve executar o script `./sync-base.sh` preservando os arquivos de conteúdo específicos do cliente (`00-dados-projeto.md` a `07-roteiro-site.md`).
 
+---
+
+## 6. Otimização para SEO e Mecanismos de IA (GEO & llms.txt)
+- **Robôs de IA (GEO):** O projeto deve manter arquivos `public/robots.txt` permitindo indexação por bots de IA (`GPTBot`, `PerplexityBot`, `ClaudeBot`, `Google-Extended`).
+- **Arquivos LLM:** Toda compilação e geração deve produzir arquivos `public/llms.txt` e `public/llms-full.txt` estruturados com o resumo de autoridade e serviços do especialista para citação em buscas de IA.
+- **Dados Estruturados JSON-LD:** O `index.html` deve conter tags Schema.org (`ProfessionalService`, `Person`, `FAQPage`, `WebSite`) e metatags OpenGraph/Twitter Cards completas.
+
+

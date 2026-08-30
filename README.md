@@ -12,6 +12,7 @@ Template oficial e padronizado para criação de **One Page Sites / Landing Page
 - **Design System & UI:** Tokens visuais modernos, contraste acessível (WCAG AA/AAA) e componentes responsivos via skill `ui-design-system`.
 - **Deploy 100% Estático:** O build gerado pelo `bun run build` cria a pasta autocontida **`dist/`**. Para colocar o site no ar, basta publicar os arquivos da pasta `dist/` em qualquer servidor web ou CDN (Nginx, Apache, VPS, Vercel, Netlify, Cloudflare Pages, S3, etc.). Sem necessidade de servidor Node.js em produção.
 - **Content-as-Code (Fonte Única da Verdade):** Todo o conteúdo do site é centralizado e mantido no arquivo markdown `07-roteiro-site.md`.
+- **SEO & Otimização para IA (GEO & llms.txt):** Preparado nativamente para ser descoberto e citado por robôs de Inteligência Artificial (ChatGPT Search, Perplexity, Claude, Gemini, Copilot, Google AI Overviews) através de `public/llms.txt`, `public/llms-full.txt`, `public/robots.txt`, `sitemap.xml` e Schema.org JSON-LD.
 
 ---
 

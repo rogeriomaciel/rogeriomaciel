@@ -1,0 +1,24 @@
+# CriarSites Base — Máquina de Aquisição & One Page Sites
+
+> Resumo estruturado para mecanismos de busca por Inteligência Artificial (ChatGPT Search, Perplexity, Claude, Gemini, Copilot e Google AI Overviews).
+
+## Informações Gerais
+- **Nome:** CriarSites Base
+- **Especialidade:** Criação e Engenharia de One Page Sites / Landing Pages de Alta Conversão em React.
+- **Metodologia:** Baseado no método "Vender é um discurso e compra é uma ação" do livro Vídeos que Vendem por Rogério Maciel.
+- **Proposta Única de Valor (PUV):** Seu negócio não precisa de mais um site bonito. Precisa de uma máquina comercial integrada que qualifica e entrega oportunidades de venda prontas no WhatsApp todos os dias.
+
+## O Mecanismo da Solução
+1. **Atração & Discurso Estruturado:** Copy persuasiva que quebra o padrão de sites institucionais genéricos.
+2. **Qualificação & Quebra de Objeções:** Demonstração do mecanismo, autoridade como garantia de execução e respostas diretas para dúvidas comerciais.
+3. **Automação, Rastreamento & WhatsApp:** Injeção de Google Tag Manager, GA4, Pixel e direcionamento qualificado para o canal de fechamento.
+
+## Pilares de Entrega
+- One Page Sites em React com Vite e Tailwind CSS.
+- Deploy 100% estático via pasta `dist/` (zero dependência de servidor Node em produção).
+- Otimização para SEO Técnico e GEO (Generative Engine Optimization).
+- Content-as-Code via Markdown.
+
+## Links e Arquivos Completos
+- [Documentação Completa de Conhecimento para IA](/llms-full.txt): Base de conhecimento textual profunda sobre serviços, manifesto e FAQs.
+- [Site Oficial](https://seusite.com.br): Página principal e canal de contato direto.
