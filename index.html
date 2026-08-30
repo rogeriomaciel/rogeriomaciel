@@ -1,17 +1,10 @@
 <!DOCTYPE html>
 <html lang="pt-BR" class="scroll-smooth">
   <head>
-    <!-- Google Tag Manager -->
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-WNXV9S4X');</script>
-    <!-- End Google Tag Manager -->
-
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#020617" />
     
     <!-- Metatags Principais de SEO -->
     <title>Rogério Maciel — Máquinas de Aquisição & One Page Sites de Alta Conversão</title>
@@ -34,10 +27,37 @@
     <link rel="alternate" type="text/plain" href="/llms.txt" title="LLM Summary (llms.txt)" />
     <link rel="alternate" type="text/plain" href="/llms-full.txt" title="LLM Full Knowledge Base (llms-full.txt)" />
 
-    <!-- Google Fonts: Inter & Plus Jakarta Sans -->
+    <!-- Google Fonts: Otimizado com preconnect e carregamento assíncrono não-bloqueante -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" media="print" onload="this.media='all'">
+    <noscript>
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap">
+    </noscript>
+
+    <!-- Google Tag Manager (Carregamento não-bloqueante para performance máxima) -->
+    <script>
+      (function() {
+        var gtmLoaded = false;
+        function loadGTM() {
+          if (gtmLoaded) return;
+          gtmLoaded = true;
+          (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+          new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+          j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+          'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+          })(window,document,'script','dataLayer','GTM-WNXV9S4X');
+        }
+        if ('requestIdleCallback' in window) {
+          window.requestIdleCallback(function() { setTimeout(loadGTM, 1500); }, { timeout: 3000 });
+        } else {
+          window.addEventListener('load', function() { setTimeout(loadGTM, 1500); });
+        }
+        ['touchstart', 'scroll', 'mousemove', 'keydown', 'click'].forEach(function(evt) {
+          window.addEventListener(evt, loadGTM, { once: true, passive: true });
+        });
+      })();
+    </script>
 
     <!-- Dados Estruturados Schema.org JSON-LD para Google e Robôs de IA -->
     <script type="application/ld+json">

@@ -161,10 +161,11 @@ export default function App() {
           {/* Mobile Menu Toggle */}
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="md:hidden p-2 rounded-lg text-slate-400 hover:text-white hover:bg-slate-800 transition"
-            aria-label="Abrir Menu"
+            className="md:hidden p-2 rounded-lg text-slate-300 hover:text-white hover:bg-slate-800 transition"
+            aria-label={mobileMenuOpen ? 'Fechar menu de navegação' : 'Abrir menu de navegação'}
+            aria-expanded={mobileMenuOpen}
           >
-            {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            {mobileMenuOpen ? <X className="w-6 h-6" aria-hidden="true" /> : <Menu className="w-6 h-6" aria-hidden="true" />}
           </button>
         </div>
 
@@ -680,6 +681,7 @@ export default function App() {
           <div className="space-y-4">
             {faqs.map((faq, idx) => {
               const isOpen = openFaqIndex === idx;
+              const faqId = `faq-answer-${idx}`;
               return (
                 <div
                   key={idx}
@@ -687,6 +689,8 @@ export default function App() {
                 >
                   <button
                     onClick={() => toggleFaq(idx)}
+                    aria-expanded={isOpen}
+                    aria-controls={faqId}
                     className="w-full px-6 py-5 text-left flex items-center justify-between gap-4 font-semibold text-base sm:text-lg text-white hover:text-blue-400 transition"
                   >
                     <span>{faq.question}</span>
@@ -695,11 +699,15 @@ export default function App() {
                         isOpen ? 'rotate-180 text-blue-400 bg-blue-950' : ''
                       }`}
                     >
-                      <ChevronDown className="w-5 h-5" />
+                      <ChevronDown className="w-5 h-5" aria-hidden="true" />
                     </div>
                   </button>
                   {isOpen && (
-                    <div className="px-6 pb-6 pt-1 text-sm sm:text-base text-slate-300 leading-relaxed border-t border-slate-800/50">
+                    <div
+                      id={faqId}
+                      role="region"
+                      className="px-6 pb-6 pt-1 text-sm sm:text-base text-slate-300 leading-relaxed border-t border-slate-800/50"
+                    >
                       {faq.answer}
                     </div>
                   )}
