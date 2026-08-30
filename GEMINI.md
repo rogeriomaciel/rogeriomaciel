@@ -9,5 +9,7 @@ Consulte o arquivo completo de diretrizes em [AGENTS.md](file:///rogerio/core/cr
 4. **Design System**: Utilizar a skill `ui-design-system` para manter coerência visual, cores acessíveis (WCAG AA), tipografia responsiva e componentes reutilizáveis.
 5. **Sincronização Simples**: O comando `./sync-base.sh` ou a mensagem `sync base` no chat atualiza o fork com o template base automaticamente.
 6. **SEO & Busca por IA (GEO)**: Presença mandatória de `public/llms.txt`, `public/llms-full.txt`, `robots.txt` para bots de IA e Schema.org JSON-LD no `index.html`.
+7. **Deploy Contínuo (CI/CD)**: Publicação 100% automatizada na nuvem via GitHub Actions (`.github/workflows/deploy.yml`) a cada push na branch `main`.
+
 
 
