@@ -35,8 +35,9 @@ jobs:
           key: ${{ secrets.DEPLOY_SSH_KEY || secrets.VPS_SSH_KEY }}
           script: |
             TARGET_DIR="${{ secrets.DEPLOY_REMOTE_DIR || secrets.DEPLOY_PATH || format('/var/www/{0}', github.event.repository.name) }}"
-            mkdir -p "$TARGET_DIR"
-            chmod -R u+rwx "$TARGET_DIR" 2>/dev/null || true
+            sudo mkdir -p "$TARGET_DIR" 2>/dev/null || mkdir -p "$TARGET_DIR"
+            sudo chown -R $(whoami) "$TARGET_DIR" 2>/dev/null || true
+            sudo chmod -R 777 "$TARGET_DIR" 2>/dev/null || chmod -R 777 "$TARGET_DIR" 2>/dev/null || true
             rm -rf "$TARGET_DIR"/* 2>/dev/null || true
 
       - name: 📤 Enviar arquivos da pasta dist/ para a VPS
