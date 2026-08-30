@@ -215,7 +215,7 @@ export default function App() {
 
           {/* Subheadline */}
           <p className="text-lg sm:text-xl text-slate-300 max-w-3xl mx-auto leading-relaxed font-normal">
-            Desenvolvemos Sites ultrarrápidos e persuasivos baseados no método autoral{' '}
+            Desenvolvemos Sites ultrarrápidos e persuasivos baseados no princípio{' '}
             <strong className="text-white font-semibold">"Vender é um Discurso e Compra é uma Ação"</strong>.
             Transforme visitantes anônimos em faturamento real — sem lentidão e sem plugins frágeis.
           </p>
@@ -369,7 +369,7 @@ export default function App() {
                     </li>
                     <li className="flex items-start gap-2">
                       <Check className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" />
-                      <span>Copy persuasiva autoral baseada no método</span>
+                      <span>Copy persuasiva focada em conversão</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <Check className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" />
@@ -568,7 +568,7 @@ export default function App() {
                     <div className="text-xs text-slate-400">Arquiteto de Software & Conversão</div>
                   </div>
                   <span className="text-xs font-mono text-blue-400 bg-blue-950 px-2.5 py-1 rounded-md border border-blue-500/30">
-                    Método Autoral
+                    Engenharia & Vendas
                   </span>
                 </div>
               </div>
@@ -577,8 +577,8 @@ export default function App() {
 
           {/* Obras & Publicações */}
           <div className="pt-8 space-y-6">
-            <h3 className="text-2xl font-bold text-white tracking-tight">Obras & Publicações Autorais</h3>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            <h3 className="text-2xl font-bold text-white tracking-tight">Obras & Livros Publicados</h3>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
               {books.map((book, idx) => (
                 <div
                   key={idx}
@@ -630,9 +630,9 @@ export default function App() {
               <div className="w-12 h-12 rounded-2xl bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-400">
                 <BookOpen className="w-6 h-6" />
               </div>
-              <h3 className="text-lg font-bold text-white">Metodologia de Vendas Publicada</h3>
+              <h3 className="text-lg font-bold text-white">Psicologia de Vendas Aplicada</h3>
               <p className="text-sm text-slate-300 leading-relaxed">
-                Textos e hierarquia visual baseados em psicologia comportamental e métodos autorais testados.
+                Textos e hierarquia visual baseados em comportamento de compra e princípios de conversão testados.
               </p>
             </div>
 

@@ -20,6 +20,6 @@ A destilação estratégica da proposta de valor exclusiva de Rogério Maciel pa
 
 ### 3. Micro-Promessa de Impacto (Badges de Conversão)
 - ⚡ **Carregamento Instantâneo (< 1s):** Arquitetura React estática com nota máxima no Google PageSpeed.
-- 🎯 **Método Autoral Comprovado:** Baseado em psicologia de conversão e frameworks autorais de vendas.
+- 🎯 **Psicologia Comportamental Validada:** Baseado em princípios comprovados de conversão e vendas.
 - 💬 **Foco Total em WhatsApp:** Estrutura pensada para conduzir o visitante direto ao fechamento.
 - 🔒 **Zero Manutenção Frágil:** 100% estático, sem WordPress pesado e imune a falhas de segurança.

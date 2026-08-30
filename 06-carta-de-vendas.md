@@ -43,7 +43,7 @@ Não sou apenas um criador de páginas; sou **Cientista da Computação (UFPB)**
 Ao criar o seu site comigo, você recebe:
 
 1. **Engenharia de Performance Pura (React + Vite):** Seu site abre instantaneamente em qualquer smartphone, garantindo que nenhum lead seja perdido por lentidão.
-2. **Copywriting com Psicologia de Vendas Autoral:** Textos desenhados especificamente para o público brasileiro, estruturados para gerar empatia, autoridade e desejo imediato.
+2. **Copywriting com Psicologia Comportamental de Vendas:** Textos desenhados especificamente para o público brasileiro, estruturados para gerar empatia, autoridade e desejo imediato.
 3. **Design Executivo & Premium:** Uma estética elegante, moderna e limpa que eleva o valor percebido do seu produto ou serviço.
 4. **Infraestrutura Pronta para Anúncios:** Google Tag Manager integrado (`GTM-WNXV9S4X`) para você mensurar cada clique e otimizar suas campanhas de tráfego.
 5. **Zero Dor de Cabeça com Manutenção:** Código 100% estático e seguro, sem plugins que quebram ou exigem atualizações caras.

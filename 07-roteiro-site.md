@@ -24,7 +24,7 @@ Este documento é a **Fonte Única da Verdade** para o desenvolvimento do Site d
   # Seu negócio não precisa de mais um site bonito.  
   # Precisa de uma máquina que coloca clientes prontos no seu WhatsApp.
 - **Subheadline (Subtítulo):**  
-  Desenvolvemos Sites ultrarrápidos e persuasivos baseados no método autoral *"Vender é um Discurso e Compra é uma Ação"*. Transforme visitantes anônimos em faturamento real — sem lentidão e sem plugins frágeis.
+  Desenvolvemos Sites ultrarrápidos e persuasivos baseados no princípio *"Vender é um Discurso e Compra é uma Ação"*. Transforme visitantes anônimos em faturamento real — sem lentidão e sem plugins frágeis.
 - **Botões de Ação (CTAs):**
   - **CTA Primário (Destaque):** `Quero um Site de Alta Conversão` → Abre WhatsApp
   - **CTA Secundário:** `Conhecer o Método` → Rola para `#problema`
@@ -56,7 +56,7 @@ Este documento é a **Fonte Única da Verdade** para o desenvolvimento do Site d
 ### Cards de Serviços:
 1. **Sites de Alta Conversão (Core Service)**
    - *O que é:* Página única contínua com carregamento instantâneo, design executivo premium e funil de microdecisões até o WhatsApp.
-   - *Entregáveis:* Estrutura React + Vite estática, copy persuasiva autoral, design responsivo mobile-first, injeção de GTM e botões inteligentes de conversão.
+   - *Entregáveis:* Estrutura React + Vite estática, copy persuasiva focada em conversão, design responsivo mobile-first, injeção de GTM e botões inteligentes de conversão.
    - *Benefício:* Máxima taxa de conversão do seu tráfego atual e zero custo com servidores pesados.
 
 2. **Diagnóstico & Reestruturação de Copy de Vendas**
@@ -90,7 +90,7 @@ Este documento é a **Fonte Única da Verdade** para o desenvolvimento do Site d
 - **Título da Seção:** Por que os nossos sites convertem mais?
 - **Grid com 4 Pilares de Excelência:**
   1. ⚡ **Velocidade Extrema (React + Vite Puro):** Sem WordPress, sem temas inchados, sem lentidão. O site carrega em fração de segundo no celular mais simples.
-  2. 🧠 **Metodologia de Vendas Publicada:** Textos e hierarquia visual baseados em psicologia comportamental e métodos autorais testados.
+  2. 🧠 **Psicologia de Vendas Aplicada:** Textos e hierarquia visual baseados em comportamento de compra e princípios de conversão testados.
   3. 🛡️ **Segurança e Estabilidade Absolutas:** Pacote 100% estático. Zero banco de dados vulnerável a invasões e zero plugins que quebram com o tempo.
   4. 📊 **Rastreamento de Elite (GTM Integrado):** Saiba com exatidão quem clicou no WhatsApp, de onde veio a campanha e como otimizar seus anúncios.
 
