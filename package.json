@@ -7,7 +7,6 @@
     "dev": "vite",
     "build": "tsc && vite build",
     "preview": "vite preview",
-    "deploy": "./deploy-vps.sh",
     "sync-base": "./sync-base.sh"
   },
   "dependencies": {
