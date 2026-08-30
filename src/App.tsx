@@ -2,6 +2,7 @@ import { useState } from 'react';
 import {
   ArrowRight,
   Sparkles,
+  CheckCircle2,
   MessageSquare,
   Zap,
   ShieldCheck,
@@ -13,8 +14,7 @@ import {
   AlertTriangle,
   Gauge,
   BarChart3,
-  Check,
-  Award
+  Check
 } from 'lucide-react';
 import { ThemeToggle } from './components/ThemeToggle';
 
@@ -70,7 +70,7 @@ export default function App() {
     {
       question: 'Eu poderei alterar o conteúdo do meu site no futuro?',
       answer:
-        'Sim! Todo o conteúdo do site é gerido com clareza através de arquivos de roteiro (Content-as-Code). As atualizações são estruturadas, previsíveis e você pode recompilar quando quiser.',
+        'Sim! Todo o conteúdo do site é gerido com clareza através de arquivos de roteiro (Content-as-Code). As atualizações são estruturadas e previsíveis.',
     },
     {
       question: 'O site já vem configurado para anúncios no Google e Meta (Facebook/Instagram)?',
@@ -145,7 +145,7 @@ export default function App() {
               href={whatsappUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-emerald-600 hover:bg-emerald-500 text-white font-semibold text-sm transition shadow-lg shadow-emerald-600/20 hover:scale-105 transform duration-150"
+              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-semibold text-sm transition shadow-lg shadow-emerald-500/20 hover:scale-105 transform duration-150"
             >
               <MessageSquare className="w-4 h-4" />
               Falar no WhatsApp
@@ -185,7 +185,7 @@ export default function App() {
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={() => setMobileMenuOpen(false)}
-                className="w-full inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl bg-emerald-600 text-white font-semibold text-sm shadow-md"
+                className="w-full inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl bg-emerald-500 text-slate-950 font-semibold text-sm shadow-md"
               >
                 <MessageSquare className="w-4 h-4" />
                 Falar no WhatsApp
@@ -196,12 +196,19 @@ export default function App() {
       </header>
 
       {/* 2. HERO SECTION */}
-      <section id="inicio" className="relative pt-16 pb-24 md:pt-24 md:pb-32 px-4 sm:px-6 lg:px-8">
+      <section id="inicio" className="relative pt-16 pb-24 md:pt-24 md:pb-32 px-4 sm:px-6 lg:px-8 overflow-hidden">
+        {/* Ambient Glows */}
+        <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[350px] bg-blue-500/10 dark:bg-blue-600/15 blur-[120px] rounded-full pointer-events-none -z-10" />
+        <div className="absolute top-1/3 right-10 w-[300px] h-[300px] bg-indigo-500/10 dark:bg-indigo-600/10 blur-[100px] rounded-full pointer-events-none -z-10" />
+
         <div className="max-w-5xl mx-auto text-center space-y-8">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-100 dark:bg-blue-950/80 border border-blue-300 dark:border-blue-500/40 text-blue-700 dark:text-blue-300 text-xs sm:text-sm font-semibold">
-            ⚡ Engenharia de Software + Psicologia de Vendas + Inteligência Artificial
+          {/* Badge */}
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-100 dark:bg-blue-950/80 border border-blue-300 dark:border-blue-500/40 text-blue-700 dark:text-blue-300 text-xs sm:text-sm font-semibold tracking-wide shadow-inner">
+            <Sparkles className="w-4 h-4 text-blue-600 dark:text-blue-400 animate-pulse" />
+            Engenharia de Software + Psicologia de Vendas + Inteligência Artificial
           </div>
 
+          {/* Headline */}
           <h1 className="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight leading-[1.1] text-slate-900 dark:text-white">
             Seu negócio não precisa de mais um site bonito.{' '}
             <span className="gradient-text block mt-2">
@@ -209,6 +216,7 @@ export default function App() {
             </span>
           </h1>
 
+          {/* Subheadline */}
           <p className="text-lg sm:text-xl text-slate-600 dark:text-slate-300 max-w-3xl mx-auto leading-relaxed font-normal">
             Desenvolvemos Sites ultrarrápidos e persuasivos baseados no princípio{' '}
             <strong className="text-slate-900 dark:text-white font-semibold">"Vender é um Discurso e Compra é uma Ação"</strong>.
@@ -221,7 +229,7 @@ export default function App() {
               href={whatsappUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-8 py-4 rounded-2xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-base transition duration-200 shadow-xl shadow-emerald-600/25 hover:scale-105 transform glow-emerald"
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-8 py-4 rounded-2xl bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold text-base transition duration-200 shadow-xl shadow-emerald-500/25 hover:scale-105 transform glow-emerald"
             >
               <MessageSquare className="w-5 h-5" />
               Quero um Site de Alta Conversão
@@ -236,27 +244,27 @@ export default function App() {
             </a>
           </div>
 
-          {/* Badges de Performance */}
+          {/* Badges de Autoridade e Performance */}
           <div className="pt-12 grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 text-left">
             <div className="glass-panel p-4 rounded-2xl border border-slate-200 dark:border-slate-800/80 hover:border-blue-500/30 transition">
               <Gauge className="w-6 h-6 text-sky-500 dark:text-sky-400 mb-2" />
               <div className="font-bold text-slate-900 dark:text-white text-sm sm:text-base">Carregamento &lt; 1s</div>
-              <div className="text-xs text-slate-500 dark:text-slate-400">Zero perda por lentidão</div>
+              <div className="text-xs text-slate-500 dark:text-slate-400 mt-0.5">Nota 98+ no Google PageSpeed</div>
             </div>
             <div className="glass-panel p-4 rounded-2xl border border-slate-200 dark:border-slate-800/80 hover:border-blue-500/30 transition">
-              <Zap className="w-6 h-6 text-amber-500 dark:text-amber-400 mb-2" />
-              <div className="font-bold text-slate-900 dark:text-white text-sm sm:text-base">One Page Direta</div>
-              <div className="text-xs text-slate-500 dark:text-slate-400">Jornada fluida e sem atrito</div>
+              <BookOpen className="w-6 h-6 text-amber-500 dark:text-amber-400 mb-2" />
+              <div className="font-bold text-slate-900 dark:text-white text-sm sm:text-base">Método Comprovado</div>
+              <div className="text-xs text-slate-500 dark:text-slate-400 mt-0.5">Psicologia de Conversão</div>
             </div>
             <div className="glass-panel p-4 rounded-2xl border border-slate-200 dark:border-slate-800/80 hover:border-blue-500/30 transition">
-              <ShieldCheck className="w-6 h-6 text-emerald-500 dark:text-emerald-400 mb-2" />
-              <div className="font-bold text-slate-900 dark:text-white text-sm sm:text-base">Código Puro &amp; Seguro</div>
-              <div className="text-xs text-slate-500 dark:text-slate-400">Sem WordPress, sem invasões</div>
+              <Cpu className="w-6 h-6 text-indigo-500 dark:text-indigo-400 mb-2" />
+              <div className="font-bold text-slate-900 dark:text-white text-sm sm:text-base">20+ Anos de Engenharia</div>
+              <div className="text-xs text-slate-500 dark:text-slate-400 mt-0.5">Ciência da Computação & MBA</div>
             </div>
             <div className="glass-panel p-4 rounded-2xl border border-slate-200 dark:border-slate-800/80 hover:border-blue-500/30 transition">
-              <BarChart3 className="w-6 h-6 text-indigo-500 dark:text-indigo-400 mb-2" />
+              <BarChart3 className="w-6 h-6 text-emerald-500 dark:text-emerald-400 mb-2" />
               <div className="font-bold text-slate-900 dark:text-white text-sm sm:text-base">GTM + GA4 Nativo</div>
-              <div className="text-xs text-slate-500 dark:text-slate-400">Métricas de conversão reais</div>
+              <div className="text-xs text-slate-500 dark:text-slate-400 mt-0.5">Rastreamento de Leads</div>
             </div>
           </div>
         </div>
@@ -266,46 +274,44 @@ export default function App() {
       <section id="problema" className="py-20 md:py-28 bg-slate-100/70 dark:bg-slate-900/40 border-y border-slate-200 dark:border-slate-800/80 px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto space-y-12">
           <div className="text-center max-w-3xl mx-auto space-y-4">
-            <span className="text-xs sm:text-sm font-bold uppercase tracking-widest text-red-600 dark:text-red-400 flex items-center justify-center gap-2">
-              <AlertTriangle className="w-4 h-4" />
-              O Grande Erro do Mercado
+            <span className="text-xs sm:text-sm font-bold tracking-widest text-rose-600 dark:text-rose-400 uppercase flex items-center justify-center gap-1.5">
+              <AlertTriangle className="w-4 h-4" /> O Diagnóstico Crítico
             </span>
             <h2 className="text-3xl sm:text-5xl font-extrabold text-slate-900 dark:text-white tracking-tight">
-              Por que a maioria dos sites na internet{' '}
-              <span className="text-red-600 dark:text-red-400">não gera nenhum cliente?</span>
+              Por que a maioria dos sites na internet <span className="text-rose-600 dark:text-rose-400">não gera vendas</span>?
             </h2>
-            <p className="text-base sm:text-lg text-slate-600 dark:text-slate-400">
+            <p className="text-slate-600 dark:text-slate-300 text-base sm:text-lg">
               A maioria das agências cria páginas estéticas como cartões de visita digitais, mas esquece que um site sem psicologia de conversão é dinheiro jogado fora.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="glass-panel p-8 rounded-3xl border border-slate-200 dark:border-slate-800 space-y-4 hover:border-red-500/30 transition">
-              <div className="h-12 w-12 rounded-2xl bg-red-100 dark:bg-red-950/60 border border-red-300 dark:border-red-800/50 flex items-center justify-center text-red-600 dark:text-red-400 font-bold text-lg">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
+            <div className="glass-panel p-6 sm:p-8 rounded-2xl border border-slate-200 dark:border-slate-800 space-y-4 hover:border-rose-500/30 transition">
+              <div className="h-12 w-12 rounded-xl bg-rose-100 dark:bg-rose-950/60 border border-rose-300 dark:border-rose-800/50 flex items-center justify-center text-rose-600 dark:text-rose-400 font-bold text-lg">
                 1
               </div>
               <h3 className="text-xl font-bold text-slate-900 dark:text-white">Lentidão que Queima Anúncios</h3>
-              <p className="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
+              <p className="text-slate-600 dark:text-slate-300 text-sm leading-relaxed">
                 Sites em WordPress cheios de plugins demoram mais de 4 segundos para abrir. Cada segundo de atraso derruba até 53% dos seus visitantes antes mesmo de verem sua oferta.
               </p>
             </div>
 
-            <div className="glass-panel p-8 rounded-3xl border border-slate-200 dark:border-slate-800 space-y-4 hover:border-red-500/30 transition">
-              <div className="h-12 w-12 rounded-2xl bg-red-100 dark:bg-red-950/60 border border-red-300 dark:border-red-800/50 flex items-center justify-center text-red-600 dark:text-red-400 font-bold text-lg">
+            <div className="glass-panel p-6 sm:p-8 rounded-2xl border border-slate-200 dark:border-slate-800 space-y-4 hover:border-rose-500/30 transition">
+              <div className="h-12 w-12 rounded-xl bg-rose-100 dark:bg-rose-950/60 border border-rose-300 dark:border-rose-800/50 flex items-center justify-center text-rose-600 dark:text-rose-400 font-bold text-lg">
                 2
               </div>
               <h3 className="text-xl font-bold text-slate-900 dark:text-white">Discurso Institucional Vazio</h3>
-              <p className="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
+              <p className="text-slate-600 dark:text-slate-300 text-sm leading-relaxed">
                 Textos genéricos falando sobre "missão, visão e valores" que não dialogam com a dor do cliente, não quebram objeções e não geram urgência de compra.
               </p>
             </div>
 
-            <div className="glass-panel p-8 rounded-3xl border border-slate-200 dark:border-slate-800 space-y-4 hover:border-red-500/30 transition">
-              <div className="h-12 w-12 rounded-2xl bg-red-100 dark:bg-red-950/60 border border-red-300 dark:border-red-800/50 flex items-center justify-center text-red-600 dark:text-red-400 font-bold text-lg">
+            <div className="glass-panel p-6 sm:p-8 rounded-2xl border border-slate-200 dark:border-slate-800 space-y-4 hover:border-rose-500/30 transition">
+              <div className="h-12 w-12 rounded-xl bg-rose-100 dark:bg-rose-950/60 border border-rose-300 dark:border-rose-800/50 flex items-center justify-center text-rose-600 dark:text-rose-400 font-bold text-lg">
                 3
               </div>
               <h3 className="text-xl font-bold text-slate-900 dark:text-white">Labirinto de Links Sem Foco</h3>
-              <p className="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
+              <p className="text-slate-600 dark:text-slate-300 text-sm leading-relaxed">
                 Menus cheios de páginas dispersas que deixam o cliente perdido em vez de conduzi-lo diretamente ao WhatsApp para fechar negócio.
               </p>
             </div>
@@ -313,18 +319,18 @@ export default function App() {
         </div>
       </section>
 
-      {/* 4. SOLUÇÕES E SERVIÇOS */}
+      {/* 4. A SOLUÇÃO: O MÉTODO */}
       <section id="servicos" className="py-20 md:py-32 px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto space-y-16">
           <div className="text-center max-w-3xl mx-auto space-y-4">
-            <span className="text-xs sm:text-sm font-bold uppercase tracking-widest text-blue-600 dark:text-blue-400">
-              O Que Construímos
+            <span className="text-xs sm:text-sm font-bold tracking-widest text-blue-600 dark:text-blue-400 uppercase">
+              O Método
             </span>
             <h2 className="text-3xl sm:text-5xl font-extrabold text-slate-900 dark:text-white tracking-tight">
-              A Engenharia de uma <span className="gradient-text">Máquina de Vendas</span>
+              Os 3 Pilares dos <span className="gradient-text">Sites de Alta Conversão</span>
             </h2>
-            <p className="text-base sm:text-lg text-slate-600 dark:text-slate-400">
-              Combinamos o melhor da tecnologia de ponta com copywriting orientado à ação imediata.
+            <p className="text-slate-600 dark:text-slate-300 text-base sm:text-lg">
+              Um modelo que substitui páginas institucionais lentas por esteiras integradas de fechamento comercial.
             </p>
           </div>
 
@@ -334,20 +340,20 @@ export default function App() {
                 <div className="h-14 w-14 rounded-2xl bg-blue-100 dark:bg-blue-950/80 border border-blue-300 dark:border-blue-500/30 flex items-center justify-center text-blue-600 dark:text-blue-400">
                   <Sparkles className="w-7 h-7" />
                 </div>
-                <h3 className="text-2xl font-bold text-slate-900 dark:text-white">One Page Sites de Alta Conversão</h3>
-                <p className="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
-                  Sites de página única focados em conduzir o lead para o fechamento no WhatsApp. Carregamento quase instantâneo e layout 100% responsivo.
+                <h3 className="text-2xl font-bold text-slate-900 dark:text-white">One Page Linear</h3>
+                <p className="text-slate-600 dark:text-slate-300 text-sm leading-relaxed">
+                  Toda a jornada de decisão concentrada em uma única página fluida com navegação suave por âncoras, eliminando distrações e menus redundantes.
                 </p>
               </div>
               <ul className="space-y-2 text-xs sm:text-sm text-slate-600 dark:text-slate-300 border-t border-slate-200 dark:border-slate-800/80 pt-4">
                 <li className="flex items-center gap-2">
-                  <Check className="w-4 h-4 text-emerald-500 dark:text-emerald-400 flex-shrink-0" /> React 19 + Vite de ultra performance
+                  <Check className="w-4 h-4 text-emerald-500 dark:text-emerald-400 flex-shrink-0" /> Zero cliques perdidos
                 </li>
                 <li className="flex items-center gap-2">
-                  <Check className="w-4 h-4 text-emerald-500 dark:text-emerald-400 flex-shrink-0" /> Deploy estático sem custos de servidor
+                  <Check className="w-4 h-4 text-emerald-500 dark:text-emerald-400 flex-shrink-0" /> Foco absoluto na conversão
                 </li>
                 <li className="flex items-center gap-2">
-                  <Check className="w-4 h-4 text-emerald-500 dark:text-emerald-400 flex-shrink-0" /> Design moderno e Dark/Light Mode
+                  <Check className="w-4 h-4 text-emerald-500 dark:text-emerald-400 flex-shrink-0" /> Navegação suave em 4G
                 </li>
               </ul>
             </div>
@@ -357,20 +363,20 @@ export default function App() {
                 <div className="h-14 w-14 rounded-2xl bg-indigo-100 dark:bg-indigo-950/80 border border-indigo-300 dark:border-indigo-500/30 flex items-center justify-center text-indigo-600 dark:text-indigo-400">
                   <BookOpen className="w-7 h-7" />
                 </div>
-                <h3 className="text-2xl font-bold text-slate-900 dark:text-white">Engenharia de Copywriting</h3>
-                <p className="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
-                  Construção do roteiro completo baseado no método do livro <em>"Vídeos que Vendem"</em>: PUV irrefutável, quebra de objeções e chamadas irresistíveis.
+                <h3 className="text-2xl font-bold text-slate-900 dark:text-white">Discurso Persuasivo</h3>
+                <p className="text-slate-600 dark:text-slate-300 text-sm leading-relaxed">
+                  Estrutura de copy inspirada na psicologia de vendas: Proposta Única de Valor irrefutável, quebra antecipada de objeções e prova de autoridade.
                 </p>
               </div>
               <ul className="space-y-2 text-xs sm:text-sm text-slate-600 dark:text-slate-300 border-t border-slate-200 dark:border-slate-800/80 pt-4">
                 <li className="flex items-center gap-2">
-                  <Check className="w-4 h-4 text-emerald-500 dark:text-emerald-400 flex-shrink-0" /> Headlines que retêm a atenção
+                  <Check className="w-4 h-4 text-emerald-500 dark:text-emerald-400 flex-shrink-0" /> Headlines de alto impacto
                 </li>
                 <li className="flex items-center gap-2">
-                  <Check className="w-4 h-4 text-emerald-500 dark:text-emerald-400 flex-shrink-0" /> Estrutura de discurso persuasivo
+                  <Check className="w-4 h-4 text-emerald-500 dark:text-emerald-400 flex-shrink-0" /> Alinhamento com a dor do cliente
                 </li>
                 <li className="flex items-center gap-2">
-                  <Check className="w-4 h-4 text-emerald-500 dark:text-emerald-400 flex-shrink-0" /> Roteiro em Content-as-Code
+                  <Check className="w-4 h-4 text-emerald-500 dark:text-emerald-400 flex-shrink-0" /> Chamadas para ação irresistíveis
                 </li>
               </ul>
             </div>
@@ -380,20 +386,20 @@ export default function App() {
                 <div className="h-14 w-14 rounded-2xl bg-teal-100 dark:bg-teal-950/80 border border-teal-300 dark:border-teal-500/30 flex items-center justify-center text-teal-600 dark:text-teal-400">
                   <Cpu className="w-7 h-7" />
                 </div>
-                <h3 className="text-2xl font-bold text-slate-900 dark:text-white">Rastreamento &amp; Busca por IA</h3>
-                <p className="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
-                  Configuração profissional de Google Tag Manager (GTM), GA4 e otimização para robôs de Inteligência Artificial (GEO e llms.txt).
+                <h3 className="text-2xl font-bold text-slate-900 dark:text-white">Engenharia Jamstack</h3>
+                <p className="text-slate-600 dark:text-slate-300 text-sm leading-relaxed">
+                  Desenvolvido em React 19 + Vite com saída estática. Zero dependência de servidores pesados, segurança máxima e custo zero de hospedagem básica.
                 </p>
               </div>
               <ul className="space-y-2 text-xs sm:text-sm text-slate-600 dark:text-slate-300 border-t border-slate-200 dark:border-slate-800/80 pt-4">
                 <li className="flex items-center gap-2">
-                  <Check className="w-4 h-4 text-emerald-500 dark:text-emerald-400 flex-shrink-0" /> Rastreamento de cliques no WhatsApp
+                  <Check className="w-4 h-4 text-emerald-500 dark:text-emerald-400 flex-shrink-0" /> Carregamento instantâneo
                 </li>
                 <li className="flex items-center gap-2">
-                  <Check className="w-4 h-4 text-emerald-500 dark:text-emerald-400 flex-shrink-0" /> Schema JSON-LD &amp; llms.txt
+                  <Check className="w-4 h-4 text-emerald-500 dark:text-emerald-400 flex-shrink-0" /> Imune a invasões comuns
                 </li>
                 <li className="flex items-center gap-2">
-                  <Check className="w-4 h-4 text-emerald-500 dark:text-emerald-400 flex-shrink-0" /> Indexação para ChatGPT &amp; Perplexity
+                  <Check className="w-4 h-4 text-emerald-500 dark:text-emerald-400 flex-shrink-0" /> Otimizado para SEO e GEO (IA)
                 </li>
               </ul>
             </div>
@@ -401,7 +407,7 @@ export default function App() {
         </div>
       </section>
 
-      {/* 5. SOBRE O ESPECIALISTA */}
+      {/* 5. SOBRE ROGÉRIO MACIEL */}
       <section id="sobre" className="py-20 md:py-32 bg-slate-100/70 dark:bg-slate-900/30 border-y border-slate-200 dark:border-slate-800/80 px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto space-y-16">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
@@ -446,7 +452,7 @@ export default function App() {
             </div>
 
             <div className="lg:col-span-7 space-y-6">
-              <span className="text-xs sm:text-sm font-bold uppercase tracking-widest text-blue-600 dark:text-blue-400">
+              <span className="text-xs sm:text-sm font-bold tracking-widest text-blue-600 dark:text-blue-400 uppercase">
                 Autoridade &amp; Bastidores
               </span>
               <h2 className="text-3xl sm:text-5xl font-extrabold text-slate-900 dark:text-white tracking-tight">
@@ -454,7 +460,7 @@ export default function App() {
               </h2>
               <div className="space-y-4 text-slate-600 dark:text-slate-300 text-base sm:text-lg leading-relaxed">
                 <p>
-                  Sou <strong>Rogério Marinho Maciel</strong>, arquiteto de software e autor do livro <em>"Vídeos que Vendem: O Guia Definitivo para Criar Vídeos que Vendem Todos os Dias"</em>.
+                  Sou <strong>Rogério Marinho Maciel</strong>, com mais de <strong>20 anos de experiência em tecnologia</strong>, Ciência da Computação e MBA em Engenharia de Software.
                 </p>
                 <p>
                   Ao longo de anos desenvolvendo plataformas digitais, identifiquei que o maior erro das empresas não está no design, mas sim no <strong>desalinhamento entre o discurso de valor e o mecanismo de ação</strong>.
@@ -482,41 +488,105 @@ export default function App() {
         </div>
       </section>
 
-      {/* 6. FAQ */}
-      <section id="faq" className="py-20 md:py-32 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto space-y-12">
-          <div className="text-center space-y-4">
-            <span className="text-xs sm:text-sm font-bold uppercase tracking-widest text-blue-600 dark:text-blue-400">
-              Tire Suas Dúvidas
+      {/* 6. DIFERENCIAIS TÉCNICOS */}
+      <section id="diferenciais" className="py-20 md:py-32 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-6xl mx-auto space-y-16">
+          <div className="text-center max-w-3xl mx-auto space-y-4">
+            <span className="text-xs sm:text-sm font-bold tracking-widest text-emerald-600 dark:text-emerald-400 uppercase">
+              Excelência em Engenharia
             </span>
             <h2 className="text-3xl sm:text-5xl font-extrabold text-slate-900 dark:text-white tracking-tight">
-              Perguntas Frequentes
+              Por que nossa infraestrutura supera o padrão do mercado
             </h2>
           </div>
 
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="glass-panel p-6 rounded-2xl border border-slate-200 dark:border-slate-800 space-y-3">
+              <div className="h-10 w-10 rounded-xl bg-blue-100 dark:bg-blue-950/80 border border-blue-300 dark:border-blue-500/30 flex items-center justify-center text-blue-600 dark:text-blue-400 mb-4">
+                <Gauge className="w-5 h-5" />
+              </div>
+              <h3 className="text-lg font-bold text-slate-900 dark:text-white">Velocidade Extrema</h3>
+              <p className="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
+                Código estático compilado sem banco de dados no servidor. Carrega em frações de segundo até em redes lentas.
+              </p>
+            </div>
+
+            <div className="glass-panel p-6 rounded-2xl border border-slate-200 dark:border-slate-800 space-y-3">
+              <div className="h-10 w-10 rounded-xl bg-emerald-100 dark:bg-emerald-950/80 border border-emerald-300 dark:border-emerald-500/30 flex items-center justify-center text-emerald-600 dark:text-emerald-400 mb-4">
+                <ShieldCheck className="w-5 h-5" />
+              </div>
+              <h3 className="text-lg font-bold text-slate-900 dark:text-white">Segurança Inabalável</h3>
+              <p className="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
+                Sem vulnerabilidades de CMS ou plugins desatualizados. Seus dados e sua página protegidos por padrão.
+              </p>
+            </div>
+
+            <div className="glass-panel p-6 rounded-2xl border border-slate-200 dark:border-slate-800 space-y-3">
+              <div className="h-10 w-10 rounded-xl bg-indigo-100 dark:bg-indigo-950/80 border border-indigo-300 dark:border-indigo-500/30 flex items-center justify-center text-indigo-600 dark:text-indigo-400 mb-4">
+                <Cpu className="w-5 h-5" />
+              </div>
+              <h3 className="text-lg font-bold text-slate-900 dark:text-white">Otimização para IAs (GEO)</h3>
+              <p className="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
+                Preparado para buscas no ChatGPT, Perplexity e Google com metadados estruturados (llms.txt e Schema JSON-LD).
+              </p>
+            </div>
+
+            <div className="glass-panel p-6 rounded-2xl border border-slate-200 dark:border-slate-800 space-y-3">
+              <div className="h-10 w-10 rounded-xl bg-teal-100 dark:bg-teal-950/80 border border-teal-300 dark:border-teal-500/30 flex items-center justify-center text-teal-600 dark:text-teal-400 mb-4">
+                <BarChart3 className="w-5 h-5" />
+              </div>
+              <h3 className="text-lg font-bold text-slate-900 dark:text-white">Rastreamento de Elite (GTM)</h3>
+              <p className="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
+                Saiba com exatidão quem clicou no WhatsApp, de onde veio a campanha e como otimizar seus anúncios.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 7. FAQ */}
+      <section id="faq" className="py-20 md:py-28 bg-slate-100/70 dark:bg-slate-900/40 border-y border-slate-200 dark:border-slate-800/80 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto space-y-12">
+          <div className="text-center space-y-4">
+            <span className="text-xs sm:text-sm font-bold tracking-widest text-blue-600 dark:text-blue-400 uppercase">
+              Tire Suas Dúvidas
+            </span>
+            <h2 className="text-3xl sm:text-5xl font-extrabold text-slate-900 dark:text-white tracking-tight">Perguntas Frequentes</h2>
+            <p className="text-slate-600 dark:text-slate-300 text-base sm:text-lg">
+              Tudo o que você precisa saber sobre o desenvolvimento de Sites de alta conversão.
+            </p>
+          </div>
+
           <div className="space-y-4">
-            {faqs.map((faq, index) => {
-              const isOpen = openFaqIndex === index;
+            {faqs.map((faq, idx) => {
+              const isOpen = openFaqIndex === idx;
+              const faqId = `faq-answer-${idx}`;
               return (
                 <div
-                  key={index}
-                  className="glass-panel rounded-2xl border border-slate-200 dark:border-slate-800/80 overflow-hidden transition-colors"
+                  key={idx}
+                  className="glass-panel rounded-2xl border border-slate-200 dark:border-slate-800 overflow-hidden transition-all duration-200"
                 >
                   <button
-                    onClick={() => toggleFaq(index)}
-                    className="w-full p-6 text-left flex items-center justify-between gap-4 font-semibold text-slate-900 dark:text-white text-base sm:text-lg hover:text-blue-600 dark:hover:text-blue-400 transition"
+                    onClick={() => toggleFaq(idx)}
                     aria-expanded={isOpen}
+                    aria-controls={faqId}
+                    className="w-full px-6 py-5 text-left flex items-center justify-between gap-4 font-semibold text-base sm:text-lg text-slate-900 dark:text-white hover:text-blue-600 dark:hover:text-blue-400 transition"
                   >
                     <span>{faq.question}</span>
-                    <ChevronDown
-                      className={`w-5 h-5 flex-shrink-0 text-slate-500 dark:text-slate-400 transition-transform duration-200 ${
-                        isOpen ? 'rotate-180 text-blue-600 dark:text-blue-400' : ''
+                    <div
+                      className={`p-1.5 rounded-lg bg-slate-200/80 dark:bg-slate-800/80 text-slate-700 dark:text-slate-300 transition-transform duration-200 ${
+                        isOpen ? 'rotate-180 text-blue-600 dark:text-blue-400 bg-blue-100 dark:bg-blue-950' : ''
                       }`}
-                      aria-hidden="true"
-                    />
+                    >
+                      <ChevronDown className="w-5 h-5" aria-hidden="true" />
+                    </div>
                   </button>
                   {isOpen && (
-                    <div className="px-6 pb-6 text-slate-600 dark:text-slate-300 text-sm sm:text-base leading-relaxed border-t border-slate-100 dark:border-slate-800/60 pt-4">
+                    <div
+                      id={faqId}
+                      role="region"
+                      className="px-6 pb-6 pt-1 text-sm sm:text-base text-slate-600 dark:text-slate-300 leading-relaxed border-t border-slate-100 dark:border-slate-800/50"
+                    >
                       {faq.answer}
                     </div>
                   )}
@@ -527,60 +597,105 @@ export default function App() {
         </div>
       </section>
 
-      {/* 7. CTA FINAL */}
-      <section className="py-20 md:py-28 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-transparent to-blue-100/50 dark:to-blue-950/20">
-        <div className="max-w-5xl mx-auto glass-panel p-8 sm:p-14 rounded-3xl border border-blue-300 dark:border-blue-500/30 text-center space-y-8 relative overflow-hidden glow-effect">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-100 dark:bg-blue-950/80 border border-blue-300 dark:border-blue-500/40 text-blue-700 dark:text-blue-300 text-xs sm:text-sm font-semibold">
-            <Award className="w-4 h-4" />
-            Comece Hoje Mesmo
+      {/* 8. CHAMADA FINAL (CTA) */}
+      <section id="contato" className="py-20 md:py-32 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+        {/* Glow */}
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[400px] bg-blue-500/10 dark:bg-blue-600/20 blur-[140px] rounded-full pointer-events-none -z-10" />
+
+        <div className="max-w-5xl mx-auto glass-panel p-8 sm:p-14 md:p-16 rounded-3xl border border-blue-300 dark:border-blue-500/40 bg-gradient-to-b from-blue-50/90 via-slate-50 to-white dark:from-blue-950/80 dark:via-slate-900 dark:to-slate-950 text-center space-y-8 shadow-2xl glow-blue">
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-emerald-100 dark:bg-emerald-950/80 border border-emerald-300 dark:border-emerald-500/40 text-emerald-700 dark:text-emerald-300 text-xs sm:text-sm font-semibold">
+            <Zap className="w-4 h-4 text-emerald-600 dark:text-emerald-400" />
+            Próximo Passo
           </div>
 
-          <h2 className="text-3xl sm:text-5xl font-extrabold text-slate-900 dark:text-white tracking-tight">
-            Pronto para transformar sua presença em uma{' '}
-            <span className="gradient-text">Máquina de Fechamento?</span>
+          <h2 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 dark:text-white tracking-tight leading-tight max-w-3xl mx-auto">
+            Pronto para ter um site que transforma visitantes em <span className="gradient-text">clientes reais</span>?
           </h2>
 
-          <p className="text-base sm:text-lg text-slate-600 dark:text-slate-300 max-w-2xl mx-auto">
-            Não desperdice mais visitantes em páginas lentas. Fale diretamente com Rogério Maciel no WhatsApp e vamos desenhar a solução ideal para o seu momento.
+          <p className="text-base sm:text-xl text-slate-600 dark:text-slate-300 max-w-2xl mx-auto leading-relaxed">
+            Dê adeus aos sites lentos e genéricos. Converse diretamente com Rogério Maciel e coloque uma máquina de alta conversão para trabalhar pelo seu negócio.
           </p>
 
-          <div className="pt-4 flex justify-center">
+          <div className="pt-4 flex flex-col sm:flex-row items-center justify-center gap-4">
             <a
               href={whatsappUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-3 px-9 py-5 rounded-2xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-lg transition duration-200 shadow-2xl shadow-emerald-600/30 hover:scale-105 transform glow-emerald"
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-9 py-4 rounded-2xl bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-extrabold text-lg transition duration-200 shadow-2xl shadow-emerald-500/30 hover:scale-105 transform glow-emerald"
             >
-              <MessageSquare className="w-6 h-6" />
+              <MessageSquare className="w-5 h-5" />
               Falar com Rogério Maciel no WhatsApp
-              <ArrowRight className="w-5 h-5" />
+              <ArrowRight className="w-4 h-4" />
             </a>
+          </div>
+
+          <div className="pt-6 border-t border-slate-200 dark:border-slate-800/80 flex flex-wrap items-center justify-center gap-6 text-xs sm:text-sm text-slate-500 dark:text-slate-400 font-medium">
+            <div className="flex items-center gap-2">
+              <CheckCircle2 className="w-4 h-4 text-emerald-600 dark:text-emerald-400" />
+              Atendimento direto e estratégico
+            </div>
+            <div className="flex items-center gap-2">
+              <CheckCircle2 className="w-4 h-4 text-emerald-600 dark:text-emerald-400" />
+              Análise personalizada da sua presença digital
+            </div>
+            <div className="flex items-center gap-2">
+              <CheckCircle2 className="w-4 h-4 text-emerald-600 dark:text-emerald-400" />
+              Entrega rápida com alta performance
+            </div>
           </div>
         </div>
       </section>
 
-      {/* 8. FOOTER */}
-      <footer className="border-t border-slate-200 dark:border-slate-800/80 py-12 px-4 sm:px-6 lg:px-8 bg-slate-100/50 dark:bg-slate-950">
-        <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6 text-xs text-slate-500 dark:text-slate-400">
+      {/* 9. FOOTER */}
+      <footer className="border-t border-slate-200 dark:border-slate-900 bg-slate-100/80 dark:bg-slate-950 py-12 px-4 sm:px-6 lg:px-8 text-slate-500 dark:text-slate-400 text-sm">
+        <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-8">
           <div className="flex items-center gap-3">
-            <div className="h-8 w-8 rounded-lg bg-blue-600 flex items-center justify-center font-bold text-white">
-              <span className="font-mono text-xs">RM</span>
+            <div className="h-10 w-10 rounded-xl bg-gradient-to-tr from-blue-600 to-indigo-500 flex items-center justify-center font-bold text-white">
+              <span className="font-mono text-base font-extrabold">RM</span>
             </div>
             <div>
-              <span className="font-bold text-slate-900 dark:text-white">Rogério Maciel</span> — Máquinas de Aquisição de Alta Conversão
+              <div className="font-bold text-slate-900 dark:text-white text-base">Rogério Maciel</div>
+              <div className="text-xs text-slate-500 dark:text-slate-400">Sites de Alta Conversão</div>
             </div>
           </div>
 
-          <div className="flex items-center gap-6">
-            <a href="#inicio" className="hover:text-blue-600 dark:hover:text-blue-400 transition">Início</a>
-            <a href="#servicos" className="hover:text-blue-600 dark:hover:text-blue-400 transition">Soluções</a>
-            <a href="#sobre" className="hover:text-blue-600 dark:hover:text-blue-400 transition">Sobre</a>
-            <a href="#faq" className="hover:text-blue-600 dark:hover:text-blue-400 transition">FAQ</a>
-            <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="text-emerald-600 dark:text-emerald-400 font-semibold hover:underline">WhatsApp</a>
+          <div className="text-center md:text-left space-y-1">
+            <p className="text-xs text-slate-600 dark:text-slate-400 font-medium">
+              "Vender é um discurso e compra é uma ação."
+            </p>
+            <p className="text-xs text-slate-400 dark:text-slate-500">
+              © {new Date().getFullYear()} Rogério Maciel. Todos os direitos reservados.
+            </p>
           </div>
 
-          <div>
-            © {new Date().getFullYear()} Rogério Marinho Maciel. Todos os direitos reservados.
+          <div className="flex items-center gap-4">
+            <a
+              href="https://www.linkedin.com/in/macrogerio/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-2.5 rounded-xl bg-slate-200/80 dark:bg-slate-900 hover:bg-slate-300 dark:hover:bg-slate-800 text-slate-700 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white transition"
+              aria-label="LinkedIn de Rogério Maciel"
+            >
+              <LinkedinIcon className="w-5 h-5" />
+            </a>
+            <a
+              href="https://www.instagram.com/mrcrogerio/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-2.5 rounded-xl bg-slate-200/80 dark:bg-slate-900 hover:bg-slate-300 dark:hover:bg-slate-800 text-slate-700 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white transition"
+              aria-label="Instagram de Rogério Maciel"
+            >
+              <InstagramIcon className="w-5 h-5" />
+            </a>
+            <a
+              href={whatsappUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-2.5 rounded-xl bg-emerald-100 dark:bg-emerald-950/80 border border-emerald-300 dark:border-emerald-500/30 text-emerald-700 dark:text-emerald-400 hover:bg-emerald-200 dark:hover:bg-emerald-900 transition"
+              aria-label="WhatsApp de Rogério Maciel"
+            >
+              <MessageSquare className="w-5 h-5" />
+            </a>
           </div>
         </div>
       </footer>
