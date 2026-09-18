@@ -1,0 +1,210 @@
+{
+  "exportFormatVersion": 2,
+  "exportTime": "2026-08-30 21:25:00",
+  "containerVersion": {
+    "path": "accounts/6000000000/containers/70000000/versions/0",
+    "accountId": "6000000000",
+    "containerId": "70000000",
+    "containerVersionId": "0",
+    "container": {
+      "path": "accounts/6000000000/containers/70000000",
+      "accountId": "6000000000",
+      "containerId": "70000000",
+      "name": "rogeriomaciel.com.br",
+      "publicId": "GTM-WNXV9S4X",
+      "usageContext": [
+        "WEB"
+      ]
+    },
+    "tag": [
+      {
+        "accountId": "6000000000",
+        "containerId": "70000000",
+        "tagId": "1",
+        "name": "GA4 - Tag Base e PageView",
+        "type": "html",
+        "parameter": [
+          {
+            "type": "TEMPLATE",
+            "key": "html",
+            "value": "<script async src=\"https://www.googletagmanager.com/gtag/js?id={{CONST - GA4 Measurement ID}}\"></script>\n<script>\n  window.dataLayer = window.dataLayer || [];\n  function gtag(){dataLayer.push(arguments);}\n  gtag('js', new Date());\n  gtag('config', '{{CONST - GA4 Measurement ID}}');\n</script>"
+          },
+          {
+            "type": "BOOLEAN",
+            "key": "supportDocumentWrite",
+            "value": "false"
+          }
+        ],
+        "firingTriggerId": [
+          "2147479553"
+        ]
+      },
+      {
+        "accountId": "6000000000",
+        "containerId": "70000000",
+        "tagId": "2",
+        "name": "GA4 - Evento Lead WhatsApp",
+        "type": "html",
+        "parameter": [
+          {
+            "type": "TEMPLATE",
+            "key": "html",
+            "value": "<script>\n  if (typeof gtag === 'function') {\n    gtag('event', 'generate_lead', {\n      'event_category': 'Engagement',\n      'event_label': '{{Click Text}}',\n      'method': 'whatsapp',\n      'page_location': '{{Page URL}}'\n    });\n  }\n</script>"
+          },
+          {
+            "type": "BOOLEAN",
+            "key": "supportDocumentWrite",
+            "value": "false"
+          }
+        ],
+        "firingTriggerId": [
+          "10"
+        ]
+      },
+      {
+        "accountId": "6000000000",
+        "containerId": "70000000",
+        "tagId": "3",
+        "name": "Meta Pixel - Base (PageView)",
+        "type": "html",
+        "parameter": [
+          {
+            "type": "TEMPLATE",
+            "key": "html",
+            "value": "<script>\n!function(f,b,e,v,n,t,s)\n{if(f.fbq)return;n=f.fbq=function(){n.callMethod?\nn.callMethod.apply(n,arguments):n.queue.push(arguments)};\nif(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';\nn.queue=[];t=b.createElement(e);t.async=!0;\nt.src=v;s=b.getElementsByTagName(e)[0];\ns.parentNode.insertBefore(t,s)}(window, document,'script',\n'https://connect.facebook.net/en_US/fbevents.js');\nfbq('init', '{{CONST - Meta Pixel ID}}');\nfbq('track', 'PageView');\n</script>\n<noscript><img height=\"1\" width=\"1\" style=\"display:none\"\nsrc=\"https://www.facebook.com/tr?id={{CONST - Meta Pixel ID}}&ev=PageView&noscript=1\"\n/></noscript>"
+          },
+          {
+            "type": "BOOLEAN",
+            "key": "supportDocumentWrite",
+            "value": "false"
+          }
+        ],
+        "firingTriggerId": [
+          "2147479553"
+        ]
+      },
+      {
+        "accountId": "6000000000",
+        "containerId": "70000000",
+        "tagId": "4",
+        "name": "Meta Pixel - Evento Lead WhatsApp",
+        "type": "html",
+        "parameter": [
+          {
+            "type": "TEMPLATE",
+            "key": "html",
+            "value": "<script>\nif (typeof fbq === 'function') {\n  fbq('track', 'Lead', {\n    content_name: 'Clique WhatsApp',\n    content_category: 'Contato Landing Page',\n    value: 0.00,\n    currency: 'BRL'\n  });\n}\n</script>"
+          },
+          {
+            "type": "BOOLEAN",
+            "key": "supportDocumentWrite",
+            "value": "false"
+          }
+        ],
+        "firingTriggerId": [
+          "10"
+        ]
+      }
+    ],
+    "trigger": [
+      {
+        "accountId": "6000000000",
+        "containerId": "70000000",
+        "triggerId": "10",
+        "name": "Clique - WhatsApp",
+        "type": "CLICK",
+        "filter": [
+          {
+            "type": "CONTAINS",
+            "parameter": [
+              {
+                "type": "TEMPLATE",
+                "key": "arg0",
+                "value": "{{Click URL}}"
+              },
+              {
+                "type": "TEMPLATE",
+                "key": "arg1",
+                "value": "wa.me"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "variable": [
+      {
+        "accountId": "6000000000",
+        "containerId": "70000000",
+        "variableId": "101",
+        "name": "CONST - GA4 Measurement ID",
+        "type": "c",
+        "parameter": [
+          {
+            "type": "TEMPLATE",
+            "key": "value",
+            "value": "G-XXXXXXXXXX"
+          }
+        ]
+      },
+      {
+        "accountId": "6000000000",
+        "containerId": "70000000",
+        "variableId": "102",
+        "name": "CONST - Meta Pixel ID",
+        "type": "c",
+        "parameter": [
+          {
+            "type": "TEMPLATE",
+            "key": "value",
+            "value": "000000000000000"
+          }
+        ]
+      }
+    ],
+    "builtInVariable": [
+      {
+        "accountId": "6000000000",
+        "containerId": "70000000",
+        "type": "PAGE_URL",
+        "name": "Page URL"
+      },
+      {
+        "accountId": "6000000000",
+        "containerId": "70000000",
+        "type": "PAGE_PATH",
+        "name": "Page Path"
+      },
+      {
+        "accountId": "6000000000",
+        "containerId": "70000000",
+        "type": "PAGE_HOSTNAME",
+        "name": "Page Hostname"
+      },
+      {
+        "accountId": "6000000000",
+        "containerId": "70000000",
+        "type": "CLICK_URL",
+        "name": "Click URL"
+      },
+      {
+        "accountId": "6000000000",
+        "containerId": "70000000",
+        "type": "CLICK_TEXT",
+        "name": "Click Text"
+      },
+      {
+        "accountId": "6000000000",
+        "containerId": "70000000",
+        "type": "CLICK_CLASSES",
+        "name": "Click Classes"
+      },
+      {
+        "accountId": "6000000000",
+        "containerId": "70000000",
+        "type": "CLICK_ID",
+        "name": "Click ID"
+      }
+    ]
+  }
+}
