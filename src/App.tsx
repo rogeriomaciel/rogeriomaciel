@@ -1,26 +1,34 @@
 import { useState } from 'react';
 import {
   ArrowRight,
-  Sparkles,
   CheckCircle2,
   MessageSquare,
   Zap,
   ShieldCheck,
-  Cpu,
-  BookOpen,
   ChevronDown,
   Menu,
   X,
-  AlertTriangle,
   Gauge,
-  BarChart3,
-  Check
+  Check,
+  Coins,
+  TrendingUp,
+  Award,
+  HelpCircle,
+  Eye,
+  Calculator,
+  Flame,
+  Building2,
+  Cpu,
+  Clock,
+  Database,
+  Layers,
+  Activity
 } from 'lucide-react';
 import { ThemeToggle } from './components/ThemeToggle';
 
 function LinkedinIcon({ className = 'w-5 h-5' }: { className?: string }) {
   return (
-    <svg className={className} fill="currentColor" viewBox="0 0 24 24">
+    <svg className={className} fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
       <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z" />
     </svg>
   );
@@ -28,8 +36,8 @@ function LinkedinIcon({ className = 'w-5 h-5' }: { className?: string }) {
 
 function InstagramIcon({ className = 'w-5 h-5' }: { className?: string }) {
   return (
-    <svg className={className} fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24">
-      <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
+    <svg className={className} fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24" aria-hidden="true">
+      <rect width="20" height="20" x="2" rx="5" ry="5" />
       <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
       <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
     </svg>
@@ -40,126 +48,144 @@ export default function App() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(0);
 
+  // Estado do Simulador de Perda Financeira (4º Sim: O Valor)
+  const [monthlyAdSpend, setMonthlyAdSpend] = useState<number>(3000); // X = Investimento em Anúncios
+  const [costPerClick, setCostPerClick] = useState<number>(5.0); // CPC atual
+  const [leadToSaleRate, setLeadToSaleRate] = useState<number>(10.0); // % conversão de leads em vendas
+  const [averageTicket, setAverageTicket] = useState<number>(1500); // Ticket médio por venda (R$)
+
   const whatsappUrl =
-    'https://wa.me/5562996232227?text=Ol%C3%A1%20Rog%C3%A9rio,%20vim%20pelo%20seu%20site%20e%20quero%20um%20Site%20de%20Alta%20Convers%C3%A3o%20para%20o%20meu%20neg%C3%B3cio.';
+    'https://wa.me/5562996232227?text=Ol%C3%A1%20Rog%C3%A9rio,%20vi%20seu%20site%20e%20quero%20uma%20Per%C3%ADcia%20T%C3%A9cnica%20Gratuita%20para%20recriar%20meu%20site%20na%20Arquitetura%20Core-Bare-Metal.';
 
   const toggleFaq = (index: number) => {
     setOpenFaqIndex(openFaqIndex === index ? null : index);
   };
 
+  // ---------------------------------------------------------------------------
+  // ETAPA 1: TRÁFEGO & QUEIMA NA TELA BRANCA
+  // ---------------------------------------------------------------------------
+  const totalClicks = Math.round(monthlyAdSpend / (costPerClick || 1));
+  const lostRate = 0.65; // 65% de fuga por lentidão (> 3s)
+  const wastedAdSpendMonthly = Math.round(monthlyAdSpend * lostRate); // Verba queimada na tela branca
+  const lostClicksMonthly = Math.round(totalClicks * lostRate); // Cliques perdidos
+  const validClicksMonthly = Math.max(0, totalClicks - lostClicksMonthly); // Cliques que abrem hoje
+
+  const leadCaptureRate = 0.15; // Média de 15% de conversão clique -> lead
+  const lostLeadsMonthly = Math.max(1, Math.round(lostClicksMonthly * leadCaptureRate)); // Leads perdidos na tela branca
+  const validLeadsMonthly = Math.max(1, Math.round(validClicksMonthly * leadCaptureRate)); // Leads válidos hoje
+
+  // ---------------------------------------------------------------------------
+  // ETAPA 2: COMERCIAL & RECUPERAÇÃO DE LEADS DEIXADOS NA MESA
+  // ---------------------------------------------------------------------------
+  const currentSalesMonthly = Math.max(1, Math.round(validLeadsMonthly * (leadToSaleRate / 100))); // Vendas atuais hoje
+  const currentRevenueMonthly = Math.round(currentSalesMonthly * averageTicket); // Y = Faturamento Atual (sem otimização)
+
+  const recoveredSalesMonthly = Math.max(1, Math.round(lostLeadsMonthly * (leadToSaleRate / 100))); // Novos convertidos dos leads recuperados
+  const recoveredRevenueMonthly = Math.round(recoveredSalesMonthly * averageTicket); // Faturamento deixado na mesa
+  const recoveredRevenueYearly = recoveredRevenueMonthly * 12;
+
+  // ---------------------------------------------------------------------------
+  // ETAPA 3: VEREDITO COMPARATIVO (INVESTE X -> FATURA Y | OTIMIZADO: INVESTE X -> FATURA Z)
+  // ---------------------------------------------------------------------------
+  const totalSalesOptimized = currentSalesMonthly + recoveredSalesMonthly; // Total de vendas com site rápido
+  const optimizedRevenueMonthly = Math.round(totalSalesOptimized * averageTicket); // Z = Faturamento Otimizado
+
+  // Links do Menu com rótulos concisos e diretos
   const navLinks = [
-    { label: 'Início', href: '#inicio' },
-    { label: 'O Diagnóstico', href: '#problema' },
-    { label: 'Soluções', href: '#servicos' },
-    { label: 'Sobre', href: '#sobre' },
-    { label: 'O Manifesto', href: './manifesto.html' },
-    { label: 'Diferenciais', href: '#diferenciais' },
+    { label: 'Especialista', href: '#especialista' },
+    { label: 'Estrutura', href: '#estrutura' },
+    { label: 'Mecanismo', href: '#solucao' },
+    { label: 'Simulador', href: '#simulador' },
+    { label: 'Garantia', href: '#fechamento' },
     { label: 'Dúvidas', href: '#faq' },
   ];
 
   const faqs = [
     {
-      question: 'O que é um One Page Site e por que ele converte mais do que um site tradicional?',
+      question: 'Eu preciso refazer o design ou mudar a identidade visual do meu site atual?',
       answer:
-        'Um One Page Site concentra toda a jornada de compra em uma única página fluida com navegação suave por âncoras. Isso elimina o atrito cognitivo de menus complexos e múltiplos cliques, guiando o visitante do primeiro impacto até o botão de WhatsApp sem distrações.',
+        'Não! Se você já gosta do visual, das cores e do layout do seu site atual, nós recriamos exatamente a mesma aparência visual. Nós trocamos apenas o "motor" por trás: eliminamos o WordPress, o Elementor e dezenas de plugins pesados, substituindo tudo por código puro compilado em Core-Bare-Metal™. O resultado é um site visualmente idêntico, mas que abre em menos de 1 segundo no celular.',
     },
     {
-      question: 'Por que vocês usam React e Vite em vez de WordPress?',
+      question: 'O que é a Arquitetura Core-Bare-Metal™ e por que ela impede a perda de vendas?',
       answer:
-        'O WordPress é pesado, depende de dezenas de plugins que frequentemente quebram, é vulnerável a invasões e costuma ser lento no 4G móvel. Com React + Vite estático, você tem um site com velocidade instantânea (< 1 segundo), segurança impenetrável e zero custo com manutenções caras.',
+        'A maioria dos sites em WordPress roda dezenas de consultas a bancos de dados, scripts de plugins e temas pesados a cada visita, levando de 8 a 12 segundos no 4G do celular. Como 53% a 78% das pessoas desistem antes de 6 segundos, você perde mais da metade dos seus cliques pagos. O Core-Bare-Metal™ compila todo o site em arquivos estáticos ultraleves (< 80 KB) executados diretamente no dispositivo do visitante em menos de 1 segundo. O clique abre no mesmo instante.',
     },
     {
-      question: 'Eu poderei alterar o conteúdo do meu site no futuro?',
+      question: 'Como funciona a Garantia Blindada de Engenharia?',
       answer:
-        'Sim! Todo o conteúdo do site é gerido com clareza através de arquivos de roteiro (Content-as-Code). As atualizações são estruturadas e previsíveis.',
+        'Nós garantimos em contrato que a sua nova versão Core-Bare-Metal™ atingirá Nota 95+ no Google PageSpeed Mobile oficial e abrirá em menos de 1 segundo. Se não atingir essa métrica de engenharia, ajustamos sem custo ou devolvemos 100% do valor pago. O risco técnico é todo nosso.',
     },
     {
-      question: 'O site já vem configurado para anúncios no Google e Meta (Facebook/Instagram)?',
+      question: 'Em quanto tempo o novo site fica pronto para receber anúncios?',
       answer:
-        'Sim. Integramos nativamente o Google Tag Manager com possibilidade de rastreamento de cliques no WhatsApp, permitindo que suas campanhas de tráfego sejam mensuradas com máxima precisão.',
+        'Por utilizarmos uma esteira moderna de engenharia automatizada (Content-as-Code e compilação direta Jamstack), entregamos a sua versão Core-Bare-Metal™ completa, testada e com nota 95+ no Google em poucos dias úteis.',
     },
     {
-      question: 'Como funciona o processo de contratação e entrega?',
+      question: 'O site já vem com o rastreamento dos meus anúncios configurado?',
       answer:
-        'Você entra em contato direto comigo pelo WhatsApp, alinhamos os dados do seu negócio, validamos o roteiro estratégico e construímos o seu site com código de alta performance pronto para publicação estática.',
-    },
-  ];
-
-  const books = [
-    {
-      title: 'A Vantagem Injusta',
-      subtitle: 'O Sistema que Trabalha Enquanto Você Dorme (Método CORE™)',
-      tag: 'Gestão & Sistemas',
-      desc: 'Arquitetura de disciplina algorítmica e sistemas operacionais de alta eficiência.',
-    },
-    {
-      title: 'CoreAutoCRM',
-      subtitle: 'O Sistema Operacional de Fricção Zero',
-      tag: 'Engenharia de Software',
-      desc: 'A tecnologia e os bastidores de um SaaS B2B conversacional operado por IA.',
-    },
-    {
-      title: 'As 5 Atitudes Diárias',
-      subtitle: 'Do Empreendedor de Sucesso',
-      tag: 'Liderança',
-      desc: 'Princípios práticos de foco, execução estratégica e construção de valor.',
+        'Sim. Integramos nativamente o Google Tag Manager (GTM), Google Analytics 4 (GA4) e Pixel da Meta com telemetria para rastrear cada clique no botão de WhatsApp. Isso envia sinais de conversão de alta precisão de volta para o algoritmo do Google Ads e Meta Ads otimizarem seus lances.',
     },
   ];
 
   return (
     <div className="min-h-screen bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-slate-100 flex flex-col font-sans selection:bg-blue-600 selection:text-white transition-colors duration-200">
-      {/* 1. NAVBAR */}
-      <header className="sticky top-0 z-50 glass-nav">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      {/* NAVBAR */}
+      <header className="sticky top-0 z-50 glass-nav border-b border-slate-200/80 dark:border-slate-800/80 backdrop-blur-md bg-white/90 dark:bg-slate-950/90">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-18 sm:h-20 flex items-center justify-between gap-4">
+          
           {/* Logo / Monograma */}
-          <a href="#inicio" className="flex items-center gap-3 group" aria-label="Rogério Maciel - Ir para o início da página">
-            <div className="h-11 w-11 rounded-xl bg-gradient-to-tr from-blue-600 to-indigo-500 flex items-center justify-center font-bold text-white shadow-lg shadow-blue-500/25 group-hover:scale-105 transition-transform duration-200" aria-hidden="true">
-              <span className="font-mono text-lg font-extrabold tracking-tighter">RM</span>
+          <a href="#especialista" className="flex items-center gap-3 group flex-shrink-0" aria-label="Rogério Maciel - Início">
+            <div className="h-10 w-10 sm:h-11 sm:w-11 rounded-xl bg-gradient-to-tr from-blue-600 to-indigo-500 flex items-center justify-center font-bold text-white shadow-md shadow-blue-500/20 group-hover:scale-105 transition-transform duration-200" aria-hidden="true">
+              <span className="font-mono text-base sm:text-lg font-extrabold tracking-tighter">RM</span>
             </div>
             <div className="flex flex-col">
-              <span className="font-bold text-lg tracking-tight text-slate-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
-                Rogério Maciel
-              </span>
-              <span className="text-[11px] font-medium tracking-wider text-slate-500 dark:text-slate-400 uppercase">
-                Sites de Alta Conversão
+              <div className="flex items-center gap-2">
+                <span className="font-extrabold text-base sm:text-lg tracking-tight text-slate-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
+                  Rogério Maciel
+                </span>
+                <span className="hidden md:inline-block px-1.5 py-0.5 text-[9px] font-bold uppercase rounded bg-blue-100 dark:bg-blue-900/60 text-blue-700 dark:text-blue-300 border border-blue-300 dark:border-blue-700">
+                  Core-Bare-Metal™
+                </span>
+              </div>
+              <span className="text-[10px] sm:text-[11px] font-medium tracking-wide text-slate-500 dark:text-slate-400 uppercase">
+                Engenharia de Performance
               </span>
             </div>
           </a>
 
           {/* Desktop Nav */}
-          <nav className="hidden md:flex items-center gap-8">
+          <nav className="hidden lg:flex items-center gap-5 xl:gap-7">
             {navLinks.map((link) => (
               <a
                 key={link.href}
                 href={link.href}
-                className="text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+                className="text-xs sm:text-sm font-semibold text-slate-600 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors whitespace-nowrap"
               >
                 {link.label}
               </a>
             ))}
           </nav>
 
-          {/* Header Actions */}
-          <div className="hidden sm:flex items-center gap-4">
+          {/* Ações da Direita */}
+          <div className="flex items-center gap-2 sm:gap-3 flex-shrink-0">
             <ThemeToggle />
+            
             <a
               href={whatsappUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-semibold text-sm transition shadow-lg shadow-emerald-500/20 hover:scale-105 transform duration-150"
+              className="hidden sm:inline-flex items-center gap-2 px-4 py-2 sm:px-5 sm:py-2.5 rounded-full bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold text-xs sm:text-sm transition shadow-md shadow-emerald-500/20 hover:scale-105 transform duration-150 whitespace-nowrap"
             >
               <MessageSquare className="w-4 h-4" />
-              Falar no WhatsApp
+              <span>Perícia Gratuita</span>
             </a>
-          </div>
 
-          {/* Mobile Menu Toggle */}
-          <div className="flex items-center gap-2 md:hidden">
-            <ThemeToggle />
+            {/* Mobile Menu Toggle Button */}
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="p-2 rounded-lg text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white hover:bg-slate-200 dark:hover:bg-slate-800 transition"
-              aria-label={mobileMenuOpen ? 'Fechar menu de navegação' : 'Abrir menu de navegação'}
+              className="lg:hidden p-2 rounded-xl text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800 transition"
+              aria-label={mobileMenuOpen ? 'Fechar menu' : 'Abrir menu'}
               aria-expanded={mobileMenuOpen}
             >
               {mobileMenuOpen ? <X className="w-6 h-6" aria-hidden="true" /> : <Menu className="w-6 h-6" aria-hidden="true" />}
@@ -169,13 +195,13 @@ export default function App() {
 
         {/* Mobile Dropdown */}
         {mobileMenuOpen && (
-          <div className="md:hidden border-t border-slate-200 dark:border-slate-800 bg-white/95 dark:bg-slate-950/95 backdrop-blur-xl px-4 pt-4 pb-6 space-y-3">
+          <div className="lg:hidden border-t border-slate-200 dark:border-slate-800 bg-white/95 dark:bg-slate-950/95 backdrop-blur-xl px-4 pt-3 pb-6 space-y-2 shadow-2xl">
             {navLinks.map((link) => (
               <a
                 key={link.href}
                 href={link.href}
                 onClick={() => setMobileMenuOpen(false)}
-                className="block px-3 py-2 rounded-md text-base font-medium text-slate-700 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-slate-100 dark:hover:bg-slate-900"
+                className="block px-3 py-2.5 rounded-xl text-sm font-semibold text-slate-700 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-slate-100 dark:hover:bg-slate-900 transition"
               >
                 {link.label}
               </a>
@@ -186,46 +212,47 @@ export default function App() {
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={() => setMobileMenuOpen(false)}
-                className="w-full inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl bg-emerald-500 text-slate-950 font-semibold text-sm shadow-md"
+                className="w-full inline-flex items-center justify-center gap-2 px-5 py-3.5 rounded-xl bg-emerald-500 text-slate-950 font-bold text-sm shadow-md"
               >
                 <MessageSquare className="w-4 h-4" />
-                Falar no WhatsApp
+                Solicitar Perícia Gratuita no WhatsApp
               </a>
             </div>
           </div>
         )}
       </header>
 
-      {/* 2. HERO SECTION */}
-      <section id="inicio" className="relative pt-16 pb-24 md:pt-24 md:pb-32 px-4 sm:px-6 lg:px-8 overflow-hidden">
+      {/* ========================================================================= */}
+      {/* 1º SIM — O ESPECIALISTA (Rogério Maciel / Confiança & Autoridade Técnica) */}
+      {/* ========================================================================= */}
+      <section id="especialista" className="relative pt-16 pb-20 md:pt-24 md:pb-28 px-4 sm:px-6 lg:px-8 overflow-hidden">
         {/* Ambient Glows */}
-        <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[350px] bg-blue-500/10 dark:bg-blue-600/15 blur-[120px] rounded-full pointer-events-none -z-10" />
+        <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[350px] bg-blue-500/10 dark:bg-blue-600/15 blur-[120px] rounded-full pointer-events-none -z-10" />
         <div className="absolute top-1/3 right-10 w-[300px] h-[300px] bg-indigo-500/10 dark:bg-indigo-600/10 blur-[100px] rounded-full pointer-events-none -z-10" />
 
         <div className="max-w-5xl mx-auto text-center space-y-8">
-          {/* Badge */}
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-100 dark:bg-blue-950/80 border border-blue-300 dark:border-blue-500/40 text-blue-700 dark:text-blue-300 text-xs sm:text-sm font-semibold tracking-wide shadow-inner">
-            <Sparkles className="w-4 h-4 text-blue-600 dark:text-blue-400 animate-pulse" />
-            Engenharia de Software + Psicologia de Vendas + Inteligência Artificial
+          {/* Headline de Alto Impacto */}
+          <div className="space-y-4">
+            <h1 className="text-4xl sm:text-6xl lg:text-7xl font-black tracking-tight leading-[1.08] text-slate-900 dark:text-white">
+              Seu site está demorando para abrir. <br />
+              <span className="text-rose-600 dark:text-rose-400">
+                E cada segundo de lentidão queima até 70% da sua verba de anúncios.
+              </span>
+            </h1>
           </div>
 
-          {/* Headline */}
-          <h1 className="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight leading-[1.1] text-slate-900 dark:text-white">
-            Seu negócio não precisa de mais um site apenas bonito.{' '}
-            <span className="gradient-text block mt-2">
-              Precisa de uma máquina que coloque clientes qualificados no seu WhatsApp.
-            </span>
-          </h1>
-
-          {/* Subheadline */}
-          <p className="text-lg sm:text-xl text-slate-600 dark:text-slate-300 max-w-3xl mx-auto leading-relaxed font-normal">
-            Desenvolvemos sites ultrarrápidos e persuasivos baseados no princípio{' '}
-            <strong className="text-slate-900 dark:text-white font-semibold">"Vender é um discurso e comprar é uma ação"</strong>.
-            Transforme visitantes anônimos em faturamento real — sem lentidão e sem plugins frágeis.
-          </p>
+          {/* Subheadline Clara & Proposta de Autoridade */}
+          <div className="max-w-3xl mx-auto space-y-3">
+            <p className="text-lg sm:text-xl text-slate-700 dark:text-slate-200 leading-relaxed font-normal">
+              Sou <strong>Rogério Maciel</strong>. Há mais de 20 anos construo engenharia de software para que empresas parem de perder vendas por travamentos técnicos e lentidão.
+            </p>
+            <p className="text-sm sm:text-base text-slate-600 dark:text-slate-400 font-medium">
+              ⚡ Vou recriar o seu site atual com o <strong>mesmo visual que você já tem</strong>, só que abrindo em <strong>menos de 1 segundo no celular e Nota 95+ no Google PageSpeed</strong>.
+            </p>
+          </div>
 
           {/* CTAs */}
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-2">
             <a
               href={whatsappUrl}
               target="_blank"
@@ -233,253 +260,80 @@ export default function App() {
               className="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-8 py-4 rounded-2xl bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold text-base transition duration-200 shadow-xl shadow-emerald-500/25 hover:scale-105 transform glow-emerald"
             >
               <MessageSquare className="w-5 h-5" />
-              Quero um Site de Alta Conversão
+              Falar Direto com Rogério Maciel
               <ArrowRight className="w-4 h-4" />
             </a>
             <a
-              href="#problema"
+              href="#estrutura"
               className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-4 rounded-2xl bg-white dark:bg-slate-900/90 hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-700 dark:text-slate-200 border border-slate-300 dark:border-slate-700 font-semibold text-base transition duration-200 shadow-sm"
             >
-              Conhecer o Método
+              Conhecer a Engenharia
               <ChevronDown className="w-4 h-4" />
             </a>
           </div>
 
-          {/* Badges de Autoridade e Performance */}
-          <div className="pt-12 grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 text-left">
+          {/* 4 Badges de Credibilidade */}
+          <div className="pt-8 grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 text-left">
+            <div className="glass-panel p-4 rounded-2xl border border-slate-200 dark:border-slate-800/80 hover:border-blue-500/30 transition">
+              <Award className="w-6 h-6 text-blue-500 dark:text-blue-400 mb-2" />
+              <div className="font-bold text-slate-900 dark:text-white text-sm sm:text-base">20+ Anos de Carreira</div>
+              <div className="text-xs text-slate-500 dark:text-slate-400 mt-0.5">UFPB, MBA &amp; Ex-Head Neoway</div>
+            </div>
             <div className="glass-panel p-4 rounded-2xl border border-slate-200 dark:border-slate-800/80 hover:border-blue-500/30 transition">
               <Gauge className="w-6 h-6 text-sky-500 dark:text-sky-400 mb-2" />
-              <div className="font-bold text-slate-900 dark:text-white text-sm sm:text-base">&lt; 0.8s no Celular</div>
-              <div className="text-xs text-slate-500 dark:text-slate-400 mt-0.5">Nota 98+ no Google PageSpeed</div>
+              <div className="font-bold text-slate-900 dark:text-white text-sm sm:text-base">&lt; 1s no Celular</div>
+              <div className="text-xs text-slate-500 dark:text-slate-400 mt-0.5">Nota 95+ no Google PageSpeed</div>
             </div>
             <div className="glass-panel p-4 rounded-2xl border border-slate-200 dark:border-slate-800/80 hover:border-blue-500/30 transition">
-              <BookOpen className="w-6 h-6 text-amber-500 dark:text-amber-400 mb-2" />
-              <div className="font-bold text-slate-900 dark:text-white text-sm sm:text-base">Psicologia de Compras</div>
-              <div className="text-xs text-slate-500 dark:text-slate-400 mt-0.5">Discurso focado em fechamento</div>
+              <Eye className="w-6 h-6 text-indigo-500 dark:text-indigo-400 mb-2" />
+              <div className="font-bold text-slate-900 dark:text-white text-sm sm:text-base">Visual Idêntico</div>
+              <div className="text-xs text-slate-500 dark:text-slate-400 mt-0.5">Mantemos o design que você gosta</div>
             </div>
             <div className="glass-panel p-4 rounded-2xl border border-slate-200 dark:border-slate-800/80 hover:border-blue-500/30 transition">
-              <Cpu className="w-6 h-6 text-indigo-500 dark:text-indigo-400 mb-2" />
-              <div className="font-bold text-slate-900 dark:text-white text-sm sm:text-base">20+ Anos de Engenharia</div>
-              <div className="text-xs text-slate-500 dark:text-slate-400 mt-0.5">Ex-Head Neoway &amp; Arquiteto IA</div>
-            </div>
-            <div className="glass-panel p-4 rounded-2xl border border-slate-200 dark:border-slate-800/80 hover:border-blue-500/30 transition">
-              <BarChart3 className="w-6 h-6 text-emerald-500 dark:text-emerald-400 mb-2" />
-              <div className="font-bold text-slate-900 dark:text-white text-sm sm:text-base">Rastreamento de Leads</div>
-              <div className="text-xs text-slate-500 dark:text-slate-400 mt-0.5">Google Tag Manager &amp; GA4 nativos</div>
+              <ShieldCheck className="w-6 h-6 text-emerald-500 dark:text-emerald-400 mb-2" />
+              <div className="font-bold text-slate-900 dark:text-white text-sm sm:text-base">Garantia Blindada</div>
+              <div className="text-xs text-slate-500 dark:text-slate-400 mt-0.5">Nota 95+ ou 100% Reembolso</div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* 3. O PROBLEMA */}
-      <section id="problema" className="py-20 md:py-28 bg-slate-100/70 dark:bg-slate-900/40 border-y border-slate-200 dark:border-slate-800/80 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-6xl mx-auto space-y-12">
-          <div className="text-center max-w-3xl mx-auto space-y-4">
-            <span className="text-xs sm:text-sm font-bold tracking-widest text-rose-600 dark:text-rose-400 uppercase flex items-center justify-center gap-1.5">
-              <AlertTriangle className="w-4 h-4" /> O Diagnóstico Crítico
-            </span>
-            <h2 className="text-3xl sm:text-5xl font-extrabold text-slate-900 dark:text-white tracking-tight">
-              Por que a maioria dos sites na internet <span className="text-rose-600 dark:text-rose-400">não geram vendas</span>?
-            </h2>
-            <p className="text-slate-600 dark:text-slate-300 text-base sm:text-lg">
-              A maioria das agências cria páginas estéticas como cartões de visita digitais, mas esquece que um site sem psicologia de conversão é dinheiro jogado fora.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
-            <div className="glass-panel p-6 sm:p-8 rounded-2xl border border-slate-200 dark:border-slate-800 space-y-4 hover:border-rose-500/30 transition">
-              <div className="h-12 w-12 rounded-xl bg-rose-100 dark:bg-rose-950/60 border border-rose-300 dark:border-rose-800/50 flex items-center justify-center text-rose-600 dark:text-rose-400 font-bold text-lg">
-                1
-              </div>
-              <h3 className="text-xl font-bold text-slate-900 dark:text-white">Lentidão que Queima Anúncios</h3>
-              <p className="text-slate-600 dark:text-slate-300 text-sm leading-relaxed">
-                Sites em WordPress cheios de plugins demoram mais de 4 segundos para abrir. Cada segundo de atraso derruba até 53% dos seus visitantes antes mesmo de verem sua oferta.
-              </p>
-            </div>
-
-            <div className="glass-panel p-6 sm:p-8 rounded-2xl border border-slate-200 dark:border-slate-800 space-y-4 hover:border-rose-500/30 transition">
-              <div className="h-12 w-12 rounded-xl bg-rose-100 dark:bg-rose-950/60 border border-rose-300 dark:border-rose-800/50 flex items-center justify-center text-rose-600 dark:text-rose-400 font-bold text-lg">
-                2
-              </div>
-              <h3 className="text-xl font-bold text-slate-900 dark:text-white">Discurso Institucional Vazio</h3>
-              <p className="text-slate-600 dark:text-slate-300 text-sm leading-relaxed">
-                Textos genéricos falando sobre "missão, visão e valores" que não dialogam com a dor do cliente, não quebram objeções e não geram urgência de compra.
-              </p>
-            </div>
-
-            <div className="glass-panel p-6 sm:p-8 rounded-2xl border border-slate-200 dark:border-slate-800 space-y-4 hover:border-rose-500/30 transition">
-              <div className="h-12 w-12 rounded-xl bg-rose-100 dark:bg-rose-950/60 border border-rose-300 dark:border-rose-800/50 flex items-center justify-center text-rose-600 dark:text-rose-400 font-bold text-lg">
-                3
-              </div>
-              <h3 className="text-xl font-bold text-slate-900 dark:text-white">Labirinto de Links Sem Foco</h3>
-              <p className="text-slate-600 dark:text-slate-300 text-sm leading-relaxed">
-                Menus cheios de páginas dispersas que deixam o cliente perdido em vez de conduzi-lo diretamente ao WhatsApp para fechar negócio.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* 4. A SOLUÇÃO: MÁQUINA DE AQUISIÇÃO */}
-      <section id="servicos" className="py-20 md:py-32 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-6xl mx-auto space-y-16">
-          <div className="text-center max-w-3xl mx-auto space-y-4">
-            <span className="text-xs sm:text-sm font-bold tracking-widest text-blue-600 dark:text-blue-400 uppercase">
-              O Conceito &amp; A Solução
-            </span>
-            <h2 className="text-3xl sm:text-5xl font-extrabold text-slate-900 dark:text-white tracking-tight">
-              O que é uma <span className="gradient-text">Máquina de Aquisição</span>?
-            </h2>
-            <p className="text-slate-600 dark:text-slate-300 text-base sm:text-lg leading-relaxed">
-              Não é um site institucional estático e esquecido. É um <strong>sistema digital de 3 camadas</strong> projetado para atrair em milissegundos, conduzir a atenção sem dispersão e entregar clientes prontos para fechar no seu WhatsApp.
-            </p>
-          </div>
-
-          {/* Os 3 Pilares */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="glass-panel p-8 rounded-3xl border border-slate-200 dark:border-slate-800 space-y-6 flex flex-col justify-between hover:border-blue-500/50 transition duration-300">
-              <div className="space-y-4">
-                <div className="h-14 w-14 rounded-2xl bg-blue-100 dark:bg-blue-950/80 border border-blue-300 dark:border-blue-500/30 flex items-center justify-center text-blue-600 dark:text-blue-400">
-                  <Sparkles className="w-7 h-7" />
-                </div>
-                <h3 className="text-2xl font-bold text-slate-900 dark:text-white">1. One Page Linear</h3>
-                <p className="text-slate-600 dark:text-slate-300 text-sm leading-relaxed">
-                  Concentra toda a jornada de decisão em uma única página fluida com navegação suave por âncoras. Elimina menus redundantes e conduz o visitante diretamente à compra.
-                </p>
-              </div>
-              <ul className="space-y-2 text-xs sm:text-sm text-slate-600 dark:text-slate-300 border-t border-slate-200 dark:border-slate-800/80 pt-4">
-                <li className="flex items-center gap-2">
-                  <Check className="w-4 h-4 text-emerald-500 dark:text-emerald-400 flex-shrink-0" /> Zero cliques dispersos
-                </li>
-                <li className="flex items-center gap-2">
-                  <Check className="w-4 h-4 text-emerald-500 dark:text-emerald-400 flex-shrink-0" /> Foco absoluto na conversão
-                </li>
-                <li className="flex items-center gap-2">
-                  <Check className="w-4 h-4 text-emerald-500 dark:text-emerald-400 flex-shrink-0" /> Navegação instantânea no 4G
-                </li>
-              </ul>
-            </div>
-
-            <div className="glass-panel p-8 rounded-3xl border border-slate-200 dark:border-slate-800 space-y-6 flex flex-col justify-between hover:border-blue-500/50 transition duration-300">
-              <div className="space-y-4">
-                <div className="h-14 w-14 rounded-2xl bg-indigo-100 dark:bg-indigo-950/80 border border-indigo-300 dark:border-indigo-500/30 flex items-center justify-center text-indigo-600 dark:text-indigo-400">
-                  <BookOpen className="w-7 h-7" />
-                </div>
-                <h3 className="text-2xl font-bold text-slate-900 dark:text-white">2. Discurso Persuasivo</h3>
-                <p className="text-slate-600 dark:text-slate-300 text-sm leading-relaxed">
-                  Estrutura inspirada na psicologia comportamental de compras: Proposta Única de Valor clara, quebra prévia de objeções e posicionamento sólido de autoridade.
-                </p>
-              </div>
-              <ul className="space-y-2 text-xs sm:text-sm text-slate-600 dark:text-slate-300 border-t border-slate-200 dark:border-slate-800/80 pt-4">
-                <li className="flex items-center gap-2">
-                  <Check className="w-4 h-4 text-emerald-500 dark:text-emerald-400 flex-shrink-0" /> Títulos de alto impacto
-                </li>
-                <li className="flex items-center gap-2">
-                  <Check className="w-4 h-4 text-emerald-500 dark:text-emerald-400 flex-shrink-0" /> Alinhamento com a dor do cliente
-                </li>
-                <li className="flex items-center gap-2">
-                  <Check className="w-4 h-4 text-emerald-500 dark:text-emerald-400 flex-shrink-0" /> Chamadas para ação irresistíveis
-                </li>
-              </ul>
-            </div>
-
-            <div className="glass-panel p-8 rounded-3xl border border-slate-200 dark:border-slate-800 space-y-6 flex flex-col justify-between hover:border-blue-500/50 transition duration-300">
-              <div className="space-y-4">
-                <div className="h-14 w-14 rounded-2xl bg-teal-100 dark:bg-teal-950/80 border border-teal-300 dark:border-teal-500/30 flex items-center justify-center text-teal-600 dark:text-teal-400">
-                  <Cpu className="w-7 h-7" />
-                </div>
-                <h3 className="text-2xl font-bold text-slate-900 dark:text-white">3. Engenharia Jamstack</h3>
-                <p className="text-slate-600 dark:text-slate-300 text-sm leading-relaxed">
-                  Desenvolvida em React e Vite com arquitetura 100% estática. Sem dependência de servidores pesados, com segurança total e alta disponibilidade.
-                </p>
-              </div>
-              <ul className="space-y-2 text-xs sm:text-sm text-slate-600 dark:text-slate-300 border-t border-slate-200 dark:border-slate-800/80 pt-4">
-                <li className="flex items-center gap-2">
-                  <Check className="w-4 h-4 text-emerald-500 dark:text-emerald-400 flex-shrink-0" /> Carregamento em &lt; 0.8s
-                </li>
-                <li className="flex items-center gap-2">
-                  <Check className="w-4 h-4 text-emerald-500 dark:text-emerald-400 flex-shrink-0" /> Imune a invasões comuns
-                </li>
-                <li className="flex items-center gap-2">
-                  <Check className="w-4 h-4 text-emerald-500 dark:text-emerald-400 flex-shrink-0" /> Otimizada para SEO e GEO (IAs)
-                </li>
-              </ul>
-            </div>
-          </div>
-
-          {/* ESTUDO DE CASO / PROVA SOCIAL REAL */}
-          <div className="glass-panel p-8 sm:p-12 rounded-3xl border border-blue-300 dark:border-blue-500/30 bg-gradient-to-br from-blue-50/80 via-white to-slate-50 dark:from-blue-950/40 dark:via-slate-900 dark:to-slate-950 space-y-8 shadow-xl">
-            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-slate-200 dark:border-slate-800 pb-6">
-              <div>
-                <span className="text-xs font-bold uppercase tracking-widest text-blue-600 dark:text-blue-400">
-                  Estudo de Caso &amp; Aplicação Real
-                </span>
-                <h3 className="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white mt-1">
-                  Kadosh Auto Center &amp; Plataforma CoreAutoCRM
-                </h3>
-              </div>
-              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-100 dark:bg-emerald-950/80 border border-emerald-300 dark:border-emerald-500/30 text-emerald-700 dark:text-emerald-400 text-xs font-bold w-fit">
-                <CheckCircle2 className="w-4 h-4" /> Resultado Comprovado
-              </div>
-            </div>
-
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 text-center sm:text-left">
-              <div className="space-y-1 p-4 rounded-2xl bg-white/80 dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800">
-                <div className="text-3xl sm:text-4xl font-extrabold text-blue-600 dark:text-blue-400">+340%</div>
-                <div className="text-xs font-bold uppercase tracking-wider text-slate-700 dark:text-slate-300">Conversão de Leads</div>
-                <p className="text-xs text-slate-500 dark:text-slate-400">Aumento no volume de clientes qualificados entrando em contato pelo WhatsApp.</p>
-              </div>
-
-              <div className="space-y-1 p-4 rounded-2xl bg-white/80 dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800">
-                <div className="text-3xl sm:text-4xl font-extrabold text-indigo-600 dark:text-indigo-400">&lt; 15s</div>
-                <div className="text-xs font-bold uppercase tracking-wider text-slate-700 dark:text-slate-300">Tempo de Triagem</div>
-                <p className="text-xs text-slate-500 dark:text-slate-400">O lead chega pronto, interessado no serviço exato e sem dúvidas básicas.</p>
-              </div>
-
-              <div className="space-y-1 p-4 rounded-2xl bg-white/80 dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800">
-                <div className="text-3xl sm:text-4xl font-extrabold text-emerald-600 dark:text-emerald-400">R$ 0,08</div>
-                <div className="text-xs font-bold uppercase tracking-wider text-slate-700 dark:text-slate-300">Custo Operacional</div>
-                <p className="text-xs text-slate-500 dark:text-slate-400">Engenharia de alta eficiência para automação com inteligência artificial.</p>
-              </div>
-            </div>
-
-            <div className="p-4 rounded-2xl bg-blue-50/60 dark:bg-blue-950/40 border border-blue-200 dark:border-blue-800/60 text-sm leading-relaxed text-slate-700 dark:text-slate-200">
-              ⚡ <strong>Transformação Operacional:</strong> De atendentes sobrecarregados com dúvidas repetitivas para um mecanismo automatizado que qualifica o cliente e responde em menos de 15 segundos, 24 horas por dia.
-            </div>
-
-            <blockquote className="italic text-sm sm:text-base text-slate-600 dark:text-slate-300 border-l-4 border-blue-500 pl-4 py-1 leading-relaxed">
-              "Saímos de uma página tradicional com a qual quase ninguém interagia para um mecanismo ágil em que o cliente entra, compreende o valor do serviço e já clica no WhatsApp pronto para agendar."
-            </blockquote>
-          </div>
-        </div>
-      </section>
-
-      {/* 5. SOBRE ROGÉRIO MACIEL */}
-      <section id="sobre" className="py-20 md:py-32 bg-slate-100/70 dark:bg-slate-900/30 border-y border-slate-200 dark:border-slate-800/80 px-4 sm:px-6 lg:px-8">
+      {/* ========================================================================= */}
+      {/* 2º SIM — A EMPRESA / ESTRUTURA (A Solidez da Engenharia & Provas Reais)    */}
+      {/* ========================================================================= */}
+      <section id="estrutura" className="py-20 md:py-28 bg-slate-100/70 dark:bg-slate-900/40 border-y border-slate-200 dark:border-slate-800/80 px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto space-y-16">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            {/* Foto / Perfil Card */}
             <div className="lg:col-span-5 space-y-6">
               <div className="relative mx-auto max-w-sm">
-                <div className="absolute -inset-2 rounded-3xl bg-gradient-to-tr from-blue-600 to-indigo-600 opacity-20 blur-xl"></div>
-                <div className="relative rounded-3xl overflow-hidden border border-slate-200 dark:border-slate-700 bg-slate-200 dark:bg-slate-900 p-2 shadow-2xl">
-                  <div className="aspect-[4/5] rounded-2xl bg-gradient-to-b from-slate-300 to-slate-400 dark:from-slate-800 dark:to-slate-950 flex flex-col items-center justify-center text-center p-8 space-y-4">
-                    <div className="h-24 w-24 rounded-full bg-gradient-to-tr from-blue-600 to-indigo-500 flex items-center justify-center text-3xl font-extrabold text-white shadow-xl shadow-blue-500/30">
-                      RM
+                <div className="absolute -inset-2 rounded-3xl bg-gradient-to-tr from-blue-600 to-indigo-600 opacity-25 blur-xl"></div>
+                <div className="relative rounded-3xl overflow-hidden border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 p-3 shadow-2xl space-y-4">
+                  <div className="relative aspect-[4/5] rounded-2xl overflow-hidden border border-slate-200/80 dark:border-slate-800 shadow-inner group">
+                    <img
+                      src="/images/rogerio-maciel.jpg"
+                      alt="Rogério Marinho Maciel - Especialista em Engenharia de Software e Alta Performance"
+                      className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
+                      loading="lazy"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent"></div>
+                    <div className="absolute bottom-3 left-3 right-3 text-white">
+                      <div className="text-lg font-bold">Rogério Marinho Maciel</div>
+                      <div className="text-xs text-blue-300 font-medium">UFPB &amp; MBA • 20+ Anos de Engenharia</div>
                     </div>
-                    <div className="space-y-1">
-                      <div className="text-xl font-bold text-slate-900 dark:text-white">Rogério Marinho Maciel</div>
-                      <div className="text-xs font-semibold text-blue-600 dark:text-blue-400 uppercase tracking-wider">Arquiteto de Software &amp; Autor</div>
-                    </div>
-                    <p className="text-xs text-slate-600 dark:text-slate-400 leading-relaxed pt-2">
-                      Especialista em unir arquitetura de software moderna com psicologia de discurso para vendas diárias.
+                  </div>
+
+                  <div className="px-2 pb-2 space-y-3 text-center">
+                    <p className="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
+                      Arquiteto de Software e Engenheiro com mais de duas décadas de experiência em plataformas corporativas, Big Data e otimização extrema de conversão.
                     </p>
-                    <div className="flex gap-4 pt-2">
+                    <div className="flex justify-center gap-3 pt-1">
                       <a
                         href="https://www.linkedin.com/in/macrogerio/"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="p-2 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-slate-200 dark:hover:bg-slate-700 transition"
-                        aria-label="Perfil no LinkedIn de Rogério Maciel"
+                        className="p-2.5 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-slate-200 dark:hover:bg-slate-700 transition shadow-sm"
+                        aria-label="LinkedIn de Rogério Maciel"
                       >
                         <LinkedinIcon className="w-5 h-5" />
                       </a>
@@ -487,10 +341,20 @@ export default function App() {
                         href="https://www.instagram.com/mrcrogerio/"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="p-2 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-slate-200 dark:hover:bg-slate-700 transition"
-                        aria-label="Perfil no Instagram de Rogério Maciel"
+                        className="p-2.5 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-slate-200 dark:hover:bg-slate-700 transition shadow-sm"
+                        aria-label="Instagram de Rogério Maciel"
                       >
                         <InstagramIcon className="w-5 h-5" />
+                      </a>
+                      <a
+                        href={whatsappUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="p-2.5 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold transition shadow-sm flex items-center gap-2 text-xs"
+                        aria-label="WhatsApp de Rogério Maciel"
+                      >
+                        <MessageSquare className="w-4 h-4" />
+                        <span>Falar no WhatsApp</span>
                       </a>
                     </div>
                   </div>
@@ -498,116 +362,712 @@ export default function App() {
               </div>
             </div>
 
+            {/* Texto de Apresentação da Estrutura */}
             <div className="lg:col-span-7 space-y-6">
-              <span className="text-xs sm:text-sm font-bold tracking-widest text-blue-600 dark:text-blue-400 uppercase">
-                Autoridade &amp; Bastidores
+              <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-100 dark:bg-blue-950/80 border border-blue-300 dark:border-blue-800 text-blue-700 dark:text-blue-300 text-xs font-bold uppercase tracking-wider">
+                <Building2 className="w-4 h-4" /> A Solidez da Nossa Estrutura
               </span>
               <h2 className="text-3xl sm:text-5xl font-extrabold text-slate-900 dark:text-white tracking-tight">
-                Engenharia de Alto Nível e Resultados Reais
+                Engenharia de Grande Escala Aplicada às Suas Vendas
               </h2>
               <div className="space-y-4 text-slate-600 dark:text-slate-300 text-base sm:text-lg leading-relaxed">
                 <p>
-                  Sou <strong>Rogério Marinho Maciel</strong>, bacharel em Ciência da Computação (UFPB) e pós-graduado com MBA em Marketing, com mais de <strong>20 anos de liderança em engenharia e arquitetura de software</strong>.
+                  Atuei como <strong>Head de Aplicação Digital na Neoway</strong> (líder em Big Data na América Latina) e sou o criador da arquitetura <strong>Core-Bare-Metal™</strong> e da plataforma <strong>CoreAutoCRM / Cora Engine</strong>.
                 </p>
                 <p>
-                  Atuei como <strong>Head de Aplicação Digital na Neoway</strong> (uma das maiores empresas de Big Data e Inteligência da América Latina) e projetei o <strong>CoreAutoCRM / Kadu Engine</strong> — um ecossistema com máquina de estados finitos (FSM) de <strong>28 módulos de IA</strong> operando com custo ultraeficiente de <strong>R$ 0,08 por loja</strong>.
-                </p>
-                <p>
-                  Aplico a mesma precisão de grandes arquiteturas empresariais para construir a sua <strong>Máquina de Aquisição</strong>: eliminando 100% da fricção técnica e alinhando o discurso para que o cliente tome a decisão de compra de forma natural.
+                  Não utilizamos templates genéricos ou construtores visuais de agência que pesam e travam o celular do cliente. Aplicamos o mesmo rigor de grandes arquiteturas de software para que <strong>sua empresa nunca mais perca uma venda por tempo de carregamento</strong>.
                 </p>
               </div>
 
-              {/* Livros Publicados */}
-              <div className="pt-4 space-y-3">
-                <div className="text-xs font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400">Obras e Publicações do Autor:</div>
-                <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
-                  {books.map((b, i) => (
-                    <div key={i} className="glass-panel p-3 rounded-xl border border-slate-200 dark:border-slate-800/80 space-y-1">
-                      <span className="text-[10px] font-semibold text-blue-600 dark:text-blue-400 uppercase">{b.tag}</span>
-                      <div className="font-bold text-xs text-slate-900 dark:text-white">{b.title}</div>
-                      <div className="text-[11px] text-slate-500 dark:text-slate-400 leading-tight">{b.subtitle}</div>
-                    </div>
-                  ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ========================================================================= */}
+      {/* 3º SIM — O PRODUTO / SOLUÇÃO (Arquitetura Core-Bare-Metal™ & 3 Pilares)    */}
+      {/* ========================================================================= */}
+      <section id="solucao" className="py-20 md:py-28 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-6xl mx-auto space-y-16">
+          {/* Header da Seção */}
+          <div className="text-center max-w-3xl mx-auto space-y-4">
+            <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-100 dark:bg-blue-950/80 border border-blue-300 dark:border-blue-800 text-blue-700 dark:text-blue-300 text-xs font-bold uppercase tracking-wider">
+              <Zap className="w-4 h-4" /> A Solução Definitiva
+            </span>
+            <h2 className="text-3xl sm:text-5xl font-extrabold text-slate-900 dark:text-white tracking-tight">
+              Mantenha o Visual Que Você Gosta. <br />
+              <span className="gradient-text">Troque Apenas o Motor por Core-Bare-Metal™</span>
+            </h2>
+            <p className="text-slate-600 dark:text-slate-300 text-base sm:text-lg leading-relaxed">
+              Você não precisa perder semanas aprovando novos layouts ou descartando o site que já construiu. Pegamos a <strong>mesma identidade visual e estrutura</strong> da sua página atual e reconstruímos todo o código em arquitetura pura, eliminando 100% dos intermediários e da lentidão.
+            </p>
+          </div>
+
+          {/* O Conceito de Bare-Metal Aplicado à Web */}
+          <div className="glass-panel p-6 sm:p-8 rounded-3xl border border-slate-200 dark:border-slate-800 bg-slate-50/50 dark:bg-slate-900/50 space-y-4 text-center max-w-4xl mx-auto">
+            <div className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-blue-600 dark:text-blue-400">
+              <Cpu className="w-4 h-4" /> O Que é a Engenharia Core-Bare-Metal™?
+            </div>
+            <p className="text-slate-700 dark:text-slate-200 text-sm sm:text-base leading-relaxed">
+              Tradicionalmente na computação, <em>"bare-metal"</em> refere-se ao software rodando diretamente no hardware, sem camadas de virtualização pesadas. Na web moderna, traduz-se em uma <strong>aplicação despojada de qualquer "gordura" de CMS</strong>, sem intermediários pesados, interpretadores lentos de runtime ou bancos dinâmicos no momento da entrega ao visitante.
+            </p>
+          </div>
+
+          {/* Os 3 Pilares Técnicos da Arquitetura */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {/* Pilar 1 */}
+            <div className="glass-panel p-6 sm:p-8 rounded-3xl border border-slate-200 dark:border-slate-800 space-y-4 hover:border-blue-500/40 transition">
+              <div className="w-12 h-12 rounded-2xl bg-blue-100 dark:bg-blue-950/80 border border-blue-300 dark:border-blue-800 flex items-center justify-center text-blue-600 dark:text-blue-400">
+                <Database className="w-6 h-6" />
+              </div>
+              <div className="space-y-1">
+                <span className="text-xs font-bold uppercase tracking-wider text-blue-600 dark:text-blue-400">Pilar 1</span>
+                <h3 className="text-xl font-bold text-slate-900 dark:text-white">
+                  Zero Runtime &amp; Banco na Borda
+                </h3>
+              </div>
+              <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+                Diferente de um CMS dinâmico (WordPress) que a cada visita precisa carregar PHP e consultar MySQL, o site é <strong>100% pré-compilado</strong>. O servidor não processa código: entrega diretamente arquivos estáticos puros compilados (HTML, CSS e JS) em nível de bytes.
+              </p>
+            </div>
+
+            {/* Pilar 2 */}
+            <div className="glass-panel p-6 sm:p-8 rounded-3xl border border-slate-200 dark:border-slate-800 space-y-4 hover:border-blue-500/40 transition">
+              <div className="w-12 h-12 rounded-2xl bg-indigo-100 dark:bg-indigo-950/80 border border-indigo-300 dark:border-indigo-800 flex items-center justify-center text-indigo-600 dark:text-indigo-400">
+                <Layers className="w-6 h-6" />
+              </div>
+              <div className="space-y-1">
+                <span className="text-xs font-bold uppercase tracking-wider text-indigo-600 dark:text-indigo-400">Pilar 2</span>
+                <h3 className="text-xl font-bold text-slate-900 dark:text-white">
+                  Stack Enxuta (React + Edge CDN)
+                </h3>
+              </div>
+              <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+                Bundle ultra-leve <strong>(&lt; 80 KB gzipped)</strong> contendo apenas o essencial. Imagens convertidas em <code>.webp</code> com dimensões explícitas para evitar saltos na tela <strong>(CLS = 0)</strong> e distribuídas pelo ponto de presença mais próximo do usuário (Cloudflare Edge).
+              </p>
+            </div>
+
+            {/* Pilar 3 */}
+            <div className="glass-panel p-6 sm:p-8 rounded-3xl border border-slate-200 dark:border-slate-800 space-y-4 hover:border-blue-500/40 transition">
+              <div className="w-12 h-12 rounded-2xl bg-emerald-100 dark:bg-emerald-950/80 border border-emerald-300 dark:border-emerald-800 flex items-center justify-center text-emerald-600 dark:text-emerald-400">
+                <Activity className="w-6 h-6" />
+              </div>
+              <div className="space-y-1">
+                <span className="text-xs font-bold uppercase tracking-wider text-emerald-600 dark:text-emerald-400">Pilar 3</span>
+                <h3 className="text-xl font-bold text-slate-900 dark:text-white">
+                  Telemetria Não Bloqueante
+                </h3>
+              </div>
+              <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+                Toda a inteligência de rastreamento (GTM, GA4, Meta Pixel) roda de forma assíncrona via APIs e <code>sendBeacon</code> sem travar a thread principal do celular. O resultado prático é <strong>Total Blocking Time (TBT) em 0 ms</strong> e resposta tátil imediata ao clique.
+              </p>
+            </div>
+          </div>
+
+          {/* Comparativo Visual do Motor & Telemetria */}
+          <div className="glass-panel p-8 sm:p-10 rounded-3xl border border-blue-200 dark:border-blue-900/60 bg-white/90 dark:bg-slate-900/90 shadow-xl space-y-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+              <div className="space-y-4">
+                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-100 dark:bg-emerald-950/80 border border-emerald-300 dark:border-emerald-700 text-emerald-700 dark:text-emerald-300 text-xs font-bold uppercase">
+                  Engenharia de Fricção Zero
+                </div>
+                <h3 className="text-2xl sm:text-3xl font-black text-slate-900 dark:text-white">
+                  O Mesmo Design. Abertura em menos de 1 segundo.
+                </h3>
+                <p className="text-sm sm:text-base text-slate-600 dark:text-slate-300 leading-relaxed">
+                  Não criamos páginas do zero que descaracterizam a marca que você consolidou. Preservamos sua identidade e trocamos o motor frágil por código 100% puro para que <strong>nenhum lead seja perdido por lentidão</strong>.
+                </p>
+                <div className="space-y-2 pt-2 text-sm">
+                  <div className="flex items-center gap-2 text-slate-700 dark:text-slate-300">
+                    <CheckCircle2 className="w-5 h-5 text-emerald-500 flex-shrink-0" />
+                    <span><strong>Preservação estética:</strong> Logotipo, fotos, cores e seções mantidas.</span>
+                  </div>
+                  <div className="flex items-center gap-2 text-slate-700 dark:text-slate-300">
+                    <CheckCircle2 className="w-5 h-5 text-emerald-500 flex-shrink-0" />
+                    <span><strong>Carregamento instantâneo:</strong> O clique no anúncio abre na hora (&lt; 1s no celular).</span>
+                  </div>
+                  <div className="flex items-center gap-2 text-slate-700 dark:text-slate-300">
+                    <CheckCircle2 className="w-5 h-5 text-emerald-500 flex-shrink-0" />
+                    <span><strong>Zero manutenção e zero quedas:</strong> Sem plugins para quebrar o site.</span>
+                  </div>
+                </div>
+              </div>
+
+              <div className="p-6 rounded-2xl bg-slate-900 text-white dark:bg-slate-950 border border-slate-800 space-y-4 font-mono text-xs sm:text-sm">
+                <div className="flex items-center justify-between border-b border-slate-800 pb-3">
+                  <span className="text-slate-400">TELEMETRIA OFICIAL</span>
+                  <span className="text-emerald-400 font-bold">CORE-BARE-METAL™</span>
+                </div>
+                <div className="space-y-2.5">
+                  <div className="flex justify-between items-center">
+                    <span className="text-slate-400">Tempo de Abertura (FCP):</span>
+                    <span className="text-emerald-400 font-bold">&lt; 0.4s</span>
+                  </div>
+                  <div className="flex justify-between items-center">
+                    <span className="text-slate-400">Maior Elemento Visual (LCP):</span>
+                    <span className="text-emerald-400 font-bold">&lt; 1s</span>
+                  </div>
+                  <div className="flex justify-between items-center">
+                    <span className="text-slate-400">Bloqueio de Scripts (TBT):</span>
+                    <span className="text-emerald-400 font-bold">0ms</span>
+                  </div>
+                  <div className="flex justify-between items-center">
+                    <span className="text-slate-400">Deslocamento Visual (CLS):</span>
+                    <span className="text-emerald-400 font-bold">0.00</span>
+                  </div>
+                  <div className="flex justify-between items-center">
+                    <span className="text-slate-400">Nota Google PageSpeed Mobile:</span>
+                    <span className="text-emerald-400 font-bold">95 a 100</span>
+                  </div>
+                  <div className="flex justify-between items-center border-t border-slate-800 pt-2.5">
+                    <span className="text-slate-300 font-bold">Taxa de Aproveitamento de Cliques:</span>
+                    <span className="text-emerald-400 font-bold">100%</span>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
+
+          {/* Comparativo Lado a Lado */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {/* Lado WordPress */}
+            <div className="p-8 rounded-3xl bg-white dark:bg-slate-900 border-2 border-rose-300 dark:border-rose-900/60 space-y-6 shadow-sm">
+              <div className="space-y-2 border-b border-rose-100 dark:border-rose-900/40 pb-4">
+                <span className="text-xs font-bold uppercase tracking-wider text-rose-600 dark:text-rose-400">
+                  Como a maioria dos sites funciona hoje
+                </span>
+                <h3 className="text-2xl font-bold text-slate-900 dark:text-white">WordPress / Elementor / Wix</h3>
+              </div>
+              <ul className="space-y-3 text-sm text-slate-600 dark:text-slate-400">
+                <li className="flex items-start gap-3">
+                  <span className="text-rose-500 font-bold">✕</span>
+                  <span><strong>8 a 12 segundos</strong> para carregar no 4G móvel</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="text-rose-500 font-bold">✕</span>
+                  <span><strong>Dezenas de plugins pesados</strong> que deixam a página instável</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="text-rose-500 font-bold">✕</span>
+                  <span><strong>53% a 78% dos cliques desistem</strong> na tela em branco</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="text-rose-500 font-bold">✕</span>
+                  <span>Banco de dados vulnerável a invasões e quedas de servidor</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="text-rose-500 font-bold">✕</span>
+                  <span>Custo por clique mais caro no Google Ads (Índice de Qualidade baixo)</span>
+                </li>
+              </ul>
+            </div>
+
+            {/* Lado Core-Bare-Metal */}
+            <div className="p-8 rounded-3xl bg-gradient-to-br from-blue-500/10 via-emerald-500/10 to-transparent border-2 border-emerald-500 space-y-6 shadow-xl relative">
+              <div className="absolute -top-3 right-6 bg-emerald-500 text-slate-950 text-xs font-extrabold px-3 py-1 rounded-full uppercase">
+                Recomendado
+              </div>
+              <div className="space-y-2 border-b border-emerald-500/30 pb-4">
+                <span className="text-xs font-bold uppercase tracking-wider text-emerald-600 dark:text-emerald-400">
+                  Reconstrução de Engenharia
+                </span>
+                <h3 className="text-2xl font-bold text-slate-900 dark:text-white">Arquitetura Core-Bare-Metal™</h3>
+              </div>
+              <ul className="space-y-3 text-sm text-slate-700 dark:text-slate-200">
+                <li className="flex items-start gap-3">
+                  <Check className="w-5 h-5 text-emerald-500 flex-shrink-0 mt-0.5" />
+                  <span><strong>Abertura em menos de 1 segundo</strong> no celular (Nota 95+ no Google)</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <Check className="w-5 h-5 text-emerald-500 flex-shrink-0 mt-0.5" />
+                  <span><strong>Zero plugins e zero dependências frágeis</strong>: código 100% puro</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <Check className="w-5 h-5 text-emerald-500 flex-shrink-0 mt-0.5" />
+                  <span><strong>100% de aproveitamento dos cliques pagos</strong>: o lead vê a oferta na hora</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <Check className="w-5 h-5 text-emerald-500 flex-shrink-0 mt-0.5" />
+                  <span>Deploy estático blindado e imune a invasões comuns</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <Check className="w-5 h-5 text-emerald-500 flex-shrink-0 mt-0.5" />
+                  <span>Redução do Custo por Lead (CPL) com Índice de Qualidade 10/10</span>
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
       </section>
 
-      {/* 6. DIFERENCIAIS TÉCNICOS COM MÉTRICAS */}
-      <section id="diferenciais" className="py-20 md:py-32 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-6xl mx-auto space-y-16">
+      {/* ========================================================================= */}
+      {/* 4º SIM — O VALOR / PREÇO (Custo da Inação & Simulador de Faturamento)      */}
+      {/* ========================================================================= */}
+      <section id="simulador" className="py-20 md:py-28 bg-slate-100/70 dark:bg-slate-900/40 border-y border-slate-200 dark:border-slate-800/80 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-5xl mx-auto space-y-12">
           <div className="text-center max-w-3xl mx-auto space-y-4">
-            <span className="text-xs sm:text-sm font-bold tracking-widest text-emerald-600 dark:text-emerald-400 uppercase">
-              Infraestrutura de Elite
+            <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-rose-100 dark:bg-rose-950/80 border border-rose-300 dark:border-rose-800 text-rose-700 dark:text-rose-300 text-xs font-bold uppercase tracking-wider">
+              <Calculator className="w-4 h-4" /> Simulador de Faturamento & Sangria de Tráfego
             </span>
             <h2 className="text-3xl sm:text-5xl font-extrabold text-slate-900 dark:text-white tracking-tight">
-              Métricas que superam qualquer agência tradicional
+              Quanto Faturamento Seu Site Lento Deixa na Mesa Todo Mês?
             </h2>
             <p className="text-slate-600 dark:text-slate-300 text-base sm:text-lg">
-              Substituímos suposições e adjetivos vagos por números e engenharia de ponta.
+              Veja em tempo real o que acontece com a sua verba de tráfego e quanto a mais o seu negócio pode faturar investindo exatamente o mesmo valor em anúncios.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            <div className="glass-panel p-6 rounded-2xl border border-slate-200 dark:border-slate-800 space-y-3">
-              <div className="h-10 w-10 rounded-xl bg-blue-100 dark:bg-blue-950/80 border border-blue-300 dark:border-blue-500/30 flex items-center justify-center text-blue-600 dark:text-blue-400 mb-4">
-                <Gauge className="w-5 h-5" />
+          <div className="glass-panel p-6 sm:p-10 rounded-3xl border-2 border-rose-400 dark:border-rose-600/50 bg-gradient-to-br from-rose-50/90 via-white to-slate-50 dark:from-rose-950/30 dark:via-slate-900 dark:to-slate-950 space-y-10 shadow-xl">
+
+            {/* ------------------------------------------------------------- */}
+            {/* ETAPA 1: TRÁFEGO & QUEIMA NA TELA BRANCA                      */}
+            {/* ------------------------------------------------------------- */}
+            <div className="space-y-6 pb-8 border-b border-slate-200 dark:border-slate-800">
+              <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-rose-600 dark:text-rose-400">
+                <span className="flex h-6 w-6 items-center justify-center rounded-full bg-rose-600 text-white font-black text-xs">1</span>
+                Etapa 1: Seus Anúncios (Investimento & Custo por Clique)
               </div>
-              <div className="text-2xl font-extrabold text-blue-600 dark:text-blue-400">&lt; 0.8s</div>
-              <h3 className="text-lg font-bold text-slate-900 dark:text-white">Velocidade no Celular</h3>
-              <p className="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
-                React 19 + Vite com nota 98+ no PageSpeed. Carregamento até 5x mais rápido do que no WordPress.
-              </p>
+
+              {/* Sliders da Etapa 1 */}
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
+                {/* 1. Investimento em Anúncios */}
+                <div className="space-y-2.5 p-4 rounded-2xl bg-white/80 dark:bg-slate-900/80 border border-slate-200 dark:border-slate-800">
+                  <div className="flex justify-between items-center">
+                    <label htmlFor="ad-spend" className="text-sm font-bold text-slate-800 dark:text-slate-200">
+                      Quanto você investe em anúncios por mês?
+                    </label>
+                    <span className="text-base font-black text-rose-600 dark:text-rose-400">
+                      R$ {monthlyAdSpend.toLocaleString('pt-BR')}
+                    </span>
+                  </div>
+                  <input
+                    id="ad-spend"
+                    type="range"
+                    min="1000"
+                    max="50000"
+                    step="500"
+                    value={monthlyAdSpend}
+                    onChange={(e) => setMonthlyAdSpend(Number(e.target.value))}
+                    className="w-full h-2.5 bg-slate-200 dark:bg-slate-700 rounded-lg appearance-none cursor-pointer accent-rose-600"
+                  />
+                  <div className="flex justify-between text-[11px] text-slate-500 dark:text-slate-400 font-mono">
+                    <span>R$ 1.000</span>
+                    <span>R$ 15.000</span>
+                    <span>R$ 30.000</span>
+                    <span>R$ 50.000</span>
+                  </div>
+                </div>
+
+                {/* 2. Custo Médio por Clique */}
+                <div className="space-y-2.5 p-4 rounded-2xl bg-white/80 dark:bg-slate-900/80 border border-slate-200 dark:border-slate-800">
+                  <div className="flex justify-between items-center">
+                    <label htmlFor="cpc" className="text-sm font-bold text-slate-800 dark:text-slate-200">
+                      Qual o seu Custo Médio por Clique (CPC)?
+                    </label>
+                    <span className="text-base font-black text-rose-600 dark:text-rose-400">
+                      R$ {costPerClick.toFixed(2).replace('.', ',')}
+                    </span>
+                  </div>
+                  <input
+                    id="cpc"
+                    type="range"
+                    min="1"
+                    max="30"
+                    step="0.5"
+                    value={costPerClick}
+                    onChange={(e) => setCostPerClick(Number(e.target.value))}
+                    className="w-full h-2.5 bg-slate-200 dark:bg-slate-700 rounded-lg appearance-none cursor-pointer accent-rose-600"
+                  />
+                  <div className="flex justify-between text-[11px] text-slate-500 dark:text-slate-400 font-mono">
+                    <span>R$ 1,00</span>
+                    <span>R$ 10,00</span>
+                    <span>R$ 20,00</span>
+                    <span>R$ 30,00</span>
+                  </div>
+                </div>
+              </div>
+
+              {/* Resposta do Sistema para a Etapa 1 */}
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-1">
+                {/* Verba Queimada */}
+                <div className="p-4 sm:p-5 rounded-2xl bg-rose-50 dark:bg-rose-950/40 border-2 border-rose-300 dark:border-rose-800 text-left space-y-1">
+                  <div className="flex items-center gap-1.5 text-rose-700 dark:text-rose-400">
+                    <Flame className="w-4 h-4" />
+                    <span className="text-xs font-extrabold uppercase tracking-wider">Verba Queimada na Tela Branca</span>
+                  </div>
+                  <div className="text-2xl sm:text-3xl font-black text-rose-600 dark:text-rose-400">
+                    R$ {wastedAdSpendMonthly.toLocaleString('pt-BR')} <span className="text-xs font-semibold text-slate-500">/ mês</span>
+                  </div>
+                  <p className="text-xs text-slate-600 dark:text-slate-400">
+                    65% da sua verba é gasta com visitantes que clicam no anúncio mas desistem antes do site lento carregar.
+                  </p>
+                </div>
+
+                {/* Leads Perdidos */}
+                <div className="p-4 sm:p-5 rounded-2xl bg-white dark:bg-slate-900 border-2 border-rose-200 dark:border-rose-900/60 text-left space-y-1">
+                  <div className="flex items-center gap-1.5 text-slate-700 dark:text-slate-300">
+                    <TrendingUp className="w-4 h-4 text-rose-500" />
+                    <span className="text-xs font-extrabold uppercase tracking-wider">Leads Perdidos por Lentidão</span>
+                  </div>
+                  <div className="text-2xl sm:text-3xl font-black text-slate-900 dark:text-white">
+                    ~{lostLeadsMonthly} leads <span className="text-xs font-semibold text-slate-500">/ mês</span>
+                  </div>
+                  <p className="text-xs text-slate-600 dark:text-slate-400">
+                    Contatos comerciais qualificados que pagaram o clique mas nunca chegaram a ver a sua oferta.
+                  </p>
+                </div>
+              </div>
             </div>
 
-            <div className="glass-panel p-6 rounded-2xl border border-slate-200 dark:border-slate-800 space-y-3">
-              <div className="h-10 w-10 rounded-xl bg-emerald-100 dark:bg-emerald-950/80 border border-emerald-300 dark:border-emerald-500/30 flex items-center justify-center text-emerald-600 dark:text-emerald-400 mb-4">
-                <ShieldCheck className="w-5 h-5" />
+            {/* ------------------------------------------------------------- */}
+            {/* ETAPA 2: COMERCIAL, TAXA DE CONVERSÃO & TICKET MÉDIO           */}
+            {/* ------------------------------------------------------------- */}
+            <div className="space-y-6 pb-8 border-b border-slate-200 dark:border-slate-800">
+              <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-blue-600 dark:text-blue-400">
+                <span className="flex h-6 w-6 items-center justify-center rounded-full bg-blue-600 text-white font-black text-xs">2</span>
+                Etapa 2: Seu Comercial (Taxa de Conversão & Ticket Médio)
               </div>
-              <div className="text-2xl font-extrabold text-emerald-600 dark:text-emerald-400">0 Falhas</div>
-              <h3 className="text-lg font-bold text-slate-900 dark:text-white">Segurança &amp; Estabilidade</h3>
-              <p className="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
-                Pacote 100% estático. Sem banco de dados exposto no frontend e com zero risco de quebra por plugins.
-              </p>
+
+              {/* Sliders da Etapa 2 */}
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
+                {/* 3. Taxa de Conversão */}
+                <div className="space-y-2.5 p-4 rounded-2xl bg-white/80 dark:bg-slate-900/80 border border-slate-200 dark:border-slate-800">
+                  <div className="flex justify-between items-center">
+                    <label htmlFor="lead-rate" className="text-sm font-bold text-slate-800 dark:text-slate-200">
+                      Qual a taxa de conversão de leads em vendas?
+                    </label>
+                    <span className="text-base font-black text-blue-600 dark:text-blue-400">
+                      {leadToSaleRate.toFixed(0)}% dos leads
+                    </span>
+                  </div>
+                  <input
+                    id="lead-rate"
+                    type="range"
+                    min="2"
+                    max="30"
+                    step="1"
+                    value={leadToSaleRate}
+                    onChange={(e) => setLeadToSaleRate(Number(e.target.value))}
+                    className="w-full h-2.5 bg-slate-200 dark:bg-slate-700 rounded-lg appearance-none cursor-pointer accent-blue-600"
+                  />
+                  <div className="flex justify-between text-[11px] text-slate-500 dark:text-slate-400 font-mono">
+                    <span>2% (conservador)</span>
+                    <span>10% (médio)</span>
+                    <span>20% (forte)</span>
+                    <span>30% (alto)</span>
+                  </div>
+                </div>
+
+                {/* 4. Ticket Médio */}
+                <div className="space-y-2.5 p-4 rounded-2xl bg-white/80 dark:bg-slate-900/80 border border-slate-200 dark:border-slate-800">
+                  <div className="flex justify-between items-center">
+                    <label htmlFor="average-ticket" className="text-sm font-bold text-slate-800 dark:text-slate-200">
+                      Qual o seu Ticket Médio por venda / contrato?
+                    </label>
+                    <span className="text-base font-black text-blue-600 dark:text-blue-400">
+                      R$ {averageTicket.toLocaleString('pt-BR')}
+                    </span>
+                  </div>
+                  <input
+                    id="average-ticket"
+                    type="range"
+                    min="100"
+                    max="15000"
+                    step="100"
+                    value={averageTicket}
+                    onChange={(e) => setAverageTicket(Number(e.target.value))}
+                    className="w-full h-2.5 bg-slate-200 dark:bg-slate-700 rounded-lg appearance-none cursor-pointer accent-blue-600"
+                  />
+                  <div className="flex justify-between text-[11px] text-slate-500 dark:text-slate-400 font-mono">
+                    <span>R$ 100</span>
+                    <span>R$ 3.000</span>
+                    <span>R$ 8.000</span>
+                    <span>R$ 15.000</span>
+                  </div>
+                </div>
+              </div>
+
+              {/* Resposta do Sistema para a Etapa 2 */}
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-1">
+                {/* Leads Recuperados */}
+                <div className="p-4 sm:p-5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-left space-y-1">
+                  <div className="flex items-center gap-1.5 text-blue-600 dark:text-blue-400">
+                    <TrendingUp className="w-4 h-4" />
+                    <span className="text-[11px] font-bold uppercase tracking-wider">Leads que Param de se Perder</span>
+                  </div>
+                  <div className="text-2xl sm:text-3xl font-black text-slate-900 dark:text-white">
+                    ~{lostLeadsMonthly} leads
+                  </div>
+                  <p className="text-[11px] text-slate-500 dark:text-slate-400">
+                    Passam a abrir sua página instantaneamente (&lt;1s).
+                  </p>
+                </div>
+
+                {/* Vendas Convertidas com a Otimização */}
+                <div className="p-4 sm:p-5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-left space-y-1">
+                  <div className="flex items-center gap-1.5 text-indigo-600 dark:text-indigo-400">
+                    <Check className="w-4 h-4" />
+                    <span className="text-[11px] font-bold uppercase tracking-wider">Novas Vendas Convertidas</span>
+                  </div>
+                  <div className="text-2xl sm:text-3xl font-black text-slate-900 dark:text-white">
+                    +{recoveredSalesMonthly} {recoveredSalesMonthly === 1 ? 'venda' : 'vendas'}
+                  </div>
+                  <p className="text-[11px] text-slate-500 dark:text-slate-400">
+                    Fechadas com sua taxa de {leadToSaleRate}%.
+                  </p>
+                </div>
+
+                {/* Faturamento Deixado na Mesa */}
+                <div className="p-4 sm:p-5 rounded-2xl bg-rose-600 text-white dark:bg-rose-950/90 border border-rose-500 dark:border-rose-800 text-left space-y-1 shadow-md">
+                  <div className="flex items-center gap-1.5 text-rose-100 dark:text-rose-300">
+                    <Coins className="w-4 h-4" />
+                    <span className="text-[11px] font-bold uppercase tracking-wider">Faturamento Deixado na Mesa</span>
+                  </div>
+                  <div className="text-2xl sm:text-3xl font-black text-white dark:text-rose-200">
+                    R$ {recoveredRevenueMonthly.toLocaleString('pt-BR')} <span className="text-xs font-normal text-rose-200">/ mês</span>
+                  </div>
+                  <p className="text-[11px] text-rose-100 dark:text-rose-300">
+                    R$ {recoveredRevenueYearly.toLocaleString('pt-BR')} no ano que voltam para seu bolso.
+                  </p>
+                </div>
+              </div>
             </div>
 
-            <div className="glass-panel p-6 rounded-2xl border border-slate-200 dark:border-slate-800 space-y-3">
-              <div className="h-10 w-10 rounded-xl bg-indigo-100 dark:bg-indigo-950/80 border border-indigo-300 dark:border-indigo-500/30 flex items-center justify-center text-indigo-600 dark:text-indigo-400 mb-4">
-                <Cpu className="w-5 h-5" />
+            {/* ------------------------------------------------------------- */}
+            {/* ETAPA 3: O VEREDITO DE IMPACTO (X -> Y vs X -> Z)             */}
+            {/* ------------------------------------------------------------- */}
+            <div className="p-6 sm:p-8 rounded-3xl bg-slate-950 text-white border-2 border-emerald-500/80 space-y-8 shadow-2xl">
+              <div className="space-y-3">
+                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-950/80 border border-emerald-800 text-emerald-400 text-xs font-bold uppercase tracking-widest">
+                  <Zap className="w-3.5 h-3.5" /> Veredito de Impacto no Faturamento
+                </div>
+                <h3 className="text-xl sm:text-2xl font-black text-white">
+                  Comparativo de Faturamento: Sem Otimização vs. Core-Bare-Metal™
+                </h3>
               </div>
-              <div className="text-2xl font-extrabold text-indigo-600 dark:text-indigo-400">100% GEO</div>
-              <h3 className="text-lg font-bold text-slate-900 dark:text-white">Otimização para IAs</h3>
-              <p className="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
-                Metadados estruturados (llms.txt e Schema JSON-LD) para citação em robôs de IA como ChatGPT, Perplexity e Google.
-              </p>
+
+              {/* Grid Comparativo em 2 Colunas */}
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                {/* Coluna 1: Cenário Atual (Site Lento) */}
+                <div className="p-5 sm:p-6 rounded-2xl bg-slate-900/90 border border-rose-900/60 space-y-4">
+                  <div className="flex items-center justify-between border-b border-slate-800 pb-3">
+                    <span className="text-xs font-bold uppercase tracking-wider text-rose-400">
+                      Situação Atual (Site Lento)
+                    </span>
+                    <span className="text-[11px] text-slate-400 font-mono">Sem Otimização</span>
+                  </div>
+                  <div className="space-y-2 text-sm text-slate-300">
+                    <div className="flex justify-between">
+                      <span className="text-slate-400">Você investe em tráfego:</span>
+                      <span className="font-bold text-white">R$ {monthlyAdSpend.toLocaleString('pt-BR')}</span>
+                    </div>
+                    <div className="flex justify-between">
+                      <span className="text-slate-400">Leads válidos capturados:</span>
+                      <span className="font-bold text-white">~{validLeadsMonthly} leads</span>
+                    </div>
+                    <div className="flex justify-between">
+                      <span className="text-slate-400">Vendas convertidas:</span>
+                      <span className="font-bold text-white">~{currentSalesMonthly} vendas</span>
+                    </div>
+                  </div>
+                  <div className="pt-3 border-t border-slate-800">
+                    <span className="text-[11px] font-bold uppercase tracking-wider text-slate-400 block">
+                      Resultado Atual (Faturamento Y):
+                    </span>
+                    <div className="text-2xl sm:text-3xl font-black text-slate-200">
+                      R$ {currentRevenueMonthly.toLocaleString('pt-BR')} <span className="text-xs font-normal text-slate-400">/ mês</span>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Coluna 2: Com Core-Bare-Metal (Site Otimizado) */}
+                <div className="p-5 sm:p-6 rounded-2xl bg-gradient-to-br from-emerald-950/40 to-slate-900/90 border-2 border-emerald-500/80 space-y-4 shadow-lg glow-emerald">
+                  <div className="flex items-center justify-between border-b border-emerald-900/60 pb-3">
+                    <span className="text-xs font-bold uppercase tracking-wider text-emerald-400">
+                      Com Core-Bare-Metal™ (Ultra Rápido)
+                    </span>
+                    <span className="text-[11px] text-emerald-400 font-mono font-bold">&lt; 1s de abertura</span>
+                  </div>
+                  <div className="space-y-2 text-sm text-slate-200">
+                    <div className="flex justify-between">
+                      <span className="text-slate-300">Você continua investindo:</span>
+                      <span className="font-bold text-emerald-300">R$ {monthlyAdSpend.toLocaleString('pt-BR')} (mesmo valor)</span>
+                    </div>
+                    <div className="flex justify-between">
+                      <span className="text-slate-300">Leads totais aproveitados:</span>
+                      <span className="font-bold text-emerald-300">~{validLeadsMonthly + lostLeadsMonthly} leads</span>
+                    </div>
+                    <div className="flex justify-between">
+                      <span className="text-slate-300">Vendas totais ({currentSalesMonthly} atuais + {recoveredSalesMonthly} novos):</span>
+                      <span className="font-bold text-emerald-300">~{totalSalesOptimized} vendas</span>
+                    </div>
+                  </div>
+                  <div className="pt-3 border-t border-emerald-900/60">
+                    <span className="text-[11px] font-bold uppercase tracking-wider text-emerald-400 block">
+                      Novo Faturamento Estimado (Faturamento Z):
+                    </span>
+                    <div className="text-2xl sm:text-3xl font-black text-emerald-400">
+                      R$ {optimizedRevenueMonthly.toLocaleString('pt-BR')} <span className="text-xs font-normal text-emerald-200">/ mês</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Frase Resumo Exata de Alto Impacto */}
+              <div className="p-5 rounded-2xl bg-slate-900 border border-slate-800 text-center sm:text-left space-y-2">
+                <p className="text-base sm:text-lg leading-relaxed text-slate-100">
+                  📢 <strong>Conclusão Clara:</strong> Hoje você investe <span className="text-rose-400 font-extrabold">R$ {monthlyAdSpend.toLocaleString('pt-BR')}</span> para ter um resultado de <span className="text-slate-200 font-extrabold">R$ {currentRevenueMonthly.toLocaleString('pt-BR')}</span> de faturamento (considerando apenas os leads válidos que conseguem abrir seu site lento). Com a nossa otimização você continua investindo os mesmos <span className="text-emerald-400 font-extrabold">R$ {monthlyAdSpend.toLocaleString('pt-BR')}</span>, mas o seu faturamento pode chegar a <span className="text-emerald-400 font-extrabold">R$ {optimizedRevenueMonthly.toLocaleString('pt-BR')} por mês</span> (resgatando <span className="text-emerald-300 font-bold">+R$ {recoveredRevenueMonthly.toLocaleString('pt-BR')}</span> que hoje são jogados no lixo).
+                </p>
+              </div>
+
+              {/* CTA do Simulador */}
+              <div className="flex flex-col sm:flex-row items-center justify-between gap-4 pt-4 border-t border-slate-800">
+                <div className="text-xs text-slate-400 text-center sm:text-left">
+                  ⚡ Recriamos seu site na arquitetura Core-Bare-Metal™ mantendo o mesmo design e entregando nota 95+ no Google.
+                </div>
+                <a
+                  href={whatsappUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-extrabold text-base shadow-xl whitespace-nowrap transition duration-200 hover:scale-105"
+                >
+                  <MessageSquare className="w-5 h-5" />
+                  Solicitar Perícia Gratuita no WhatsApp
+                  <ArrowRight className="w-4 h-4" />
+                </a>
+              </div>
             </div>
 
-            <div className="glass-panel p-6 rounded-2xl border border-slate-200 dark:border-slate-800 space-y-3">
-              <div className="h-10 w-10 rounded-xl bg-teal-100 dark:bg-teal-950/80 border border-teal-300 dark:border-teal-500/30 flex items-center justify-center text-teal-600 dark:text-teal-400 mb-4">
-                <BarChart3 className="w-5 h-5" />
-              </div>
-              <div className="text-2xl font-extrabold text-teal-600 dark:text-teal-400">100% Rastreável</div>
-              <h3 className="text-lg font-bold text-slate-900 dark:text-white">Custo por Lead e ROI</h3>
-              <p className="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
-                GTM e GA4 nativos para mensurar o custo de cada lead e acompanhar o retorno exato dos anúncios.
-              </p>
-            </div>
           </div>
         </div>
       </section>
 
-      {/* 7. FAQ */}
-      <section id="faq" className="py-20 md:py-28 bg-slate-100/70 dark:bg-slate-900/40 border-y border-slate-200 dark:border-slate-800/80 px-4 sm:px-6 lg:px-8">
+      {/* ========================================================================= */}
+      {/* 5º SIM — O MOMENTO (Perícia Gratuita, Garantia Blindada & WhatsApp)        */}
+      {/* ========================================================================= */}
+      <section id="fechamento" className="py-20 md:py-32 px-4 sm:px-6 lg:px-8 relative overflow-hidden bg-slate-100/70 dark:bg-slate-900/40 border-t border-slate-200 dark:border-slate-800/80">
+        {/* Glow de Fundo */}
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[400px] bg-emerald-500/10 dark:bg-emerald-600/15 blur-[140px] rounded-full pointer-events-none -z-10" />
+
+        <div className="max-w-5xl mx-auto space-y-10">
+          {/* Header do Fechamento */}
+          <div className="text-center max-w-3xl mx-auto space-y-4">
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-emerald-100 dark:bg-emerald-950/80 border border-emerald-300 dark:border-emerald-500/40 text-emerald-700 dark:text-emerald-300 text-xs sm:text-sm font-semibold">
+              <Clock className="w-4 h-4 text-emerald-600 dark:text-emerald-400" />
+              Diagnóstico Sem Custo & Risco Zero
+            </div>
+
+            <h2 className="text-3xl sm:text-5xl lg:text-6xl font-black text-slate-900 dark:text-white tracking-tight leading-tight">
+              Pare de ver seu dinheiro de anúncios evaporar na tela branca.
+            </h2>
+
+            <p className="text-slate-600 dark:text-slate-300 text-base sm:text-lg">
+              Veja exatamente quanto tráfego você recupera e como colocar seu site abrindo em menos de 1 segundo com código puro de engenharia.
+            </p>
+          </div>
+
+          {/* Card Principal Unificado com Perícia Técnica + Garantia Blindada */}
+          <div className="glass-panel p-8 sm:p-12 md:p-14 rounded-3xl border-2 border-emerald-500/40 bg-gradient-to-b from-emerald-50/70 via-white to-slate-50 dark:from-emerald-950/30 dark:via-slate-900 dark:to-slate-950 space-y-8 shadow-2xl glow-emerald">
+            
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch">
+              {/* Coluna 1: Como Funciona a Perícia Gratuita */}
+              <div className="bg-white/90 dark:bg-slate-900/90 p-6 sm:p-8 rounded-2xl border border-slate-200 dark:border-slate-800 space-y-4 flex flex-col justify-between">
+                <div className="space-y-3">
+                  <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-blue-600 dark:text-blue-400">
+                    <CheckCircle2 className="w-4 h-4" />
+                    Como Funciona Sua Perícia Técnica Gratuita:
+                  </div>
+                  <ol className="space-y-3 text-sm sm:text-base text-slate-700 dark:text-slate-300">
+                    <li className="flex items-start gap-3">
+                      <span className="flex-shrink-0 w-6 h-6 rounded-full bg-blue-100 dark:bg-blue-900/80 text-blue-600 dark:text-blue-300 font-bold text-xs flex items-center justify-center mt-0.5">1</span>
+                      <span><strong>Envio do Link:</strong> Você me manda o endereço do seu site atual via WhatsApp.</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <span className="flex-shrink-0 w-6 h-6 rounded-full bg-blue-100 dark:bg-blue-900/80 text-blue-600 dark:text-blue-300 font-bold text-xs flex items-center justify-center mt-0.5">2</span>
+                      <span><strong>Diagnóstico no 4G/5G:</strong> Meço o tempo real de abertura no celular e calculo a sangria de anúncios.</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <span className="flex-shrink-0 w-6 h-6 rounded-full bg-blue-100 dark:bg-blue-900/80 text-blue-600 dark:text-blue-300 font-bold text-xs flex items-center justify-center mt-0.5">3</span>
+                      <span><strong>Plano de Ação:</strong> Apresento a reconstrução em Core-Bare-Metal™ mantendo seu design.</span>
+                    </li>
+                  </ol>
+                </div>
+                <div className="text-xs text-slate-500 dark:text-slate-400 pt-2 border-t border-slate-100 dark:border-slate-800">
+                  🎯 Perícia realizada pessoalmente por Rogério Maciel (20+ anos de experiência).
+                </div>
+              </div>
+
+              {/* Coluna 2: A Garantia Blindada de Engenharia */}
+              <div className="bg-gradient-to-br from-emerald-500/10 to-teal-500/10 dark:from-emerald-950/60 dark:to-slate-900/90 p-6 sm:p-8 rounded-2xl border-2 border-emerald-500/60 space-y-4 flex flex-col justify-between">
+                <div className="space-y-3">
+                  <div className="flex items-center gap-2">
+                    <ShieldCheck className="w-6 h-6 text-emerald-600 dark:text-emerald-400" />
+                    <span className="text-xs font-bold uppercase tracking-wider text-emerald-700 dark:text-emerald-300">
+                      Garantia Blindada de Engenharia (Risco Zero)
+                    </span>
+                  </div>
+                  <h3 className="text-xl sm:text-2xl font-black text-slate-900 dark:text-white leading-snug">
+                    Nota 95+ no Google PageSpeed ou 100% de Devolução
+                  </h3>
+                  <p className="text-sm sm:text-base text-slate-700 dark:text-slate-300 leading-relaxed">
+                    Se o seu novo site não carregar em <strong>menos de 1 segundo no celular</strong> e não atingir <strong>nota 95+ no Google PageSpeed oficial</strong>, refinamos sem custos ou <strong>devolvemos 100% do valor pago</strong>.
+                  </p>
+                </div>
+                <div className="inline-flex items-center gap-2 text-xs font-bold text-emerald-800 dark:text-emerald-300 bg-emerald-100/80 dark:bg-emerald-950/80 px-3 py-1.5 rounded-lg border border-emerald-300 dark:border-emerald-800">
+                  <Check className="w-4 h-4" /> Sem letras miúdas. O risco técnico é 100% meu.
+                </div>
+              </div>
+            </div>
+
+            {/* Chamada para Ação Centralizada no WhatsApp */}
+            <div className="pt-4 flex flex-col items-center justify-center gap-4 text-center">
+              <a
+                href={whatsappUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-8 sm:px-12 py-5 rounded-2xl bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-black text-base sm:text-xl transition duration-200 shadow-2xl shadow-emerald-500/30 hover:scale-105 transform glow-emerald"
+              >
+                <MessageSquare className="w-6 h-6" />
+                SOLICITAR PERÍCIA TÉCNICA GRATUITA NO WHATSAPP
+                <ArrowRight className="w-5 h-5" />
+              </a>
+              <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-400">
+                Atendimento direto com Rogério Maciel via WhatsApp: <strong className="text-slate-900 dark:text-white">(62) 99623-2227</strong>
+              </p>
+            </div>
+
+            {/* Badges Finais de Confiança */}
+            <div className="pt-6 border-t border-slate-200 dark:border-slate-800/80 flex flex-wrap items-center justify-center gap-6 text-xs sm:text-sm text-slate-500 dark:text-slate-400 font-medium">
+              <div className="flex items-center gap-2">
+                <CheckCircle2 className="w-4 h-4 text-emerald-600 dark:text-emerald-400" />
+                Perícia Técnica Sem Custo
+              </div>
+              <div className="flex items-center gap-2">
+                <CheckCircle2 className="w-4 h-4 text-emerald-600 dark:text-emerald-400" />
+                Reconstrução em Core-Bare-Metal™
+              </div>
+              <div className="flex items-center gap-2">
+                <CheckCircle2 className="w-4 h-4 text-emerald-600 dark:text-emerald-400" />
+                Nota 95+ Garantida
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      {/* DÚVIDAS FREQUENTES */}
+      <section id="faq" className="py-20 md:py-28 px-4 sm:px-6 lg:px-8 border-t border-slate-200 dark:border-slate-800/80">
         <div className="max-w-4xl mx-auto space-y-12">
           <div className="text-center space-y-4">
-            <span className="text-xs sm:text-sm font-bold tracking-widest text-blue-600 dark:text-blue-400 uppercase">
-              Tire Suas Dúvidas
+            <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-100 dark:bg-blue-950/80 border border-blue-300 dark:border-blue-800 text-blue-700 dark:text-blue-300 text-xs font-bold uppercase tracking-wider">
+              <HelpCircle className="w-4 h-4" /> Perguntas Frequentes
             </span>
-            <h2 className="text-3xl sm:text-5xl font-extrabold text-slate-900 dark:text-white tracking-tight">Perguntas Frequentes</h2>
+            <h2 className="text-3xl sm:text-5xl font-extrabold text-slate-900 dark:text-white tracking-tight">
+              Dúvidas Frequentes
+            </h2>
             <p className="text-slate-600 dark:text-slate-300 text-base sm:text-lg">
-              Tudo o que você precisa saber sobre o desenvolvimento de sites de alta conversão.
+              Tudo sobre como funciona a recriação do seu site na Arquitetura Core-Bare-Metal™.
             </p>
           </div>
 
@@ -628,9 +1088,8 @@ export default function App() {
                   >
                     <span>{faq.question}</span>
                     <div
-                      className={`p-1.5 rounded-lg bg-slate-200/80 dark:bg-slate-800/80 text-slate-700 dark:text-slate-300 transition-transform duration-200 ${
-                        isOpen ? 'rotate-180 text-blue-600 dark:text-blue-400 bg-blue-100 dark:bg-blue-950' : ''
-                      }`}
+                      className={`p-1.5 rounded-lg bg-slate-200/80 dark:bg-slate-800/80 text-slate-700 dark:text-slate-300 transition-transform duration-200 ${isOpen ? 'rotate-180 text-blue-600 dark:text-blue-400 bg-blue-100 dark:bg-blue-950' : ''
+                        }`}
                     >
                       <ChevronDown className="w-5 h-5" aria-hidden="true" />
                     </div>
@@ -651,55 +1110,7 @@ export default function App() {
         </div>
       </section>
 
-      {/* 8. CHAMADA FINAL (CTA) */}
-      <section id="contato" className="py-20 md:py-32 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
-        {/* Glow */}
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[400px] bg-blue-500/10 dark:bg-blue-600/20 blur-[140px] rounded-full pointer-events-none -z-10" />
-
-        <div className="max-w-5xl mx-auto glass-panel p-8 sm:p-14 md:p-16 rounded-3xl border border-blue-300 dark:border-blue-500/40 bg-gradient-to-b from-blue-50/90 via-slate-50 to-white dark:from-blue-950/80 dark:via-slate-900 dark:to-slate-950 text-center space-y-8 shadow-2xl glow-blue">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-emerald-100 dark:bg-emerald-950/80 border border-emerald-300 dark:border-emerald-500/40 text-emerald-700 dark:text-emerald-300 text-xs sm:text-sm font-semibold">
-            <Zap className="w-4 h-4 text-emerald-600 dark:text-emerald-400" />
-            Máquina de Aquisição Ativa
-          </div>
-
-          <h2 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 dark:text-white tracking-tight leading-tight max-w-3xl mx-auto">
-            Pare de queimar tráfego em páginas lentas. <span className="gradient-text">Coloque uma Máquina de Aquisição no seu WhatsApp.</span>
-          </h2>
-
-          <p className="text-base sm:text-xl text-slate-600 dark:text-slate-300 max-w-2xl mx-auto leading-relaxed">
-            Em poucos dias, tenha um ativo digital com carregamento em milissegundos (&lt; 0.8s), psicologia de fechamento e rastreamento nativo operando pelo seu negócio.
-          </p>
-
-          <div className="pt-4 flex flex-col sm:flex-row items-center justify-center gap-4">
-            <a
-              href={whatsappUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-8 py-4 rounded-2xl bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold text-base transition duration-200 shadow-xl shadow-emerald-500/25 hover:scale-105 transform glow-emerald"
-            >
-              <MessageSquare className="w-5 h-5" />
-              Quero Minha Máquina de Aquisição
-            </a>
-          </div>
-
-          <div className="pt-6 border-t border-slate-200 dark:border-slate-800/80 flex flex-wrap items-center justify-center gap-6 text-xs sm:text-sm text-slate-500 dark:text-slate-400 font-medium">
-            <div className="flex items-center gap-2">
-              <CheckCircle2 className="w-4 h-4 text-emerald-600 dark:text-emerald-400" />
-              Atendimento direto e estratégico
-            </div>
-            <div className="flex items-center gap-2">
-              <CheckCircle2 className="w-4 h-4 text-emerald-600 dark:text-emerald-400" />
-              Análise personalizada da sua presença digital
-            </div>
-            <div className="flex items-center gap-2">
-              <CheckCircle2 className="w-4 h-4 text-emerald-600 dark:text-emerald-400" />
-              Entrega rápida com alta performance
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* 9. FOOTER */}
+      {/* FOOTER */}
       <footer className="border-t border-slate-200 dark:border-slate-900 bg-slate-100/80 dark:bg-slate-950 py-12 px-4 sm:px-6 lg:px-8 text-slate-500 dark:text-slate-400 text-sm">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-8">
           <div className="flex items-center gap-3">
@@ -708,13 +1119,13 @@ export default function App() {
             </div>
             <div>
               <div className="font-bold text-slate-900 dark:text-white text-base">Rogério Maciel</div>
-              <div className="text-xs text-slate-500 dark:text-slate-400">Sites de Alta Conversão</div>
+              <div className="text-xs text-slate-500 dark:text-slate-400">Arquitetura Core-Bare-Metal™</div>
             </div>
           </div>
 
           <div className="text-center md:text-left space-y-1">
             <p className="text-xs text-slate-600 dark:text-slate-400 font-medium">
-              "Vender é um discurso e compra é uma ação."
+              "Vender é um discurso e comprar é uma ação."
             </p>
             <p className="text-xs text-slate-400 dark:text-slate-500">
               © {new Date().getFullYear()} Rogério Maciel. Todos os direitos reservados.
