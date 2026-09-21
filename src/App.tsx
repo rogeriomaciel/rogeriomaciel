@@ -129,7 +129,7 @@ export default function App() {
   ];
 
   return (
-    <div className="min-h-screen bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-slate-100 flex flex-col font-sans selection:bg-blue-600 selection:text-white transition-colors duration-200">
+    <div className="min-h-screen bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-slate-100 flex flex-col font-sans selection:bg-blue-600 selection:text-white transition-colors duration-200 pb-20 md:pb-0">
       {/* NAVBAR */}
       <header className="sticky top-0 z-50 glass-nav border-b border-slate-200/80 dark:border-slate-800/80 backdrop-blur-md bg-white/90 dark:bg-slate-950/90">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-18 sm:h-20 flex items-center justify-between gap-4">
@@ -651,13 +651,23 @@ export default function App() {
                     step="500"
                     value={monthlyAdSpend}
                     onChange={(e) => setMonthlyAdSpend(Number(e.target.value))}
-                    className="w-full h-2.5 bg-slate-200 dark:bg-slate-700 rounded-lg appearance-none cursor-pointer accent-rose-600"
+                    className="w-full h-3 bg-slate-200 dark:bg-slate-700 rounded-lg appearance-none cursor-pointer accent-rose-600 touch-manipulation"
                   />
-                  <div className="flex justify-between text-[11px] text-slate-500 dark:text-slate-400 font-mono">
-                    <span>R$ 1.000</span>
-                    <span>R$ 15.000</span>
-                    <span>R$ 30.000</span>
-                    <span>R$ 50.000</span>
+                  {/* Presets de Toque Rápido para Celular */}
+                  <div className="flex flex-wrap gap-1.5 pt-1">
+                    {[1500, 3000, 5000, 10000, 20000].map((val) => (
+                      <button
+                        key={val}
+                        type="button"
+                        onClick={() => setMonthlyAdSpend(val)}
+                        className={`px-2.5 py-1 text-xs rounded-lg font-semibold transition active:scale-95 ${monthlyAdSpend === val
+                            ? 'bg-rose-600 text-white shadow-sm'
+                            : 'bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700'
+                          }`}
+                      >
+                        R$ {val >= 1000 ? `${val / 1000}k` : val}
+                      </button>
+                    ))}
                   </div>
                 </div>
 
@@ -679,13 +689,23 @@ export default function App() {
                     step="0.5"
                     value={costPerClick}
                     onChange={(e) => setCostPerClick(Number(e.target.value))}
-                    className="w-full h-2.5 bg-slate-200 dark:bg-slate-700 rounded-lg appearance-none cursor-pointer accent-rose-600"
+                    className="w-full h-3 bg-slate-200 dark:bg-slate-700 rounded-lg appearance-none cursor-pointer accent-rose-600 touch-manipulation"
                   />
-                  <div className="flex justify-between text-[11px] text-slate-500 dark:text-slate-400 font-mono">
-                    <span>R$ 1,00</span>
-                    <span>R$ 10,00</span>
-                    <span>R$ 20,00</span>
-                    <span>R$ 30,00</span>
+                  {/* Presets de Toque Rápido para Celular */}
+                  <div className="flex flex-wrap gap-1.5 pt-1">
+                    {[2.0, 3.5, 5.0, 8.0, 12.0].map((val) => (
+                      <button
+                        key={val}
+                        type="button"
+                        onClick={() => setCostPerClick(val)}
+                        className={`px-2.5 py-1 text-xs rounded-lg font-semibold transition active:scale-95 ${costPerClick === val
+                            ? 'bg-rose-600 text-white shadow-sm'
+                            : 'bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700'
+                          }`}
+                      >
+                        R$ {val.toFixed(2).replace('.', ',')}
+                      </button>
+                    ))}
                   </div>
                 </div>
               </div>
@@ -751,13 +771,23 @@ export default function App() {
                     step="1"
                     value={leadToSaleRate}
                     onChange={(e) => setLeadToSaleRate(Number(e.target.value))}
-                    className="w-full h-2.5 bg-slate-200 dark:bg-slate-700 rounded-lg appearance-none cursor-pointer accent-blue-600"
+                    className="w-full h-3 bg-slate-200 dark:bg-slate-700 rounded-lg appearance-none cursor-pointer accent-blue-600 touch-manipulation"
                   />
-                  <div className="flex justify-between text-[11px] text-slate-500 dark:text-slate-400 font-mono">
-                    <span>2% (conservador)</span>
-                    <span>10% (médio)</span>
-                    <span>20% (forte)</span>
-                    <span>30% (alto)</span>
+                  {/* Presets de Toque Rápido para Celular */}
+                  <div className="flex flex-wrap gap-1.5 pt-1">
+                    {[3, 5, 10, 15, 20].map((val) => (
+                      <button
+                        key={val}
+                        type="button"
+                        onClick={() => setLeadToSaleRate(val)}
+                        className={`px-2.5 py-1 text-xs rounded-lg font-semibold transition active:scale-95 ${leadToSaleRate === val
+                            ? 'bg-blue-600 text-white shadow-sm'
+                            : 'bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700'
+                          }`}
+                      >
+                        {val}%
+                      </button>
+                    ))}
                   </div>
                 </div>
 
@@ -779,13 +809,23 @@ export default function App() {
                     step="100"
                     value={averageTicket}
                     onChange={(e) => setAverageTicket(Number(e.target.value))}
-                    className="w-full h-2.5 bg-slate-200 dark:bg-slate-700 rounded-lg appearance-none cursor-pointer accent-blue-600"
+                    className="w-full h-3 bg-slate-200 dark:bg-slate-700 rounded-lg appearance-none cursor-pointer accent-blue-600 touch-manipulation"
                   />
-                  <div className="flex justify-between text-[11px] text-slate-500 dark:text-slate-400 font-mono">
-                    <span>R$ 100</span>
-                    <span>R$ 3.000</span>
-                    <span>R$ 8.000</span>
-                    <span>R$ 15.000</span>
+                  {/* Presets de Toque Rápido para Celular */}
+                  <div className="flex flex-wrap gap-1.5 pt-1">
+                    {[500, 1500, 3000, 5000, 10000].map((val) => (
+                      <button
+                        key={val}
+                        type="button"
+                        onClick={() => setAverageTicket(val)}
+                        className={`px-2.5 py-1 text-xs rounded-lg font-semibold transition active:scale-95 ${averageTicket === val
+                            ? 'bg-blue-600 text-white shadow-sm'
+                            : 'bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700'
+                          }`}
+                      >
+                        R$ {val >= 1000 ? `${val / 1000}k` : val}
+                      </button>
+                    ))}
                   </div>
                 </div>
               </div>
@@ -1166,6 +1206,30 @@ export default function App() {
           </div>
         </div>
       </footer>
+
+      {/* ========================================================================= */}
+      {/* BARRA FIXA MOBILE DE CONVERSÃO (Thumb Zone CTA - Apenas Mobile)           */}
+      {/* ========================================================================= */}
+      <div className="md:hidden fixed bottom-0 left-0 right-0 z-40 p-3 bg-white/95 dark:bg-slate-950/95 backdrop-blur-xl border-t border-slate-200/80 dark:border-slate-800/80 shadow-[0_-8px_25px_rgba(0,0,0,0.15)] flex items-center justify-between gap-3 safe-area-pb">
+        <div className="flex flex-col">
+          <span className="text-[11px] font-bold text-slate-900 dark:text-white leading-tight">
+            Perícia Técnica Sem Custo
+          </span>
+          <span className="text-[10px] text-emerald-600 dark:text-emerald-400 font-semibold flex items-center gap-1">
+            <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
+            Online no WhatsApp
+          </span>
+        </div>
+        <a
+          href={whatsappUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex-1 max-w-[210px] inline-flex items-center justify-center gap-2 py-3 px-4 rounded-xl bg-emerald-500 hover:bg-emerald-400 active:scale-95 text-slate-950 font-black text-xs shadow-lg transition duration-150"
+        >
+          <MessageSquare className="w-4 h-4" />
+          <span>Falar com Rogério</span>
+        </a>
+      </div>
     </div>
   );
 }
