@@ -306,16 +306,20 @@ export default function App() {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             {/* Foto / Perfil Card */}
             <div className="lg:col-span-5 space-y-6">
-              <div className="relative mx-auto max-w-sm">
-                <div className="absolute -inset-2 rounded-3xl bg-gradient-to-tr from-blue-600 to-indigo-600 opacity-25 blur-xl"></div>
                 <div className="relative rounded-3xl overflow-hidden border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 p-3 shadow-2xl space-y-4">
                   <div className="relative aspect-[4/5] rounded-2xl overflow-hidden border border-slate-200/80 dark:border-slate-800 shadow-inner group">
-                    <img
-                      src="/images/rogerio-maciel.jpg"
-                      alt="Rogério Marinho Maciel - Especialista em Engenharia de Software e Alta Performance"
-                      className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
-                      loading="lazy"
-                    />
+                    <picture>
+                      <source type="image/webp" srcSet="/images/rogerio-maciel.webp" />
+                      <img
+                        src="/images/rogerio-maciel.jpg"
+                        alt="Rogério Marinho Maciel - Especialista em Engenharia de Software e Alta Performance"
+                        width="600"
+                        height="750"
+                        className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
+                        loading="lazy"
+                        decoding="async"
+                      />
+                    </picture>
                     <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent"></div>
                     <div className="absolute bottom-3 left-3 right-3 text-white">
                       <div className="text-lg font-bold">Rogério Marinho Maciel</div>
@@ -359,7 +363,6 @@ export default function App() {
                     </div>
                   </div>
                 </div>
-              </div>
             </div>
 
             {/* Texto de Apresentação da Estrutura */}
