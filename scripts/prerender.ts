@@ -11,7 +11,7 @@ const assetsDir = path.join(distDir, 'assets');
 if (fs.existsSync(indexPath)) {
   let indexHtml = fs.readFileSync(indexPath, 'utf-8');
 
-  // 1. Pré-renderizar a árvore de componentes React no HTML inicial (FCP / Speed Index < 0.5s)
+  // 1. Pré-renderizar a árvore de componentes React no HTML inicial (FCP / Speed Index < 0.4s)
   const appHtml = renderToString(React.createElement(App));
   indexHtml = indexHtml.replace('<div id="root"></div>', `<div id="root">${appHtml}</div>`);
 
@@ -19,7 +19,7 @@ if (fs.existsSync(indexPath)) {
   // Isso elimina 100% dos "Recursos que impedem a renderização" no Google PageSpeed / Cloudflare Edge
   if (fs.existsSync(assetsDir)) {
     const assetFiles = fs.readdirSync(assetsDir);
-    const cssFile = assetFiles.find((f) => f.endsWith('.css'));
+    const cssFile = assetFiles.find((f: string) => f.endsWith('.css'));
 
     if (cssFile) {
       const cssPath = path.join(assetsDir, cssFile);
@@ -33,6 +33,16 @@ if (fs.existsSync(indexPath)) {
         indexHtml = indexHtml.replace('</head>', `<style id="critical-css">${cssContent}</style>\n</head>`);
       }
       console.log(`⚡ [Critical CSS] Inlined ${cssFile} (${(cssContent.length / 1024).toFixed(1)} KB) directly into index.html`);
+    }
+
+    // 3. Mover o script JS principal para antes do fechamento do </body> para eliminar qualquer impacto no FCP
+    const scriptRegex = /<script\s+type="module"[^>]*src=["'][^"']*assets\/index-[^"']*\.js["'][^>]*><\/script>/i;
+    const scriptMatch = indexHtml.match(scriptRegex);
+    if (scriptMatch) {
+      const scriptTag = scriptMatch[0];
+      indexHtml = indexHtml.replace(scriptTag, '');
+      indexHtml = indexHtml.replace('</body>', `${scriptTag}\n</body>`);
+      console.log('⚡ [Deferred JS] Moved main bundle script to bottom of <body>');
     }
   }
 
