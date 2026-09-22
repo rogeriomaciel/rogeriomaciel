@@ -47,7 +47,7 @@ export default function Manifesto() {
             <h1 className="text-4xl sm:text-6xl font-extrabold tracking-tight leading-[1.1] text-slate-900 dark:text-white">
               Vender é um Discurso e <span className="gradient-text">Comprar é uma Ação</span>
             </h1>
-            <p className="text-sm sm:text-base text-slate-500 dark:text-slate-400 font-medium">
+            <p className="text-sm sm:text-base text-slate-600 dark:text-slate-400 font-medium">
               A filosofia por trás dos sites que geram faturamento real todos os dias.
             </p>
           </div>
@@ -135,7 +135,7 @@ export default function Manifesto() {
       </main>
 
       {/* Footer */}
-      <footer className="border-t border-slate-200 dark:border-slate-900 py-8 text-center text-xs text-slate-500">
+      <footer className="border-t border-slate-200 dark:border-slate-900 py-8 text-center text-xs text-slate-600 dark:text-slate-400">
         <p>© {new Date().getFullYear()} {meta.brandName}. Todos os direitos reservados.</p>
       </footer>
     </div>

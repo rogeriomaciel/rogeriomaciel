@@ -130,6 +130,14 @@ export default function App() {
 
   return (
     <div className="min-h-screen bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-slate-100 flex flex-col font-sans selection:bg-blue-600 selection:text-white transition-colors duration-200 pb-20 md:pb-0">
+      {/* Skip to Main Content Link for Keyboard / Screen Reader Accessibility */}
+      <a
+        href="#especialista"
+        className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 z-50 px-4 py-2 bg-blue-600 text-white rounded-xl font-bold shadow-xl outline-none ring-2 ring-white"
+      >
+        Pular para o conteúdo principal
+      </a>
+
       {/* NAVBAR */}
       <header className="sticky top-0 z-50 glass-nav border-b border-slate-200/80 dark:border-slate-800/80 backdrop-blur-md bg-white/90 dark:bg-slate-950/90">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-18 sm:h-20 flex items-center justify-between gap-4">
@@ -148,7 +156,7 @@ export default function App() {
                   Core-Bare-Metal™
                 </span>
               </div>
-              <span className="text-[10px] sm:text-[11px] font-medium tracking-wide text-slate-500 dark:text-slate-400 uppercase">
+              <span className="text-[10px] sm:text-[11px] font-medium tracking-wide text-slate-600 dark:text-slate-300 uppercase">
                 Engenharia de Performance
               </span>
             </div>
@@ -160,7 +168,7 @@ export default function App() {
               <a
                 key={link.href}
                 href={link.href}
-                className="text-xs sm:text-sm font-semibold text-slate-600 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors whitespace-nowrap"
+                className="text-xs sm:text-sm font-semibold text-slate-700 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors whitespace-nowrap"
               >
                 {link.label}
               </a>
@@ -175,6 +183,7 @@ export default function App() {
               href={whatsappUrl}
               target="_blank"
               rel="noopener noreferrer"
+              aria-label="Solicitar Perícia Gratuita no WhatsApp"
               className="hidden sm:inline-flex items-center gap-2 px-4 py-2 sm:px-5 sm:py-2.5 rounded-full bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold text-xs sm:text-sm transition shadow-md shadow-emerald-500/20 hover:scale-105 transform duration-150 whitespace-nowrap"
             >
               <MessageSquare className="w-4 h-4" />
@@ -183,9 +192,10 @@ export default function App() {
 
             {/* Mobile Menu Toggle Button */}
             <button
+              type="button"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="lg:hidden p-2 rounded-xl text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800 transition"
-              aria-label={mobileMenuOpen ? 'Fechar menu' : 'Abrir menu'}
+              className="lg:hidden p-2 rounded-xl text-slate-700 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800 transition"
+              aria-label={mobileMenuOpen ? 'Fechar menu de navegação' : 'Abrir menu de navegação'}
               aria-expanded={mobileMenuOpen}
             >
               {mobileMenuOpen ? <X className="w-6 h-6" aria-hidden="true" /> : <Menu className="w-6 h-6" aria-hidden="true" />}
@@ -212,6 +222,7 @@ export default function App() {
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={() => setMobileMenuOpen(false)}
+                aria-label="Solicitar Perícia Gratuita no WhatsApp"
                 className="w-full inline-flex items-center justify-center gap-2 px-5 py-3.5 rounded-xl bg-emerald-500 text-slate-950 font-bold text-sm shadow-md"
               >
                 <MessageSquare className="w-4 h-4" />
@@ -222,81 +233,83 @@ export default function App() {
         )}
       </header>
 
-      {/* ========================================================================= */}
-      {/* 1º SIM — O ESPECIALISTA (Rogério Maciel / Confiança & Autoridade Técnica) */}
-      {/* ========================================================================= */}
-      <section id="especialista" className="relative pt-16 pb-20 md:pt-24 md:pb-28 px-4 sm:px-6 lg:px-8 overflow-hidden">
-        {/* Ambient Glows */}
-        <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[350px] bg-blue-500/10 dark:bg-blue-600/15 blur-[120px] rounded-full pointer-events-none -z-10" />
-        <div className="absolute top-1/3 right-10 w-[300px] h-[300px] bg-indigo-500/10 dark:bg-indigo-600/10 blur-[100px] rounded-full pointer-events-none -z-10" />
+      {/* Conteúdo Principal Semântico (<main>) */}
+      <main id="main-content" className="flex-1">
+        {/* ========================================================================= */}
+        {/* 1º SIM — O ESPECIALISTA (Rogério Maciel / Confiança & Autoridade Técnica) */}
+        {/* ========================================================================= */}
+        <section id="especialista" className="relative pt-16 pb-20 md:pt-24 md:pb-28 px-4 sm:px-6 lg:px-8 overflow-hidden">
+          {/* Ambient Glows */}
+          <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[350px] bg-blue-500/10 dark:bg-blue-600/15 blur-[120px] rounded-full pointer-events-none -z-10" />
+          <div className="absolute top-1/3 right-10 w-[300px] h-[300px] bg-indigo-500/10 dark:bg-indigo-600/10 blur-[100px] rounded-full pointer-events-none -z-10" />
 
-        <div className="max-w-5xl mx-auto text-center space-y-8">
-          {/* Headline de Alto Impacto */}
-          <div className="space-y-4">
-            <h1 className="text-4xl sm:text-6xl lg:text-7xl font-black tracking-tight leading-[1.08] text-slate-900 dark:text-white">
-              Seu site está demorando para abrir. <br />
-              <span className="text-rose-600 dark:text-rose-400">
-                E cada segundo de lentidão queima até 70% da sua verba de anúncios.
-              </span>
-            </h1>
-          </div>
+          <div className="max-w-5xl mx-auto text-center space-y-8">
+            {/* Headline de Alto Impacto */}
+            <div className="space-y-4">
+              <h1 className="text-4xl sm:text-6xl lg:text-7xl font-black tracking-tight leading-[1.08] text-slate-900 dark:text-white">
+                Seu site está demorando para abrir. <br />
+                <span className="text-rose-700 dark:text-rose-400">
+                  E cada segundo de lentidão queima até 70% da sua verba de anúncios.
+                </span>
+              </h1>
+            </div>
 
-          {/* Subheadline Clara & Proposta de Autoridade */}
-          <div className="max-w-3xl mx-auto space-y-3">
-            <p className="text-lg sm:text-xl text-slate-700 dark:text-slate-200 leading-relaxed font-normal">
-              Sou <strong>Rogério Maciel</strong>. Há mais de 20 anos construo engenharia de software para que empresas parem de perder vendas por travamentos técnicos e lentidão.
-            </p>
-            <p className="text-sm sm:text-base text-slate-600 dark:text-slate-400 font-medium">
-              ⚡ Vou recriar o seu site atual com o <strong>mesmo visual que você já tem</strong>, só que abrindo em <strong>menos de 1 segundo no celular e Nota 95+ no Google PageSpeed</strong>.
-            </p>
-          </div>
+            {/* Subheadline Clara & Proposta de Autoridade */}
+            <div className="max-w-3xl mx-auto space-y-3">
+              <p className="text-lg sm:text-xl text-slate-700 dark:text-slate-200 leading-relaxed font-normal">
+                Sou <strong>Rogério Maciel</strong>. Há mais de 20 anos construo engenharia de software para que empresas parem de perder vendas por travamentos técnicos e lentidão.
+              </p>
+              <p className="text-sm sm:text-base text-slate-700 dark:text-slate-300 font-medium">
+                ⚡ Vou recriar o seu site atual com o <strong>mesmo visual que você já tem</strong>, só que abrindo em <strong>menos de 1 segundo no celular e Nota 95+ no Google PageSpeed</strong>.
+              </p>
+            </div>
 
-          {/* CTAs */}
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-2">
-            <a
-              href={whatsappUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-8 py-4 rounded-2xl bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold text-base transition duration-200 shadow-xl shadow-emerald-500/25 hover:scale-105 transform glow-emerald"
-            >
-              <MessageSquare className="w-5 h-5" />
-              Falar Direto com Rogério Maciel
-              <ArrowRight className="w-4 h-4" />
-            </a>
-            <a
-              href="#estrutura"
-              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-4 rounded-2xl bg-white dark:bg-slate-900/90 hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-700 dark:text-slate-200 border border-slate-300 dark:border-slate-700 font-semibold text-base transition duration-200 shadow-sm"
-            >
-              Conhecer a Engenharia
-              <ChevronDown className="w-4 h-4" />
-            </a>
-          </div>
+            {/* CTAs */}
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-2">
+              <a
+                href={whatsappUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-8 py-4 rounded-2xl bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold text-base transition duration-200 shadow-xl shadow-emerald-500/25 hover:scale-105 transform glow-emerald"
+              >
+                <MessageSquare className="w-5 h-5" />
+                Falar Direto com Rogério Maciel
+                <ArrowRight className="w-4 h-4" />
+              </a>
+              <a
+                href="#estrutura"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-4 rounded-2xl bg-white dark:bg-slate-900/90 hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-700 dark:text-slate-200 border border-slate-300 dark:border-slate-700 font-semibold text-base transition duration-200 shadow-sm"
+              >
+                Conhecer a Engenharia
+                <ChevronDown className="w-4 h-4" />
+              </a>
+            </div>
 
-          {/* 4 Badges de Credibilidade */}
-          <div className="pt-8 grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 text-left">
-            <div className="glass-panel p-4 rounded-2xl border border-slate-200 dark:border-slate-800/80 hover:border-blue-500/30 transition">
-              <Award className="w-6 h-6 text-blue-500 dark:text-blue-400 mb-2" />
-              <div className="font-bold text-slate-900 dark:text-white text-sm sm:text-base">20+ Anos de Carreira</div>
-              <div className="text-xs text-slate-500 dark:text-slate-400 mt-0.5">UFPB, MBA &amp; Ex-Head Neoway</div>
-            </div>
-            <div className="glass-panel p-4 rounded-2xl border border-slate-200 dark:border-slate-800/80 hover:border-blue-500/30 transition">
-              <Gauge className="w-6 h-6 text-sky-500 dark:text-sky-400 mb-2" />
-              <div className="font-bold text-slate-900 dark:text-white text-sm sm:text-base">&lt; 1s no Celular</div>
-              <div className="text-xs text-slate-500 dark:text-slate-400 mt-0.5">Nota 95+ no Google PageSpeed</div>
-            </div>
-            <div className="glass-panel p-4 rounded-2xl border border-slate-200 dark:border-slate-800/80 hover:border-blue-500/30 transition">
-              <Eye className="w-6 h-6 text-indigo-500 dark:text-indigo-400 mb-2" />
-              <div className="font-bold text-slate-900 dark:text-white text-sm sm:text-base">Visual Idêntico</div>
-              <div className="text-xs text-slate-500 dark:text-slate-400 mt-0.5">Mantemos o design que você gosta</div>
-            </div>
-            <div className="glass-panel p-4 rounded-2xl border border-slate-200 dark:border-slate-800/80 hover:border-blue-500/30 transition">
-              <ShieldCheck className="w-6 h-6 text-emerald-500 dark:text-emerald-400 mb-2" />
-              <div className="font-bold text-slate-900 dark:text-white text-sm sm:text-base">Garantia Blindada</div>
-              <div className="text-xs text-slate-500 dark:text-slate-400 mt-0.5">Nota 95+ ou 100% Reembolso</div>
+            {/* 4 Badges de Credibilidade */}
+            <div className="pt-8 grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 text-left">
+              <div className="glass-panel p-4 rounded-2xl border border-slate-200 dark:border-slate-800/80 hover:border-blue-500/30 transition">
+                <Award className="w-6 h-6 text-blue-600 dark:text-blue-400 mb-2" />
+                <div className="font-bold text-slate-900 dark:text-white text-sm sm:text-base">20+ Anos de Carreira</div>
+                <div className="text-xs text-slate-600 dark:text-slate-300 mt-0.5">UFPB, MBA &amp; Ex-Head Neoway</div>
+              </div>
+              <div className="glass-panel p-4 rounded-2xl border border-slate-200 dark:border-slate-800/80 hover:border-blue-500/30 transition">
+                <Gauge className="w-6 h-6 text-sky-600 dark:text-sky-400 mb-2" />
+                <div className="font-bold text-slate-900 dark:text-white text-sm sm:text-base">&lt; 1s no Celular</div>
+                <div className="text-xs text-slate-600 dark:text-slate-300 mt-0.5">Nota 95+ no Google PageSpeed</div>
+              </div>
+              <div className="glass-panel p-4 rounded-2xl border border-slate-200 dark:border-slate-800/80 hover:border-blue-500/30 transition">
+                <Eye className="w-6 h-6 text-indigo-600 dark:text-indigo-400 mb-2" />
+                <div className="font-bold text-slate-900 dark:text-white text-sm sm:text-base">Visual Idêntico</div>
+                <div className="text-xs text-slate-600 dark:text-slate-300 mt-0.5">Mantemos o design que você gosta</div>
+              </div>
+              <div className="glass-panel p-4 rounded-2xl border border-slate-200 dark:border-slate-800/80 hover:border-blue-500/30 transition">
+                <ShieldCheck className="w-6 h-6 text-emerald-600 dark:text-emerald-400 mb-2" />
+                <div className="font-bold text-slate-900 dark:text-white text-sm sm:text-base">Garantia Blindada</div>
+                <div className="text-xs text-slate-600 dark:text-slate-300 mt-0.5">Nota 95+ ou 100% Reembolso</div>
+              </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
       {/* ========================================================================= */}
       {/* 2º SIM — A EMPRESA / ESTRUTURA (A Solidez da Engenharia & Provas Reais)    */}
@@ -429,7 +442,7 @@ export default function App() {
                   Zero Runtime &amp; Banco na Borda
                 </h3>
               </div>
-              <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+              <p className="text-sm text-slate-700 dark:text-slate-300 leading-relaxed">
                 Diferente de um CMS dinâmico (WordPress) que a cada visita precisa carregar PHP e consultar MySQL, o site é <strong>100% pré-compilado</strong>. O servidor não processa código: entrega diretamente arquivos estáticos puros compilados (HTML, CSS e JS) em nível de bytes.
               </p>
             </div>
@@ -445,7 +458,7 @@ export default function App() {
                   Stack Enxuta (React + Edge CDN)
                 </h3>
               </div>
-              <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+              <p className="text-sm text-slate-700 dark:text-slate-300 leading-relaxed">
                 Bundle ultra-leve <strong>(&lt; 80 KB gzipped)</strong> contendo apenas o essencial. Imagens convertidas em <code>.webp</code> com dimensões explícitas para evitar saltos na tela <strong>(CLS = 0)</strong> e distribuídas pelo ponto de presença mais próximo do usuário (Cloudflare Edge).
               </p>
             </div>
@@ -461,7 +474,7 @@ export default function App() {
                   Telemetria Não Bloqueante
                 </h3>
               </div>
-              <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+              <p className="text-sm text-slate-700 dark:text-slate-300 leading-relaxed">
                 Toda a inteligência de rastreamento (GTM, GA4, Meta Pixel) roda de forma assíncrona via APIs e <code>sendBeacon</code> sem travar a thread principal do celular. O resultado prático é <strong>Total Blocking Time (TBT) em 0 ms</strong> e resposta tátil imediata ao clique.
               </p>
             </div>
@@ -471,13 +484,13 @@ export default function App() {
           <div className="glass-panel p-8 sm:p-10 rounded-3xl border border-blue-200 dark:border-blue-900/60 bg-white/90 dark:bg-slate-900/90 shadow-xl space-y-8">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
               <div className="space-y-4">
-                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-100 dark:bg-emerald-950/80 border border-emerald-300 dark:border-emerald-700 text-emerald-700 dark:text-emerald-300 text-xs font-bold uppercase">
+                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-100 dark:bg-emerald-950/80 border border-emerald-300 dark:border-emerald-700 text-emerald-800 dark:text-emerald-300 text-xs font-bold uppercase">
                   Engenharia de Fricção Zero
                 </div>
                 <h3 className="text-2xl sm:text-3xl font-black text-slate-900 dark:text-white">
                   O Mesmo Design. Abertura em menos de 1 segundo.
                 </h3>
-                <p className="text-sm sm:text-base text-slate-600 dark:text-slate-300 leading-relaxed">
+                <p className="text-sm sm:text-base text-slate-700 dark:text-slate-300 leading-relaxed">
                   Não criamos páginas do zero que descaracterizam a marca que você consolidou. Preservamos sua identidade e trocamos o motor frágil por código 100% puro para que <strong>nenhum lead seja perdido por lentidão</strong>.
                 </p>
                 <div className="space-y-2 pt-2 text-sm">
@@ -498,32 +511,32 @@ export default function App() {
 
               <div className="p-6 rounded-2xl bg-slate-900 text-white dark:bg-slate-950 border border-slate-800 space-y-4 font-mono text-xs sm:text-sm">
                 <div className="flex items-center justify-between border-b border-slate-800 pb-3">
-                  <span className="text-slate-400">TELEMETRIA OFICIAL</span>
+                  <span className="text-slate-300">TELEMETRIA OFICIAL</span>
                   <span className="text-emerald-400 font-bold">CORE-BARE-METAL™</span>
                 </div>
                 <div className="space-y-2.5">
                   <div className="flex justify-between items-center">
-                    <span className="text-slate-400">Tempo de Abertura (FCP):</span>
+                    <span className="text-slate-300">Tempo de Abertura (FCP):</span>
                     <span className="text-emerald-400 font-bold">&lt; 0.4s</span>
                   </div>
                   <div className="flex justify-between items-center">
-                    <span className="text-slate-400">Maior Elemento Visual (LCP):</span>
+                    <span className="text-slate-300">Maior Elemento Visual (LCP):</span>
                     <span className="text-emerald-400 font-bold">&lt; 1s</span>
                   </div>
                   <div className="flex justify-between items-center">
-                    <span className="text-slate-400">Bloqueio de Scripts (TBT):</span>
+                    <span className="text-slate-300">Bloqueio de Scripts (TBT):</span>
                     <span className="text-emerald-400 font-bold">0ms</span>
                   </div>
                   <div className="flex justify-between items-center">
-                    <span className="text-slate-400">Deslocamento Visual (CLS):</span>
+                    <span className="text-slate-300">Deslocamento Visual (CLS):</span>
                     <span className="text-emerald-400 font-bold">0.00</span>
                   </div>
                   <div className="flex justify-between items-center">
-                    <span className="text-slate-400">Nota Google PageSpeed Mobile:</span>
+                    <span className="text-slate-300">Nota Google PageSpeed Mobile:</span>
                     <span className="text-emerald-400 font-bold">95 a 100</span>
                   </div>
                   <div className="flex justify-between items-center border-t border-slate-800 pt-2.5">
-                    <span className="text-slate-300 font-bold">Taxa de Aproveitamento de Cliques:</span>
+                    <span className="text-slate-200 font-bold">Taxa de Aproveitamento de Cliques:</span>
                     <span className="text-emerald-400 font-bold">100%</span>
                   </div>
                 </div>
@@ -536,30 +549,30 @@ export default function App() {
             {/* Lado WordPress */}
             <div className="p-8 rounded-3xl bg-white dark:bg-slate-900 border-2 border-rose-300 dark:border-rose-900/60 space-y-6 shadow-sm">
               <div className="space-y-2 border-b border-rose-100 dark:border-rose-900/40 pb-4">
-                <span className="text-xs font-bold uppercase tracking-wider text-rose-600 dark:text-rose-400">
+                <span className="text-xs font-bold uppercase tracking-wider text-rose-700 dark:text-rose-400">
                   Como a maioria dos sites funciona hoje
                 </span>
                 <h3 className="text-2xl font-bold text-slate-900 dark:text-white">WordPress / Elementor / Wix</h3>
               </div>
-              <ul className="space-y-3 text-sm text-slate-600 dark:text-slate-400">
+              <ul className="space-y-3 text-sm text-slate-700 dark:text-slate-300">
                 <li className="flex items-start gap-3">
-                  <span className="text-rose-500 font-bold">✕</span>
+                  <span className="text-rose-600 font-bold">✕</span>
                   <span><strong>8 a 12 segundos</strong> para carregar no 4G móvel</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <span className="text-rose-500 font-bold">✕</span>
+                  <span className="text-rose-600 font-bold">✕</span>
                   <span><strong>Dezenas de plugins pesados</strong> que deixam a página instável</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <span className="text-rose-500 font-bold">✕</span>
+                  <span className="text-rose-600 font-bold">✕</span>
                   <span><strong>53% a 78% dos cliques desistem</strong> na tela em branco</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <span className="text-rose-500 font-bold">✕</span>
+                  <span className="text-rose-600 font-bold">✕</span>
                   <span>Banco de dados vulnerável a invasões e quedas de servidor</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <span className="text-rose-500 font-bold">✕</span>
+                  <span className="text-rose-600 font-bold">✕</span>
                   <span>Custo por clique mais caro no Google Ads (Índice de Qualidade baixo)</span>
                 </li>
               </ul>
@@ -571,7 +584,7 @@ export default function App() {
                 Recomendado
               </div>
               <div className="space-y-2 border-b border-emerald-500/30 pb-4">
-                <span className="text-xs font-bold uppercase tracking-wider text-emerald-600 dark:text-emerald-400">
+                <span className="text-xs font-bold uppercase tracking-wider text-emerald-800 dark:text-emerald-300">
                   Reconstrução de Engenharia
                 </span>
                 <h3 className="text-2xl font-bold text-slate-900 dark:text-white">Arquitetura Core-Bare-Metal™</h3>
@@ -609,13 +622,13 @@ export default function App() {
       <section id="simulador" className="py-20 md:py-28 bg-slate-100/70 dark:bg-slate-900/40 border-y border-slate-200 dark:border-slate-800/80 px-4 sm:px-6 lg:px-8">
         <div className="max-w-5xl mx-auto space-y-12">
           <div className="text-center max-w-3xl mx-auto space-y-4">
-            <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-rose-100 dark:bg-rose-950/80 border border-rose-300 dark:border-rose-800 text-rose-700 dark:text-rose-300 text-xs font-bold uppercase tracking-wider">
+            <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-rose-100 dark:bg-rose-950/80 border border-rose-300 dark:border-rose-800 text-rose-800 dark:text-rose-300 text-xs font-bold uppercase tracking-wider">
               <Calculator className="w-4 h-4" /> Simulador de Faturamento & Sangria de Tráfego
             </span>
             <h2 className="text-3xl sm:text-5xl font-extrabold text-slate-900 dark:text-white tracking-tight">
               Quanto Faturamento Seu Site Lento Deixa na Mesa Todo Mês?
             </h2>
-            <p className="text-slate-600 dark:text-slate-300 text-base sm:text-lg">
+            <p className="text-slate-700 dark:text-slate-300 text-base sm:text-lg">
               Veja em tempo real o que acontece com a sua verba de tráfego e quanto a mais o seu negócio pode faturar investindo exatamente o mesmo valor em anúncios.
             </p>
           </div>
@@ -626,7 +639,7 @@ export default function App() {
             {/* ETAPA 1: TRÁFEGO & QUEIMA NA TELA BRANCA                      */}
             {/* ------------------------------------------------------------- */}
             <div className="space-y-6 pb-8 border-b border-slate-200 dark:border-slate-800">
-              <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-rose-600 dark:text-rose-400">
+              <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-rose-700 dark:text-rose-400">
                 <span className="flex h-6 w-6 items-center justify-center rounded-full bg-rose-600 text-white font-black text-xs">1</span>
                 Etapa 1: Seus Anúncios (Investimento & Custo por Clique)
               </div>
@@ -639,7 +652,7 @@ export default function App() {
                     <label htmlFor="ad-spend" className="text-sm font-bold text-slate-800 dark:text-slate-200">
                       Quanto você investe em anúncios por mês?
                     </label>
-                    <span className="text-base font-black text-rose-600 dark:text-rose-400">
+                    <span className="text-base font-black text-rose-700 dark:text-rose-400">
                       R$ {monthlyAdSpend.toLocaleString('pt-BR')}
                     </span>
                   </div>
@@ -649,6 +662,10 @@ export default function App() {
                     min="1000"
                     max="50000"
                     step="500"
+                    aria-label="Investimento mensal em anúncios"
+                    aria-valuemin={1000}
+                    aria-valuemax={50000}
+                    aria-valuenow={monthlyAdSpend}
                     value={monthlyAdSpend}
                     onChange={(e) => setMonthlyAdSpend(Number(e.target.value))}
                     className="w-full h-3 bg-slate-200 dark:bg-slate-700 rounded-lg appearance-none cursor-pointer accent-rose-600 touch-manipulation"
@@ -660,9 +677,10 @@ export default function App() {
                         key={val}
                         type="button"
                         onClick={() => setMonthlyAdSpend(val)}
+                        aria-label={`Definir investimento em R$ ${val}`}
                         className={`px-2.5 py-1 text-xs rounded-lg font-semibold transition active:scale-95 ${monthlyAdSpend === val
                             ? 'bg-rose-600 text-white shadow-sm'
-                            : 'bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700'
+                            : 'bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700'
                           }`}
                       >
                         R$ {val >= 1000 ? `${val / 1000}k` : val}
@@ -677,7 +695,7 @@ export default function App() {
                     <label htmlFor="cpc" className="text-sm font-bold text-slate-800 dark:text-slate-200">
                       Qual o seu Custo Médio por Clique (CPC)?
                     </label>
-                    <span className="text-base font-black text-rose-600 dark:text-rose-400">
+                    <span className="text-base font-black text-rose-700 dark:text-rose-400">
                       R$ {costPerClick.toFixed(2).replace('.', ',')}
                     </span>
                   </div>
@@ -687,6 +705,10 @@ export default function App() {
                     min="1"
                     max="30"
                     step="0.5"
+                    aria-label="Custo por clique (CPC)"
+                    aria-valuemin={1}
+                    aria-valuemax={30}
+                    aria-valuenow={costPerClick}
                     value={costPerClick}
                     onChange={(e) => setCostPerClick(Number(e.target.value))}
                     className="w-full h-3 bg-slate-200 dark:bg-slate-700 rounded-lg appearance-none cursor-pointer accent-rose-600 touch-manipulation"
@@ -698,9 +720,10 @@ export default function App() {
                         key={val}
                         type="button"
                         onClick={() => setCostPerClick(val)}
+                        aria-label={`Definir CPC em R$ ${val.toFixed(2).replace('.', ',')}`}
                         className={`px-2.5 py-1 text-xs rounded-lg font-semibold transition active:scale-95 ${costPerClick === val
                             ? 'bg-rose-600 text-white shadow-sm'
-                            : 'bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700'
+                            : 'bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700'
                           }`}
                       >
                         R$ {val.toFixed(2).replace('.', ',')}
@@ -714,14 +737,14 @@ export default function App() {
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-1">
                 {/* Verba Queimada */}
                 <div className="p-4 sm:p-5 rounded-2xl bg-rose-50 dark:bg-rose-950/40 border-2 border-rose-300 dark:border-rose-800 text-left space-y-1">
-                  <div className="flex items-center gap-1.5 text-rose-700 dark:text-rose-400">
+                  <div className="flex items-center gap-1.5 text-rose-800 dark:text-rose-400">
                     <Flame className="w-4 h-4" />
                     <span className="text-xs font-extrabold uppercase tracking-wider">Verba Queimada na Tela Branca</span>
                   </div>
-                  <div className="text-2xl sm:text-3xl font-black text-rose-600 dark:text-rose-400">
-                    R$ {wastedAdSpendMonthly.toLocaleString('pt-BR')} <span className="text-xs font-semibold text-slate-500">/ mês</span>
+                  <div className="text-2xl sm:text-3xl font-black text-rose-700 dark:text-rose-400">
+                    R$ {wastedAdSpendMonthly.toLocaleString('pt-BR')} <span className="text-xs font-semibold text-slate-600 dark:text-slate-300">/ mês</span>
                   </div>
-                  <p className="text-xs text-slate-600 dark:text-slate-400">
+                  <p className="text-xs text-slate-700 dark:text-slate-300">
                     65% da sua verba é gasta com visitantes que clicam no anúncio mas desistem antes do site lento carregar.
                   </p>
                 </div>
@@ -729,13 +752,13 @@ export default function App() {
                 {/* Leads Perdidos */}
                 <div className="p-4 sm:p-5 rounded-2xl bg-white dark:bg-slate-900 border-2 border-rose-200 dark:border-rose-900/60 text-left space-y-1">
                   <div className="flex items-center gap-1.5 text-slate-700 dark:text-slate-300">
-                    <TrendingUp className="w-4 h-4 text-rose-500" />
+                    <TrendingUp className="w-4 h-4 text-rose-600" />
                     <span className="text-xs font-extrabold uppercase tracking-wider">Leads Perdidos por Lentidão</span>
                   </div>
                   <div className="text-2xl sm:text-3xl font-black text-slate-900 dark:text-white">
-                    ~{lostLeadsMonthly} leads <span className="text-xs font-semibold text-slate-500">/ mês</span>
+                    ~{lostLeadsMonthly} leads <span className="text-xs font-semibold text-slate-600 dark:text-slate-300">/ mês</span>
                   </div>
-                  <p className="text-xs text-slate-600 dark:text-slate-400">
+                  <p className="text-xs text-slate-700 dark:text-slate-300">
                     Contatos comerciais qualificados que pagaram o clique mas nunca chegaram a ver a sua oferta.
                   </p>
                 </div>
@@ -769,6 +792,10 @@ export default function App() {
                     min="2"
                     max="30"
                     step="1"
+                    aria-label="Taxa de conversão de leads em vendas"
+                    aria-valuemin={2}
+                    aria-valuemax={30}
+                    aria-valuenow={leadToSaleRate}
                     value={leadToSaleRate}
                     onChange={(e) => setLeadToSaleRate(Number(e.target.value))}
                     className="w-full h-3 bg-slate-200 dark:bg-slate-700 rounded-lg appearance-none cursor-pointer accent-blue-600 touch-manipulation"
@@ -780,9 +807,10 @@ export default function App() {
                         key={val}
                         type="button"
                         onClick={() => setLeadToSaleRate(val)}
+                        aria-label={`Definir taxa em ${val}%`}
                         className={`px-2.5 py-1 text-xs rounded-lg font-semibold transition active:scale-95 ${leadToSaleRate === val
                             ? 'bg-blue-600 text-white shadow-sm'
-                            : 'bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700'
+                            : 'bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700'
                           }`}
                       >
                         {val}%
@@ -807,6 +835,10 @@ export default function App() {
                     min="100"
                     max="15000"
                     step="100"
+                    aria-label="Ticket médio por venda ou contrato"
+                    aria-valuemin={100}
+                    aria-valuemax={15000}
+                    aria-valuenow={averageTicket}
                     value={averageTicket}
                     onChange={(e) => setAverageTicket(Number(e.target.value))}
                     className="w-full h-3 bg-slate-200 dark:bg-slate-700 rounded-lg appearance-none cursor-pointer accent-blue-600 touch-manipulation"
@@ -818,9 +850,10 @@ export default function App() {
                         key={val}
                         type="button"
                         onClick={() => setAverageTicket(val)}
+                        aria-label={`Definir ticket médio em R$ ${val}`}
                         className={`px-2.5 py-1 text-xs rounded-lg font-semibold transition active:scale-95 ${averageTicket === val
                             ? 'bg-blue-600 text-white shadow-sm'
-                            : 'bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700'
+                            : 'bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700'
                           }`}
                       >
                         R$ {val >= 1000 ? `${val / 1000}k` : val}
@@ -841,7 +874,7 @@ export default function App() {
                   <div className="text-2xl sm:text-3xl font-black text-slate-900 dark:text-white">
                     ~{lostLeadsMonthly} leads
                   </div>
-                  <p className="text-[11px] text-slate-500 dark:text-slate-400">
+                  <p className="text-[11px] text-slate-600 dark:text-slate-300">
                     Passam a abrir sua página instantaneamente (&lt;1s).
                   </p>
                 </div>
@@ -855,21 +888,21 @@ export default function App() {
                   <div className="text-2xl sm:text-3xl font-black text-slate-900 dark:text-white">
                     +{recoveredSalesMonthly} {recoveredSalesMonthly === 1 ? 'venda' : 'vendas'}
                   </div>
-                  <p className="text-[11px] text-slate-500 dark:text-slate-400">
+                  <p className="text-[11px] text-slate-600 dark:text-slate-300">
                     Fechadas com sua taxa de {leadToSaleRate}%.
                   </p>
                 </div>
 
                 {/* Faturamento Deixado na Mesa */}
                 <div className="p-4 sm:p-5 rounded-2xl bg-rose-600 text-white dark:bg-rose-950/90 border border-rose-500 dark:border-rose-800 text-left space-y-1 shadow-md">
-                  <div className="flex items-center gap-1.5 text-rose-100 dark:text-rose-300">
+                  <div className="flex items-center gap-1.5 text-rose-100 dark:text-rose-200">
                     <Coins className="w-4 h-4" />
                     <span className="text-[11px] font-bold uppercase tracking-wider">Faturamento Deixado na Mesa</span>
                   </div>
                   <div className="text-2xl sm:text-3xl font-black text-white dark:text-rose-200">
-                    R$ {recoveredRevenueMonthly.toLocaleString('pt-BR')} <span className="text-xs font-normal text-rose-200">/ mês</span>
+                    R$ {recoveredRevenueMonthly.toLocaleString('pt-BR')} <span className="text-xs font-normal text-rose-100">/ mês</span>
                   </div>
-                  <p className="text-[11px] text-rose-100 dark:text-rose-300">
+                  <p className="text-[11px] text-rose-100 dark:text-rose-200">
                     R$ {recoveredRevenueYearly.toLocaleString('pt-BR')} no ano que voltam para seu bolso.
                   </p>
                 </div>
@@ -897,28 +930,28 @@ export default function App() {
                     <span className="text-xs font-bold uppercase tracking-wider text-rose-400">
                       Situação Atual (Site Lento)
                     </span>
-                    <span className="text-[11px] text-slate-400 font-mono">Sem Otimização</span>
+                    <span className="text-[11px] text-slate-300 font-mono">Sem Otimização</span>
                   </div>
                   <div className="space-y-2 text-sm text-slate-300">
                     <div className="flex justify-between">
-                      <span className="text-slate-400">Você investe em tráfego:</span>
+                      <span className="text-slate-300">Você investe em tráfego:</span>
                       <span className="font-bold text-white">R$ {monthlyAdSpend.toLocaleString('pt-BR')}</span>
                     </div>
                     <div className="flex justify-between">
-                      <span className="text-slate-400">Leads válidos capturados:</span>
+                      <span className="text-slate-300">Leads válidos capturados:</span>
                       <span className="font-bold text-white">~{validLeadsMonthly} leads</span>
                     </div>
                     <div className="flex justify-between">
-                      <span className="text-slate-400">Vendas convertidas:</span>
+                      <span className="text-slate-300">Vendas convertidas:</span>
                       <span className="font-bold text-white">~{currentSalesMonthly} vendas</span>
                     </div>
                   </div>
                   <div className="pt-3 border-t border-slate-800">
-                    <span className="text-[11px] font-bold uppercase tracking-wider text-slate-400 block">
+                    <span className="text-[11px] font-bold uppercase tracking-wider text-slate-300 block">
                       Resultado Atual (Faturamento Y):
                     </span>
                     <div className="text-2xl sm:text-3xl font-black text-slate-200">
-                      R$ {currentRevenueMonthly.toLocaleString('pt-BR')} <span className="text-xs font-normal text-slate-400">/ mês</span>
+                      R$ {currentRevenueMonthly.toLocaleString('pt-BR')} <span className="text-xs font-normal text-slate-300">/ mês</span>
                     </div>
                   </div>
                 </div>
@@ -933,15 +966,15 @@ export default function App() {
                   </div>
                   <div className="space-y-2 text-sm text-slate-200">
                     <div className="flex justify-between">
-                      <span className="text-slate-300">Você continua investindo:</span>
+                      <span className="text-slate-200">Você continua investindo:</span>
                       <span className="font-bold text-emerald-300">R$ {monthlyAdSpend.toLocaleString('pt-BR')} (mesmo valor)</span>
                     </div>
                     <div className="flex justify-between">
-                      <span className="text-slate-300">Leads totais aproveitados:</span>
+                      <span className="text-slate-200">Leads totais aproveitados:</span>
                       <span className="font-bold text-emerald-300">~{validLeadsMonthly + lostLeadsMonthly} leads</span>
                     </div>
                     <div className="flex justify-between">
-                      <span className="text-slate-300">Vendas totais ({currentSalesMonthly} atuais + {recoveredSalesMonthly} novos):</span>
+                      <span className="text-slate-200">Vendas totais ({currentSalesMonthly} atuais + {recoveredSalesMonthly} novos):</span>
                       <span className="font-bold text-emerald-300">~{totalSalesOptimized} vendas</span>
                     </div>
                   </div>
@@ -965,7 +998,7 @@ export default function App() {
 
               {/* CTA do Simulador */}
               <div className="flex flex-col sm:flex-row items-center justify-between gap-4 pt-4 border-t border-slate-800">
-                <div className="text-xs text-slate-400 text-center sm:text-left">
+                <div className="text-xs text-slate-300 text-center sm:text-left">
                   ⚡ Recriamos seu site na arquitetura Core-Bare-Metal™ mantendo o mesmo design e entregando nota 95+ no Google.
                 </div>
                 <a
@@ -995,8 +1028,8 @@ export default function App() {
         <div className="max-w-5xl mx-auto space-y-10">
           {/* Header do Fechamento */}
           <div className="text-center max-w-3xl mx-auto space-y-4">
-            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-emerald-100 dark:bg-emerald-950/80 border border-emerald-300 dark:border-emerald-500/40 text-emerald-700 dark:text-emerald-300 text-xs sm:text-sm font-semibold">
-              <Clock className="w-4 h-4 text-emerald-600 dark:text-emerald-400" />
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-emerald-100 dark:bg-emerald-950/80 border border-emerald-300 dark:border-emerald-500/40 text-emerald-800 dark:text-emerald-300 text-xs sm:text-sm font-semibold">
+              <Clock className="w-4 h-4 text-emerald-700 dark:text-emerald-400" />
               Diagnóstico Sem Custo & Risco Zero
             </div>
 
@@ -1004,7 +1037,7 @@ export default function App() {
               Pare de ver seu dinheiro de anúncios evaporar na tela branca.
             </h2>
 
-            <p className="text-slate-600 dark:text-slate-300 text-base sm:text-lg">
+            <p className="text-slate-700 dark:text-slate-300 text-base sm:text-lg">
               Veja exatamente quanto tráfego você recupera e como colocar seu site abrindo em menos de 1 segundo com código puro de engenharia.
             </p>
           </div>
@@ -1022,20 +1055,20 @@ export default function App() {
                   </div>
                   <ol className="space-y-3 text-sm sm:text-base text-slate-700 dark:text-slate-300">
                     <li className="flex items-start gap-3">
-                      <span className="flex-shrink-0 w-6 h-6 rounded-full bg-blue-100 dark:bg-blue-900/80 text-blue-600 dark:text-blue-300 font-bold text-xs flex items-center justify-center mt-0.5">1</span>
+                      <span className="flex-shrink-0 w-6 h-6 rounded-full bg-blue-100 dark:bg-blue-900/80 text-blue-700 dark:text-blue-300 font-bold text-xs flex items-center justify-center mt-0.5">1</span>
                       <span><strong>Envio do Link:</strong> Você me manda o endereço do seu site atual via WhatsApp.</span>
                     </li>
                     <li className="flex items-start gap-3">
-                      <span className="flex-shrink-0 w-6 h-6 rounded-full bg-blue-100 dark:bg-blue-900/80 text-blue-600 dark:text-blue-300 font-bold text-xs flex items-center justify-center mt-0.5">2</span>
+                      <span className="flex-shrink-0 w-6 h-6 rounded-full bg-blue-100 dark:bg-blue-900/80 text-blue-700 dark:text-blue-300 font-bold text-xs flex items-center justify-center mt-0.5">2</span>
                       <span><strong>Diagnóstico no 4G/5G:</strong> Meço o tempo real de abertura no celular e calculo a sangria de anúncios.</span>
                     </li>
                     <li className="flex items-start gap-3">
-                      <span className="flex-shrink-0 w-6 h-6 rounded-full bg-blue-100 dark:bg-blue-900/80 text-blue-600 dark:text-blue-300 font-bold text-xs flex items-center justify-center mt-0.5">3</span>
+                      <span className="flex-shrink-0 w-6 h-6 rounded-full bg-blue-100 dark:bg-blue-900/80 text-blue-700 dark:text-blue-300 font-bold text-xs flex items-center justify-center mt-0.5">3</span>
                       <span><strong>Plano de Ação:</strong> Apresento a reconstrução em Core-Bare-Metal™ mantendo seu design.</span>
                     </li>
                   </ol>
                 </div>
-                <div className="text-xs text-slate-500 dark:text-slate-400 pt-2 border-t border-slate-100 dark:border-slate-800">
+                <div className="text-xs text-slate-600 dark:text-slate-300 pt-2 border-t border-slate-100 dark:border-slate-800">
                   🎯 Perícia realizada pessoalmente por Rogério Maciel (20+ anos de experiência).
                 </div>
               </div>
@@ -1044,8 +1077,8 @@ export default function App() {
               <div className="bg-gradient-to-br from-emerald-500/10 to-teal-500/10 dark:from-emerald-950/60 dark:to-slate-900/90 p-6 sm:p-8 rounded-2xl border-2 border-emerald-500/60 space-y-4 flex flex-col justify-between">
                 <div className="space-y-3">
                   <div className="flex items-center gap-2">
-                    <ShieldCheck className="w-6 h-6 text-emerald-600 dark:text-emerald-400" />
-                    <span className="text-xs font-bold uppercase tracking-wider text-emerald-700 dark:text-emerald-300">
+                    <ShieldCheck className="w-6 h-6 text-emerald-700 dark:text-emerald-400" />
+                    <span className="text-xs font-bold uppercase tracking-wider text-emerald-800 dark:text-emerald-300">
                       Garantia Blindada de Engenharia (Risco Zero)
                     </span>
                   </div>
@@ -1056,7 +1089,7 @@ export default function App() {
                     Se o seu novo site não carregar em <strong>menos de 1 segundo no celular</strong> e não atingir <strong>nota 95+ no Google PageSpeed oficial</strong>, refinamos sem custos ou <strong>devolvemos 100% do valor pago</strong>.
                   </p>
                 </div>
-                <div className="inline-flex items-center gap-2 text-xs font-bold text-emerald-800 dark:text-emerald-300 bg-emerald-100/80 dark:bg-emerald-950/80 px-3 py-1.5 rounded-lg border border-emerald-300 dark:border-emerald-800">
+                <div className="inline-flex items-center gap-2 text-xs font-bold text-emerald-900 dark:text-emerald-200 bg-emerald-100 dark:bg-emerald-950/80 px-3 py-1.5 rounded-lg border border-emerald-300 dark:border-emerald-800">
                   <Check className="w-4 h-4" /> Sem letras miúdas. O risco técnico é 100% meu.
                 </div>
               </div>
@@ -1072,25 +1105,25 @@ export default function App() {
               >
                 <MessageSquare className="w-6 h-6" />
                 SOLICITAR PERÍCIA TÉCNICA GRATUITA NO WHATSAPP
-                <ArrowRight className="w-5 h-5" />
+                <ArrowRight className="w-4 h-4" />
               </a>
-              <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-400">
+              <p className="text-xs sm:text-sm text-slate-700 dark:text-slate-300">
                 Atendimento direto com Rogério Maciel via WhatsApp: <strong className="text-slate-900 dark:text-white">(62) 99623-2227</strong>
               </p>
             </div>
 
             {/* Badges Finais de Confiança */}
-            <div className="pt-6 border-t border-slate-200 dark:border-slate-800/80 flex flex-wrap items-center justify-center gap-6 text-xs sm:text-sm text-slate-500 dark:text-slate-400 font-medium">
+            <div className="pt-6 border-t border-slate-200 dark:border-slate-800/80 flex flex-wrap items-center justify-center gap-6 text-xs sm:text-sm text-slate-700 dark:text-slate-300 font-medium">
               <div className="flex items-center gap-2">
-                <CheckCircle2 className="w-4 h-4 text-emerald-600 dark:text-emerald-400" />
+                <CheckCircle2 className="w-4 h-4 text-emerald-700 dark:text-emerald-400" />
                 Perícia Técnica Sem Custo
               </div>
               <div className="flex items-center gap-2">
-                <CheckCircle2 className="w-4 h-4 text-emerald-600 dark:text-emerald-400" />
+                <CheckCircle2 className="w-4 h-4 text-emerald-700 dark:text-emerald-400" />
                 Reconstrução em Core-Bare-Metal™
               </div>
               <div className="flex items-center gap-2">
-                <CheckCircle2 className="w-4 h-4 text-emerald-600 dark:text-emerald-400" />
+                <CheckCircle2 className="w-4 h-4 text-emerald-700 dark:text-emerald-400" />
                 Nota 95+ Garantida
               </div>
             </div>
@@ -1109,7 +1142,7 @@ export default function App() {
             <h2 className="text-3xl sm:text-5xl font-extrabold text-slate-900 dark:text-white tracking-tight">
               Dúvidas Frequentes
             </h2>
-            <p className="text-slate-600 dark:text-slate-300 text-base sm:text-lg">
+            <p className="text-slate-700 dark:text-slate-300 text-base sm:text-lg">
               Tudo sobre como funciona a recriação do seu site na Arquitetura Core-Bare-Metal™.
             </p>
           </div>
@@ -1124,6 +1157,7 @@ export default function App() {
                   className="glass-panel rounded-2xl border border-slate-200 dark:border-slate-800 overflow-hidden transition-all duration-200"
                 >
                   <button
+                    type="button"
                     onClick={() => toggleFaq(idx)}
                     aria-expanded={isOpen}
                     aria-controls={faqId}
@@ -1141,7 +1175,7 @@ export default function App() {
                     <div
                       id={faqId}
                       role="region"
-                      className="px-6 pb-6 pt-1 text-sm sm:text-base text-slate-600 dark:text-slate-300 leading-relaxed border-t border-slate-100 dark:border-slate-800/50"
+                      className="px-6 pb-6 pt-1 text-sm sm:text-base text-slate-700 dark:text-slate-300 leading-relaxed border-t border-slate-100 dark:border-slate-800/50"
                     >
                       {faq.answer}
                     </div>
@@ -1152,9 +1186,10 @@ export default function App() {
           </div>
         </div>
       </section>
+      </main>
 
       {/* FOOTER */}
-      <footer className="border-t border-slate-200 dark:border-slate-900 bg-slate-100/80 dark:bg-slate-950 py-12 px-4 sm:px-6 lg:px-8 text-slate-500 dark:text-slate-400 text-sm">
+      <footer className="border-t border-slate-200 dark:border-slate-900 bg-slate-100/80 dark:bg-slate-950 py-12 px-4 sm:px-6 lg:px-8 text-slate-600 dark:text-slate-400 text-sm">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-8">
           <div className="flex items-center gap-3">
             <div className="h-10 w-10 rounded-xl bg-gradient-to-tr from-blue-600 to-indigo-500 flex items-center justify-center font-bold text-white">
@@ -1162,15 +1197,15 @@ export default function App() {
             </div>
             <div>
               <div className="font-bold text-slate-900 dark:text-white text-base">Rogério Maciel</div>
-              <div className="text-xs text-slate-500 dark:text-slate-400">Arquitetura Core-Bare-Metal™</div>
+              <div className="text-xs text-slate-600 dark:text-slate-300">Arquitetura Core-Bare-Metal™</div>
             </div>
           </div>
 
           <div className="text-center md:text-left space-y-1">
-            <p className="text-xs text-slate-600 dark:text-slate-400 font-medium">
+            <p className="text-xs text-slate-700 dark:text-slate-300 font-medium">
               "Vender é um discurso e comprar é uma ação."
             </p>
-            <p className="text-xs text-slate-400 dark:text-slate-500">
+            <p className="text-xs text-slate-600 dark:text-slate-400">
               © {new Date().getFullYear()} Rogério Maciel. Todos os direitos reservados.
             </p>
           </div>
@@ -1198,10 +1233,10 @@ export default function App() {
               href={whatsappUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="p-2.5 rounded-xl bg-emerald-100 dark:bg-emerald-950/80 border border-emerald-300 dark:border-emerald-500/30 text-emerald-700 dark:text-emerald-400 hover:bg-emerald-200 dark:hover:bg-emerald-900 transition"
+              className="p-2.5 rounded-xl bg-emerald-100 dark:bg-emerald-950/80 border border-emerald-300 dark:border-emerald-500/30 text-emerald-800 dark:text-emerald-300 hover:bg-emerald-200 dark:hover:bg-emerald-900 transition"
               aria-label="WhatsApp de Rogério Maciel"
             >
-              <MessageSquare className="w-5 h-5" />
+              <MessageSquare className="w-4 h-4" />
             </a>
           </div>
         </div>
@@ -1215,7 +1250,7 @@ export default function App() {
           <span className="text-[11px] font-bold text-slate-900 dark:text-white leading-tight">
             Perícia Técnica Sem Custo
           </span>
-          <span className="text-[10px] text-emerald-600 dark:text-emerald-400 font-semibold flex items-center gap-1">
+          <span className="text-[10px] text-emerald-700 dark:text-emerald-400 font-bold flex items-center gap-1">
             <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
             Online no WhatsApp
           </span>
@@ -1224,6 +1259,7 @@ export default function App() {
           href={whatsappUrl}
           target="_blank"
           rel="noopener noreferrer"
+          aria-label="Falar com Rogério no WhatsApp"
           className="flex-1 max-w-[210px] inline-flex items-center justify-center gap-2 py-3 px-4 rounded-xl bg-emerald-500 hover:bg-emerald-400 active:scale-95 text-slate-950 font-black text-xs shadow-lg transition duration-150"
         >
           <MessageSquare className="w-4 h-4" />

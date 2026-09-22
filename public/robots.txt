@@ -35,4 +35,4 @@ Allow: /
 # llms.txt: /llms.txt
 # llms-full.txt: /llms-full.txt
 
-Sitemap: https://seusite.com.br/sitemap.xml
+Sitemap: https://rogeriomaciel.com.br/sitemap.xml
