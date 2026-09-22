@@ -10,6 +10,9 @@ export default defineConfig({
     assetsDir: 'assets',
     sourcemap: false,
     emptyOutDir: true,
+    target: 'esnext',
+    minify: 'esbuild',
+    cssMinify: 'esbuild',
   },
   server: {
     host: true,
