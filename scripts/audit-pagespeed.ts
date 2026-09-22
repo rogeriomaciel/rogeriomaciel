@@ -4,7 +4,7 @@
  */
 
 const targetUrl = process.env.AUDIT_URL || 'https://rogeriomaciel.com.br';
-const apiKey = process.env.PAGESPEED_API_KEY || process.env.GOOGLE_API_KEY || '';
+const apiKey = process.env.PAGESPEED_API_KEY || process.env.GOOGLE_API_KEY || 'AIzaSyA2SvFIt9jAtviQwierMV4IocycR8B0M3k';
 
 const apiUrl = new URL('https://www.googleapis.com/pagespeedonline/v5/runPagespeed');
 apiUrl.searchParams.set('url', targetUrl);

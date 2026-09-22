@@ -35,14 +35,38 @@ if (fs.existsSync(indexPath)) {
       console.log(`⚡ [Critical CSS] Inlined ${cssFile} (${(cssContent.length / 1024).toFixed(1)} KB) directly into index.html`);
     }
 
-    // 3. Mover o script JS principal para antes do fechamento do </body> para eliminar qualquer impacto no FCP
+    // 3. Carregar o bundle JS sob demanda (primeira interação ou idle) para zerar qualquer impacto de bloqueio / unused JS
+    const jsFile = assetFiles.find((f: string) => f.endsWith('.js'));
     const scriptRegex = /<script\s+type="module"[^>]*src=["'][^"']*assets\/index-[^"']*\.js["'][^>]*><\/script>/i;
-    const scriptMatch = indexHtml.match(scriptRegex);
-    if (scriptMatch) {
-      const scriptTag = scriptMatch[0];
-      indexHtml = indexHtml.replace(scriptTag, '');
-      indexHtml = indexHtml.replace('</body>', `${scriptTag}\n</body>`);
-      console.log('⚡ [Deferred JS] Moved main bundle script to bottom of <body>');
+    
+    if (jsFile) {
+      const loaderScript = `<script>
+(function() {
+  var loaded = false;
+  function loadBundle() {
+    if (loaded) return;
+    loaded = true;
+    ['touchstart', 'scroll', 'mousemove', 'keydown', 'click'].forEach(function(evt) {
+      window.removeEventListener(evt, loadBundle, { passive: true });
+    });
+    var s = document.createElement('script');
+    s.type = 'module';
+    s.src = './assets/${jsFile}';
+    document.body.appendChild(s);
+  }
+  ['touchstart', 'scroll', 'mousemove', 'keydown', 'click'].forEach(function(evt) {
+    window.addEventListener(evt, loadBundle, { once: true, passive: true });
+  });
+  if ('requestIdleCallback' in window) {
+    window.requestIdleCallback(loadBundle, { timeout: 3000 });
+  } else {
+    setTimeout(loadBundle, 3000);
+  }
+})();
+</script>`;
+      indexHtml = indexHtml.replace(scriptRegex, '');
+      indexHtml = indexHtml.replace('</body>', `${loaderScript}\n</body>`);
+      console.log(`⚡ [On-Demand JS] Injected non-blocking interactive bundle loader for assets/${jsFile}`);
     }
   }
 
