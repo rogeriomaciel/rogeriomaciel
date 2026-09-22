@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "bun scripts/parse-content.ts && vite",
-    "build": "bun scripts/parse-content.ts && bunx tsc && vite build",
+    "build": "bun scripts/parse-content.ts && bunx tsc && vite build && bun scripts/prerender.ts",
     "preview": "vite preview",
     "sync-base": "./sync-base.sh"
   },
