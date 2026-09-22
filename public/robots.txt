@@ -36,3 +36,4 @@ Allow: /
 # llms-full.txt: /llms-full.txt
 
 Sitemap: https://rogeriomaciel.com.br/sitemap.xml
+Agentmap: https://rogeriomaciel.com.br/.well-known/ai-catalog.json
