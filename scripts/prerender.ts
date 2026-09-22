@@ -58,9 +58,9 @@ if (fs.existsSync(indexPath)) {
     window.addEventListener(evt, loadBundle, { once: true, passive: true });
   });
   if ('requestIdleCallback' in window) {
-    window.requestIdleCallback(loadBundle, { timeout: 3000 });
+    window.requestIdleCallback(loadBundle, { timeout: 6000 });
   } else {
-    setTimeout(loadBundle, 3000);
+    setTimeout(loadBundle, 6000);
   }
 })();
 </script>`;
