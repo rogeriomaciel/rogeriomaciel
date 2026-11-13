@@ -74,13 +74,15 @@ export function Hero({ locale = 'pt' }: { locale?: Locale }) {
               ))}
             </div>
 
-            {/* Action Buttons */}
+            {/* Action Buttons: Sim 5 (A Venda da Conversa Direta no WhatsApp) */}
             <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3.5 pt-4">
               <a
-                href="#pilares"
+                href={whatsappUrl}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-2.5 px-6 py-3.5 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-slate-950 text-sm font-bold font-mono tracking-wider transition-all duration-200 shadow-[0_0_25px_rgba(16,185,129,0.25)] hover:shadow-[0_0_35px_rgba(16,185,129,0.4)] active:scale-[0.98]"
               >
-                <span>{t.hero.exploreCta}</span>
+                <span>{t.hero.whatsappCta}</span>
                 <ArrowRightIcon className="w-4 h-4 text-slate-950" />
               </a>
 
@@ -96,14 +98,22 @@ export function Hero({ locale = 'pt' }: { locale?: Locale }) {
               </a>
 
               <a
-                href={whatsappUrl}
-                target="_blank"
-                rel="noopener noreferrer"
+                href="#kadosh-case"
                 className="inline-flex items-center justify-center gap-2 px-5 py-3.5 rounded-xl bg-white/[0.03] hover:bg-emerald-500/10 border border-white/[0.1] hover:border-emerald-500/30 text-emerald-400 text-sm font-mono transition-all duration-200"
               >
-                <span>{t.hero.whatsappCta}</span>
-                <ExternalLinkIcon className="w-3.5 h-3.5 text-emerald-400" />
+                <span>{t.hero.exploreCta}</span>
+                <ArrowRightIcon className="w-3.5 h-3.5 text-emerald-400" />
               </a>
+            </div>
+
+            {/* Microcopy de Quebra de Objeção */}
+            <div className="text-[11px] font-mono text-slate-400 flex items-center gap-2 pt-1">
+              <span className="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
+              <span>
+                {locale === 'en'
+                  ? 'No sales pitch • Direct WhatsApp conversation with Rogério Maciel'
+                  : 'Sem papo de vendedor • Conversa franca e direta com Rogério Maciel'}
+              </span>
             </div>
 
             {/* Trust Quote */}

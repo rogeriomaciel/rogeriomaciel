@@ -6,8 +6,8 @@ export function AuditCTA({ locale = 'pt' }: { locale?: Locale }) {
 
   const whatsappMsg =
     locale === 'en'
-      ? 'Hello Rogério! I would like to request a 5-minute technical architecture audit of our automation / platform stack.'
-      : 'Olá Rogério! Vi seu portal de autoridade e gostaria de solicitar uma Perícia Técnica de 5 minutos da minha arquitetura.';
+      ? 'Hello Rogério! I read your insights on AI and automation architecture and would like to discuss our current bottlenecks and opportunities.'
+      : 'Olá Rogério! Vi sua análise sobre vendas e IA no site e gostaria de trocar uma ideia sobre como está o atendimento e os gargalos na minha empresa.';
 
   const whatsappUrl = `https://wa.me/${t.profile.whatsappDigits}?text=${encodeURIComponent(whatsappMsg)}`;
 

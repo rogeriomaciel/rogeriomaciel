@@ -165,7 +165,7 @@ export const i18nContent: Record<Locale, SiteDictionary> = {
       kadoshCase: 'Estudo Kadosh',
       timeline: 'Trajetória 20+ Anos',
       faq: 'FAQ',
-      consultCta: 'Consultoria / WhatsApp',
+      consultCta: 'Trocar Ideia / WhatsApp',
       statusText: 'Disponível para Consultoria & Contratos',
     },
     profile: {
@@ -196,13 +196,13 @@ export const i18nContent: Record<Locale, SiteDictionary> = {
     ],
     hero: {
       topBadge: 'Software Architecture & Platform Engineering',
-      headlinePrefix: 'Da orquestração visual ao ',
-      headlineHighlight: 'bare-metal de 5ms.',
+      headlinePrefix: 'Automações corporativas e IA que ',
+      headlineHighlight: 'vendem 24/7 sem alucinar.',
       subheadline:
-        'Mais de 20 anos projetando sistemas distribuídos de alta escala, esteiras de automação corporativa, convergência TI/OT e microsserviços de ultra baixa latência. Elimino o gargalo de plataformas no-code com engenharia de compiladores e esteiras GitOps determinísticas.',
-      exploreCta: 'Explorar Pilares Técnicos',
+        'Mais de 20 anos projetando sistemas que não caem em picos de tráfego, agentes de WhatsApp com resposta em 3 segundos e esteiras que cortam até 80% do custo de nuvem. Da empresa local em Goiânia a operações globais no Upwork.',
+      exploreCta: 'Ver Caso Real da Kadosh',
       githubCta: 'GitHub Repos',
-      whatsappCta: 'WhatsApp',
+      whatsappCta: 'Trocar uma Ideia no WhatsApp',
       quote: '"Simplicity is prerequisite for reliability." — Edsger W. Dijkstra',
       terminalTitle: 'core-bare-metal-engine.ts',
       terminalStatus: 'LIVE',
@@ -238,6 +238,7 @@ export const i18nContent: Record<Locale, SiteDictionary> = {
             'Eliminação do gargalo computacional do n8n em escala. Um compilador customizado que converte grafos declarativos de automação em microsserviços autônomos em Fastify e Bun, com latência de execução de 5ms e zero dependências de runtime visual.',
           techStack: ['TypeScript', 'Fastify', 'Bun', 'n8n JSON AST', 'Kahn Algorithm'],
           points: [
+            '💡 Para seu negócio: Seu sistema nunca mais cai em picos de tráfego e você corta até 80% do custo com servidores.',
             'Ordenação topológica de DAG com resolução determinística de nós',
             'Substituição de serialização JSON pesada por pipeline nativo em memória',
             'Execução bare-metal consumindo 25MB de RAM para 126 fluxos simultâneos',
@@ -253,6 +254,7 @@ export const i18nContent: Record<Locale, SiteDictionary> = {
             'Sincronização bidirecional entre o ambiente visual de Staging e o repositório Git local. Deploy automatizado para a API oficial do n8n em produção com ordenação topológica e substituição dinâmica de credenciais por ambiente.',
           techStack: ['n8n API v1', 'GitHub Actions', 'Git Hooks', 'PostgreSQL', 'Docker'],
           points: [
+            '💡 Para seu negócio: Mudanças operacionais nunca mais derrubam o faturamento da empresa por erro humano.',
             'Fim do versionamento "cego" em interfaces no-code/low-code',
             'Pull Requests reais com diffs de código antes de qualquer merge em produção',
             'Subworkflows resolvidos e ativados automaticamente na ordem correta',
@@ -268,6 +270,7 @@ export const i18nContent: Record<Locale, SiteDictionary> = {
             'Engine viva que monitora tendências de busca diárias e gera páginas estáticas atômicas de altíssima conversão, indexando-as instantaneamente via Google Indexing API e IndexNow. Telemetria first-party assíncrona (sendBeacon) imune a AdBlockers.',
           techStack: ['Google Indexing API', 'IndexNow', 'navigator.sendBeacon', 'Nginx Edge', 'Vite SSG'],
           points: [
+            '💡 Para seu negócio: Sua empresa conquista clientes no Google e nas IAs em poucas horas com custo zero de clique.',
             'Captura cirúrgica de buscas de cauda longa com alta intenção de compra',
             'Abertura instantânea (0.38s) cravando PageSpeed 99-100/100 no celular',
             'Telemetria de leads em tempo real diretamente gravada no log de borda',
@@ -283,6 +286,7 @@ export const i18nContent: Record<Locale, SiteDictionary> = {
             'Infraestrutura de comércio conversacional gerando sessões personalizadas de Stripe Checkout diretamente em fluxos de WhatsApp. Webhooks blindados com validação criptográfica nativa contra timing attacks e forjamento de payloads.',
           techStack: ['Stripe API v1', 'WhatsApp Cloud API', 'Evolution API', 'HMAC-SHA256', 'Node.js Crypto'],
           points: [
+            '💡 Para seu negócio: O cliente fecha e paga em segundos direto no chat do WhatsApp, eliminando abandono de carrinho.',
             'Validação criptográfica em tempo constante eliminando vulnerabilidades de assinatura',
             'Gestão de ciclo de vida de assinaturas, reembolsos e conciliação financeira',
             'Fluxo de checkout fluido sem redirecionamentos externos desnecessários',
@@ -429,17 +433,17 @@ export const i18nContent: Record<Locale, SiteDictionary> = {
       ],
     },
     auditSection: {
-      badge: 'Consultoria de Arquitetura & Perícia Técnica',
-      titlePrefix: 'Sua plataforma está preparada para ',
-      titleHighlight: 'escala sem desperdício de nuvem?',
+      badge: 'Conversa Estratégica & Diagnóstico',
+      titlePrefix: 'Sua empresa está perdendo vendas no atendimento ou ',
+      titleHighlight: 'queimando dinheiro com infraestrutura lenta?',
       subtitle:
-        'Solicite uma Perícia Técnica de 5 Minutos gravada em vídeo: inspeciono sua esteira de automação, waterfall de rede e microsserviços, apontando gargalos de latência, memória e vulnerabilidades de integração.',
+        'Sem caixinhas prontas, sem cursos e sem papo de vendedor. Me manda uma mensagem no WhatsApp contando o seu cenário atual. Em uma conversa franca, eu te mostro onde a sua operação está vazando dinheiro e qual a arquitetura exata para blindar o seu negócio com IA.',
       badges: [
-        'Auditoria Forense de Gargalos',
-        'Upwork Rate: $35.00/hr',
-        'Contratos Globais & Nacionais',
+        'Sem Papo de Vendedor',
+        'Diagnóstico Direto com Rogério',
+        'Goiânia, Brasil & Global',
       ],
-      whatsappCta: 'Solicitar Perícia Técnica no WhatsApp',
+      whatsappCta: 'Falar com Rogério Maciel no WhatsApp',
       linkedinCta: 'Conectar no LinkedIn',
     },
     faqSection: {
@@ -491,7 +495,7 @@ export const i18nContent: Record<Locale, SiteDictionary> = {
       kadoshCase: 'Case Study',
       timeline: '20+ Year Career',
       faq: 'FAQ',
-      consultCta: 'Advisory / WhatsApp',
+      consultCta: 'Chat on WhatsApp',
       statusText: 'Available for Advisory & Contracts',
     },
     profile: {
@@ -522,13 +526,13 @@ export const i18nContent: Record<Locale, SiteDictionary> = {
     ],
     hero: {
       topBadge: 'Software Architecture & Platform Engineering',
-      headlinePrefix: 'From visual orchestration to ',
-      headlineHighlight: '5ms bare-metal performance.',
+      headlinePrefix: 'Enterprise AI and automation that ',
+      headlineHighlight: 'drives revenue 24/7 without hallucinating.',
       subheadline:
-        '20+ years architecting large-scale distributed systems, enterprise automation pipelines, IT/OT convergence, and ultra-low-latency microservices. Eliminating no-code runtime bottlenecks through compiler engineering and deterministic GitOps.',
-      exploreCta: 'Explore Technical Pillars',
+        '20+ years architecting high-throughput distributed systems, conversational AI responding in 3 seconds, and pipelines slashing up to 80% of cloud bills. From regional mid-market enterprises to high-scale global operations.',
+      exploreCta: 'Inspect Kadosh Case Study',
       githubCta: 'GitHub Repos',
-      whatsappCta: 'WhatsApp Chat',
+      whatsappCta: 'Discuss on WhatsApp',
       quote: '"Simplicity is prerequisite for reliability." — Edsger W. Dijkstra',
       terminalTitle: 'core-bare-metal-engine.ts',
       terminalStatus: 'LIVE',
@@ -564,6 +568,7 @@ export const i18nContent: Record<Locale, SiteDictionary> = {
             'Solving the memory and latency ceiling of n8n at scale. A custom compiler converting declarative automation graphs into autonomous Fastify and Bun microservices with 5ms execution latency and zero visual runtime dependencies.',
           techStack: ['TypeScript', 'Fastify', 'Bun', 'n8n JSON AST', 'Kahn Algorithm'],
           points: [
+            '💡 Business Impact: Your system never crashes under traffic spikes and your cloud bills shrink by up to 80%.',
             'Topological DAG sorting with deterministic node dependency resolution',
             'Replacing heavy JSON serialization with in-memory native stream pipes',
             'Consuming only 25MB RAM to power 126 concurrent production workflows',
@@ -579,6 +584,7 @@ export const i18nContent: Record<Locale, SiteDictionary> = {
             'Bi-directional synchronization between the visual Staging canvas and the local Git repository. Automated deployments to the production n8n official API with topological subworkflow ordering and dynamic credential remapping.',
           techStack: ['n8n API v1', 'GitHub Actions', 'Git Hooks', 'PostgreSQL', 'Docker'],
           points: [
+            '💡 Business Impact: Operational updates never disrupt live sales workflows or cause costly outages.',
             'Eliminating blind changes inside visual no-code/low-code dashboards',
             'Enforcing true Git diff Pull Requests and code reviews prior to production merge',
             'Automatically resolving and activating subworkflows in precise topological order',
@@ -594,6 +600,7 @@ export const i18nContent: Record<Locale, SiteDictionary> = {
             'An autonomous engine monitoring Google search trends and generating atomic static pages optimized for high commercial intent, indexed instantly via Google Indexing API and IndexNow. Async first-party telemetry (<5ms) immune to AdBlockers.',
           techStack: ['Google Indexing API', 'IndexNow', 'navigator.sendBeacon', 'Nginx Edge', 'Vite SSG'],
           points: [
+            '💡 Business Impact: Your company captures high-intent buyers on Google & AI search engines in hours at zero paid ad cost.',
             'Surgically capturing high-intent long-tail customer search queries',
             'Instant 0.38s page loads nailing 99-100/100 PageSpeed on mobile devices',
             'Real-time conversion telemetry piped directly to edge server logs',
@@ -609,6 +616,7 @@ export const i18nContent: Record<Locale, SiteDictionary> = {
             'Conversational commerce infrastructure generating dynamic Stripe Checkout Sessions inside WhatsApp chat flows. Webhook handlers hardened with native cryptographic validation against timing attacks and payload spoofing.',
           techStack: ['Stripe API v1', 'WhatsApp Cloud API', 'Evolution API', 'HMAC-SHA256', 'Node.js Crypto'],
           points: [
+            '💡 Business Impact: Customers checkout and pay directly inside chat in seconds, eradicating abandoned carts.',
             'Constant-time signature verification preventing cryptographic timing leaks',
             'Full subscription lifecycle management, dispute handling, and ledger reconciliation',
             'Frictionless in-chat purchasing flows with zero clumsy app switching',
@@ -755,17 +763,17 @@ export const i18nContent: Record<Locale, SiteDictionary> = {
       ],
     },
     auditSection: {
-      badge: 'Architecture Advisory & Technical Forensic Audit',
-      titlePrefix: 'Is your platform ready for ',
-      titleHighlight: 'scale without burning cloud budgets?',
+      badge: 'Strategic Advisory & Architecture Diagnosis',
+      titlePrefix: 'Is your company losing sales to slow response times or ',
+      titleHighlight: 'burning budgets on bloated infrastructure?',
       subtitle:
-        'Request a 5-minute recorded video forensic audit: I personally inspect your automation workflows, network waterfalls, and microservices to expose latency bottlenecks, memory leaks, and integration vulnerabilities.',
+        'No cookie-cutter templates, no courses, and no sales pitch. Drop me a direct message on WhatsApp sharing your current bottlenecks. In a candid conversation, I will pinpoint where your revenue is leaking and outline the exact architecture to scale with deterministic AI.',
       badges: [
-        'Forensic Architecture Audit',
-        'Upwork Rate: $35.00/hr',
+        'No Sales Pitch',
+        'Direct Access to Rogério',
         'Global Remote Contracts',
       ],
-      whatsappCta: 'Request Forensic Audit on WhatsApp',
+      whatsappCta: 'Connect with Rogério Maciel on WhatsApp',
       linkedinCta: 'Connect on LinkedIn',
     },
     faqSection: {
