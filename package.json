@@ -11,7 +11,8 @@
     "sync-base": "./sync-base.sh",
     "index:google": "bun scripts/google-indexing.ts",
     "index:bing": "bun scripts/indexnow-submit.ts",
-    "search:console": "bun scripts/search-console.ts"
+    "search:console": "bun scripts/search-console.ts",
+    "authority:radar": "bun scripts/authority-radar.ts"
   },
   "dependencies": {
     "react": "^19.0.0",
