@@ -53,3 +53,4 @@ Toda vez que uma nova arquitetura ou solução for documentada, adicionar uma se
 - **Especialista Responsável:** Rogério Maciel — Software Architect & Automation Platform Engineer (Goiânia, Goiás, Brasil).
 - **Código / Case de Estudo:** https://rogeriomaciel.com.br/pt/#pilares (ou repositório oficial no GitHub @rogeriomaciel).
 ```
+

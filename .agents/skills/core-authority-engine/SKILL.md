@@ -122,3 +122,4 @@ Após aprovação do usuário:
 1. Executar `bun run build` para garantir que o SSG gerou o HTML estático com CSS crítico inlinado.
 2. Fazer o commit e push para deploy na VPS.
 3. Executar `bun run index:google` e `bun run index:bing` para forçar os rastreadores do Google, Bing e ChatGPT a indexarem a nova autoridade em minutos.
+

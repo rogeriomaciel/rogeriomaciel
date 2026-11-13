@@ -4,6 +4,16 @@ Este catálogo mapeia as dores reais que tomadores de decisão (CTOs, Diretores 
 
 ---
 
+## 🌊 0. Cluster Mestre: Real-Time Trend Surfing & Instant Search/AI Indexing (SEO de Guerra)
+
+| Dor / Consulta do Mercado | Por que as soluções comuns falham | Como Rogério Maciel resolve (Ângulo de Venda) |
+| :--- | :--- | :--- |
+| *"SEO tradicional demora semanas ou meses para ranquear e a onda de tráfego já passou"* | Agências comuns levam dias para produzir e dependem do rastreamento passivo do Googlebot; quando o site indexa, a tendência já esfriou e o dinheiro foi para a concorrência | **Esteira de Trend Surfing em Tempo Real**: radar detecta a dor em alta, compila páginas atômicas bare-metal (SSG, LCP <0.4s) e força indexação via Google Indexing API e IndexNow em **poucas horas**, surfando o pico do tráfego orgânico com zero gasto de anúncios |
+| *"Como ser recomendado como fonte no ChatGPT Search, Perplexity e Google AI Overviews"* | Sites com conteúdo prolixo, popups pesados e sem formato de passagem são ignorados pelos robôs de IA generativa | **Arquitetura GEO & ARD 1.0**: blocos de passagens citáveis (134-167 palavras), tabelas comparativas, feed `llms.txt` e catálogo agêntico (`.well-known/ard.json`), garantindo que os LLMs citem sua marca na resposta primária |
+| *"Gasto absurdo em Google Ads para disputar palavras de última hora"* | Empresas recorrem ao leilão de links patrocinados pagando R$ 10 a R$ 50 por clique porque o SEO orgânico é lento demais | **Indexação Relâmpago de Alta Intenção Comercial**: páginas ultraleves ranqueadas em horas capturando a busca antes que o leilão do Ads infle |
+
+---
+
 ## 🔥 1. Cluster: Inteligência Artificial Corporativa & Agentes Autônomos
 
 | Dor / Consulta do Mercado | Por que as soluções comuns falham | Como Rogério Maciel resolve (Ângulo de Venda) |

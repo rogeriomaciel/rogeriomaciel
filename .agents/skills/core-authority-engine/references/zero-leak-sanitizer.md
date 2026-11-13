@@ -39,3 +39,4 @@ Antes de qualquer publicação no site, no `llms-full.txt` ou em redes sociais, 
 - [ ] O nome do cliente ou da marca contratante foi anonimizado?
 - [ ] Os trechos de código mostrados são genéricos e educativos (sem lógica de negócio confidencial)?
 - [ ] As métricas apresentadas destacam a capacidade de entrega sem quebrar sigilo?
+

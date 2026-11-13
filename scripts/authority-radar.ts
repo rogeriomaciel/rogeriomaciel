@@ -19,7 +19,14 @@ interface TrendOpportunity {
 
 const opportunities: TrendOpportunity[] = [
   {
-    topic: 'Transpilação n8n ➔ Fastify/Bun (Baixa Latência & Queda de RAM)',
+    topic: 'Real-Time Trend Surfing & Instant SEO/AI Indexing (Surfar a Onda em Horas)',
+    marketPain: 'SEO tradicional leva semanas ou meses para engajar. Quando a página finalmente indexa, a tendência quente já passou e o tráfego foi para concorrentes ou leilões caros de Ads.',
+    solutionAngle: 'Esteira bare-metal em React + Bun que detecta a dor, compila páginas SSG ultrarrápidas (<0.4s) e força a indexação no Google Indexing API e IndexNow em HORAS, posicionando na 1ª página e sendo citado por ChatGPT Search/Perplexity enquanto a onda ainda está no auge.',
+    targetAudience: 'Chief Growth Officers (CGOs), Diretores de Marketing, Founders de Escala e Gestores de Tráfego.',
+    geoTarget: 'Goiânia e Goiás (captura regional de leads), Brasil e Marcas Internacionais.'
+  },
+  {
+    topic: 'Transpilação n8n ➔ Fastify/Bun (Baixa Latência & Queda de 98% de RAM)',
     marketPain: 'Servidores de n8n batendo 100% de CPU/RAM em automações de alto volume e webhooks demorando 4 a 12s para responder.',
     solutionAngle: 'Transpilar grafos de automação para microsserviços em Fastify e Bun: latência média de 5ms e redução de 98% no consumo de memória (de 1.2GB para 25MB).',
     targetAudience: 'CTOs, Heads de Operação, Founders de SaaS e Líderes de Engenharia.',
@@ -40,18 +47,11 @@ const opportunities: TrendOpportunity[] = [
     geoTarget: 'Goiás e Nacional.'
   },
   {
-    topic: 'IA Corporativa sem Alucinação & Agentes com Guardrails',
+    topic: 'IA Corporativa sem Alucinação & Agentes com Guardrails Determinísticos',
     marketPain: 'Empresas querendo adotar agentes de IA mas com medo de vazamento de dados confidenciais ou respostas alucinadas que quebram o negócio.',
     solutionAngle: 'Arquitetura de agentes locais em VPS privada com esquemas determinísticos de JSON, guardrails estritos e integração direta com ERP/CRM.',
     targetAudience: 'Diretores de Operações, Agronegócio, Hospitais e Indústrias.',
     geoTarget: 'Polo Industrial de Goiás, Goiânia e Centro-Oeste.'
-  },
-  {
-    topic: 'Arquitetura Web Bare-Metal (SSG + PageSpeed 99 + Indexação Instantânea)',
-    marketPain: 'Sites institucionais lentos feitos em WordPress que demoram 4s para abrir no celular e levam semanas para indexar novidades no Google.',
-    solutionAngle: 'Frontend em React + Bun com SSG, CSS crítico inlined, TBT 0ms e disparo instantâneo para Google Indexing API e Bing IndexNow em minutos.',
-    targetAudience: 'Empresas buscando liderança em SEO e buscas de IA (GEO).',
-    geoTarget: 'Goiânia e Brasil.'
   }
 ];
 
