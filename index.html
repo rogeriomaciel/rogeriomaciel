@@ -28,6 +28,10 @@
     <meta name="twitter:description" content="20+ anos projetando sistemas de alta performance, transpilação n8n para Fastify/Bun de 5ms e convergência TI/OT." />
     <meta name="twitter:image" content="https://rogeriomaciel.com.br/og-image.jpg" />
 
+    <!-- Google Search Console & IndexNow Verification -->
+    <meta name="google-site-verification" content="google-site-verification-id" />
+    <meta name="indexnow-key" content="61f53f62035a6493e50b0b59feca6748" />
+
     <!-- Descoberta por Agentes de IA, LLMs e Navegação Agêntica (GEO & ARD 1.0) -->
     <link rel="alternate" type="text/markdown" href="/llms.txt" title="LLMs Summary" />
     <link rel="alternate" type="text/markdown" href="/llms-full.txt" title="LLMs Full Knowledge Base" />
@@ -37,25 +41,26 @@
     <link rel="describedby" type="application/json" href="/.well-known/ai-catalog.json" title="AI Catalog" />
     <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
 
-    <!-- Buffer Global de Analytics e Carregamento de Alta Performance (TBT = 0ms, PageSpeed 99-100) -->
+    <!-- Buffer Global de Analytics & Tracking sob demanda (TBT = 0ms, PageSpeed 99-100) -->
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
 
       var analyticsLoaded = false;
       function initAnalytics() {
         if (analyticsLoaded) return;
         analyticsLoaded = true;
 
-        // Google Tag Manager sob demanda
+        // 1. Google Tag Manager
         window.dataLayer.push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
         var g = document.createElement('script');
         g.async = true;
-        g.src = 'https://www.googletagmanager.com/gtm.js?id=GTM-WNXV9S4X';
+        g.src = 'https://www.googletagmanager.com/gtag/js?id=GTM-WNXV9S4X';
         document.head.appendChild(g);
       }
 
-      // Execução automática após pintura inicial sem travar a thread principal
+      // Execução automática garantida após a pintura inicial (Zera o TBT do Lighthouse)
       if (document.readyState === 'complete') {
         setTimeout(initAnalytics, 1200);
       } else {
@@ -64,13 +69,13 @@
         });
       }
 
-      // Ativação instantânea no primeiro toque ou rolagem
+      // Ativação instantânea no primeiro gesto do usuário
       ['pointerdown', 'touchstart', 'scroll', 'keydown'].forEach(function(ev) {
         window.addEventListener(ev, initAnalytics, { once: true, passive: true });
       });
     </script>
 
-    <!-- Telemetria First-Party Não Bloqueante (sendBeacon) para Cliques de Conversão -->
+    <!-- Rastreamento Global de Conversões & Telemetria First-Party Não-Bloqueante -->
     <script>
       (function() {
         document.addEventListener('click', function(e) {
@@ -81,37 +86,70 @@
           var isGitHub = href.indexOf('github.com') !== -1;
           var isUpwork = href.indexOf('upwork.com') !== -1;
           var isLinkedIn = href.indexOf('linkedin.com') !== -1;
+          var isPhone = href.indexOf('tel:') === 0;
+          var isMail = href.indexOf('mailto:') === 0;
 
-          if (isWhatsApp || isGitHub || isUpwork || isLinkedIn) {
+          if (isWhatsApp || isGitHub || isUpwork || isLinkedIn || isPhone || isMail) {
             initAnalytics();
-            var targetChannel = isWhatsApp ? 'whatsapp' : isGitHub ? 'github' : isUpwork ? 'upwork' : 'linkedin';
+            var targetChannel = isWhatsApp ? 'whatsapp' : isGitHub ? 'github' : isUpwork ? 'upwork' : isLinkedIn ? 'linkedin' : isPhone ? 'telefone' : 'email';
             var buttonText = (link.innerText || '').trim().slice(0, 60);
 
+            // 1. Telemetria First-Party no servidor de borda via sendBeacon
             try {
               var trackUrl = '/api/telemetry?channel=' + encodeURIComponent(targetChannel) +
-                             '&btn=' + encodeURIComponent(buttonText) +
-                             '&ref=' + encodeURIComponent(window.location.pathname);
+                             '&btn=' + encodeURIComponent(buttonText || targetChannel) +
+                             '&origem=' + encodeURIComponent(window.location.pathname);
               if (navigator.sendBeacon) {
                 navigator.sendBeacon(trackUrl, '');
+              } else {
+                fetch(trackUrl, { method: 'POST', keepalive: true, mode: 'no-cors' });
               }
             } catch (err) {}
 
+            // 2. Eventos GA4 & GTM & Google Ads
             try {
               window.dataLayer = window.dataLayer || [];
               window.dataLayer.push({
-                event: 'architect_interaction',
+                event: 'generate_lead',
                 conversion_channel: targetChannel,
                 destination: href,
                 button_text: buttonText,
+                page_location: window.location.href,
                 page_path: window.location.pathname
               });
+
+              window.dataLayer.push({
+                event: 'lead_' + targetChannel + '_click',
+                conversion_channel: targetChannel,
+                button_text: buttonText,
+                page_path: window.location.pathname
+              });
+
+              if (typeof window.gtag === 'function') {
+                window.gtag('event', 'generate_lead', {
+                  event_category: 'engagement',
+                  event_label: buttonText || ('Botão ' + targetChannel),
+                  conversion_channel: targetChannel,
+                  destination: href,
+                  transport_type: 'beacon'
+                });
+
+                window.gtag('event', 'lead_click', {
+                  event_category: 'contact',
+                  event_label: buttonText || ('Botão ' + targetChannel),
+                  conversion_channel: targetChannel,
+                  page_location: window.location.href,
+                  page_path: window.location.pathname,
+                  transport_type: 'beacon'
+                });
+              }
             } catch (err) {}
           }
         }, { capture: true });
       })();
     </script>
 
-    <!-- Schema.org Graph JSON-LD para Google e Motores de Busca por IA -->
+    <!-- Schema.org Graph JSON-LD para Google e Robôs de IA -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -222,7 +260,7 @@
   <body class="bg-[#07090E] text-slate-100 font-sans antialiased selection:bg-emerald-500 selection:text-slate-950">
     <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WNXV9S4X"
-    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    title="Google Tag Manager" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
 
     <div id="root"></div>
