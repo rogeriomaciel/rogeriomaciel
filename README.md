@@ -31,6 +31,7 @@ I am a Software Architect & Platform Engineer specializing in high-performance w
 ### 🌟 Featured Production Case Studies (2026)
 
 - ⚡ **[Low-Code Speed, Bare-Metal Performance](https://github.com/rogeriomaciel/coreautocrm-architecture):** Transpiled 126 n8n workflows into high-throughput Fastify microservices with zero external dependencies, reducing RAM usage by 98% (from 1.2GB to 25MB) and execution latency from ~500ms to 5ms.
+- 🔄 **Enterprise GitOps & Multi-Environment CI/CD for n8n:** Engineered a zero-downtime bi-directional CI/CD pipeline synchronizing visual n8n Staging UI with local Git repositories, automating Production deployment via official n8n API with dynamic credential re-mapping and topological sub-workflow resolution.
 - 📡 **First-Party Telemetry & Intent Tracker:** Engineered a lightweight (<4KB) vanilla JavaScript tracker operating asynchronously with a 0-second initial ping and adaptive heartbeats, capturing high-intent CTA interactions without third-party analytics bloat.
 - 🤖 **Deterministic AI Agent Engine (FSM Orchestration):** Architected a 39-state conversational engine for WhatsApp with atomic transition locks, semantic intent routing, and strict safety guardrails to eliminate LLM hallucinations and conversational loops.
 - 🎯 **[AdsWhats Monitor](https://github.com/rogeriomaciel/adswhats-monitor):** Built a multi-tenant operational control tower tracking Meta Ads (Click-to-WhatsApp) message attribution and auditing sales-rep first-response SLA in seconds across retail stores.
