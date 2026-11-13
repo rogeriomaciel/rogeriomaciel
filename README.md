@@ -9,12 +9,12 @@
 
 ### 👨‍💻 About Me
 
-I am a Software Architect & Platform Engineer specializing in high-performance automation, real-time telemetry, and resilient microservices. I bridge the gap between workflow orchestration (n8n, APIs, LLMs) and low-latency bare-metal engineering (Node.js, Fastify, Bun, TypeScript, PostgreSQL).
+I am a Software Architect & Platform Engineer specializing in high-performance workflow automation, real-time telemetry, and resilient distributed systems. I bridge the gap between visual orchestration (n8n, webhooks, LLMs) and low-latency bare-metal engineering (Node.js, Fastify, Bun, TypeScript, PostgreSQL).
 
 - 🏛️ **Founder & Chief Architect** at [CORE Ecosystem / CoreAuto](https://github.com/rogeriomaciel/coreautocrm-architecture) (SaaS, Telemetry & Multi-tenant Automation).
 - 🏢 **Former Head of Digital Applications** at **Neoway Business Solutions** (Latin America's largest Big Data & Analytics company).
 - 🎓 **B.S. in Computer Science** from **Universidade Federal da Paraíba (UFPB)** (CNPq Research Scholar in Real-Time Systems, Telemetry & Fuzzy Control).
-- ⚙️ **Creator of the CoreAuto Transpiler**: Successfully converted **126 visual n8n workflows** into standalone Fastify/TypeScript microservices with **5ms latency** and a **98% RAM reduction** (from 1.2GB to 25MB).
+- ⚙️ **Workflow-as-Code Pioneer**: Created automated CI/CD deployment engines for visual workflows with topological dependency ordering and automated unit test generation.
 
 ---
 
@@ -28,10 +28,12 @@ I am a Software Architect & Platform Engineer specializing in high-performance a
 
 ---
 
-### 🌟 Featured Engineering Case Studies
+### 🌟 Featured Production Case Studies (2026)
 
-- 📖 **[Low-Code Speed, Bare-Metal Performance](https://github.com/rogeriomaciel/coreautocrm-architecture):** How we transpiled 126 n8n workflows into high-throughput Fastify microservices with zero external dependencies and automated unit testing.
-- 📡 **[AdsWhats Monitor](https://github.com/rogeriomaciel/adswhats-monitor):** Multi-tenant WhatsApp traffic monitoring, Meta Ads (CTWA) attribution engine, and SLA auditing control tower.
+- ⚡ **[Low-Code Speed, Bare-Metal Performance](https://github.com/rogeriomaciel/coreautocrm-architecture):** Transpiled 126 n8n workflows into high-throughput Fastify microservices with zero external dependencies, reducing RAM usage by 98% (from 1.2GB to 25MB) and execution latency from ~500ms to 5ms.
+- 📡 **First-Party Telemetry & Intent Tracker:** Engineered a lightweight (<4KB) vanilla JavaScript tracker operating asynchronously with a 0-second initial ping and adaptive heartbeats, capturing high-intent CTA interactions without third-party analytics bloat.
+- 🤖 **Deterministic AI Agent Engine (FSM Orchestration):** Architected a 39-state conversational engine for WhatsApp with atomic transition locks, semantic intent routing, and strict safety guardrails to eliminate LLM hallucinations and conversational loops.
+- 🎯 **[AdsWhats Monitor](https://github.com/rogeriomaciel/adswhats-monitor):** Built a multi-tenant operational control tower tracking Meta Ads (Click-to-WhatsApp) message attribution and auditing sales-rep first-response SLA in seconds across retail stores.
 
 ---
 
