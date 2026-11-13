@@ -9,49 +9,57 @@ interface CommitItem {
   date: string;
 }
 
+interface FiveYesPillar {
+  sim1_dor: string;
+  sim2_antivenda: string;
+  sim3_autoridade: string;
+  sim4_contraste: string;
+  sim5_cta_whatsapp: string;
+}
+
 interface TrendOpportunity {
   topic: string;
-  marketPain: string;
-  solutionAngle: string;
   targetAudience: string;
   geoTarget: string;
+  fiveYes: FiveYesPillar;
 }
 
 const opportunities: TrendOpportunity[] = [
   {
-    topic: 'Real-Time Trend Surfing & Instant SEO/AI Indexing (Surfar a Onda em Horas)',
-    marketPain: 'SEO tradicional leva semanas ou meses para engajar. Quando a página finalmente indexa, a tendência quente já passou e o tráfego foi para concorrentes ou leilões caros de Ads.',
-    solutionAngle: 'Esteira bare-metal em React + Bun que detecta a dor, compila páginas SSG ultrarrápidas (<0.4s) e força a indexação no Google Indexing API e IndexNow em HORAS, posicionando na 1ª página e sendo citado por ChatGPT Search/Perplexity enquanto a onda ainda está no auge.',
-    targetAudience: 'Chief Growth Officers (CGOs), Diretores de Marketing, Founders de Escala e Gestores de Tráfego.',
-    geoTarget: 'Goiânia e Goiás (captura regional de leads), Brasil e Marcas Internacionais.'
+    topic: 'Vendas Perdidas no WhatsApp: O Atendimento com IA em 3s (Zero Alucinação)',
+    targetAudience: 'Empresários, Diretores Comerciais e Founders de PMEs / E-commerce.',
+    geoTarget: 'Goiânia/GO, Polo Industrial de Goiás e Nacional.',
+    fiveYes: {
+      sim1_dor: 'Perda comprovada de 20% a 40% das vendas no WhatsApp porque o cliente chama à noite ou fim de semana e a equipe demora horas para responder.',
+      sim2_antivenda: 'Chatbots genéricos de R$ 99 passam vergonha, inventam descontos e irritam o cliente. Soluções prontas não entendem o seu processo.',
+      sim3_autoridade: '20+ anos de engenharia, ex-Head Neoway Big Data e arquitetura FSM determinística (caso Kadosh com 220+ avaliações 4.7★).',
+      sim4_contraste: 'Continuar jogando dinheiro fora em tráfego pago para o lead esfriar vs. ter um agente que responde em 3s e qualifica na hora.',
+      sim5_cta_whatsapp: 'Trocar uma ideia sem compromisso no WhatsApp direto com Rogério Maciel para entender onde está o gargalo da empresa.'
+    }
   },
   {
-    topic: 'Transpilação n8n ➔ Fastify/Bun (Baixa Latência & Queda de 98% de RAM)',
-    marketPain: 'Servidores de n8n batendo 100% de CPU/RAM em automações de alto volume e webhooks demorando 4 a 12s para responder.',
-    solutionAngle: 'Transpilar grafos de automação para microsserviços em Fastify e Bun: latência média de 5ms e redução de 98% no consumo de memória (de 1.2GB para 25MB).',
-    targetAudience: 'CTOs, Heads de Operação, Founders de SaaS e Líderes de Engenharia.',
-    geoTarget: 'Goiânia/GO (grandes operações corporativas), Brasil e Contratos Remotos no Upwork.'
+    topic: 'Real-Time Trend Surfing: Conquistar a 1ª Página do Google e Buscas de IA em Horas',
+    targetAudience: 'Chief Growth Officers (CGOs), Diretores de Marketing e Donos de Negócios Locais de Alto Ticket.',
+    geoTarget: 'Goiânia/GO (negócios locais), Brasil e Internacional.',
+    fiveYes: {
+      sim1_dor: 'SEO tradicional demora semanas para ranquear e a onda quente de demanda passa, forçando a empresa a pagar fortunas por clique no Google Ads.',
+      sim2_antivenda: 'Agências tradicionais vendem "contrato de SEO de 6 meses" com relatórios que não trazem 1 cliente no WhatsApp.',
+      sim3_autoridade: 'Arquitetura Bare-Metal em Bun + SSG com disparo atômico via Google Indexing API e IndexNow (Bing/ChatGPT) no minuto do deploy.',
+      sim4_contraste: 'Gastar R$ 10 a R$ 30 por clique em leilões inflacionados vs. surfar a busca orgânica e citações no ChatGPT Search em poucas horas a custo zero.',
+      sim5_cta_whatsapp: 'Mandar uma mensagem no WhatsApp para avaliar quais demandas da sua cidade sua empresa pode surfar agora.'
+    }
   },
   {
-    topic: 'GitOps Bi-Direcional para n8n com DAGs de Kahn',
-    marketPain: 'Alterações perigosas feitas diretamente no canvas visual de produção derrubando fluxos críticos de vendas sem versionamento ou code review.',
-    solutionAngle: 'Esteira GitOps com ambiente de staging visual sincronizado no Git (PRs/Code Review) e deploy automatizado via API oficial com ordenação topológica de DAGs.',
-    targetAudience: 'Tech Leads, Engenheiros DevOps e Gestores de TI.',
-    geoTarget: 'Brasil e Internacional.'
-  },
-  {
-    topic: 'Fintech: Checkout Conversacional WhatsApp + HMAC Seguro',
-    marketPain: 'Fricção extrema ao desviar o cliente do chat para sites lentos, além de vulnerabilidade a timing attacks em webhooks de pagamento.',
-    solutionAngle: 'Sessão de Stripe Checkout dinâmica gerada dentro do WhatsApp com validação criptográfica HMAC-SHA256 em tempo constante (timingSafeEqual).',
-    targetAudience: 'Empresas de E-commerce, Infoprodutores e Redes Varejistas.',
-    geoTarget: 'Goiás e Nacional.'
-  },
-  {
-    topic: 'IA Corporativa sem Alucinação & Agentes com Guardrails Determinísticos',
-    marketPain: 'Empresas querendo adotar agentes de IA mas com medo de vazamento de dados confidenciais ou respostas alucinadas que quebram o negócio.',
-    solutionAngle: 'Arquitetura de agentes locais em VPS privada com esquemas determinísticos de JSON, guardrails estritos e integração direta com ERP/CRM.',
-    targetAudience: 'Diretores de Operações, Agronegócio, Hospitais e Indústrias.',
-    geoTarget: 'Polo Industrial de Goiás, Goiânia e Centro-Oeste.'
+    topic: 'O Gargalo do n8n: Como Eliminamos 98% da Memória e Batemos 5ms de Latência',
+    targetAudience: 'CTOs, Tech Leads, Engenheiros de Automação e Clientes Globais do Upwork.',
+    geoTarget: 'Upwork Internacional (EUA/Europa), Brasil e Grandes Operações.',
+    fiveYes: {
+      sim1_dor: 'Servidores de n8n batendo 100% de CPU/RAM em dias de pico e webhooks demorando 4 a 12s para responder, travando integrações críticas.',
+      sim2_antivenda: 'Subir o tamanho da máquina na AWS só mascara o problema e multiplica a fatura da nuvem.',
+      sim3_autoridade: 'Transpilador próprio de DAGs via algoritmo de Kahn que converte nós visuais em microsserviços compilados Fastify/Bun (código público no GitHub @rogeriomaciel).',
+      sim4_contraste: 'Gastar R$ 5.000 a mais por mês em servidores lentos vs. rodar 126 fluxos com 25MB de RAM e 5ms estáveis.',
+      sim5_cta_whatsapp: 'Conectar no WhatsApp ou no Upwork para uma auditoria técnica de arquitetura de automação.'
+    }
   }
 ];
 
@@ -75,13 +83,13 @@ function getRecentCommits(limit = 10): CommitItem[] {
 }
 
 async function runRadar() {
-  console.log('🛰️  [Core Authority Radar] Analisando atividade técnica e tendências de mercado...\n');
+  console.log('🛰️  [Core Authority Radar v2.0] Conectando Atividade do GitHub ➔ Psicologia dos 5 Sims ➔ WhatsApp Lead\n');
 
-  const commits = getRecentCommits(8);
+  const commits = getRecentCommits(6);
 
   console.log('📌 COMMITS RECENTES IDENTIFICADOS NO GIT:');
   if (commits.length === 0) {
-    console.log('   (Nenhum commit recente encontrado no repositório local)');
+    console.log('   (Nenhum commit recente)');
   } else {
     commits.forEach(c => {
       console.log(`   • [${c.hash}] ${c.date} — ${c.subject}`);
@@ -89,23 +97,25 @@ async function runRadar() {
   }
 
   console.log('\n──────────────────────────────────────────────────────────────────────────────');
-  console.log('🎯 MATRIZ DE OPORTUNIDADES DE AUTORIDADE & VENDA (Dores Quentes de Mercado):');
+  console.log('🎯 MATRIZ DE GERAÇÃO DE CONVERSAS NO WHATSAPP (Os 5 Sims em Ação):');
   console.log('──────────────────────────────────────────────────────────────────────────────\n');
 
   opportunities.forEach((op, idx) => {
-    console.log(`[OPÇÃO ${idx + 1}] ${op.topic}`);
-    console.log(`   🔴 A Dor do Mercado: ${op.marketPain}`);
-    console.log(`   🟢 A Solução de Rogério Maciel: ${op.solutionAngle}`);
-    console.log(`   🎯 Público Alvo: ${op.targetAudience}`);
-    console.log(`   📍 Posicionamento Geográfico: ${op.geoTarget}`);
+    console.log(`[OPORTUNIDADE ${idx + 1}] ${op.topic}`);
+    console.log(`   🎯 Público: ${op.targetAudience} | 📍 Alvo: ${op.geoTarget}`);
+    console.log(`   • [Sim 1 - Kotler (Dor)]: ${op.fiveYes.sim1_dor}`);
+    console.log(`   • [Sim 2 - Gitomer (Anti-Venda)]: ${op.fiveYes.sim2_antivenda}`);
+    console.log(`   • [Sim 3 - Cialdini (Autoridade)]: ${op.fiveYes.sim3_autoridade}`);
+    console.log(`   • [Sim 4 - Hormozi (Contraste)]: ${op.fiveYes.sim4_contraste}`);
+    console.log(`   • [Sim 5 - Carol Iasmim (CTA WhatsApp)]: ${op.fiveYes.sim5_cta_whatsapp}`);
     console.log('');
   });
 
   console.log('──────────────────────────────────────────────────────────────────────────────');
   console.log('💡 COMANDOS DISPONÍVEIS:');
-  console.log('   • Para compilar e testar pré-renderização: bun run build');
-  console.log('   • Para notificar Google após publicar: bun run index:google');
-  console.log('   • Para notificar Bing/ChatGPT Search: bun run index:bing');
+  console.log('   • Para compilar com SSG: bun run build');
+  console.log('   • Para indexar no Google em minutos: bun run index:google');
+  console.log('   • Para indexar no Bing/ChatGPT Search: bun run index:bing');
   console.log('──────────────────────────────────────────────────────────────────────────────\n');
 }
 

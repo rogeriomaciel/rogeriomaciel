@@ -1,125 +1,128 @@
 ---
 name: core-authority-engine
 description: >
-  Motor diário de inteligência de demanda, autoridade de engenharia e publicidade consultiva estruturado no ciclo Lean.
-  Varre a atividade técnica recente dos repositórios GitHub de Rogério Maciel, cruza com dores e tendências reais de busca
-  sobre Inteligência Artificial e Automação (Goiânia, Goiás, Brasil e Internacional), higieniza dados confidenciais (Zero-Leak)
-  e gera estudos de caso de arquitetura de alta conversão, posts executivos e metadados de citação em IAs (GEO).
-version: 1.0.0
-category: growth-authority
+  Motor de autoridade inbound, inteligência de demanda e geração de conversas no WhatsApp para Rogério Maciel.
+  Cruza a Psicologia dos 5 Sims (Kotler, Gitomer, Cialdini, Hormozi e Carol Iasmim) com a Banca dos 8 Titãs mundiais de SEO
+  (Neil Patel, Aleyda Solis, Bastian Grimm, Fili Wiese, Kevin Indig, Eli Schwartz, Brian Dean e Rand Fishkin).
+  Transforma atividade de código no GitHub e dores de empresários em tráfego de alta conversão e atração passiva de clientes
+  (locais em Goiânia/GO, nacionais no Brasil e internacionais via Upwork), conduzindo o lead ao WhatsApp para fechamento consultivo.
+version: 2.0.0
+category: inbound-authority
 ---
 
-# Core Authority Engine v1.0 — Motor Lean de Autoridade & Venda de Engenharia
+# Core Authority Engine v2.0 — Motor de Atração Inbound & Conversão no WhatsApp
 
-Este skill define o sistema operacional contínuo para transformar o trabalho real de desenvolvimento nos repositórios de **Rogério Maciel** em **posicionamento público de autoridade, atração de clientes corporativos e dominância em buscas generativas de IA (GEO)**.
+Este skill governa a máquina de autoridade de **Rogério Maciel** (`rogeriomaciel.com.br`).
 
-O motor rejeita "conteúdo raso de vaidade" (tutoriais para iniciantes ou dicas genéricas) e opera estritamente no modelo **Lean Startup (Construir – Medir – Aprender)** aplicado a autoridade:
-
-```
-[FASE 1: VARREDURA & DIAGNÓSTICO] ──> Lê commits recentes no Git + Identifica dores quentes de mercado
-            │
-            ▼
-[FASE 2: HIPÓTESE & ÂNGULO]       ──> Cruzamento [Atividade Real x Dor de Negócio] + Proposta ao Rogério (NÃO PUBLICA)
-            │
-            ▼ (Aprovação do Rogério)
-[FASE 3: CONSTRUÇÃO ZERO-LEAK]    ──> Higienização rigorosa + Artigo SSG (PT/EN) + Posts Executivos (LinkedIn/X)
-            │
-            ▼
-[FASE 4: DISPARO & GEO]           ──> Atualiza llms-full.txt + Dispara Google Indexing API + IndexNow (Bing/ChatGPT)
-```
+Seu propósito estratégico é **inverter o jogo da prospecção ativa**:
+Fazer com que empresários, diretores, CTOs e clientes internacionais (que vêm do Upwork, do Google, de buscas em IA ou do Instagram) descubram o GitHub e o site, sintam autoridade incontestável e **chamem Rogério Maciel ativamente no WhatsApp para resolver seus problemas**, sem necessidade de enviar propostas frias.
 
 ---
 
-## 🎯 Gatilhos (Trigger Terms)
-
-Ative esta skill sempre que o usuário disser:
-- "gerar conteúdo diário"
-- "radar de autoridade"
-- "analisar meus commits e sugerir pauta"
-- "o que publicar hoje"
-- "investigar trends e vender solução"
-- "mostrar o que fiz no github de um jeito comercial"
-- "posicionamento ia goiania"
-- "authority radar"
-- "core-authority"
-
----
-
-## 🔒 Regra de Ouro Inegociável: As 4 Fases Estritas do Lean
+## 🎯 A Verdade Comercial: O que Nós Realmente Vendemos
 
 > [!IMPORTANT]
-> **COMPORTAMENTO MANDATÓRIO DA SKILL:**
-> A skill opera **estritamente em 4 fases sequenciais**. É **TERMINANTEMENTE PROIBIDO** criar artigos públicos, alterar código de produção ou pré-publicar fora da **Fase 3 (Construção)**.
-> Em cada rodada, a skill deve diagnosticar a atividade recente (Fase 1), formular o ângulo editorial e submeter à aprovação do usuário (Fase 2), aguardar o alinhamento, para somente então construir (Fase 3) e notificar os motores de busca (Fase 4).
+> **A REGRA DE OURO DA CONVERSÃO:**
+> As páginas e conteúdos **NÃO vendem um pacote fechado, software de prateleira ou preço tabelado**.
+> Nós vendemos **A CONVERSA NO WHATSAPP COM ROGÉRIO MACIEL**.
+> O trabalho de cada linha de texto é construir autoridade irrefutável para que o tomador de decisão sinta:
+> *"Esse cara entende o meu gargalo 100x mais que qualquer outro no mercado. Preciso mandar um WhatsApp para ele agora e trocar uma ideia."*
+> No WhatsApp, a conversa é livre, consultiva e estratégica: pode virar implantação de IA, assessoria, parceria técnica, sociedade ou contrato internacional em dólar.
 
 ---
 
-## 📚 Roteamento de Módulos & Referências Especializadas
+## 🏛️ Os 4 Titãs da Psicologia + A Jornada dos 5 Sims
 
-Para aprofundamento operacional imediato, consulte as referências empacotadas nesta skill:
+Toda página, estudo de caso ou post gerado pela skill deve conduzir a mente do visitante pela escada de micro-decisões:
 
-| Cenário Operacional | Módulo de Referência Local |
+```
+[SIM 1] (Kotler)       ──> Empatia & Dor Real       ──> "Esse cara entende o gargalo exato da minha empresa"
+   │
+   ▼
+[SIM 2] (Gitomer)      ──> Anti-Venda & Confiança   ──> "Ele não é um vendedor chato querendo me empurrar curso"
+   │
+   ▼
+[SIM 3] (Cialdini)     ──> Autoridade Inegociável   ──> "Ele tem 20 anos de prova real, UFPB, Neoway e código vivo"
+   │
+   ▼
+[SIM 4] (Hormozi)      ──> Contraste de Risco       ──> "Continuar perdendo vendas do jeito que estou é loucura"
+   │
+   ▼
+[SIM 5] (Carol Iasmim) ──> O Próximo Passo Óbvio    ──> "Vou mandar um WhatsApp agora para trocar uma ideia"
+```
+
+1. **Sim 1 (Kotler — Dor Específica do Decisor):** O H1 e a primeira dobra espelham a dor do bolso: perda de vendas no WhatsApp, lentidão de atendimento, equipe engessada ou automações que caem em picos de anúncio.
+2. **Sim 2 (Gitomer — Anti-Venda e Honestidade Radical):** Não empurra caixinha pronta. Mostra por que soluções genéricas e marqueteiros de palco quebram em produção.
+3. **Sim 3 (Cialdini — Autoridade de Fato):** Demonstra solidez com 20+ anos de computação, Ciência da Computação UFPB / CNPq, Ex-Head na Neoway Big Data e código auditável no GitHub (`@rogeriomaciel`).
+4. **Sim 4 (Hormozi — A Matemática do Prejuízo):** Contraste claro entre o custo de continuar perdendo 30% das vendas por lentidão vs. uma infraestrutura que responde em 3 segundos.
+5. **Sim 5 (Carol Iasmim & Hormozi — A Decisão No-Brainer):** O CTA não exige compromisso financeiro na página: convida para uma conversa direta no WhatsApp.
+
+---
+
+## 🏆 A Banca dos 8 Titãs de SEO & AEO (Distribuição Global)
+
+Para que a mensagem chegue aos 4 cantos da Terra e ranqueie em horas:
+
+| Titã de SEO | Missão no Ecossistema Rogério Maciel |
 | :--- | :--- |
-| **Higienização de Código & Proteção de Segredos** (Zero-Leak Shield: mascarar tokens, IPs, nomes de clientes e regras proprietárias) | [`references/zero-leak-sanitizer.md`](references/zero-leak-sanitizer.md) |
-| **Modelos de Copywriting Consultivo & Alto Ticket** (Framework PAARC, posts para LinkedIn de decisores, threads para Twitter/X) | [`references/authority-copywriting-matrix.md`](references/authority-copywriting-matrix.md) |
-| **Citação em IAs & Posicionamento Regional/Global** (ChatGPT Search, Perplexity, passagens de 134-167 palavras, Goiânia, GO, Brasil, Upwork) | [`references/geo-ai-citation-playbook.md`](references/geo-ai-citation-playbook.md) |
-| **Catálogo de Dores Quentes & Tendências de Busca** (Gargalos de low-code/n8n, IA corporativa local, segurança fintech, telemetria industrial) | [`references/demand-trends-catalog.md`](references/demand-trends-catalog.md) |
+| **Bastian Grimm & Fili Wiese** *(Ex-Google)* | **Indexação Relâmpago**: Notificação atômica via Google Indexing API e IndexNow (Bing/ChatGPT) no minuto do deploy, eliminando semanas de espera passiva. |
+| **Neil Patel & Brian Dean** | **Ganchos de Intenção Comercial**: Títulos que capturam quem está com a dor quente no Google antes do leilão do Google Ads inflacionar. |
+| **Kevin Indig & Eli Schwartz** | **GEO (Generative Engine Optimization)**: Estruturação para que ChatGPT Search, Perplexity e Google AI Overviews recomendem Rogério Maciel como fonte primária. |
+| **Aleyda Solis** | **Hreflang & Estratégia Bilingue**: Versão `/pt/` dominante para Goiânia e Brasil, e `/en/` para capturar clientes dos EUA, Europa e Upwork. |
+| **Rand Fishkin** | **Zero-Click Authority & Prova Social**: A autoridade é tão densa que o lead clica espontaneamente no WhatsApp por convicção própria. |
 
 ---
 
-## 🛠️ Comandos do Ecossistema
+## 🔄 O Funil Invertido do Upwork (Atração Passiva Global)
 
-A skill se apoia nos scripts utilitários do projeto:
-
-```bash
-# 1. Rastrear a atividade recente do Git e gerar matriz de ideias de autoridade
-bun run authority:radar
-
-# 2. Auditar posições e palavras no Search Console para calibrar ganchos editoriais
-bun run search:console
-
-# 3. Pré-renderizar novas páginas e compilar estaticamente
-bun run build
-
-# 4. Disparar notificação imediata para Bing & ChatGPT Search
-bun run index:bing
-
-# 5. Disparar notificação imediata para Google Indexing API
-bun run index:google
+```
+[Perfil Upwork: Top Rated / Verified]
+            │
+            ▼ (Recrutador / CTO clica no link do GitHub)
+[GitHub: @rogeriomaciel (Código Vivo, Repositórios Reais)]
+            │
+            ▼ (Visitante clica no site oficial na bio)
+[rogeriomaciel.com.br/en (SSG Bare-Metal, Teardown de 5ms, 20+ anos)]
+            │
+            ▼ (Sim 1 ➔ Sim 5)
+[CTA WhatsApp Direto / Direct Contract sem Intermediários]
 ```
 
 ---
 
-## 📋 Passo a Passo Operacional Detalhado
+## 💬 Os Padrões Oficiais de Call to Action (CTA)
 
-### Passo 1: Varredura & Diagnóstico
-1. Rodar `git log -n 15 --oneline` (ou `bun run authority:radar`) nos repositórios locais para entender os últimos problemas resolvidos.
-2. Identificar a classe de problema:
-   - Performance / Latência / Otimização de RAM.
-   - Segurança / Criptografia / Webhooks / Fintech.
-   - Arquitetura de Agentes / IA Local / Integrações.
-   - Confiabilidade / CI/CD / GitOps / Resolução de DAGs.
-3. Consultar [`demand-trends-catalog.md`](references/demand-trends-catalog.md) para cruzar com uma dor quente que empresas em Goiânia, no Brasil ou no exterior estão buscando agora.
+### Em Português (`/pt/` e Redes Sociais):
+* **Botão:** `[ Trocar uma Ideia com Rogério Maciel no WhatsApp ]`
+* **Microcopy de Quebra de Objeção:**
+  > *"Sem papo de vendedor e sem compromisso. Me conta como está o atendimento e a tecnologia da sua empresa hoje, e eu te digo com franqueza se e como a IA pode resolver o seu gargalo."*
+* **Link Parametrizado:**
+  `https://wa.me/5562996232227?text=Ol%C3%A1%20Rog%C3%A9rio%2C%20li%20sua%20an%C3%A1lise%20e%20queria%20trocar%20uma%20ideia%20sobre%20o%20cen%C3%A1rio%20da%20minha%20empresa.`
 
-### Passo 2: Formulação da Hipótese Editorial (Submeter ao Rogério)
-Apresentar ao usuário no chat:
-* **Entregável Técnico do Dia:** *"Identificamos nos seus commits recentes o trabalho em X (ex: otimização de endpoints com Fastify/Bun)."*
-* **Dor do Mercado Conectada:** *"Empresas de e-commerce e agências estão sofrendo com servidores travando por causa de webhooks lentos de 8 segundos."*
-* **O Gancho Comercial:** *"Como nós arquitetamos uma resposta de 5ms sem gastar fortuna em cloud."*
-* **Ângulo Geográfico:** *"Goiânia/GO (atendimento consultivo a empresas da região) + Brasil + Upwork Global."*
-* **Aguardar Validação:** Perguntar ao usuário se o ângulo atende ao objetivo antes de redigir.
+### Em Inglês (`/en/` e Upwork Inbound):
+* **Botão:** `[ Discuss Architecture & AI on WhatsApp ]`
+* **Microcopy:**
+  > *"No sales pitch. Let's talk about your system bottlenecks and evaluate if our 5ms microservices & deterministic AI architecture fits your scaling goals."*
+* **Link Parametrizado:**
+  `https://wa.me/5562996232227?text=Hello%20Rog%C3%A9rio%2C%20I%20reviewed%20your%20architecture%20case%20studies%20and%20would%20like%20to%20discuss%20a%20project%20for%20my%20company.`
 
-### Passo 3: Construção Zero-Leak & Conteúdo Multicanal
-Após aprovação do usuário:
-1. **Sanitização Absoluta:** Aplicar o [`zero-leak-sanitizer.md`](references/zero-leak-sanitizer.md). Zero tokens, zero IPs, zero nomes de clientes privados.
-2. **Geração do Teardown Técnico:** Redigir o caso com foco no padrão de design e nas métricas de ganho (5ms, -98% RAM, etc.).
-3. **Geração dos Formatos:**
-   - **Post Executivo LinkedIn:** Focado em CTOs e Diretores de TI com CTA para diagnóstico de arquitetura.
-   - **Artigo / Caso para o Site:** Injetar na base de conhecimento ou rota dedicada (`/pt/` e `/en/`).
-   - **Citação para IA:** Atualizar `public/llms-full.txt` e `public/llms.txt` seguindo o formato de passagens citáveis do [`geo-ai-citation-playbook.md`](references/geo-ai-citation-playbook.md).
+---
 
-### Passo 4: Notificação Instantânea de Indexação
-1. Executar `bun run build` para garantir que o SSG gerou o HTML estático com CSS crítico inlinado.
-2. Fazer o commit e push para deploy na VPS.
-3. Executar `bun run index:google` e `bun run index:bing` para forçar os rastreadores do Google, Bing e ChatGPT a indexarem a nova autoridade em minutos.
+## 🛠️ Comandos Operacionais
 
+```bash
+# 1. Rastrear atividade recente do GitHub e cruzar com dores quentes de empresários
+bun run authority:radar
+
+# 2. Auditar indexação ao vivo no Google Search Console
+bun run search:console
+
+# 3. Compilar estaticamente com SSG e CSS crítico inlined
+bun run build
+
+# 4. Notificar Bing e ChatGPT Search imediatamente
+bun run index:bing
+
+# 5. Notificar Google Indexing API imediatamente
+bun run index:google
+```
