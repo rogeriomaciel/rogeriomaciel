@@ -3,58 +3,115 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="theme-color" content="#020617" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+    <meta name="theme-color" content="#07090E" />
     
     <!-- Metatags Principais de SEO -->
-    <title>Rogério Maciel — Recriação de Sites em Alta Performance | Arquitetura Core-Bare-Metal™</title>
-    <meta name="description" content="Recriamos o seu site com o mesmo visual que você já tem, mas com abertura instantânea (< 0.8s) na arquitetura Core-Bare-Metal™. Pare de queimar verba de anúncios em páginas lentas." />
+    <title>Rogério Maciel — Software Architect & Automation Platform Engineer | 20+ Anos</title>
+    <meta name="description" content="Arquiteto de Software e Engenheiro de Plataformas de Automação com mais de 20 anos de experiência. Transpilação n8n para microsserviços Fastify/Bun de 5ms, telemetria em tempo real, convergência TI/OT e esteiras de alta concorrência." />
+    <meta name="keywords" content="Software Architect, Platform Engineer, n8n Automation, Fastify, Bun, TypeScript, Low-Code Transpiler, Telemetry, Real-Time Systems, Upwork Architect, Rogério Maciel, Rogério Marinho Maciel" />
     <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+    <link rel="canonical" href="https://rogeriomaciel.com.br/" />
     
-    <!-- Open Graph / Facebook / WhatsApp -->
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content="Rogério Maciel — Recriação de Sites em Alta Performance | Arquitetura Core-Bare-Metal™" />
-    <meta property="og:description" content="Recriamos o seu site com o mesmo visual que você já tem, mas com abertura instantânea (< 0.8s) na arquitetura Core-Bare-Metal™. Pare de queimar verba de anúncios em páginas lentas." />
+    <!-- Open Graph / Redes Sociais / WhatsApp Preview -->
+    <meta property="og:locale" content="pt_BR" />
+    <meta property="og:type" content="profile" />
+    <meta property="og:title" content="Rogério Maciel — Software Architect & Automation Platform Engineer" />
+    <meta property="og:description" content="20+ anos projetando sistemas distribuídos, transpilação n8n para Fastify/Bun com latência de 5ms (-98% RAM), telemetria em tempo real e esteiras autônomas de alta taxa de transferência." />
     <meta property="og:url" content="https://rogeriomaciel.com.br/" />
+    <meta property="og:site_name" content="Rogério Maciel — Software Architecture & Automation" />
     <meta property="og:image" content="https://rogeriomaciel.com.br/og-image.jpg" />
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Rogério Maciel — Recriação de Sites em Alta Performance | Arquitetura Core-Bare-Metal™" />
-    <meta name="twitter:description" content="Recriamos o seu site com o mesmo visual que você já tem, mas com abertura instantânea (< 0.8s) na arquitetura Core-Bare-Metal™. Pare de queimar verba de anúncios em páginas lentas." />
+    <meta name="twitter:title" content="Rogério Maciel — Software Architect & Automation Platform Engineer" />
+    <meta name="twitter:description" content="20+ anos projetando sistemas de alta performance, transpilação n8n para Fastify/Bun de 5ms e convergência TI/OT." />
+    <meta name="twitter:image" content="https://rogeriomaciel.com.br/og-image.jpg" />
 
-    <!-- LLM / AI Discovery Links (GEO & ARD) -->
-    <link rel="alternate" type="text/plain" href="/llms.txt" title="LLM Summary (llms.txt)" />
-    <link rel="alternate" type="text/plain" href="/llms-full.txt" title="LLM Full Knowledge Base (llms-full.txt)" />
+    <!-- Descoberta por Agentes de IA, LLMs e Navegação Agêntica (GEO & ARD 1.0) -->
+    <link rel="alternate" type="text/markdown" href="/llms.txt" title="LLMs Summary" />
+    <link rel="alternate" type="text/markdown" href="/llms-full.txt" title="LLMs Full Knowledge Base" />
+    <link rel="agent" type="application/json" href="/.well-known/ard.json" title="Agentic Resource Discovery (ARD)" />
     <link rel="ai-catalog" type="application/json" href="/.well-known/ai-catalog.json" title="AI Catalog (ARD)" />
     <link rel="ard" type="application/json" href="/.well-known/ard.json" title="Agentic Resource Discovery (ARD)" />
+    <link rel="describedby" type="application/json" href="/.well-known/ai-catalog.json" title="AI Catalog" />
+    <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
 
-    <!-- Canonical URL -->
-    <link rel="canonical" href="https://rogeriomaciel.com.br/" />
+    <!-- Buffer Global de Analytics e Carregamento de Alta Performance (TBT = 0ms, PageSpeed 99-100) -->
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
 
-    <!-- Google Tag Manager (Carregamento ultra-otimizado sob demanda para Core Web Vitals 100/100) -->
+      var analyticsLoaded = false;
+      function initAnalytics() {
+        if (analyticsLoaded) return;
+        analyticsLoaded = true;
+
+        // Google Tag Manager sob demanda
+        window.dataLayer.push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
+        var g = document.createElement('script');
+        g.async = true;
+        g.src = 'https://www.googletagmanager.com/gtm.js?id=GTM-WNXV9S4X';
+        document.head.appendChild(g);
+      }
+
+      // Execução automática após pintura inicial sem travar a thread principal
+      if (document.readyState === 'complete') {
+        setTimeout(initAnalytics, 1200);
+      } else {
+        window.addEventListener('load', function() {
+          setTimeout(initAnalytics, 1200);
+        });
+      }
+
+      // Ativação instantânea no primeiro toque ou rolagem
+      ['pointerdown', 'touchstart', 'scroll', 'keydown'].forEach(function(ev) {
+        window.addEventListener(ev, initAnalytics, { once: true, passive: true });
+      });
+    </script>
+
+    <!-- Telemetria First-Party Não Bloqueante (sendBeacon) para Cliques de Conversão -->
     <script>
       (function() {
-        var gtmLoaded = false;
-        function loadGTM() {
-          if (gtmLoaded) return;
-          gtmLoaded = true;
-          ['touchstart', 'scroll', 'mousemove', 'keydown', 'click'].forEach(function(evt) {
-            window.removeEventListener(evt, loadGTM, { passive: true });
-          });
-          (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-          new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-          j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-          'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-          })(window,document,'script','dataLayer','GTM-WNXV9S4X');
-        }
-        ['touchstart', 'scroll', 'mousemove', 'keydown', 'click'].forEach(function(evt) {
-          window.addEventListener(evt, loadGTM, { once: true, passive: true });
-        });
+        document.addEventListener('click', function(e) {
+          var link = e.target && e.target.closest ? e.target.closest('a') : null;
+          if (!link || !link.href) return;
+          var href = link.href;
+          var isWhatsApp = href.indexOf('wa.me') !== -1 || href.indexOf('whatsapp.com') !== -1;
+          var isGitHub = href.indexOf('github.com') !== -1;
+          var isUpwork = href.indexOf('upwork.com') !== -1;
+          var isLinkedIn = href.indexOf('linkedin.com') !== -1;
+
+          if (isWhatsApp || isGitHub || isUpwork || isLinkedIn) {
+            initAnalytics();
+            var targetChannel = isWhatsApp ? 'whatsapp' : isGitHub ? 'github' : isUpwork ? 'upwork' : 'linkedin';
+            var buttonText = (link.innerText || '').trim().slice(0, 60);
+
+            try {
+              var trackUrl = '/api/telemetry?channel=' + encodeURIComponent(targetChannel) +
+                             '&btn=' + encodeURIComponent(buttonText) +
+                             '&ref=' + encodeURIComponent(window.location.pathname);
+              if (navigator.sendBeacon) {
+                navigator.sendBeacon(trackUrl, '');
+              }
+            } catch (err) {}
+
+            try {
+              window.dataLayer = window.dataLayer || [];
+              window.dataLayer.push({
+                event: 'architect_interaction',
+                conversion_channel: targetChannel,
+                destination: href,
+                button_text: buttonText,
+                page_path: window.location.pathname
+              });
+            } catch (err) {}
+          }
+        }, { capture: true });
       })();
     </script>
 
-    <!-- Dados Estruturados Schema.org JSON-LD para Google e Robôs de IA -->
+    <!-- Schema.org Graph JSON-LD para Google e Motores de Busca por IA -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -63,33 +120,54 @@
           "@type": "WebSite",
           "@id": "https://rogeriomaciel.com.br/#website",
           "url": "https://rogeriomaciel.com.br/",
-          "name": "Rogério Maciel — Recriação de Sites em Alta Performance",
-          "description": "Engenharia de performance e reconstrução de sites na Arquitetura Core-Bare-Metal™ (< 1s, Nota 95+ no Google PageSpeed).",
+          "name": "Rogério Maciel — Software Architecture & Automation",
+          "description": "Portal oficial de engenharia de software, automação de alta performance e microsserviços bare-metal de Rogério Marinho Maciel.",
           "inLanguage": "pt-BR"
+        },
+        {
+          "@type": "ProfilePage",
+          "@id": "https://rogeriomaciel.com.br/#profilepage",
+          "url": "https://rogeriomaciel.com.br/",
+          "name": "Perfil Profissional de Rogério Maciel",
+          "mainEntity": {
+            "@id": "https://rogeriomaciel.com.br/#person"
+          }
         },
         {
           "@type": "Person",
           "@id": "https://rogeriomaciel.com.br/#person",
           "name": "Rogério Marinho Maciel",
-          "jobTitle": "Arquiteto de Software & Engenheiro de Performance",
-          "description": "Cientista da Computação UFPB, MBA Marketing, Ex-Head Neoway e criador da Arquitetura Core-Bare-Metal™.",
+          "alternateName": ["Rogério Maciel", "Rogerio Marinho Maciel"],
+          "jobTitle": "Software Architect & Automation Platform Engineer",
+          "description": "Cientista da Computação pela UFPB, pesquisador bolsista CNPq em sistemas de tempo real, ex-Head de Digital Applications na Neoway (Big Data) e ex-CTO na Traffega. Criador de compilador de grafos n8n para microsserviços Fastify/Bun de 5ms.",
           "url": "https://rogeriomaciel.com.br/",
-          "sameAs": [
-            "https://www.linkedin.com/in/macrogerio/",
-            "https://www.instagram.com/mrcrogerio/"
-          ]
-        },
-        {
-          "@type": "ProfessionalService",
-          "@id": "https://rogeriomaciel.com.br/#service",
-          "name": "Rogério Maciel — Engenharia de Performance & Alta Conversão",
-          "url": "https://rogeriomaciel.com.br/",
+          "image": "https://rogeriomaciel.com.br/images/rogerio-maciel.webp",
+          "email": "rogerio@rogeriomaciel.com.br",
           "telephone": "+55-62-99623-2227",
-          "priceRange": "$$$",
-          "address": {
-            "@type": "PostalAddress",
-            "addressCountry": "BR"
-          }
+          "alumniOf": {
+            "@type": "CollegeOrUniversity",
+            "name": "Universidade Federal da Paraíba (UFPB)"
+          },
+          "knowsAbout": [
+            "Software Architecture",
+            "Distributed Systems",
+            "n8n Workflow Automation",
+            "Fastify Microservices",
+            "Bun Runtime",
+            "TypeScript",
+            "Real-Time Telemetry",
+            "TI/OT Convergence",
+            "Programmatic SEO",
+            "Conversational Commerce",
+            "Stripe Payments API",
+            "Finite State Machines (FSM)"
+          ],
+          "sameAs": [
+            "https://github.com/rogeriomaciel",
+            "https://www.linkedin.com/in/macrogerio",
+            "https://lattes.cnpq.br/5008294767552521",
+            "https://www.upwork.com"
+          ]
         },
         {
           "@type": "FAQPage",
@@ -97,34 +175,26 @@
           "mainEntity": [
             {
               "@type": "Question",
-              "name": "Eu preciso refazer o design ou mudar a identidade visual do meu site?",
+              "name": "Como funciona a consultoria de arquitetura e otimização de plataformas?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Não! Nós recriamos o visual exato que você já tem e gosta, substituindo o código pesado por engenharia Core-Bare-Metal™ ultrarrápida."
+                "text": "A consultoria atua diretamente na raiz dos problemas de escala, latência e custo operacional. Analisamos a arquitetura atual (fluxos n8n, microsserviços, consumo de banco de dados, esteiras de mensageria) e traçamos o plano de transição para código nativo bare-metal (Fastify/Bun), reduzindo custos de nuvem em até 80% e cortando a latência para menos de 10ms."
               }
             },
             {
               "@type": "Question",
-              "name": "O que é a Arquitetura Core-Bare-Metal™ e por que ela não perde leads?",
+              "name": "O que diferencia a sua abordagem de automação das soluções no-code comuns?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "O Core-Bare-Metal™ compila todo o site em arquivos estáticos ultra-leves (< 80 KB) servidos direto no dispositivo do visitante em menos de 1 segundo. O cliente clica no anúncio e a página já está aberta."
+                "text": "Minha abordagem une a agilidade da modelagem visual com o rigor de engenharia: Workflow-as-Code com versionamento no Git, testes unitários automatizados, transpilação para microsserviços nativos e telemetria first-party de nível militar."
               }
             },
             {
               "@type": "Question",
-              "name": "Em quanto tempo o novo site fica pronto?",
+              "name": "Você atende clientes e contratos internacionais?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Por trabalharmos com esteira de engenharia moderna, entregamos a sua versão Core-Bare-Metal™ completa, testada e com nota 95+ no Google em poucos dias úteis."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "Como funciona o rastreamento dos meus anúncios?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Integramos nativamente o Google Tag Manager (GTM) e Google Analytics 4 (GA4) com rastreamento cirúrgico de cliques no WhatsApp para calibrar o Google e Meta Ads."
+                "text": "Sim. Possuo perfil ativo e validado no Upwork ($35.00/hr) com contratos gerenciados em dólares, além de disponibilidade para projetos de consultoria de arquitetura, refatoração de infraestrutura crítica e implantação de plataformas corporativas no Brasil e no exterior."
               }
             }
           ]
@@ -132,6 +202,7 @@
       ]
     }
     </script>
+
     <!-- Anti-FOUC Theme Script -->
     <script>
       (function() {
@@ -148,7 +219,7 @@
       })();
     </script>
   </head>
-  <body class="bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-slate-100 font-sans antialiased selection:bg-blue-600 selection:text-white">
+  <body class="bg-[#07090E] text-slate-100 font-sans antialiased selection:bg-emerald-500 selection:text-slate-950">
     <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WNXV9S4X"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>

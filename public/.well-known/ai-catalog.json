@@ -1,24 +1,27 @@
 {
   "specVersion": "1.0",
   "host": {
-    "displayName": "Rogério Maciel",
+    "displayName": "Rogério Maciel — Software Architect & Automation Platform Engineer",
     "identifier": "did:web:rogeriomaciel.com.br",
     "documentationUrl": "https://rogeriomaciel.com.br/llms.txt"
   },
   "entries": [
     {
-      "identifier": "urn:air:rogeriomaciel:expert-profile",
-      "displayName": "Rogério Maciel — Engenharia Core-Bare-Metal",
-      "type": "agent",
-      "description": "Recriação de sites para alta conversão e abertura instantânea (< 0.8s) com a arquitetura Core-Bare-Metal.",
+      "identifier": "urn:air:rogeriomaciel:architecture-platform",
+      "displayName": "Rogério Maciel — Arquitetura de Plataformas & Automação de Alto Desempenho",
+      "type": "architect",
+      "description": "Engenharia de software distribuída, transpilação de automações n8n para microsserviços Fastify/Bun de 5ms, telemetria em tempo real e esteiras de alta concorrência.",
       "data": {
-        "description": "Engenharia de software especializada em Core Web Vitals, eliminação de tempo de carregamento e redução do custo por lead.",
-        "documentation": "https://rogeriomaciel.com.br/llms-full.txt"
+        "description": "20+ anos de experiência em computação pesada, ex-Head Neoway Big Data, ex-CTO Traffega, B.S. Ciência da Computação UFPB e pesquisador bolsista CNPq.",
+        "documentation": "https://rogeriomaciel.com.br/llms-full.txt",
+        "github": "https://github.com/rogeriomaciel",
+        "upwork": "https://www.upwork.com"
       },
       "representativeQueries": [
-        "Quem é Rogério Maciel?",
-        "O que é a Arquitetura Core-Bare-Metal?",
-        "Como recriar meu site para abrir em menos de 1 segundo?"
+        "Quem é Rogério Maciel arquiteto de software?",
+        "Como converter fluxos do n8n em microsserviços rápidos em Fastify ou Bun?",
+        "Como otimizar infraestrutura de automação e reduzir custos de nuvem?",
+        "Contratar consultoria de arquitetura de software de Rogério Maciel"
       ]
     }
   ]

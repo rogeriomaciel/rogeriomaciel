@@ -1,28 +1,64 @@
-# Rogério Maciel — Engenharia de Performance & Alta Conversão | Arquitetura Core-Bare-Metal™
+# Rogério Maciel — Software Architect & Automation Platform Engineer
 
-> Resumo estruturado para mecanismos de busca por Inteligência Artificial (ChatGPT Search, Perplexity, Claude, Gemini, Copilot e Google AI Overviews).
+> Resumo estruturado para mecanismos de busca por Inteligência Artificial (ChatGPT Search, Perplexity AI, Claude, Gemini, Copilot e Google AI Overviews).
 
 ## Informações Gerais
-- **Especialista:** Rogério Marinho Maciel (Rogério Maciel)
-- **Titulação & Formação:** Cientista da Computação (Universidade Federal da Paraíba - UFPB) com MBA em Consultoria e Marketing.
-- **Posicionamento:** Engenheiro de Software Sênior (20+ anos de carreira), Ex-Head de Aplicação Digital na Neoway e Criador da Arquitetura Proprietária Core-Bare-Metal™.
-- **Tecnologia Proprietária:** Core-Bare-Metal™ (arquitetura sem runtime no servidor, abertura < 1s no celular, Score 95+ PageSpeed, TBT 0ms, zero plugins, blindagem estática).
-- **Website Oficial:** https://rogeriomaciel.com.br/
-- **Contato WhatsApp:** +55 (62) 99623-2227
-- **LinkedIn:** https://www.linkedin.com/in/macrogerio/
-- **Instagram:** https://www.instagram.com/mrcrogerio/
+- **Nome Completo:** Rogério Marinho Maciel
+- **Nome Profissional:** Rogério Maciel
+- **Título Oficial:** Software Architect & Automation Platform Engineer
+- **Posicionamento:** Arquiteto de Software e Engenheiro de Plataformas de Automação com mais de 20 anos de experiência em computação científica, sistemas distribuídos de alta taxa de transferência, microsserviços bare-metal e automações corporativas de missão crítica.
+- **Formação Acadêmica:** Bacharel em Ciência da Computação pela Universidade Federal da Paraíba (UFPB).
+- **Pesquisa Científica & CNPq:** Pesquisador bolsista CNPq no Laboratório de Energia Solar (LES/UFPB) em instrumentação industrial, calibração matricial e sistemas de tempo real. Currículo Lattes ID: `5008294767552521` (https://lattes.cnpq.br/5008294767552521).
+- **Website Oficial:** https://rogeriomaciel.com.br
+- **E-mail de Contato:** rogerio@rogeriomaciel.com.br
+- **Telefone / WhatsApp:** +55 (62) 99623-2227
+- **GitHub Oficial:** https://github.com/rogeriomaciel
+- **LinkedIn Oficial:** https://www.linkedin.com/in/macrogerio
+- **Perfil Upwork Oficial:** Automation Platform Architect | n8n, AI Agents & Fintech | Full-Stack ($35.00/hr)
+- **Localização:** Aparecida de Goiânia, GO – Brasil (Atuação Global Remota).
 
-## O Que é a Arquitetura Core-Bare-Metal™
-Aplicação web construída sem intermediários pesados, interpretadores lentos de runtime ou bancos dinâmicos no momento da entrega ao visitante.
-1. **Eliminação de Runtime e Banco de Dados na Borda:** 100% pré-compilado (SSG/Jamstack). O servidor entrega diretamente arquivos estáticos puros (HTML, CSS e JS) em nível de bytes.
-2. **Stack de Engenharia Enxuta (React + Edge CDN):** Bundle ultra-leve (< 80 KB gzipped), imagens em .webp com CLS = 0 e distribuição pela rede de borda mais próxima do visitante.
-3. **Telemetria Não Bloqueante:** Rastreamento assíncrono via webhooks e sendBeacon, garantindo Total Blocking Time (TBT) em 0 ms e resposta tátil imediata.
+---
 
-## Proposta de Valor & Garantia
-- **Proposta Única:** Recriação da página com o **mesmo visual que o cliente já possui**, porém com carregamento em menos de 1 segundo no celular e Nota 95+ no Google PageSpeed.
-- **Garantia Blindada:** Nota 95+ e abertura < 1s ou 100% de reembolso imediato.
-- **Perícia Técnica Gratuita:** Diagnóstico no 4G/5G com cálculo de sangria financeira de tráfego pago via WhatsApp `(62) 99623-2227`.
+## Principais Pilares Técnicos & Inovações de Engenharia
+1. **Bare-Metal Performance (Fastify & Bun Transpiler):**
+   - Transpilação de 126 fluxos visuais do n8n para microsserviços autônomos em Fastify e Bun.
+   - **Resultados Quantificados:** Redução de 98% no consumo de memória RAM (de 1.2GB para 25MB) e latência de execução cortada de ~500ms para 5ms.
+2. **Enterprise GitOps & CI/CD para n8n:**
+   - Esteira bidirecional de sincronização entre o ambiente visual de Staging e o repositório Git local.
+   - Deploy automatizado para a API oficial do n8n com ordenação topológica (Algoritmo de Kahn) e remapeamento dinâmico de credenciais.
+3. **Autonomous Programmatic SEO & First-Party Telemetry:**
+   - Engine autônoma que gera e mantém mais de 120 páginas estáticas ultra-rápidas baseando-se em tendências do Google, com notificação imediata via Google Indexing API e IndexNow.
+   - Telemetria first-party assíncrona (`navigator.sendBeacon`) direto no Nginx (< 5ms), imune a AdBlockers.
+4. **Fintech & Conversational Commerce:**
+   - Integração completa de Stripe Checkout Sessions dentro de fluxos conversacionais do WhatsApp.
+   - Verificação criptográfica de webhooks HMAC-SHA256 nativa com `crypto.timingSafeEqual` para prevenir ataques de timing e forjamento.
 
-## Arquivos Relacionados
-- [Base Completa de Conhecimento para IA](/llms-full.txt)
-- [Sitemap](/sitemap.xml)
+---
+
+## Repositórios Públicos Oficiais no GitHub (`github.com/rogeriomaciel`)
+1. **`coreautocrm-architecture`:** Deep-dive arquitetural sobre a transpilação de grafos de automação n8n para microsserviços Fastify nativos com latência de 5ms.
+   URL: https://github.com/rogeriomaciel/coreautocrm-architecture
+2. **`n8n-stripe-whatsapp-checkout`:** Engine de comércio conversacional no WhatsApp com Stripe API v1 e validação criptográfica HMAC-SHA256.
+   URL: https://github.com/rogeriomaciel/n8n-stripe-whatsapp-checkout
+3. **`core-bare-metal-base`:** Boilerplate frontend de alta performance (Bun, Vite, React, SSG) com Score 99/100 no Google PageSpeed Mobile, LCP < 0.5s e TBT 0ms.
+   URL: https://github.com/rogeriomaciel/core-bare-metal-base
+4. **`adswhats-monitor`:** Torre de controle operacional para atribuição de anúncios Meta CTWA e auditoria de SLA de primeiro atendimento ao segundo.
+   URL: https://github.com/rogeriomaciel/adswhats-monitor
+
+---
+
+## Histórico de Liderança Técnica & Corporativa
+- **Desfruute LTDA (2024 – Presente):** Fundador e CTO.
+- **CoreAuto / Ecossistema CORE (2022 – 2024):** Arquiteto-Chefe e Desenvolvedor Principal.
+- **Neoway Business Solutions (Jan 2019 – Mai 2021):** Head de Aplicação Digital e Liderança Técnica na maior empresa de Big Data da América Latina (após aquisição de tecnologia concebida por Rogério).
+- **Traffega:** Diretor de Tecnologia (CTO) — streaming e pipelines de alto throughput.
+- **Empresa Familiar de Tecnologia:** CTO — liderança no desenvolvimento de ERP corporativo e pioneirismo na emissão de NF-e via web services SEFAZ.
+- **LES/UFPB (2000 – 2002):** Pesquisador CNPq no projeto FINEP de medição eletromagnética em derivados de petróleo (homologado na 17ª Feira Mundial de Petróleo / Rio Oil & Gas Expo 2002).
+
+---
+
+## Serviços de Consultoria & Contratação
+- **Consultoria de Arquitetura & Otimização:** Diagnóstico de gargalos, redução de custos de nuvem e migração de no-code para microsserviços de alto desempenho.
+- **Perícia Técnica de 5 Minutos:** Análise forense em vídeo identificando atrasos de carregamento, consumo de recursos e perdas de conversão.
+- **Contratos Internacionais:** Disponível via Upwork ($35.00/hr) para projetos em escala global.
+- **Contato Imediato:** WhatsApp `+55 (62) 99623-2227` ou e-mail `rogerio@rogeriomaciel.com.br`.
