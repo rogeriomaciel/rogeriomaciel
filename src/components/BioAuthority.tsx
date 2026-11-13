@@ -1,4 +1,4 @@
-import { siteConfig } from '../config/site.config';
+import { Locale, i18nContent } from '../config/i18n.content';
 import {
   GraduationCapIcon,
   Building2Icon,
@@ -8,7 +8,9 @@ import {
   CheckIcon,
 } from './Icons';
 
-export function BioAuthority() {
+export function BioAuthority({ locale = 'pt' }: { locale?: Locale }) {
+  const t = i18nContent[locale];
+
   const timelineIcons = [
     <CpuIcon className="w-5 h-5 text-emerald-400" />,
     <Building2Icon className="w-5 h-5 text-cyan-400" />,
@@ -23,14 +25,13 @@ export function BioAuthority() {
         <div className="max-w-3xl mb-16 space-y-3">
           <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-mono uppercase tracking-wider">
             <AwardIcon className="w-3.5 h-3.5" />
-            <span>20+ Anos de Computação Pesada</span>
+            <span>{t.bioSection.badge}</span>
           </div>
           <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-white">
-            Trajetória de Liderança Técnica &amp; Pesquisa
+            {t.bioSection.title}
           </h2>
           <p className="text-slate-300 text-base sm:text-lg leading-relaxed">
-            Da pesquisa científica em sistemas de tempo real na UFPB à liderança em Big Data na Neoway e arquiteturas 
-            autônomas bare-metal em produção.
+            {t.bioSection.subtitle}
           </p>
         </div>
 
@@ -42,8 +43,8 @@ export function BioAuthority() {
               {/* Profile Image & Name */}
               <div className="flex items-center gap-4">
                 <img
-                  src={siteConfig.profile.photoUrl}
-                  alt={siteConfig.profile.name}
+                  src="/images/rogerio-maciel.webp"
+                  alt={t.profile.name}
                   width={72}
                   height={72}
                   loading="lazy"
@@ -52,10 +53,10 @@ export function BioAuthority() {
                 />
                 <div>
                   <h3 className="text-lg font-bold text-white font-mono leading-tight">
-                    {siteConfig.profile.name}
+                    {t.profile.name}
                   </h3>
                   <div className="text-xs text-emerald-400 font-mono">
-                    Software Architect &amp; CTO
+                    {t.profile.title}
                   </div>
                   <div className="text-[11px] text-slate-400 font-mono mt-0.5">
                     UFPB • CNPq • Ex-Neoway
@@ -65,26 +66,24 @@ export function BioAuthority() {
 
               {/* Bio Highlights */}
               <p className="text-xs text-slate-300 leading-relaxed">
-                Bacharel em Ciência da Computação (UFPB). Pesquisador bolsista CNPq no Laboratório de Energia Solar (LES) 
-                em instrumentação industrial e calibração matricial. Ex-Head de Aplicação Digital na Neoway (Big Data) e 
-                Ex-CTO na Traffega.
+                {t.profile.subheadline}
               </p>
 
               {/* Lattes CNPq Link Box */}
               <div className="p-3.5 rounded-xl bg-white/[0.03] border border-white/[0.08] space-y-1.5">
                 <div className="text-[11px] font-mono text-slate-400 flex items-center justify-between">
-                  <span>Currículo Lattes (CNPq):</span>
-                  <span className="text-emerald-400 font-bold">Validado</span>
+                  <span>{t.bioSection.lattesLabel}</span>
+                  <span className="text-emerald-400 font-bold">{t.bioSection.lattesStatus}</span>
                 </div>
                 <div className="text-xs font-mono text-white font-semibold flex items-center justify-between">
-                  <span>ID: {siteConfig.profile.lattesId}</span>
+                  <span>ID: {t.profile.lattesId}</span>
                   <a
-                    href={siteConfig.profile.lattesUrl}
+                    href={t.profile.lattesUrl}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-emerald-400 hover:text-emerald-300 inline-flex items-center gap-1 text-[11px]"
                   >
-                    <span>Acessar</span>
+                    <span>{t.bioSection.lattesAction}</span>
                     <ExternalLinkIcon className="w-3 h-3" />
                   </a>
                 </div>
@@ -92,22 +91,12 @@ export function BioAuthority() {
 
               {/* Key Credentials List */}
               <div className="space-y-2 pt-2 text-xs text-slate-300">
-                <div className="flex items-center gap-2">
-                  <CheckIcon className="w-3.5 h-3.5 text-emerald-400 flex-shrink-0" />
-                  <span>Convergência TI/OT &amp; Sensores Industriais</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <CheckIcon className="w-3.5 h-3.5 text-emerald-400 flex-shrink-0" />
-                  <span>Pioneirismo em NF-e direta na SEFAZ</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <CheckIcon className="w-3.5 h-3.5 text-emerald-400 flex-shrink-0" />
-                  <span>17ª Feira Mundial de Petróleo / Rio Oil &amp; Gas</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <CheckIcon className="w-3.5 h-3.5 text-emerald-400 flex-shrink-0" />
-                  <span>Engenharia de Compiladores (Kahn DAG)</span>
-                </div>
+                {t.bioSection.credentials.map((cred, idx) => (
+                  <div key={idx} className="flex items-center gap-2">
+                    <CheckIcon className="w-3.5 h-3.5 text-emerald-400 flex-shrink-0" />
+                    <span>{cred}</span>
+                  </div>
+                ))}
               </div>
             </div>
           </div>
@@ -115,7 +104,7 @@ export function BioAuthority() {
           {/* RIGHT: TIMELINE ACCORDION / CARDS */}
           <div className="lg:col-span-8 space-y-6">
             <div className="space-y-6">
-              {siteConfig.timeline.map((item, index) => (
+              {t.bioSection.timeline.map((item, index) => (
                 <div
                   key={index}
                   className="relative pl-8 sm:pl-10 pb-8 border-l border-white/[0.08] last:border-l-0 last:pb-0 group"
@@ -163,4 +152,3 @@ export function BioAuthority() {
     </section>
   );
 }
-

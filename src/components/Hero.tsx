@@ -1,4 +1,4 @@
-import { siteConfig, getWhatsAppConsultUrl } from '../config/site.config';
+import { Locale, i18nContent } from '../config/i18n.content';
 import {
   ArrowRightIcon,
   GithubIcon,
@@ -8,7 +8,16 @@ import {
   ExternalLinkIcon,
 } from './Icons';
 
-export function Hero() {
+export function Hero({ locale = 'pt' }: { locale?: Locale }) {
+  const t = i18nContent[locale];
+
+  const whatsappMsg =
+    locale === 'en'
+      ? 'Hello Rogério! I visited your architecture portal and would like to discuss platform engineering / advisory for my team.'
+      : 'Olá Rogério! Vi seu portal de engenharia e gostaria de conversar sobre consultoria de arquitetura / automação para a minha empresa.';
+
+  const whatsappUrl = `https://wa.me/${t.profile.whatsappDigits}?text=${encodeURIComponent(whatsappMsg)}`;
+
   return (
     <section id="top" className="relative overflow-hidden pt-32 pb-20 lg:pt-40 lg:pb-32 border-b border-white/[0.08] bg-[#07090E]">
       {/* Background Glow Emitters */}
@@ -36,33 +45,31 @@ export function Hero() {
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75" />
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500" />
               </span>
-              <span>Software Architecture &amp; Platform Engineering</span>
+              <span>{t.hero.topBadge}</span>
             </div>
 
             {/* Main Headline */}
             <h1 className="text-3xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-white leading-[1.08]">
-              Da orquestração visual ao{' '}
+              {t.hero.headlinePrefix}
               <span className="bg-clip-text text-transparent bg-gradient-to-r from-emerald-400 via-teal-300 to-cyan-400 block sm:inline">
-                bare-metal de 5ms.
+                {t.hero.headlineHighlight}
               </span>
             </h1>
 
             {/* Subheadline */}
             <p className="text-base sm:text-lg text-slate-300 leading-relaxed font-normal max-w-2xl">
-              Mais de 20 anos projetando sistemas distribuídos de alta escala, esteiras de automação corporativa, 
-              convergência TI/OT e microsserviços de ultra baixa latência. Elimino o gargalo de plataformas no-code 
-              com engenharia de compiladores e esteiras GitOps determinísticas.
+              {t.hero.subheadline}
             </p>
 
             {/* Authority Badges */}
             <div className="flex flex-wrap gap-2 pt-1">
-              {siteConfig.badges.map((b, idx) => (
+              {t.badges.map((b, idx) => (
                 <div
                   key={idx}
                   className="inline-flex items-center gap-1.5 px-3 py-1 rounded-md bg-white/[0.03] border border-white/[0.08] text-xs font-mono text-slate-300 hover:border-emerald-500/30 transition-colors"
                 >
                   <span className="text-emerald-400">⚡</span>
-                  <span>{b.label}</span>
+                  <span>{b}</span>
                 </div>
               ))}
             </div>
@@ -73,35 +80,35 @@ export function Hero() {
                 href="#pilares"
                 className="inline-flex items-center justify-center gap-2.5 px-6 py-3.5 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-slate-950 text-sm font-bold font-mono tracking-wider transition-all duration-200 shadow-[0_0_25px_rgba(16,185,129,0.25)] hover:shadow-[0_0_35px_rgba(16,185,129,0.4)] active:scale-[0.98]"
               >
-                <span>Explorar Pilares Técnicos</span>
+                <span>{t.hero.exploreCta}</span>
                 <ArrowRightIcon className="w-4 h-4 text-slate-950" />
               </a>
 
               <a
-                href={siteConfig.profile.githubUrl}
+                href={t.profile.githubUrl}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-2.5 px-5 py-3.5 rounded-xl bg-white/[0.03] hover:bg-white/[0.08] border border-white/[0.1] text-slate-200 text-sm font-mono transition-all duration-200"
               >
                 <GithubIcon className="w-4 h-4 text-slate-200" />
-                <span>GitHub Repos</span>
+                <span>{t.hero.githubCta}</span>
                 <ExternalLinkIcon className="w-3.5 h-3.5 text-slate-400" />
               </a>
 
               <a
-                href={getWhatsAppConsultUrl()}
+                href={whatsappUrl}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-2 px-5 py-3.5 rounded-xl bg-white/[0.03] hover:bg-emerald-500/10 border border-white/[0.1] hover:border-emerald-500/30 text-emerald-400 text-sm font-mono transition-all duration-200"
               >
-                <span>WhatsApp</span>
+                <span>{t.hero.whatsappCta}</span>
                 <ExternalLinkIcon className="w-3.5 h-3.5 text-emerald-400" />
               </a>
             </div>
 
             {/* Trust Quote */}
             <div className="pt-2 text-xs text-slate-400 font-mono italic border-l-2 border-emerald-500/40 pl-3">
-              "Simplicity is prerequisite for reliability." — Edsger W. Dijkstra
+              {t.hero.quote}
             </div>
           </div>
 
@@ -117,10 +124,10 @@ export function Hero() {
                 </div>
                 <div className="text-[11px] font-mono text-slate-400 flex items-center gap-1.5">
                   <TerminalIcon className="w-3.5 h-3.5 text-emerald-400" />
-                  <span>core-bare-metal-engine.ts</span>
+                  <span>{t.hero.terminalTitle}</span>
                 </div>
                 <div className="text-[10px] font-mono px-2 py-0.5 rounded bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">
-                  LIVE
+                  {t.hero.terminalStatus}
                 </div>
               </div>
 
@@ -129,58 +136,50 @@ export function Hero() {
                 {/* Metric 1 */}
                 <div className="space-y-1">
                   <div className="text-slate-400 text-[11px] uppercase tracking-wider flex items-center justify-between">
-                    <span>Transpiler Engine (n8n ➔ Fastify)</span>
-                    <span className="text-emerald-400 font-bold">5.0ms avg</span>
+                    <span>{t.hero.terminalMetrics.transpilerTitle}</span>
+                    <span className="text-emerald-400 font-bold">{t.hero.terminalMetrics.transpilerStat}</span>
                   </div>
                   <div className="h-2 w-full rounded-full bg-white/[0.05] overflow-hidden">
                     <div className="h-full bg-gradient-to-r from-emerald-500 to-teal-400 w-[96%]" />
                   </div>
-                  <div className="text-[10px] text-slate-400 flex justify-between">
-                    <span>126 Workflows Ativos</span>
-                    <span>-98% RAM (1.2GB ➔ 25MB)</span>
+                  <div className="text-[10px] text-slate-400">
+                    {t.hero.terminalMetrics.transpilerDesc}
                   </div>
                 </div>
 
                 {/* Metric 2 */}
                 <div className="space-y-1 pt-2 border-t border-white/[0.05]">
                   <div className="text-slate-400 text-[11px] uppercase tracking-wider flex items-center justify-between">
-                    <span>GitOps CI/CD DAG Resolution</span>
-                    <span className="text-cyan-400 font-bold">Kahn Alg.</span>
+                    <span>{t.hero.terminalMetrics.gitopsTitle}</span>
+                    <span className="text-cyan-400 font-bold">{t.hero.terminalMetrics.gitopsStat}</span>
                   </div>
                   <div className="text-[11px] text-slate-300">
-                    <span className="text-emerald-400">✓</span> Staging UI ➔ Git Sync ➔ Official n8n API
-                  </div>
-                  <div className="text-[10px] text-slate-400">
-                    Remapeamento dinâmico de credenciais em produção
+                    <span className="text-emerald-400">✓</span> {t.hero.terminalMetrics.gitopsDesc}
                   </div>
                 </div>
 
                 {/* Metric 3 */}
                 <div className="space-y-1 pt-2 border-t border-white/[0.05]">
                   <div className="text-slate-400 text-[11px] uppercase tracking-wider flex items-center justify-between">
-                    <span>Programmatic SEO &amp; RUM</span>
-                    <span className="text-emerald-400 font-bold">Score 99/100</span>
+                    <span>{t.hero.terminalMetrics.seoTitle}</span>
+                    <span className="text-emerald-400 font-bold">{t.hero.terminalMetrics.seoStat}</span>
                   </div>
-                  <div className="text-[11px] text-slate-300 flex items-center justify-between">
-                    <span>120+ LPs Vivas (IndexNow / API)</span>
-                    <span className="text-emerald-400">LCP 0.38s</span>
-                  </div>
-                  <div className="text-[10px] text-slate-400">
-                    sendBeacon &lt; 5ms direto no Nginx (Anti-AdBlock)
+                  <div className="text-[11px] text-slate-300">
+                    {t.hero.terminalMetrics.seoDesc}
                   </div>
                 </div>
 
                 {/* Metric 4 */}
                 <div className="space-y-1 pt-2 border-t border-white/[0.05]">
                   <div className="text-slate-400 text-[11px] uppercase tracking-wider flex items-center justify-between">
-                    <span>Fintech &amp; Security</span>
+                    <span>{t.hero.terminalMetrics.fintechTitle}</span>
                     <span className="text-emerald-400 font-bold flex items-center gap-1">
                       <ShieldCheckIcon className="w-3.5 h-3.5 text-emerald-400" />
-                      HMAC SHA-256
+                      {t.hero.terminalMetrics.fintechStat}
                     </span>
                   </div>
                   <div className="text-[10px] text-slate-400">
-                    timingSafeEqual() constant-time signature verification
+                    {t.hero.terminalMetrics.fintechDesc}
                   </div>
                 </div>
 
@@ -188,7 +187,7 @@ export function Hero() {
                 <div className="pt-3 border-t border-white/[0.08] flex items-center justify-between text-[11px]">
                   <div className="flex items-center gap-2 text-slate-300">
                     <ActivityIcon className="w-3.5 h-3.5 text-emerald-400" />
-                    <span>Upwork Rate: $35.00/hr</span>
+                    <span>Upwork Rate: {t.profile.hourlyRate}</span>
                   </div>
                   <div className="text-[10px] text-emerald-400 font-bold">
                     VERIFIED EXPERT
@@ -202,4 +201,3 @@ export function Hero() {
     </section>
   );
 }
-

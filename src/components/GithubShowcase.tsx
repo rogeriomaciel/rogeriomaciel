@@ -1,7 +1,9 @@
-import { siteConfig } from '../config/site.config';
+import { Locale, i18nContent } from '../config/i18n.content';
 import { GithubIcon, ExternalLinkIcon, CodeIcon } from './Icons';
 
-export function GithubShowcase() {
+export function GithubShowcase({ locale = 'pt' }: { locale?: Locale }) {
+  const t = i18nContent[locale];
+
   return (
     <section id="github" className="py-24 border-b border-white/[0.08] bg-[#090D16] relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -10,32 +12,31 @@ export function GithubShowcase() {
           <div className="max-w-2xl space-y-3">
             <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 text-xs font-mono uppercase tracking-wider">
               <GithubIcon className="w-3.5 h-3.5" />
-              <span>Open Source &amp; Blueprints de Produção</span>
+              <span>{t.githubSection.badge}</span>
             </div>
             <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-white">
-              Vitrine de Repositórios Públicos no GitHub
+              {t.githubSection.title}
             </h2>
             <p className="text-slate-300 text-sm sm:text-base leading-relaxed">
-              Casos reais e código aberto de engenharia de alta escala: transpiladores, comércio conversacional em fintech, 
-              arquitetura bare-metal SSG e monitoramento de atribuição de anúncios.
+              {t.githubSection.subtitle}
             </p>
           </div>
 
           <a
-            href={siteConfig.profile.githubUrl}
+            href={t.profile.githubUrl}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-white/[0.04] hover:bg-white/[0.08] border border-white/[0.1] text-slate-200 text-xs font-mono font-bold transition-colors self-start md:self-end"
           >
             <GithubIcon className="w-4 h-4 text-slate-200" />
-            <span>Ver Todos no GitHub (@rogeriomaciel)</span>
+            <span>{t.githubSection.viewAllOnGithub}</span>
             <ExternalLinkIcon className="w-3.5 h-3.5 text-slate-400" />
           </a>
         </div>
 
         {/* Repositories Grid */}
         <div className="grid md:grid-cols-2 gap-6">
-          {siteConfig.repositories.map((repo) => (
+          {t.githubSection.repos.map((repo) => (
             <div
               key={repo.name}
               className="rounded-xl bg-white/[0.02] hover:bg-white/[0.04] border border-white/[0.08] hover:border-cyan-500/30 p-6 sm:p-7 flex flex-col justify-between transition-all duration-300 group"
@@ -83,7 +84,7 @@ export function GithubShowcase() {
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-1.5 text-xs font-mono text-cyan-400 hover:text-cyan-300 font-semibold transition-colors"
                 >
-                  <span>Inspecionar Repositório</span>
+                  <span>{t.githubSection.inspectButton}</span>
                   <ExternalLinkIcon className="w-3.5 h-3.5" />
                 </a>
               </div>
@@ -94,4 +95,3 @@ export function GithubShowcase() {
     </section>
   );
 }
-

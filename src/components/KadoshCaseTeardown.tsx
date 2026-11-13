@@ -1,8 +1,9 @@
-import { siteConfig } from '../config/site.config';
+import { Locale, i18nContent } from '../config/i18n.content';
 import { ExternalLinkIcon, CheckCircle2Icon, GaugeIcon, StarIcon } from './Icons';
 
-export function KadoshCaseTeardown() {
-  const caseData = siteConfig.kadoshCase;
+export function KadoshCaseTeardown({ locale = 'pt' }: { locale?: Locale }) {
+  const t = i18nContent[locale];
+  const caseData = t.kadoshSection;
 
   return (
     <section id="kadosh-case" className="py-24 border-b border-white/[0.08] bg-[#07090E] relative overflow-hidden">
@@ -14,14 +15,13 @@ export function KadoshCaseTeardown() {
         <div className="max-w-3xl mb-16 space-y-3">
           <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-mono uppercase tracking-wider">
             <GaugeIcon className="w-3.5 h-3.5" />
-            <span>Estudo de Caso Empírico em Produção</span>
+            <span>{caseData.badge}</span>
           </div>
           <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-white">
-            O Teardown da Oficina Kadosh
+            {caseData.title}
           </h2>
           <p className="text-slate-300 text-base sm:text-lg leading-relaxed">
-            Como a convergência entre Programmatic SEO, arquitetura Core-Bare-Metal e agentes determinísticos 
-            transformou uma operação automotiva de alto ticket em autoridade líder da Grande Goiânia.
+            {caseData.subtitle}
           </p>
         </div>
 
@@ -34,18 +34,18 @@ export function KadoshCaseTeardown() {
               <div className="flex flex-wrap items-center justify-between gap-4 pb-6 border-b border-white/[0.06]">
                 <div>
                   <div className="text-xs font-mono text-slate-400 uppercase tracking-wider">
-                    Cliente / Operação
+                    {caseData.clientLabel}
                   </div>
                   <div className="text-lg font-bold text-white font-mono">
-                    {caseData.client}
+                    {caseData.clientName}
                   </div>
                   <div className="text-xs text-slate-400">
-                    {caseData.location}
+                    {caseData.clientLocation}
                   </div>
                 </div>
 
                 <a
-                  href={caseData.url}
+                  href="https://kadoshautomotiva.com.br"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-emerald-500/10 hover:bg-emerald-500/20 border border-emerald-500/30 text-emerald-400 text-xs font-mono font-bold transition-colors"
@@ -58,20 +58,20 @@ export function KadoshCaseTeardown() {
               {/* The Challenge */}
               <div className="space-y-2">
                 <h3 className="text-xs font-mono uppercase tracking-wider text-red-400 font-bold flex items-center gap-2">
-                  <span>🛑 O Desafio Operacional</span>
+                  <span>{caseData.challengeTitle}</span>
                 </h3>
                 <p className="text-sm text-slate-300 leading-relaxed">
-                  {caseData.challenge}
+                  {caseData.challengeDesc}
                 </p>
               </div>
 
               {/* The Solution */}
               <div className="space-y-3">
                 <h3 className="text-xs font-mono uppercase tracking-wider text-emerald-400 font-bold flex items-center gap-2">
-                  <span>⚡ A Engenharia Aplicada</span>
+                  <span>{caseData.engineeringTitle}</span>
                 </h3>
                 <div className="space-y-2.5">
-                  {caseData.solution.map((sol, idx) => (
+                  {caseData.solutionPoints.map((sol, idx) => (
                     <div key={idx} className="flex items-start gap-2.5 text-xs sm:text-sm text-slate-300">
                       <CheckCircle2Icon className="w-4 h-4 text-emerald-400 flex-shrink-0 mt-0.5" />
                       <span>{sol}</span>
@@ -106,11 +106,10 @@ export function KadoshCaseTeardown() {
                 {[...Array(5)].map((_, i) => (
                   <StarIcon key={i} className="w-4 h-4 fill-amber-400 text-amber-400" />
                 ))}
-                <span className="text-xs font-mono font-bold text-white ml-2">4.7 / 5.0 no Google Maps</span>
+                <span className="text-xs font-mono font-bold text-white ml-2">{caseData.socialProofScore}</span>
               </div>
               <p className="text-xs text-slate-300 leading-relaxed font-mono">
-                "O tempo de resposta no celular caiu de 9 segundos para 0.38s. As buscas orgânicas de cauda longa 
-                no Google cobrem todos os bairros e modelos de veículos, gerando fluxo constante de orçamentos qualificados no WhatsApp."
+                {caseData.socialProofQuote}
               </p>
             </div>
           </div>
@@ -119,4 +118,3 @@ export function KadoshCaseTeardown() {
     </section>
   );
 }
-

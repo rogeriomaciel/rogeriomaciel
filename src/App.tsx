@@ -1,27 +1,21 @@
-import { Navbar } from './components/Navbar';
-import { Hero } from './components/Hero';
-import { EngineeringPillars } from './components/EngineeringPillars';
-import { GithubShowcase } from './components/GithubShowcase';
-import { KadoshCaseTeardown } from './components/KadoshCaseTeardown';
-import { BioAuthority } from './components/BioAuthority';
-import { AuditCTA } from './components/AuditCTA';
-import { FaqSection } from './components/FaqSection';
-import { Footer } from './components/Footer';
+import { useEffect, useState } from 'react';
+import Pt from './pages/Pt';
+import En from './pages/En';
+import { Locale } from './config/i18n.content';
 
 export default function App() {
-  return (
-    <div className="min-h-screen bg-[#07090E] text-slate-100 flex flex-col selection:bg-emerald-500 selection:text-slate-950">
-      <Navbar />
-      <main className="flex-grow">
-        <Hero />
-        <EngineeringPillars />
-        <GithubShowcase />
-        <KadoshCaseTeardown />
-        <BioAuthority />
-        <AuditCTA />
-        <FaqSection />
-      </main>
-      <Footer />
-    </div>
-  );
+  const [currentLocale, setCurrentLocale] = useState<Locale>('pt');
+
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      const pathname = window.location.pathname.toLowerCase();
+      if (pathname.startsWith('/en')) {
+        setCurrentLocale('en');
+      } else {
+        setCurrentLocale('pt');
+      }
+    }
+  }, []);
+
+  return currentLocale === 'en' ? <En /> : <Pt />;
 }

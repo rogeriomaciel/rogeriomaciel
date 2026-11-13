@@ -260,3 +260,5 @@ export function getWhatsAppConsultUrl(customText?: string): string {
   return `https://wa.me/${siteConfig.profile.whatsappDigits}?text=${encodeURIComponent(text)}`;
 }
 
+
+export * from './i18n.content';

@@ -61,3 +61,4 @@ submitIndexNow().catch(err => {
   console.error('❌ Erro fatal no IndexNow:', err);
   process.exit(1);
 });
+

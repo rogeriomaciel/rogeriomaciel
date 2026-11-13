@@ -1,11 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <!-- Raiz Oficial com detecção e fallback -->
   <url>
     <loc>https://rogeriomaciel.com.br/</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://rogeriomaciel.com.br/pt/" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://rogeriomaciel.com.br/pt/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://rogeriomaciel.com.br/en/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://rogeriomaciel.com.br/en/" />
     <lastmod>2026-11-13</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
+
+  <!-- Versão Português (Brasil) -->
+  <url>
+    <loc>https://rogeriomaciel.com.br/pt/</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://rogeriomaciel.com.br/pt/" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://rogeriomaciel.com.br/pt/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://rogeriomaciel.com.br/en/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://rogeriomaciel.com.br/en/" />
+    <lastmod>2026-11-13</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.95</priority>
+  </url>
+
+  <!-- Versão Inglês (Global) -->
+  <url>
+    <loc>https://rogeriomaciel.com.br/en/</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://rogeriomaciel.com.br/pt/" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://rogeriomaciel.com.br/pt/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://rogeriomaciel.com.br/en/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://rogeriomaciel.com.br/en/" />
+    <lastmod>2026-11-13</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.95</priority>
+  </url>
+
+  <!-- Arquivos de Autoridade para IA e LLMs (GEO) -->
   <url>
     <loc>https://rogeriomaciel.com.br/llms.txt</loc>
     <lastmod>2026-11-13</lastmod>

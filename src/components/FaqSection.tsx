@@ -1,9 +1,10 @@
 import { useState } from 'react';
-import { siteConfig } from '../config/site.config';
+import { Locale, i18nContent } from '../config/i18n.content';
 import { ChevronDownIcon, HelpCircleIcon } from './Icons';
 
-export function FaqSection() {
+export function FaqSection({ locale = 'pt' }: { locale?: Locale }) {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
+  const t = i18nContent[locale];
 
   const toggle = (idx: number) => {
     setOpenIndex(openIndex === idx ? null : idx);
@@ -16,19 +17,19 @@ export function FaqSection() {
         <div className="text-center max-w-2xl mx-auto mb-16 space-y-3">
           <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-mono uppercase tracking-wider">
             <HelpCircleIcon className="w-3.5 h-3.5" />
-            <span>Perguntas Frequentes de CTOs &amp; Fundadores</span>
+            <span>{t.faqSection.badge}</span>
           </div>
           <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-white">
-            Respostas Técnicas Diretas
+            {t.faqSection.title}
           </h2>
           <p className="text-slate-300 text-sm sm:text-base leading-relaxed">
-            Dúvidas comuns sobre consultoria de arquitetura, esteiras bare-metal e contratos internacionais.
+            {t.faqSection.subtitle}
           </p>
         </div>
 
         {/* FAQ Accordion */}
         <div className="space-y-4">
-          {siteConfig.faqs.map((faq, index) => {
+          {t.faqSection.faqs.map((faq, index) => {
             const isOpen = openIndex === index;
             return (
               <div
@@ -65,4 +66,3 @@ export function FaqSection() {
     </section>
   );
 }
-

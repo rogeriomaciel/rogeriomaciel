@@ -1,7 +1,9 @@
-import { siteConfig } from '../config/site.config';
+import { Locale, i18nContent } from '../config/i18n.content';
 import { CpuIcon, LayersIcon, ActivityIcon, ShieldCheckIcon, CheckIcon } from './Icons';
 
-export function EngineeringPillars() {
+export function EngineeringPillars({ locale = 'pt' }: { locale?: Locale }) {
+  const t = i18nContent[locale];
+
   const pillarIcons = [
     <CpuIcon className="w-6 h-6 text-emerald-400" />,
     <LayersIcon className="w-6 h-6 text-cyan-400" />,
@@ -15,23 +17,22 @@ export function EngineeringPillars() {
         {/* Section Header */}
         <div className="max-w-3xl mb-16 space-y-4">
           <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-mono uppercase tracking-wider">
-            <span>Arquitetura de Plataforma</span>
+            <span>{t.pillarsSection.badge}</span>
           </div>
           <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-white">
-            Os 4 Pilares da Engenharia de{' '}
+            {t.pillarsSection.titlePrefix}
             <span className="bg-clip-text text-transparent bg-gradient-to-r from-emerald-400 to-cyan-400">
-              Rogério Maciel
+              {t.pillarsSection.titleHighlight}
             </span>
           </h2>
           <p className="text-slate-300 text-base sm:text-lg leading-relaxed">
-            Sistemas distribuídos projetados para eliminar gargalos de concorrência, cortar custos de infraestrutura 
-            e garantir resiliência operacional com rigor de engenharia de software de nível corporativo.
+            {t.pillarsSection.subtitle}
           </p>
         </div>
 
         {/* 2x2 Grid of Pillars */}
         <div className="grid md:grid-cols-2 gap-8">
-          {siteConfig.pillars.map((pillar, index) => (
+          {t.pillarsSection.pillars.map((pillar, index) => (
             <div
               key={pillar.id}
               className="rounded-2xl bg-white/[0.02] hover:bg-white/[0.04] border border-white/[0.08] hover:border-emerald-500/30 p-8 transition-all duration-300 flex flex-col justify-between group"
@@ -96,4 +97,3 @@ export function EngineeringPillars() {
     </section>
   );
 }
-

@@ -1,8 +1,9 @@
-import { siteConfig } from '../config/site.config';
+import { Locale, i18nContent } from '../config/i18n.content';
 import { GithubIcon, LinkedinIcon, ExternalLinkIcon } from './Icons';
 
-export function Footer() {
+export function Footer({ locale = 'pt' }: { locale?: Locale }) {
   const currentYear = new Date().getFullYear();
+  const t = i18nContent[locale];
 
   return (
     <footer className="py-16 bg-[#07090E] border-t border-white/[0.08] text-slate-400 text-xs font-mono">
@@ -16,31 +17,30 @@ export function Footer() {
               </div>
               <div>
                 <div className="text-sm font-bold text-white tracking-tight">
-                  {siteConfig.profile.name}
+                  {t.profile.name}
                 </div>
                 <div className="text-[11px] text-emerald-400">
-                  {siteConfig.profile.title}
+                  {t.profile.title}
                 </div>
               </div>
             </div>
 
             <p className="text-slate-400 text-xs leading-relaxed max-w-sm">
-              Mais de 20 anos projetando sistemas distribuídos de alta escala, esteiras de automação corporativa, 
-              convergência TI/OT e microsserviços bare-metal.
+              {t.footer.about}
             </p>
 
             <div className="text-[11px] text-slate-400 italic">
-              "Simplicity is prerequisite for reliability." — Edsger W. Dijkstra
+              {t.footer.quote}
             </div>
           </div>
 
           {/* OPEN SOURCE REPOSITORIES */}
           <div className="md:col-span-4 space-y-3">
             <div className="text-xs font-bold uppercase tracking-wider text-white">
-              Repositórios no GitHub
+              {t.footer.reposTitle}
             </div>
             <ul className="space-y-2 text-xs">
-              {siteConfig.repositories.map((repo) => (
+              {t.githubSection.repos.map((repo) => (
                 <li key={repo.name}>
                   <a
                     href={repo.url}
@@ -59,12 +59,12 @@ export function Footer() {
           {/* CANONICAL LINKS & CONTACT */}
           <div className="md:col-span-3 space-y-3">
             <div className="text-xs font-bold uppercase tracking-wider text-white">
-              Conexões Oficiais
+              {t.footer.connectionsTitle}
             </div>
             <ul className="space-y-2 text-xs">
               <li>
                 <a
-                  href={siteConfig.profile.githubUrl}
+                  href={t.profile.githubUrl}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="hover:text-emerald-400 transition-colors inline-flex items-center gap-2"
@@ -75,7 +75,7 @@ export function Footer() {
               </li>
               <li>
                 <a
-                  href={siteConfig.profile.linkedinUrl}
+                  href={t.profile.linkedinUrl}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="hover:text-emerald-400 transition-colors inline-flex items-center gap-2"
@@ -86,7 +86,7 @@ export function Footer() {
               </li>
               <li>
                 <a
-                  href={siteConfig.profile.lattesUrl}
+                  href={t.profile.lattesUrl}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="hover:text-emerald-400 transition-colors inline-flex items-center gap-2"
@@ -96,14 +96,14 @@ export function Footer() {
               </li>
               <li>
                 <a
-                  href={`mailto:${siteConfig.profile.email}`}
+                  href={`mailto:${t.profile.email}`}
                   className="hover:text-emerald-400 transition-colors"
                 >
-                  {siteConfig.profile.email}
+                  {t.profile.email}
                 </a>
               </li>
               <li>
-                <span className="text-emerald-400">WhatsApp: {siteConfig.profile.whatsapp}</span>
+                <span className="text-emerald-400">WhatsApp: {t.profile.whatsapp}</span>
               </li>
             </ul>
           </div>
@@ -112,9 +112,17 @@ export function Footer() {
         {/* BOTTOM COPYRIGHT BAR */}
         <div className="pt-8 border-t border-white/[0.06] flex flex-col sm:flex-row items-center justify-between gap-4 text-[11px] text-slate-400">
           <div>
-            © {currentYear} {siteConfig.profile.name}. Todos os direitos reservados.
+            © {currentYear} {t.profile.name}. {t.footer.allRightsReserved}
           </div>
           <div className="flex items-center gap-4">
+            <a href="/pt/" className={locale === 'pt' ? 'text-emerald-400 font-bold' : 'hover:text-emerald-400'}>
+              Português (/pt/)
+            </a>
+            <span className="text-slate-600">|</span>
+            <a href="/en/" className={locale === 'en' ? 'text-emerald-400 font-bold' : 'hover:text-emerald-400'}>
+              English (/en/)
+            </a>
+            <span className="text-slate-400">•</span>
             <a href="/llms.txt" className="hover:text-emerald-400 transition-colors">
               llms.txt
             </a>
@@ -129,4 +137,3 @@ export function Footer() {
     </footer>
   );
 }
-

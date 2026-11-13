@@ -13,6 +13,29 @@
     <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
     <link rel="canonical" href="https://rogeriomaciel.com.br/" />
     
+    <!-- Hreflang Tags (Multilíngue Oficial) -->
+    <link rel="alternate" hreflang="pt-BR" href="https://rogeriomaciel.com.br/pt/" />
+    <link rel="alternate" hreflang="pt" href="https://rogeriomaciel.com.br/pt/" />
+    <link rel="alternate" hreflang="en" href="https://rogeriomaciel.com.br/en/" />
+    <link rel="alternate" hreflang="x-default" href="https://rogeriomaciel.com.br/en/" />
+
+    <!-- Script de Redirecionamento Imediato de Idioma para a Raiz -->
+    <script>
+      (function() {
+        var path = window.location.pathname;
+        if (path === '/' || path === '' || path === '/index.html') {
+          try {
+            var lang = (navigator.language || navigator.userLanguage || '').toLowerCase();
+            var isEn = lang.indexOf('en') === 0;
+            var target = isEn ? '/en/' : '/pt/';
+            var hash = window.location.hash || '';
+            var search = window.location.search || '';
+            window.location.replace(target + search + hash);
+          } catch (e) {}
+        }
+      })();
+    </script>
+    
     <!-- Open Graph / Redes Sociais / WhatsApp Preview -->
     <meta property="og:locale" content="pt_BR" />
     <meta property="og:type" content="profile" />
