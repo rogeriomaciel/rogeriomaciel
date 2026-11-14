@@ -20,6 +20,17 @@ export interface RepoContent {
   highlight: string;
 }
 
+export interface DeploymentContent {
+  id: string;
+  title: string;
+  category: string;
+  url: string;
+  displayUrl: string;
+  description: string;
+  stack: string[];
+  status: string;
+}
+
 export interface TimelineContent {
   period: string;
   role: string;
@@ -95,6 +106,13 @@ export interface SiteDictionary {
     titleHighlight: string;
     subtitle: string;
     pillars: PillarContent[];
+  };
+  deploymentsSection: {
+    badge: string;
+    title: string;
+    subtitle: string;
+    accessLiveButton: string;
+    deployments: DeploymentContent[];
   };
   githubSection: {
     badge: string;
@@ -291,6 +309,81 @@ export const i18nContent: Record<Locale, SiteDictionary> = {
             'Gestão de ciclo de vida de assinaturas, reembolsos e conciliação financeira',
             'Fluxo de checkout fluido sem redirecionamentos externos desnecessários',
           ],
+        },
+      ],
+    },
+    deploymentsSection: {
+      badge: 'Soberania Operacional em Produção',
+      title: 'Plataformas Ativas & Sistemas em Operação Real',
+      subtitle:
+        'Software não é mockup de design nem código de laboratório. Conheça as plataformas ao vivo em produção, servindo clientes reais, processos industriais e operações empresariais.',
+      accessLiveButton: 'Acessar Sistema Online',
+      deployments: [
+        {
+          id: 'coreauto-os',
+          title: 'CoreAuto OS — Operação Automotiva Industrial',
+          category: 'Chão de Fábrica & Indústria',
+          url: 'https://app.coreautocrm.com.br/',
+          displayUrl: 'app.coreautocrm.com.br',
+          description:
+            'Sistema operacional do chão de pátio na Oficina Kadosh Auto Center: ordens de serviço por voz, checklist fotográfico, totem de TV ao vivo, DRE financeiro e automação n8n integrada.',
+          stack: ['React', 'Vite', 'Fastify', 'Supabase Realtime', 'Totem Kiosk', 'n8n'],
+          status: 'Online em Produção',
+        },
+        {
+          id: 'adswhats-monitor',
+          title: 'AdsWhats Monitor — Torre de SLA & Meta Ads',
+          category: 'MarTech & Vendas B2B',
+          url: 'https://adswhatsmonitor.alvoestrategia.com.br/login',
+          displayUrl: 'adswhatsmonitor.alvoestrategia.com.br',
+          description:
+            'Torre de controle multi-tenant que rastreia a atribuição exata de campanhas Meta Ads (Click-to-WhatsApp) e audita o tempo de resposta (SLA) de vendedores em segundos.',
+          stack: ['React', 'TypeScript', 'Bun', 'Meta CTWA API', 'PostgreSQL'],
+          status: 'Online em Produção',
+        },
+        {
+          id: 'coreautocrm-saas',
+          title: 'CoreAuto CRM — Portal Comercial & SaaS',
+          category: 'SaaS Automotivo',
+          url: 'https://coreautocrm.com.br/',
+          displayUrl: 'coreautocrm.com.br',
+          description:
+            'Portal oficial, motor de agendamento online e aquisição para o segmento automotivo com arquitetura bare-metal de alta conversão e Schema.org GEO.',
+          stack: ['React 19', 'Tailwind CSS', 'Vite SSG', 'SEO / GEO'],
+          status: 'Online em Produção',
+        },
+        {
+          id: 'core-manifesto',
+          title: 'CORE — Executive Operating System',
+          category: 'Liderança & Estratégia',
+          url: 'https://runoncore.com/',
+          displayUrl: 'runoncore.com',
+          description:
+            'Manifesto e portal da plataforma executiva de autoliderança, soberania de tempo e execução assistida por inteligência artificial.',
+          stack: ['High-Performance Landing', 'Tailwind', 'Design System'],
+          status: 'Online em Produção',
+        },
+        {
+          id: 'core-dash',
+          title: 'CORE Mission Control — Painel Executivo & Telemetria',
+          category: 'Gestão & Decisão C-Level',
+          url: 'https://dash.runoncore.com/login',
+          displayUrl: 'dash.runoncore.com',
+          description:
+            'Sala de comando executiva: rituais diários (Startup Matinal & Shutdown), gamificação com motor de XP, regulação neurobiológica e diários de bordo automáticos.',
+          stack: ['React 19', 'Gamification Engine', 'AI Journaling', 'PostgreSQL'],
+          status: 'Online em Produção',
+        },
+        {
+          id: 'inroom',
+          title: 'InRoom — Controle de Presença Presencial & Totem',
+          category: 'Comunidades & Eventos',
+          url: 'https://inroom.runoncore.com/',
+          displayUrl: 'inroom.runoncore.com',
+          description:
+            'Sistema de chamada e presença presencial incorrompível para ensaios e comunidades com QR Code rotativo de 60s, modo totem fullscreen para Smart TV e integração com WhatsApp.',
+          stack: ['Bun', 'React 19', 'Supabase Realtime', 'Rotating QR', 'Evolution API'],
+          status: 'Online em Produção',
         },
       ],
     },
@@ -621,6 +714,81 @@ export const i18nContent: Record<Locale, SiteDictionary> = {
             'Full subscription lifecycle management, dispute handling, and ledger reconciliation',
             'Frictionless in-chat purchasing flows with zero clumsy app switching',
           ],
+        },
+      ],
+    },
+    deploymentsSection: {
+      badge: 'Operational Sovereignty in Production',
+      title: 'Active Platforms & Live Production Deployments',
+      subtitle:
+        'Software is neither a design mockup nor an isolated lab experiment. Explore production systems actively serving real clients, industrial operations, and business workflows.',
+      accessLiveButton: 'Access Live Platform',
+      deployments: [
+        {
+          id: 'coreauto-os',
+          title: 'CoreAuto OS — Industrial Automotive Operations',
+          category: 'Shop Floor & Industry',
+          url: 'https://app.coreautocrm.com.br/',
+          displayUrl: 'app.coreautocrm.com.br',
+          description:
+            'Real-time workshop operating engine at Oficina Kadosh Auto Center: voice-to-text service orders, photographic inspection checklists, live 4K TV kiosk, and integrated n8n automations.',
+          stack: ['React', 'Vite', 'Fastify', 'Supabase Realtime', 'Totem Kiosk', 'n8n'],
+          status: 'Active Live Production',
+        },
+        {
+          id: 'adswhats-monitor',
+          title: 'AdsWhats Monitor — SLA Control Tower & Meta Ads Attribution',
+          category: 'MarTech & B2B Sales',
+          url: 'https://adswhatsmonitor.alvoestrategia.com.br/login',
+          displayUrl: 'adswhatsmonitor.alvoestrategia.com.br',
+          description:
+            'Multi-tenant control tower auditing exact Meta Ads (Click-to-WhatsApp) attribution and sales-rep first-response SLA down to the exact second across regional retail stores.',
+          stack: ['React', 'TypeScript', 'Bun', 'Meta CTWA API', 'PostgreSQL'],
+          status: 'Active Live Production',
+        },
+        {
+          id: 'coreautocrm-saas',
+          title: 'CoreAuto CRM — Commercial Portal & SaaS Platform',
+          category: 'Automotive SaaS',
+          url: 'https://coreautocrm.com.br/',
+          displayUrl: 'coreautocrm.com.br',
+          description:
+            'Official SaaS portal, online booking engine, and customer onboarding for automotive service centers with bare-metal high-speed prerendering and Schema.org GEO.',
+          stack: ['React 19', 'Tailwind CSS', 'Vite SSG', 'SEO / GEO'],
+          status: 'Active Live Production',
+        },
+        {
+          id: 'core-manifesto',
+          title: 'CORE — Executive Operating System',
+          category: 'Leadership & Strategy',
+          url: 'https://runoncore.com/',
+          displayUrl: 'runoncore.com',
+          description:
+            'Manifesto and digital portal for the executive self-leadership framework, focused on time sovereignty and AI-assisted strategic execution.',
+          stack: ['High-Performance Landing', 'Tailwind', 'Design System'],
+          status: 'Active Live Production',
+        },
+        {
+          id: 'core-dash',
+          title: 'CORE Mission Control — Executive Dashboard & Telemetry',
+          category: 'C-Level Management & Telemetry',
+          url: 'https://dash.runoncore.com/login',
+          displayUrl: 'dash.runoncore.com',
+          description:
+            'Executive command room: daily startup/shutdown rituals, gamified XP engine, neurobiological regulation tracking, and AI-automated daily logs.',
+          stack: ['React 19', 'Gamification Engine', 'AI Journaling', 'PostgreSQL'],
+          status: 'Active Live Production',
+        },
+        {
+          id: 'inroom',
+          title: 'InRoom — Physical Attendance Engine & TV Totem',
+          category: 'Communities & Live Events',
+          url: 'https://inroom.runoncore.com/',
+          displayUrl: 'inroom.runoncore.com',
+          description:
+            'Frictionless physical attendance tracking for communities and choir rehearsals with rotating 60s dynamic QR code, full-screen Smart TV kiosk mode, and WhatsApp integration.',
+          stack: ['Bun', 'React 19', 'Supabase Realtime', 'Rotating QR', 'Evolution API'],
+          status: 'Active Live Production',
         },
       ],
     },

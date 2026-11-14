@@ -9,6 +9,7 @@ export function Navbar({ locale = 'pt' }: { locale?: Locale }) {
 
   const navLinks = [
     { label: t.nav.pillars, href: '#pilares' },
+    { label: locale === 'en' ? 'Live Production' : 'Produção', href: '#producao' },
     { label: t.nav.github, href: '#github' },
     { label: t.nav.kadoshCase, href: '#kadosh-case' },
     { label: locale === 'en' ? 'Solutions' : 'Soluções', href: '#solucoes' },

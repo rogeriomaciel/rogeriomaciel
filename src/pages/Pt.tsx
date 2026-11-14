@@ -1,6 +1,7 @@
 import { Navbar } from '../components/Navbar';
 import { Hero } from '../components/Hero';
 import { EngineeringPillars } from '../components/EngineeringPillars';
+import { LiveDeploymentsShowcase } from '../components/LiveDeploymentsShowcase';
 import { GithubShowcase } from '../components/GithubShowcase';
 import { KadoshCaseTeardown } from '../components/KadoshCaseTeardown';
 import { SolutionsDirectory } from '../components/SolutionsDirectory';
@@ -16,6 +17,7 @@ export default function Pt() {
       <main className="flex-grow">
         <Hero locale="pt" />
         <EngineeringPillars locale="pt" />
+        <LiveDeploymentsShowcase locale="pt" />
         <GithubShowcase locale="pt" />
         <KadoshCaseTeardown locale="pt" />
         <SolutionsDirectory locale="pt" />
