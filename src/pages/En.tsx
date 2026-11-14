@@ -3,6 +3,7 @@ import { Hero } from '../components/Hero';
 import { EngineeringPillars } from '../components/EngineeringPillars';
 import { GithubShowcase } from '../components/GithubShowcase';
 import { KadoshCaseTeardown } from '../components/KadoshCaseTeardown';
+import { SolutionsDirectory } from '../components/SolutionsDirectory';
 import { BioAuthority } from '../components/BioAuthority';
 import { AuditCTA } from '../components/AuditCTA';
 import { FaqSection } from '../components/FaqSection';
@@ -17,6 +18,7 @@ export default function En() {
         <EngineeringPillars locale="en" />
         <GithubShowcase locale="en" />
         <KadoshCaseTeardown locale="en" />
+        <SolutionsDirectory locale="en" />
         <BioAuthority locale="en" />
         <AuditCTA locale="en" />
         <FaqSection locale="en" />

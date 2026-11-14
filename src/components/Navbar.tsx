@@ -11,6 +11,7 @@ export function Navbar({ locale = 'pt' }: { locale?: Locale }) {
     { label: t.nav.pillars, href: '#pilares' },
     { label: t.nav.github, href: '#github' },
     { label: t.nav.kadoshCase, href: '#kadosh-case' },
+    { label: locale === 'en' ? 'Solutions' : 'Soluções', href: '#solucoes' },
     { label: t.nav.timeline, href: '#trajetoria' },
     { label: t.nav.faq, href: '#faq' },
   ];
