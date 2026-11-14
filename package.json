@@ -14,6 +14,7 @@
     "index:bing": "bun scripts/indexnow-submit.ts",
     "search:console": "bun scripts/search-console.ts",
     "search:rankings": "bun scripts/search-analytics.ts",
+    "analytics": "bun scripts/analytics-report.ts",
     "authority:radar": "bun scripts/authority-radar.ts"
   },
   "dependencies": {
