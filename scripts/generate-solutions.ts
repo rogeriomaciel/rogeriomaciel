@@ -68,6 +68,8 @@ function generateHtml(sol: SolutionCluster, locale: 'pt' | 'en' = 'pt'): string 
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="apple-touch-icon" href="/icons/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
     <meta name="theme-color" content="#07090E" />
 
@@ -146,6 +148,13 @@ function generateHtml(sol: SolutionCluster, locale: 'pt' | 'en' = 'pt'): string 
     title="Google Tag Manager" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     <div id="root">${appHtml}</div>
+    <script>
+      if ('serviceWorker' in navigator && (window.location.protocol === 'https:' || window.location.hostname === 'localhost')) {
+        window.addEventListener('load', function() {
+          navigator.serviceWorker.register('/sw.js').catch(function() {});
+        });
+      }
+    </script>
   </body>
 </html>`;
 }

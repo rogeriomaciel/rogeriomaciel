@@ -332,3 +332,4 @@ export const solutionsClusters: SolutionCluster[] = ${JSON.stringify(solutionsCl
 
 fs.writeFileSync(targetFile, content, 'utf-8');
 console.log(`✅ [Enrichment Concluído] Todos os ${solutionsClusters.length} clusters agora possuem versão em Português e Inglês com slugs canônicos!`);
+
