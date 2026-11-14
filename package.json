@@ -13,6 +13,7 @@
     "index:google": "bun scripts/google-indexing.ts",
     "index:bing": "bun scripts/indexnow-submit.ts",
     "search:console": "bun scripts/search-console.ts",
+    "search:rankings": "bun scripts/search-analytics.ts",
     "authority:radar": "bun scripts/authority-radar.ts"
   },
   "dependencies": {

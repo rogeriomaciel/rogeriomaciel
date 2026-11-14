@@ -94,3 +94,4 @@ export function SolutionsDirectory({ locale = 'pt' }: { locale?: 'pt' | 'en' }) 
     </section>
   );
 }
+

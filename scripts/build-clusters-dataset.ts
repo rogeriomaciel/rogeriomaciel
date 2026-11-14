@@ -789,3 +789,4 @@ export const solutionsClusters: SolutionCluster[] = ${JSON.stringify(clusters, n
 
 fs.writeFileSync(targetFile, content, 'utf-8');
 console.log(`✅ [Dataset de Soluções Criado com Sucesso] Total de ${clusters.length} clusters de alta conversão salvos em src/data/solutions-clusters.ts!`);
+
