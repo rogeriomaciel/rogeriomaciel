@@ -18,6 +18,21 @@ I am a Software Architect & Platform Engineer specializing in high-performance w
 
 ---
 
+### 🌐 Live Production Platforms & Active Deployments
+
+All architectures described in this profile are backed by live, battle-tested software systems operating in production:
+
+| Platform & Live URL | Role / Architecture | Core Stack & Use Case | Status |
+| :--- | :--- | :--- | :---: |
+| 🚗 **[app.coreautocrm.com.br](https://app.coreautocrm.com.br/)** | **CoreAuto OS: Industrial Automotive Operations** | React, Vite, Fastify, Supabase Realtime, Totem Display, WhatsApp Automation. Powers real-time workshop workflows, repair checklists, and service orders at Oficina Kadosh Auto Center. | `● Active Live Production` |
+| ⚡ **[coreautocrm.com.br](https://coreautocrm.com.br/)** | **CoreAuto CRM SaaS Portal** | Vite, Tailwind CSS, Schema.org SEO/GEO, Dynamic Booking Engine. Official portal and customer onboarding for the automotive CRM ecosystem. | `● Active Live Production` |
+| 📊 **[adswhatsmonitor.alvoestrategia.com.br](https://adswhatsmonitor.alvoestrategia.com.br/login)** | **AdsWhats Monitor (Sales SLA & Ad Attribution Tower)** | Multi-tenant Real-Time Control Tower auditing Meta Ads Click-to-WhatsApp attribution, rep response SLA in seconds, and store performance. | `● Active Live Production` |
+| 🏛️ **[runoncore.com](https://runoncore.com/)** | **CORE Executive Operating System Manifesto** | High-performance Landing Engine & Strategic Positioning Portal. The executive framework for self-management, mission architecture, and AI-driven leadership. | `● Active Live Production` |
+| 🕹️ **[dash.runoncore.com](https://dash.runoncore.com/login)** | **CORE Mission Control & Telemetry Engine** | React 19, Gamified XP engine, Daily Startup/Shutdown rituals, Neurobiological energy regulation, and automated executive journaling. | `● Active Live Production` |
+| 👥 **[inroom.runoncore.com](https://inroom.runoncore.com/)** | **InRoom: Real-Time Presence & Attendance Engine** | Bun, React 19, Supabase Realtime, WhatsApp QR Kiosk. Frictionless physical attendance tracking for communities, choir rehearsals, and group meetings with rotating 60s QR code and WhatsApp notification. | `● Active Live Production` |
+
+---
+
 ### 🌐 Official Architecture Portal & Production Solutions
 
 Explore detailed case studies, live telemetry benchmarks, and architecture teardowns on my official portal:
