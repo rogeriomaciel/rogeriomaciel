@@ -1,6 +1,6 @@
 import { Navbar } from '../components/Navbar';
 import { Hero } from '../components/Hero';
-import { EngineeringPillars } from '../components/EngineeringPillars';
+import { ArchitectureBlueprints } from '../components/ArchitectureBlueprints';
 import { LiveDeploymentsShowcase } from '../components/LiveDeploymentsShowcase';
 import { GithubShowcase } from '../components/GithubShowcase';
 import { KadoshCaseTeardown } from '../components/KadoshCaseTeardown';
@@ -16,12 +16,12 @@ export default function En() {
       <Navbar locale="en" />
       <main className="flex-grow">
         <Hero locale="en" />
-        <EngineeringPillars locale="en" />
-        <LiveDeploymentsShowcase locale="en" />
+        <ArchitectureBlueprints locale="en" />
         <GithubShowcase locale="en" />
+        <LiveDeploymentsShowcase locale="en" />
+        <BioAuthority locale="en" />
         <KadoshCaseTeardown locale="en" />
         <SolutionsDirectory locale="en" />
-        <BioAuthority locale="en" />
         <AuditCTA locale="en" />
         <FaqSection locale="en" />
       </main>
