@@ -1689,30 +1689,30 @@ export const solutionsClusters: SolutionCluster[] = [
   {
     "slug": "high-throughput-n8n-scaling",
     "category": "Enterprise Architecture",
-    "title": "Enterprise n8n Scaling: How to Handle Millions of Executions Without Crashing",
-    "metaDescription": "Scale self-hosted n8n to enterprise production. Master queue mode, Redis scaling, worker concurrency tuning, and database pruning for mission-critical workflows.",
+    "title": "Escalar n8n Enterprise: Milhões de Execuções sem Travar",
+    "metaDescription": "Escale o n8n self-hosted para produção corporativa com Queue Mode, Redis, tuning de workers e poda automática no PostgreSQL.",
     "keywords": [
-      "scale n8n enterprise",
+      "escalar n8n enterprise",
       "n8n queue mode redis",
-      "high throughput automation",
-      "n8n production architecture",
+      "automação alto throughput",
+      "arquitetura n8n produção",
       "Rogério Maciel"
     ],
-    "fastAnswer": "Scaling n8n for high throughput requires switching from default execution mode to Queue Mode with Redis, separating the webhook receiver process from background worker instances, and implementing aggressive pruning policies on execution history in PostgreSQL.",
-    "deepTension": "When automation workflows reach enterprise scale, default n8n instances suffer from database locks, bloated execution tables, and thread starvation, bringing business-critical integrations to a complete halt.",
-    "antiPitch": "Scaling enterprise workflows is not about blindly spinning up oversized Docker containers. It demands meticulous decoupling of event intake, asynchronous queue processing, and database indexing.",
-    "authorityProof": "With over two decades of systems architecture experience, Rogério Maciel designs distributed workflow topologies capable of sustaining millions of events per month with resilient failover mechanisms.",
-    "contrastPrejudice": "System downtime in mission-critical pipelines causes immediate revenue loss and breaks customer trust. A hardened queue architecture ensures 99.99% uptime even during massive traffic spikes.",
-    "ctaLabel": "Discuss Enterprise Architecture with Rogério",
-    "whatsappPrompt": "Hello Rogério, I read your breakdown on scaling n8n for enterprise workloads and would like to discuss optimizing our infrastructure.",
+    "fastAnswer": "Escalar o n8n para alto volume exige migrar do modo padrão para o Queue Mode com Redis, separando receptores de webhook dos workers de processamento em segundo plano e aplicando políticas rígidas de poda do histórico de execuções no PostgreSQL.",
+    "deepTension": "Quando fluxos de automação atingem escala corporativa, instâncias padrão do n8n sofrem com travamentos de banco de dados, tabelas de execução inchadas e esgotamento de threads, paralisando integrações críticas.",
+    "antiPitch": "Escalar fluxos corporativos não é subir containers Docker gigantes no escuro. Exige desacoplamento rigoroso entre ingestão de eventos, processamento assíncrono em fila e indexação de banco de dados.",
+    "authorityProof": "Com mais de duas décadas em arquitetura de sistemas, Rogério Maciel projeta topologias distribuídas capazes de sustentar milhões de eventos mensais com failover resiliente.",
+    "contrastPrejudice": "Quedas em pipelines críticos geram perda imediata de receita e confiança. Uma arquitetura com filas endurecidas garante 99,99% de disponibilidade mesmo sob picos massivos de tráfego.",
+    "ctaLabel": "Discutir Arquitetura Enterprise com Rogério",
+    "whatsappPrompt": "Olá Rogério, li sua análise sobre escalar n8n para alto volume e gostaria de otimizar nossa infraestrutura.",
     "faq": [
       {
-        "question": "When should an organization transition n8n to Queue Mode?",
-        "answer": "When monthly executions exceed 100,000, when processing webhooks with high concurrency spikes, or when individual workflow failures threaten to crash the primary UI server."
+        "question": "Quando uma empresa deve migrar o n8n para Queue Mode?",
+        "answer": "Quando o volume ultrapassa 100 mil execuções mensais, há picos de concorrência em webhooks ou falhas isoladas ameaçam derrubar o servidor principal."
       },
       {
-        "question": "How do you handle workflow execution history bloat?",
-        "answer": "By configuring automatic execution pruning, offloading long-term audit logs to cold storage (S3/BigQuery), and maintaining strict database maintenance jobs in PostgreSQL."
+        "question": "Como evitar que o histórico de execuções trave o banco?",
+        "answer": "Configurando poda automática de execuções antigas, descarregando logs de auditoria para armazenamento frio e mantendo rotinas de manutenção no PostgreSQL."
       }
     ],
     "en": {
@@ -1749,30 +1749,30 @@ export const solutionsClusters: SolutionCluster[] = [
   {
     "slug": "fastify-microservices-architecture",
     "category": "Enterprise Architecture",
-    "title": "High-Performance Node.js & Fastify Microservices with Sub-10ms Latency",
-    "metaDescription": "Replace slow, memory-heavy middleware with lightning-fast Fastify microservices. Learn how to achieve sub-10ms response times and zero-dependency efficiency.",
+    "title": "Microsserviços Node.js & Fastify com Latência Abaixo de 10ms",
+    "metaDescription": "Substitua middlewares lentos por microsserviços Fastify de alta performance com resposta abaixo de 10ms e baixo consumo de RAM.",
     "keywords": [
-      "Fastify microservices architecture",
-      "Nodejs high performance",
-      "sub-10ms API latency",
-      "Express to Fastify migration",
+      "arquitetura microsserviços Fastify",
+      "Nodejs alta performance",
+      "latência API menor 10ms",
+      "migrar Express para Fastify",
       "Rogério Maciel"
     ],
-    "fastAnswer": "Fastify achieves superior throughput and ultra-low latency through internal schema compilation using Ajv, highly optimized radix tree routing (find-my-way), and asynchronous serialization via fast-json-stringify, delivering up to 4x higher RPS compared to legacy Express setups.",
-    "deepTension": "Modern web applications and APIs frequently struggle with latency bottlenecks and rising cloud costs caused by bloated frameworks and unoptimized JSON serialization layers that choke on heavy payloads.",
-    "antiPitch": "Microservices architecture should never be adopted just for industry hype. It is a precise engineering choice for decoupling high-throughput bottlenecks and guaranteeing deterministic response times under load.",
-    "authorityProof": "Rogério Maciel has architected zero-runtime-overhead backend services for high-throughput enterprise systems, reducing server fleets while dramatically improving latency profiles.",
-    "contrastPrejudice": "Shaving 200ms of API latency directly improves customer conversion rates and reduces compute infrastructure bills by more than 60%. Engineering efficiency pays for itself immediately.",
-    "ctaLabel": "Connect with Rogério on Fastify Architecture",
-    "whatsappPrompt": "Hello Rogério, I would like to consult on high-performance Fastify microservices and backend latency optimization.",
+    "fastAnswer": "O Fastify atinge throughput superior e latência mínima compilando schemas JSON com Ajv, roteamento em radix tree (find-my-way) e serialização assíncrona via fast-json-stringify, entregando até 4x mais requisições por segundo que o Express legado.",
+    "deepTension": "APIs modernas frequentemente sofrem com gargalos de latência e contas de nuvem infladas por frameworks pesados e serialização JSON não otimizada sob cargas altas.",
+    "antiPitch": "Arquitetura em microsserviços não deve ser adotada por modismo. É uma decisão precisa de engenharia para desacoplar gargalos de alto volume e garantir tempos de resposta determinísticos.",
+    "authorityProof": "Rogério Maciel projeta serviços de backend com overhead mínimo para operações de alta vazão, reduzindo frota de servidores e derrubando drasticamente a latência.",
+    "contrastPrejudice": "Cortar 200ms de latência de API melhora diretamente a conversão e reduz custos de computação em mais de 60%. Eficiência de engenharia se paga imediatamente.",
+    "ctaLabel": "Falar com Rogério sobre Arquitetura Fastify",
+    "whatsappPrompt": "Olá Rogério, gostaria de conversar sobre microsserviços Fastify de alta performance e redução de latência no backend.",
     "faq": [
       {
-        "question": "Why does Fastify outperform traditional Node.js frameworks like Express?",
-        "answer": "Fastify compiles JSON schemas beforehand into specialized serialization functions, drastically reducing the CPU overhead of repetitive JSON string manipulation during requests."
+        "question": "Por que o Fastify supera frameworks tradicionais como Express?",
+        "answer": "O Fastify pré-compila schemas JSON em funções especializadas de serialização, reduzindo drasticamente o custo de CPU ao manipular payloads repetitivos."
       },
       {
-        "question": "How difficult is migrating existing Express routes to Fastify?",
-        "answer": "With structured middleware wrappers and systematic route modularization, migrations can be executed incrementally without downtime or code regressions."
+        "question": "É complexo migrar rotas existentes do Express para o Fastify?",
+        "answer": "Com adaptadores estruturados e modularização incremental de rotas, a migração é executada sem downtime nem regressões."
       }
     ],
     "en": {

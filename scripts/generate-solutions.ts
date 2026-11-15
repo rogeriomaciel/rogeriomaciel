@@ -11,6 +11,38 @@ const assetsDir = path.join(distDir, 'assets');
 const sitemapPath = path.resolve(import.meta.dir, '../public/sitemap.xml');
 const llmsFullPath = path.resolve(import.meta.dir, '../public/llms-full.txt');
 
+function escapeHtml(value: string): string {
+  return value
+    .replace(/&/g, '&amp;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#39;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;');
+}
+
+function truncateAtWordBoundary(text: string, maxLen: number): string {
+  if (text.length <= maxLen) return text;
+  const sliced = text.slice(0, maxLen - 1);
+  const lastSpace = sliced.lastIndexOf(' ');
+  const base = lastSpace > Math.floor(maxLen * 0.6) ? sliced.slice(0, lastSpace) : sliced;
+  return `${base.replace(/[,:;.\-–—]+$/, '').trim()}…`;
+}
+
+function buildSeoTitle(rawTitle: string): string {
+  const suffix = ' | Rogério Maciel';
+  if (rawTitle.length + suffix.length <= 65) {
+    return `${rawTitle}${suffix}`;
+  }
+  if (rawTitle.length <= 65) {
+    return rawTitle;
+  }
+  return truncateAtWordBoundary(rawTitle, 65);
+}
+
+function buildSeoDescription(rawDesc: string): string {
+  return truncateAtWordBoundary(rawDesc, 158);
+}
+
 // 1. Obter o CSS crítico gerado pelo build do Vite
 let criticalCss = '';
 if (fs.existsSync(assetsDir)) {
@@ -63,6 +95,58 @@ function generateHtml(sol: SolutionCluster, locale: 'pt' | 'en' = 'pt'): string 
     description: content.metaDescription
   };
 
+  const seoTitle = escapeHtml(buildSeoTitle(content.title));
+  const seoDesc = escapeHtml(buildSeoDescription(content.metaDescription));
+  const seoKeywords = escapeHtml(content.keywords.join(', '));
+
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      {
+        '@type': 'ListItem',
+        position: 1,
+        name: isEn ? 'Home' : 'Início',
+        item: isEn ? 'https://rogeriomaciel.com.br/en/' : 'https://rogeriomaciel.com.br/pt/'
+      },
+      {
+        '@type': 'ListItem',
+        position: 2,
+        name: content.category || sol.category,
+        item: canonicalUrl
+      },
+      {
+        '@type': 'ListItem',
+        position: 3,
+        name: content.title,
+        item: canonicalUrl
+      }
+    ]
+  };
+
+  const articleSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'TechArticle',
+    headline: content.title,
+    description: content.metaDescription,
+    inLanguage: isEn ? 'en' : 'pt-BR',
+    mainEntityOfPage: {
+      '@type': 'WebPage',
+      '@id': canonicalUrl
+    },
+    author: {
+      '@type': 'Person',
+      '@id': 'https://rogeriomaciel.com.br/#person',
+      name: 'Rogério Marinho Maciel',
+      url: 'https://rogeriomaciel.com.br/en/'
+    },
+    publisher: {
+      '@type': 'Person',
+      '@id': 'https://rogeriomaciel.com.br/#person',
+      name: 'Rogério Marinho Maciel'
+    }
+  };
+
   return `<!DOCTYPE html>
 <html lang="${isEn ? 'en' : 'pt-BR'}" class="dark scroll-smooth">
   <head>
@@ -73,9 +157,9 @@ function generateHtml(sol: SolutionCluster, locale: 'pt' | 'en' = 'pt'): string 
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
     <meta name="theme-color" content="#07090E" />
 
-    <title>${content.title} | Rogério Maciel</title>
-    <meta name="description" content="${content.metaDescription}" />
-    <meta name="keywords" content="${content.keywords.join(', ')}" />
+    <title>${seoTitle}</title>
+    <meta name="description" content="${seoDesc}" />
+    <meta name="keywords" content="${seoKeywords}" />
     <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
     <link rel="canonical" href="${canonicalUrl}" />
 
@@ -87,20 +171,19 @@ function generateHtml(sol: SolutionCluster, locale: 'pt' | 'en' = 'pt'): string 
     <!-- Open Graph -->
     <meta property="og:locale" content="${isEn ? 'en_US' : 'pt_BR'}" />
     <meta property="og:type" content="article" />
-    <meta property="og:title" content="${content.title} | Rogério Maciel" />
-    <meta property="og:description" content="${content.metaDescription}" />
+    <meta property="og:title" content="${seoTitle}" />
+    <meta property="og:description" content="${seoDesc}" />
     <meta property="og:url" content="${canonicalUrl}" />
-    <meta property="og:site_name" content="Rogério Maciel — Software Architecture & Automation" />
+    <meta property="og:site_name" content="Rogério Maciel — Software Architecture &amp; Automation" />
     <meta property="og:image" content="https://rogeriomaciel.com.br/og-image.jpg" />
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="${content.title} | Rogério Maciel" />
-    <meta name="twitter:description" content="${content.metaDescription}" />
+    <meta name="twitter:title" content="${seoTitle}" />
+    <meta name="twitter:description" content="${seoDesc}" />
     <meta name="twitter:image" content="https://rogeriomaciel.com.br/og-image.jpg" />
 
-    <!-- Google Search Console & IndexNow Verification -->
-    <meta name="google-site-verification" content="google-site-verification-id" />
+    <!-- IndexNow Verification -->
     <meta name="indexnow-key" content="61f53f62035a6493e50b0b59feca6748" />
 
     <!-- AI Feeds (GEO) -->
@@ -113,6 +196,12 @@ function generateHtml(sol: SolutionCluster, locale: 'pt' | 'en' = 'pt'): string 
     </script>
     <script type="application/ld+json">
       ${JSON.stringify(faqSchema)}
+    </script>
+    <script type="application/ld+json">
+      ${JSON.stringify(breadcrumbSchema)}
+    </script>
+    <script type="application/ld+json">
+      ${JSON.stringify(articleSchema)}
     </script>
 
     <!-- Buffer Global de Analytics & Tracking sob demanda (TBT = 0ms) -->
@@ -193,35 +282,63 @@ async function runGenerate() {
     console.log(`🌐 [EN] /en/solutions/${enSlug}/ ➔ ${sol.en?.title || sol.title}`);
   }
 
-  // 3. Atualizar public/sitemap.xml com as URLs PT e EN
-  if (fs.existsSync(sitemapPath)) {
-    let sitemap = fs.readFileSync(sitemapPath, 'utf-8');
-    const existingLocs = new Set([...sitemap.matchAll(/<loc>([^<]+)<\/loc>/g)].map(m => m[1].trim()));
+  // 3. Gerar public/sitemap.xml e dist/sitemap.xml limpos (somente HTML canônicos + hreflang)
+  const today = new Date().toISOString().split('T')[0];
+  const rootHreflangs = `    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://rogeriomaciel.com.br/pt/" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://rogeriomaciel.com.br/pt/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://rogeriomaciel.com.br/en/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://rogeriomaciel.com.br/en/" />`;
 
-    let addedCount = 0;
-    let newEntries = '';
-    const today = new Date().toISOString().split('T')[0];
-
-    for (const url of generatedUrls) {
-      if (!existingLocs.has(url)) {
-        newEntries += `  <url>
-    <loc>${url}</loc>
+  let sitemapEntries = `  <!-- Canonical Global (/en/) -->
+  <url>
+    <loc>https://rogeriomaciel.com.br/en/</loc>
+${rootHreflangs}
     <lastmod>${today}</lastmod>
     <changefreq>daily</changefreq>
-    <priority>0.9</priority>
-  </url>\n`;
-        addedCount++;
-      }
-    }
+    <priority>1.0</priority>
+  </url>
 
-    if (addedCount > 0) {
-      sitemap = sitemap.replace('</urlset>', `${newEntries}</urlset>`);
-      fs.writeFileSync(sitemapPath, sitemap);
-      const distSitemap = path.join(distDir, 'sitemap.xml');
-      fs.writeFileSync(distSitemap, sitemap);
-      console.log(`\n📋 [Sitemap] Adicionadas ${addedCount} novas URLs bilíngues no sitemap.xml!`);
-    }
+  <!-- Versão Português (Brasil) -->
+  <url>
+    <loc>https://rogeriomaciel.com.br/pt/</loc>
+${rootHreflangs}
+    <lastmod>${today}</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.95</priority>
+  </url>\n`;
+
+  for (const sol of solutionsClusters) {
+    const enSlug = getEnSlug(sol);
+    const ptUrl = `https://rogeriomaciel.com.br/solucoes/${sol.slug}/`;
+    const enUrl = `https://rogeriomaciel.com.br/en/solutions/${enSlug}/`;
+    const solHreflangs = `    <xhtml:link rel="alternate" hreflang="pt-BR" href="${ptUrl}" />
+    <xhtml:link rel="alternate" hreflang="en" href="${enUrl}" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="${enUrl}" />`;
+
+    sitemapEntries += `  <url>
+    <loc>${enUrl}</loc>
+${solHreflangs}
+    <lastmod>${today}</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>${ptUrl}</loc>
+${solHreflangs}
+    <lastmod>${today}</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>\n`;
   }
+
+  const cleanSitemap = `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+${sitemapEntries}</urlset>\n`;
+
+  fs.writeFileSync(sitemapPath, cleanSitemap, 'utf-8');
+  fs.writeFileSync(path.join(distDir, 'sitemap.xml'), cleanSitemap, 'utf-8');
+  console.log(`\n📋 [Sitemap] Sitemap limpo regenerado com ${generatedUrls.length + 2} URLs HTML canônicas!`);
 
   // 4. Atualizar public/llms-full.txt com as soluções bilíngues
   if (fs.existsSync(llmsFullPath)) {

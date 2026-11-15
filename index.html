@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-BR" class="dark scroll-smooth">
+<html lang="en" class="dark scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
@@ -8,53 +8,52 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
     <meta name="theme-color" content="#07090E" />
     
-    <!-- Metatags Principais de SEO -->
-    <title>Rogério Maciel — Software Architect & Automation Platform Engineer | 20+ Anos</title>
-    <meta name="description" content="Arquiteto de Software e Engenheiro de Plataformas de Automação com mais de 20 anos de experiência. Transpilação n8n para microsserviços Fastify/Bun de 5ms, telemetria em tempo real, convergência TI/OT e esteiras de alta concorrência." />
+    <!-- Core SEO Meta Tags (Primary Canonical: /en/) -->
+    <title>Rogério Maciel — Software &amp; AI Automation Architect</title>
+    <meta name="description" content="Software &amp; AI Automation Architect (20+ yrs). Transpiling n8n workflows into 5ms Fastify/Bun microservices (-98% RAM) and real-time telemetry." />
     <meta name="keywords" content="Software Architect, Platform Engineer, n8n Automation, Fastify, Bun, TypeScript, Low-Code Transpiler, Telemetry, Real-Time Systems, Upwork Architect, Rogério Maciel, Rogério Marinho Maciel" />
     <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
-    <link rel="canonical" href="https://rogeriomaciel.com.br/" />
+    <link rel="canonical" href="https://rogeriomaciel.com.br/en/" />
     
-    <!-- Hreflang Tags (Multilíngue Oficial) -->
+    <!-- Hreflang Tags (Official Multilingual Parity) -->
     <link rel="alternate" hreflang="pt-BR" href="https://rogeriomaciel.com.br/pt/" />
     <link rel="alternate" hreflang="pt" href="https://rogeriomaciel.com.br/pt/" />
     <link rel="alternate" hreflang="en" href="https://rogeriomaciel.com.br/en/" />
     <link rel="alternate" hreflang="x-default" href="https://rogeriomaciel.com.br/en/" />
 
-    <!-- Script de Redirecionamento Imediato de Idioma para a Raiz -->
+    <!-- Browser-Language Redirect: Portuguese browsers -> /pt/, Global/Bots stay on canonical /en/ content -->
     <script>
       (function() {
         var path = window.location.pathname;
         if (path === '/' || path === '' || path === '/index.html') {
           try {
             var lang = (navigator.language || navigator.userLanguage || '').toLowerCase();
-            var isEn = lang.indexOf('en') === 0;
-            var target = isEn ? '/en/' : '/pt/';
-            var hash = window.location.hash || '';
-            var search = window.location.search || '';
-            window.location.replace(target + search + hash);
+            if (lang.indexOf('pt') === 0) {
+              var hash = window.location.hash || '';
+              var search = window.location.search || '';
+              window.location.replace('/pt/' + search + hash);
+            }
           } catch (e) {}
         }
       })();
     </script>
     
-    <!-- Open Graph / Redes Sociais / WhatsApp Preview -->
-    <meta property="og:locale" content="pt_BR" />
+    <!-- Open Graph / Social Media Preview -->
+    <meta property="og:locale" content="en_US" />
     <meta property="og:type" content="profile" />
-    <meta property="og:title" content="Rogério Maciel — Software Architect & Automation Platform Engineer" />
-    <meta property="og:description" content="20+ anos projetando sistemas distribuídos, transpilação n8n para Fastify/Bun com latência de 5ms (-98% RAM), telemetria em tempo real e esteiras autônomas de alta taxa de transferência." />
-    <meta property="og:url" content="https://rogeriomaciel.com.br/" />
-    <meta property="og:site_name" content="Rogério Maciel — Software Architecture & Automation" />
+    <meta property="og:title" content="Rogério Maciel — Software &amp; AI Automation Architect" />
+    <meta property="og:description" content="20+ years architecting distributed systems, transpiling n8n workflows into 5ms Fastify/Bun microservices (-98% RAM), real-time telemetry, and event-driven backends." />
+    <meta property="og:url" content="https://rogeriomaciel.com.br/en/" />
+    <meta property="og:site_name" content="Rogério Maciel — Software Architecture &amp; Automation" />
     <meta property="og:image" content="https://rogeriomaciel.com.br/og-image.jpg" />
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Rogério Maciel — Software Architect & Automation Platform Engineer" />
-    <meta name="twitter:description" content="20+ anos projetando sistemas de alta performance, transpilação n8n para Fastify/Bun de 5ms e convergência TI/OT." />
+    <meta name="twitter:title" content="Rogério Maciel — Software &amp; AI Automation Architect" />
+    <meta name="twitter:description" content="20+ years architecting high-performance systems, transpiling n8n workflows into 5ms Fastify/Bun microservices, and IT/OT convergence." />
     <meta name="twitter:image" content="https://rogeriomaciel.com.br/og-image.jpg" />
 
-    <!-- Google Search Console & IndexNow Verification -->
-    <meta name="google-site-verification" content="google-site-verification-id" />
+    <!-- IndexNow Verification -->
     <meta name="indexnow-key" content="61f53f62035a6493e50b0b59feca6748" />
 
     <!-- Descoberta por Agentes de IA, LLMs e Navegação Agêntica (GEO & ARD 1.0) -->
@@ -228,8 +227,7 @@
           "sameAs": [
             "https://github.com/rogeriomaciel",
             "https://www.linkedin.com/in/macrogerio",
-            "https://lattes.cnpq.br/5008294767552521",
-            "https://www.upwork.com"
+            "https://lattes.cnpq.br/5008294767552521"
           ]
         },
         {

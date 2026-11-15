@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  <!-- Raiz Oficial com detecção e fallback -->
+  <!-- Canonical Global (/en/) -->
   <url>
-    <loc>https://rogeriomaciel.com.br/</loc>
+    <loc>https://rogeriomaciel.com.br/en/</loc>
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://rogeriomaciel.com.br/pt/" />
     <xhtml:link rel="alternate" hreflang="pt" href="https://rogeriomaciel.com.br/pt/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://rogeriomaciel.com.br/en/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://rogeriomaciel.com.br/en/" />
-    <lastmod>2026-11-13</lastmod>
+    <lastmod>2026-11-15</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -20,502 +20,692 @@
     <xhtml:link rel="alternate" hreflang="pt" href="https://rogeriomaciel.com.br/pt/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://rogeriomaciel.com.br/en/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://rogeriomaciel.com.br/en/" />
-    <lastmod>2026-11-13</lastmod>
+    <lastmod>2026-11-15</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.95</priority>
   </url>
-
-  <!-- Versão Inglês (Global) -->
   <url>
-    <loc>https://rogeriomaciel.com.br/en/</loc>
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://rogeriomaciel.com.br/pt/" />
-    <xhtml:link rel="alternate" hreflang="pt" href="https://rogeriomaciel.com.br/pt/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://rogeriomaciel.com.br/en/" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://rogeriomaciel.com.br/en/" />
-    <lastmod>2026-11-13</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.95</priority>
-  </url>
-
-  <!-- Arquivos de Autoridade para IA e LLMs (GEO) -->
-  <url>
-    <loc>https://rogeriomaciel.com.br/llms.txt</loc>
-    <lastmod>2026-11-13</lastmod>
+    <loc>https://rogeriomaciel.com.br/en/solutions/zero-hallucination-whatsapp-ai/</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://rogeriomaciel.com.br/solucoes/ia-whatsapp-sem-alucinacao/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://rogeriomaciel.com.br/en/solutions/zero-hallucination-whatsapp-ai/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://rogeriomaciel.com.br/en/solutions/zero-hallucination-whatsapp-ai/" />
+    <lastmod>2026-11-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://rogeriomaciel.com.br/llms-full.txt</loc>
-    <lastmod>2026-11-13</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://rogeriomaciel.com.br/.well-known/ai-catalog.json</loc>
-    <lastmod>2026-11-13</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://rogeriomaciel.com.br/.well-known/ard.json</loc>
-    <lastmod>2026-11-13</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://rogeriomaciel.com.br/solucoes/ia-whatsapp-sem-alucinacao/</loc>
-    <lastmod>2026-11-13</lastmod>
-    <changefreq>daily</changefreq>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://rogeriomaciel.com.br/solucoes/ia-whatsapp-sem-alucinacao/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://rogeriomaciel.com.br/en/solutions/zero-hallucination-whatsapp-ai/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://rogeriomaciel.com.br/en/solutions/zero-hallucination-whatsapp-ai/" />
+    <lastmod>2026-11-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://rogeriomaciel.com.br/en/solutions/avoid-whatsapp-meta-ban-ai/</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://rogeriomaciel.com.br/solucoes/evitar-banimento-whatsapp-ia/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://rogeriomaciel.com.br/en/solutions/avoid-whatsapp-meta-ban-ai/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://rogeriomaciel.com.br/en/solutions/avoid-whatsapp-meta-ban-ai/" />
+    <lastmod>2026-11-15</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://rogeriomaciel.com.br/solucoes/evitar-banimento-whatsapp-ia/</loc>
-    <lastmod>2026-11-13</lastmod>
-    <changefreq>daily</changefreq>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://rogeriomaciel.com.br/solucoes/evitar-banimento-whatsapp-ia/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://rogeriomaciel.com.br/en/solutions/avoid-whatsapp-meta-ban-ai/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://rogeriomaciel.com.br/en/solutions/avoid-whatsapp-meta-ban-ai/" />
+    <lastmod>2026-11-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://rogeriomaciel.com.br/en/solutions/ai-to-human-handoff-whatsapp/</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://rogeriomaciel.com.br/solucoes/transbordo-humano-ia-whatsapp/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://rogeriomaciel.com.br/en/solutions/ai-to-human-handoff-whatsapp/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://rogeriomaciel.com.br/en/solutions/ai-to-human-handoff-whatsapp/" />
+    <lastmod>2026-11-15</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://rogeriomaciel.com.br/solucoes/transbordo-humano-ia-whatsapp/</loc>
-    <lastmod>2026-11-13</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://rogeriomaciel.com.br/solucoes/transbordo-humano-ia-whatsapp/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://rogeriomaciel.com.br/en/solutions/ai-to-human-handoff-whatsapp/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://rogeriomaciel.com.br/en/solutions/ai-to-human-handoff-whatsapp/" />
+    <lastmod>2026-11-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://rogeriomaciel.com.br/solucoes/n8n-travando-memoria-solucao/</loc>
-    <lastmod>2026-11-13</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://rogeriomaciel.com.br/solucoes/speed-to-lead-automacao-vendas/</loc>
-    <lastmod>2026-11-13</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://rogeriomaciel.com.br/solucoes/recuperar-carrinho-stripe-whatsapp/</loc>
-    <lastmod>2026-11-13</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://rogeriomaciel.com.br/solucoes/ia-empresas-goiania-goias/</loc>
-    <lastmod>2026-11-13</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://rogeriomaciel.com.br/solucoes/transpilar-n8n-microsservicos-fastify/</loc>
-    <lastmod>2026-11-13</lastmod>
-    <changefreq>daily</changefreq>
+    <loc>https://rogeriomaciel.com.br/en/solutions/automatic-lead-qualification-ai-whatsapp/</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://rogeriomaciel.com.br/solucoes/qualificacao-leads-ia-whatsapp/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://rogeriomaciel.com.br/en/solutions/automatic-lead-qualification-ai-whatsapp/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://rogeriomaciel.com.br/en/solutions/automatic-lead-qualification-ai-whatsapp/" />
+    <lastmod>2026-11-15</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://rogeriomaciel.com.br/solucoes/qualificacao-leads-ia-whatsapp/</loc>
-    <lastmod>2026-11-14</lastmod>
-    <changefreq>daily</changefreq>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://rogeriomaciel.com.br/solucoes/qualificacao-leads-ia-whatsapp/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://rogeriomaciel.com.br/en/solutions/automatic-lead-qualification-ai-whatsapp/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://rogeriomaciel.com.br/en/solutions/automatic-lead-qualification-ai-whatsapp/" />
+    <lastmod>2026-11-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://rogeriomaciel.com.br/en/solutions/stripe-checkout-whatsapp-cart-recovery/</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://rogeriomaciel.com.br/solucoes/recuperar-carrinho-stripe-whatsapp/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://rogeriomaciel.com.br/en/solutions/stripe-checkout-whatsapp-cart-recovery/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://rogeriomaciel.com.br/en/solutions/stripe-checkout-whatsapp-cart-recovery/" />
+    <lastmod>2026-11-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://rogeriomaciel.com.br/solucoes/recuperar-carrinho-stripe-whatsapp/</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://rogeriomaciel.com.br/solucoes/recuperar-carrinho-stripe-whatsapp/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://rogeriomaciel.com.br/en/solutions/stripe-checkout-whatsapp-cart-recovery/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://rogeriomaciel.com.br/en/solutions/stripe-checkout-whatsapp-cart-recovery/" />
+    <lastmod>2026-11-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://rogeriomaciel.com.br/en/solutions/debt-collection-invoicing-automation-whatsapp/</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://rogeriomaciel.com.br/solucoes/automacao-cobranca-inadimplencia-whatsapp/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://rogeriomaciel.com.br/en/solutions/debt-collection-invoicing-automation-whatsapp/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://rogeriomaciel.com.br/en/solutions/debt-collection-invoicing-automation-whatsapp/" />
+    <lastmod>2026-11-15</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://rogeriomaciel.com.br/solucoes/automacao-cobranca-inadimplencia-whatsapp/</loc>
-    <lastmod>2026-11-14</lastmod>
-    <changefreq>daily</changefreq>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://rogeriomaciel.com.br/solucoes/automacao-cobranca-inadimplencia-whatsapp/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://rogeriomaciel.com.br/en/solutions/debt-collection-invoicing-automation-whatsapp/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://rogeriomaciel.com.br/en/solutions/debt-collection-invoicing-automation-whatsapp/" />
+    <lastmod>2026-11-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://rogeriomaciel.com.br/en/solutions/speed-to-lead-sales-automation-whatsapp/</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://rogeriomaciel.com.br/solucoes/speed-to-lead-automacao-vendas/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://rogeriomaciel.com.br/en/solutions/speed-to-lead-sales-automation-whatsapp/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://rogeriomaciel.com.br/en/solutions/speed-to-lead-sales-automation-whatsapp/" />
+    <lastmod>2026-11-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://rogeriomaciel.com.br/solucoes/speed-to-lead-automacao-vendas/</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://rogeriomaciel.com.br/solucoes/speed-to-lead-automacao-vendas/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://rogeriomaciel.com.br/en/solutions/speed-to-lead-sales-automation-whatsapp/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://rogeriomaciel.com.br/en/solutions/speed-to-lead-sales-automation-whatsapp/" />
+    <lastmod>2026-11-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://rogeriomaciel.com.br/en/solutions/24-7-whatsapp-ai-customer-service/</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://rogeriomaciel.com.br/solucoes/atendimento-whatsapp-24-horas-ia/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://rogeriomaciel.com.br/en/solutions/24-7-whatsapp-ai-customer-service/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://rogeriomaciel.com.br/en/solutions/24-7-whatsapp-ai-customer-service/" />
+    <lastmod>2026-11-15</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://rogeriomaciel.com.br/solucoes/atendimento-whatsapp-24-horas-ia/</loc>
-    <lastmod>2026-11-14</lastmod>
-    <changefreq>daily</changefreq>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://rogeriomaciel.com.br/solucoes/atendimento-whatsapp-24-horas-ia/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://rogeriomaciel.com.br/en/solutions/24-7-whatsapp-ai-customer-service/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://rogeriomaciel.com.br/en/solutions/24-7-whatsapp-ai-customer-service/" />
+    <lastmod>2026-11-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://rogeriomaciel.com.br/en/solutions/autonomous-appointment-booking-whatsapp-ai/</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://rogeriomaciel.com.br/solucoes/agendamento-consultas-whatsapp-ia/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://rogeriomaciel.com.br/en/solutions/autonomous-appointment-booking-whatsapp-ai/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://rogeriomaciel.com.br/en/solutions/autonomous-appointment-booking-whatsapp-ai/" />
+    <lastmod>2026-11-15</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://rogeriomaciel.com.br/solucoes/agendamento-consultas-whatsapp-ia/</loc>
-    <lastmod>2026-11-14</lastmod>
-    <changefreq>daily</changefreq>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://rogeriomaciel.com.br/solucoes/agendamento-consultas-whatsapp-ia/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://rogeriomaciel.com.br/en/solutions/autonomous-appointment-booking-whatsapp-ai/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://rogeriomaciel.com.br/en/solutions/autonomous-appointment-booking-whatsapp-ai/" />
+    <lastmod>2026-11-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://rogeriomaciel.com.br/en/solutions/whatsapp-sales-sla-audit-dashboard/</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://rogeriomaciel.com.br/solucoes/dashboard-operacional-whatsapp-vendedores/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://rogeriomaciel.com.br/en/solutions/whatsapp-sales-sla-audit-dashboard/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://rogeriomaciel.com.br/en/solutions/whatsapp-sales-sla-audit-dashboard/" />
+    <lastmod>2026-11-15</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://rogeriomaciel.com.br/solucoes/dashboard-operacional-whatsapp-vendedores/</loc>
-    <lastmod>2026-11-14</lastmod>
-    <changefreq>daily</changefreq>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://rogeriomaciel.com.br/solucoes/dashboard-operacional-whatsapp-vendedores/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://rogeriomaciel.com.br/en/solutions/whatsapp-sales-sla-audit-dashboard/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://rogeriomaciel.com.br/en/solutions/whatsapp-sales-sla-audit-dashboard/" />
+    <lastmod>2026-11-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://rogeriomaciel.com.br/en/solutions/ai-whatsapp-medical-clinics/</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://rogeriomaciel.com.br/solucoes/ia-whatsapp-clinicas-consultorios/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://rogeriomaciel.com.br/en/solutions/ai-whatsapp-medical-clinics/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://rogeriomaciel.com.br/en/solutions/ai-whatsapp-medical-clinics/" />
+    <lastmod>2026-11-15</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://rogeriomaciel.com.br/solucoes/ia-whatsapp-clinicas-consultorios/</loc>
-    <lastmod>2026-11-14</lastmod>
-    <changefreq>daily</changefreq>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://rogeriomaciel.com.br/solucoes/ia-whatsapp-clinicas-consultorios/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://rogeriomaciel.com.br/en/solutions/ai-whatsapp-medical-clinics/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://rogeriomaciel.com.br/en/solutions/ai-whatsapp-medical-clinics/" />
+    <lastmod>2026-11-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://rogeriomaciel.com.br/en/solutions/whatsapp-sales-automation-car-dealerships/</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://rogeriomaciel.com.br/solucoes/ia-whatsapp-concessionarias-lojas-carros/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://rogeriomaciel.com.br/en/solutions/whatsapp-sales-automation-car-dealerships/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://rogeriomaciel.com.br/en/solutions/whatsapp-sales-automation-car-dealerships/" />
+    <lastmod>2026-11-15</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://rogeriomaciel.com.br/solucoes/ia-whatsapp-concessionarias-lojas-carros/</loc>
-    <lastmod>2026-11-14</lastmod>
-    <changefreq>daily</changefreq>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://rogeriomaciel.com.br/solucoes/ia-whatsapp-concessionarias-lojas-carros/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://rogeriomaciel.com.br/en/solutions/whatsapp-sales-automation-car-dealerships/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://rogeriomaciel.com.br/en/solutions/whatsapp-sales-automation-car-dealerships/" />
+    <lastmod>2026-11-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://rogeriomaciel.com.br/en/solutions/ai-whatsapp-real-estate-qualification/</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://rogeriomaciel.com.br/solucoes/ia-whatsapp-imobiliarias-corretores/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://rogeriomaciel.com.br/en/solutions/ai-whatsapp-real-estate-qualification/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://rogeriomaciel.com.br/en/solutions/ai-whatsapp-real-estate-qualification/" />
+    <lastmod>2026-11-15</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://rogeriomaciel.com.br/solucoes/ia-whatsapp-imobiliarias-corretores/</loc>
-    <lastmod>2026-11-14</lastmod>
-    <changefreq>daily</changefreq>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://rogeriomaciel.com.br/solucoes/ia-whatsapp-imobiliarias-corretores/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://rogeriomaciel.com.br/en/solutions/ai-whatsapp-real-estate-qualification/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://rogeriomaciel.com.br/en/solutions/ai-whatsapp-real-estate-qualification/" />
+    <lastmod>2026-11-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://rogeriomaciel.com.br/en/solutions/b2b-whatsapp-order-automation-wholesale/</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://rogeriomaciel.com.br/solucoes/ia-whatsapp-distribuidoras-atacado/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://rogeriomaciel.com.br/en/solutions/b2b-whatsapp-order-automation-wholesale/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://rogeriomaciel.com.br/en/solutions/b2b-whatsapp-order-automation-wholesale/" />
+    <lastmod>2026-11-15</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://rogeriomaciel.com.br/solucoes/ia-whatsapp-distribuidoras-atacado/</loc>
-    <lastmod>2026-11-14</lastmod>
-    <changefreq>daily</changefreq>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://rogeriomaciel.com.br/solucoes/ia-whatsapp-distribuidoras-atacado/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://rogeriomaciel.com.br/en/solutions/b2b-whatsapp-order-automation-wholesale/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://rogeriomaciel.com.br/en/solutions/b2b-whatsapp-order-automation-wholesale/" />
+    <lastmod>2026-11-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://rogeriomaciel.com.br/en/solutions/ai-whatsapp-law-firms-case-intake/</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://rogeriomaciel.com.br/solucoes/ia-whatsapp-escritorios-advocacia/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://rogeriomaciel.com.br/en/solutions/ai-whatsapp-law-firms-case-intake/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://rogeriomaciel.com.br/en/solutions/ai-whatsapp-law-firms-case-intake/" />
+    <lastmod>2026-11-15</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://rogeriomaciel.com.br/solucoes/ia-whatsapp-escritorios-advocacia/</loc>
-    <lastmod>2026-11-14</lastmod>
-    <changefreq>daily</changefreq>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://rogeriomaciel.com.br/solucoes/ia-whatsapp-escritorios-advocacia/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://rogeriomaciel.com.br/en/solutions/ai-whatsapp-law-firms-case-intake/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://rogeriomaciel.com.br/en/solutions/ai-whatsapp-law-firms-case-intake/" />
+    <lastmod>2026-11-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://rogeriomaciel.com.br/en/solutions/whatsapp-automation-agribusiness-parts/</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://rogeriomaciel.com.br/solucoes/ia-whatsapp-agronegocio-revendas/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://rogeriomaciel.com.br/en/solutions/whatsapp-automation-agribusiness-parts/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://rogeriomaciel.com.br/en/solutions/whatsapp-automation-agribusiness-parts/" />
+    <lastmod>2026-11-15</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://rogeriomaciel.com.br/solucoes/ia-whatsapp-agronegocio-revendas/</loc>
-    <lastmod>2026-11-14</lastmod>
-    <changefreq>daily</changefreq>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://rogeriomaciel.com.br/solucoes/ia-whatsapp-agronegocio-revendas/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://rogeriomaciel.com.br/en/solutions/whatsapp-automation-agribusiness-parts/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://rogeriomaciel.com.br/en/solutions/whatsapp-automation-agribusiness-parts/" />
+    <lastmod>2026-11-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://rogeriomaciel.com.br/en/solutions/ai-whatsapp-auto-repair-shops/</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://rogeriomaciel.com.br/solucoes/ia-whatsapp-centros-automotivos-oficinas/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://rogeriomaciel.com.br/en/solutions/ai-whatsapp-auto-repair-shops/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://rogeriomaciel.com.br/en/solutions/ai-whatsapp-auto-repair-shops/" />
+    <lastmod>2026-11-15</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://rogeriomaciel.com.br/solucoes/ia-whatsapp-centros-automotivos-oficinas/</loc>
-    <lastmod>2026-11-14</lastmod>
-    <changefreq>daily</changefreq>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://rogeriomaciel.com.br/solucoes/ia-whatsapp-centros-automotivos-oficinas/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://rogeriomaciel.com.br/en/solutions/ai-whatsapp-auto-repair-shops/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://rogeriomaciel.com.br/en/solutions/ai-whatsapp-auto-repair-shops/" />
+    <lastmod>2026-11-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://rogeriomaciel.com.br/en/solutions/student-enrollment-ai-whatsapp-schools/</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://rogeriomaciel.com.br/solucoes/ia-whatsapp-escolas-cursos-faculdades/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://rogeriomaciel.com.br/en/solutions/student-enrollment-ai-whatsapp-schools/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://rogeriomaciel.com.br/en/solutions/student-enrollment-ai-whatsapp-schools/" />
+    <lastmod>2026-11-15</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://rogeriomaciel.com.br/solucoes/ia-whatsapp-escolas-cursos-faculdades/</loc>
-    <lastmod>2026-11-14</lastmod>
-    <changefreq>daily</changefreq>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://rogeriomaciel.com.br/solucoes/ia-whatsapp-escolas-cursos-faculdades/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://rogeriomaciel.com.br/en/solutions/student-enrollment-ai-whatsapp-schools/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://rogeriomaciel.com.br/en/solutions/student-enrollment-ai-whatsapp-schools/" />
+    <lastmod>2026-11-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://rogeriomaciel.com.br/en/solutions/ai-enterprise-consulting-goiania-brazil/</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://rogeriomaciel.com.br/solucoes/ia-empresas-goiania-goias/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://rogeriomaciel.com.br/en/solutions/ai-enterprise-consulting-goiania-brazil/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://rogeriomaciel.com.br/en/solutions/ai-enterprise-consulting-goiania-brazil/" />
+    <lastmod>2026-11-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://rogeriomaciel.com.br/solucoes/ia-empresas-goiania-goias/</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://rogeriomaciel.com.br/solucoes/ia-empresas-goiania-goias/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://rogeriomaciel.com.br/en/solutions/ai-enterprise-consulting-goiania-brazil/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://rogeriomaciel.com.br/en/solutions/ai-enterprise-consulting-goiania-brazil/" />
+    <lastmod>2026-11-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://rogeriomaciel.com.br/en/solutions/business-process-automation-goiania/</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://rogeriomaciel.com.br/solucoes/automacao-processos-goiania-aparecida/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://rogeriomaciel.com.br/en/solutions/business-process-automation-goiania/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://rogeriomaciel.com.br/en/solutions/business-process-automation-goiania/" />
+    <lastmod>2026-11-15</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://rogeriomaciel.com.br/solucoes/automacao-processos-goiania-aparecida/</loc>
-    <lastmod>2026-11-14</lastmod>
-    <changefreq>daily</changefreq>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://rogeriomaciel.com.br/solucoes/automacao-processos-goiania-aparecida/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://rogeriomaciel.com.br/en/solutions/business-process-automation-goiania/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://rogeriomaciel.com.br/en/solutions/business-process-automation-goiania/" />
+    <lastmod>2026-11-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://rogeriomaciel.com.br/en/solutions/ai-whatsapp-clinics-bueno-goiania/</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://rogeriomaciel.com.br/solucoes/ia-whatsapp-setor-bueno-goiania/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://rogeriomaciel.com.br/en/solutions/ai-whatsapp-clinics-bueno-goiania/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://rogeriomaciel.com.br/en/solutions/ai-whatsapp-clinics-bueno-goiania/" />
+    <lastmod>2026-11-15</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://rogeriomaciel.com.br/solucoes/ia-whatsapp-setor-bueno-goiania/</loc>
-    <lastmod>2026-11-14</lastmod>
-    <changefreq>daily</changefreq>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://rogeriomaciel.com.br/solucoes/ia-whatsapp-setor-bueno-goiania/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://rogeriomaciel.com.br/en/solutions/ai-whatsapp-clinics-bueno-goiania/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://rogeriomaciel.com.br/en/solutions/ai-whatsapp-clinics-bueno-goiania/" />
+    <lastmod>2026-11-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://rogeriomaciel.com.br/en/solutions/vip-whatsapp-automation-marista-goiania/</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://rogeriomaciel.com.br/solucoes/ia-whatsapp-setor-marista-goiania/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://rogeriomaciel.com.br/en/solutions/vip-whatsapp-automation-marista-goiania/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://rogeriomaciel.com.br/en/solutions/vip-whatsapp-automation-marista-goiania/" />
+    <lastmod>2026-11-15</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://rogeriomaciel.com.br/solucoes/ia-whatsapp-setor-marista-goiania/</loc>
-    <lastmod>2026-11-14</lastmod>
-    <changefreq>daily</changefreq>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://rogeriomaciel.com.br/solucoes/ia-whatsapp-setor-marista-goiania/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://rogeriomaciel.com.br/en/solutions/vip-whatsapp-automation-marista-goiania/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://rogeriomaciel.com.br/en/solutions/vip-whatsapp-automation-marista-goiania/" />
+    <lastmod>2026-11-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://rogeriomaciel.com.br/en/solutions/industrial-process-automation-daia-anapolis/</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://rogeriomaciel.com.br/solucoes/ia-automacao-industrias-daia-anapolis/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://rogeriomaciel.com.br/en/solutions/industrial-process-automation-daia-anapolis/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://rogeriomaciel.com.br/en/solutions/industrial-process-automation-daia-anapolis/" />
+    <lastmod>2026-11-15</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://rogeriomaciel.com.br/solucoes/ia-automacao-industrias-daia-anapolis/</loc>
-    <lastmod>2026-11-14</lastmod>
-    <changefreq>daily</changefreq>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://rogeriomaciel.com.br/solucoes/ia-automacao-industrias-daia-anapolis/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://rogeriomaciel.com.br/en/solutions/industrial-process-automation-daia-anapolis/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://rogeriomaciel.com.br/en/solutions/industrial-process-automation-daia-anapolis/" />
+    <lastmod>2026-11-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://rogeriomaciel.com.br/en/solutions/ai-consulting-agribusiness-rio-verde/</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://rogeriomaciel.com.br/solucoes/consultor-ia-empresas-rio-verde-goias/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://rogeriomaciel.com.br/en/solutions/ai-consulting-agribusiness-rio-verde/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://rogeriomaciel.com.br/en/solutions/ai-consulting-agribusiness-rio-verde/" />
+    <lastmod>2026-11-15</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://rogeriomaciel.com.br/solucoes/consultor-ia-empresas-rio-verde-goias/</loc>
-    <lastmod>2026-11-14</lastmod>
-    <changefreq>daily</changefreq>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://rogeriomaciel.com.br/solucoes/consultor-ia-empresas-rio-verde-goias/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://rogeriomaciel.com.br/en/solutions/ai-consulting-agribusiness-rio-verde/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://rogeriomaciel.com.br/en/solutions/ai-consulting-agribusiness-rio-verde/" />
+    <lastmod>2026-11-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://rogeriomaciel.com.br/en/solutions/n8n-out-of-memory-oom-solution/</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://rogeriomaciel.com.br/solucoes/n8n-travando-memoria-solucao/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://rogeriomaciel.com.br/en/solutions/n8n-out-of-memory-oom-solution/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://rogeriomaciel.com.br/en/solutions/n8n-out-of-memory-oom-solution/" />
+    <lastmod>2026-11-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://rogeriomaciel.com.br/solucoes/n8n-travando-memoria-solucao/</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://rogeriomaciel.com.br/solucoes/n8n-travando-memoria-solucao/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://rogeriomaciel.com.br/en/solutions/n8n-out-of-memory-oom-solution/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://rogeriomaciel.com.br/en/solutions/n8n-out-of-memory-oom-solution/" />
+    <lastmod>2026-11-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://rogeriomaciel.com.br/en/solutions/transpiling-n8n-to-fastify-microservices/</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://rogeriomaciel.com.br/solucoes/transpilar-n8n-microsservicos-fastify/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://rogeriomaciel.com.br/en/solutions/transpiling-n8n-to-fastify-microservices/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://rogeriomaciel.com.br/en/solutions/transpiling-n8n-to-fastify-microservices/" />
+    <lastmod>2026-11-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://rogeriomaciel.com.br/solucoes/transpilar-n8n-microsservicos-fastify/</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://rogeriomaciel.com.br/solucoes/transpilar-n8n-microsservicos-fastify/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://rogeriomaciel.com.br/en/solutions/transpiling-n8n-to-fastify-microservices/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://rogeriomaciel.com.br/en/solutions/transpiling-n8n-to-fastify-microservices/" />
+    <lastmod>2026-11-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://rogeriomaciel.com.br/en/solutions/gitops-cicd-n8n-production/</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://rogeriomaciel.com.br/solucoes/gitops-ci-cd-n8n-producao/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://rogeriomaciel.com.br/en/solutions/gitops-cicd-n8n-production/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://rogeriomaciel.com.br/en/solutions/gitops-cicd-n8n-production/" />
+    <lastmod>2026-11-15</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://rogeriomaciel.com.br/solucoes/gitops-ci-cd-n8n-producao/</loc>
-    <lastmod>2026-11-14</lastmod>
-    <changefreq>daily</changefreq>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://rogeriomaciel.com.br/solucoes/gitops-ci-cd-n8n-producao/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://rogeriomaciel.com.br/en/solutions/gitops-cicd-n8n-production/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://rogeriomaciel.com.br/en/solutions/gitops-cicd-n8n-production/" />
+    <lastmod>2026-11-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://rogeriomaciel.com.br/en/solutions/verify-webhook-hmac-sha256-nodejs/</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://rogeriomaciel.com.br/solucoes/validar-webhook-hmac-sha256-nodejs/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://rogeriomaciel.com.br/en/solutions/verify-webhook-hmac-sha256-nodejs/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://rogeriomaciel.com.br/en/solutions/verify-webhook-hmac-sha256-nodejs/" />
+    <lastmod>2026-11-15</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://rogeriomaciel.com.br/solucoes/validar-webhook-hmac-sha256-nodejs/</loc>
-    <lastmod>2026-11-14</lastmod>
-    <changefreq>daily</changefreq>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://rogeriomaciel.com.br/solucoes/validar-webhook-hmac-sha256-nodejs/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://rogeriomaciel.com.br/en/solutions/verify-webhook-hmac-sha256-nodejs/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://rogeriomaciel.com.br/en/solutions/verify-webhook-hmac-sha256-nodejs/" />
+    <lastmod>2026-11-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://rogeriomaciel.com.br/en/solutions/high-throughput-n8n-scaling/</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://rogeriomaciel.com.br/solucoes/high-throughput-n8n-scaling/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://rogeriomaciel.com.br/en/solutions/high-throughput-n8n-scaling/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://rogeriomaciel.com.br/en/solutions/high-throughput-n8n-scaling/" />
+    <lastmod>2026-11-15</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://rogeriomaciel.com.br/solucoes/high-throughput-n8n-scaling/</loc>
-    <lastmod>2026-11-14</lastmod>
-    <changefreq>daily</changefreq>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://rogeriomaciel.com.br/solucoes/high-throughput-n8n-scaling/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://rogeriomaciel.com.br/en/solutions/high-throughput-n8n-scaling/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://rogeriomaciel.com.br/en/solutions/high-throughput-n8n-scaling/" />
+    <lastmod>2026-11-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://rogeriomaciel.com.br/en/solutions/fastify-microservices-architecture/</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://rogeriomaciel.com.br/solucoes/fastify-microservices-architecture/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://rogeriomaciel.com.br/en/solutions/fastify-microservices-architecture/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://rogeriomaciel.com.br/en/solutions/fastify-microservices-architecture/" />
+    <lastmod>2026-11-15</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://rogeriomaciel.com.br/solucoes/fastify-microservices-architecture/</loc>
-    <lastmod>2026-11-14</lastmod>
-    <changefreq>daily</changefreq>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://rogeriomaciel.com.br/solucoes/fastify-microservices-architecture/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://rogeriomaciel.com.br/en/solutions/fastify-microservices-architecture/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://rogeriomaciel.com.br/en/solutions/fastify-microservices-architecture/" />
+    <lastmod>2026-11-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://rogeriomaciel.com.br/en/solutions/ai-medical-clinics-bueno-goiania/</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://rogeriomaciel.com.br/solucoes/ia-whatsapp-clinicas-setor-bueno/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://rogeriomaciel.com.br/en/solutions/ai-medical-clinics-bueno-goiania/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://rogeriomaciel.com.br/en/solutions/ai-medical-clinics-bueno-goiania/" />
+    <lastmod>2026-11-15</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://rogeriomaciel.com.br/solucoes/ia-whatsapp-clinicas-setor-bueno/</loc>
-    <lastmod>2026-11-14</lastmod>
-    <changefreq>daily</changefreq>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://rogeriomaciel.com.br/solucoes/ia-whatsapp-clinicas-setor-bueno/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://rogeriomaciel.com.br/en/solutions/ai-medical-clinics-bueno-goiania/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://rogeriomaciel.com.br/en/solutions/ai-medical-clinics-bueno-goiania/" />
+    <lastmod>2026-11-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://rogeriomaciel.com.br/en/solutions/luxury-real-estate-whatsapp-jardim-goias/</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://rogeriomaciel.com.br/solucoes/ia-whatsapp-imobiliarias-jardim-goias/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://rogeriomaciel.com.br/en/solutions/luxury-real-estate-whatsapp-jardim-goias/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://rogeriomaciel.com.br/en/solutions/luxury-real-estate-whatsapp-jardim-goias/" />
+    <lastmod>2026-11-15</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://rogeriomaciel.com.br/solucoes/ia-whatsapp-imobiliarias-jardim-goias/</loc>
-    <lastmod>2026-11-14</lastmod>
-    <changefreq>daily</changefreq>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://rogeriomaciel.com.br/solucoes/ia-whatsapp-imobiliarias-jardim-goias/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://rogeriomaciel.com.br/en/solutions/luxury-real-estate-whatsapp-jardim-goias/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://rogeriomaciel.com.br/en/solutions/luxury-real-estate-whatsapp-jardim-goias/" />
+    <lastmod>2026-11-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://rogeriomaciel.com.br/en/solutions/car-dealership-sales-automation-goiania/</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://rogeriomaciel.com.br/solucoes/automacao-vendas-concessionarias-goiania/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://rogeriomaciel.com.br/en/solutions/car-dealership-sales-automation-goiania/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://rogeriomaciel.com.br/en/solutions/car-dealership-sales-automation-goiania/" />
+    <lastmod>2026-11-15</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://rogeriomaciel.com.br/solucoes/automacao-vendas-concessionarias-goiania/</loc>
-    <lastmod>2026-11-14</lastmod>
-    <changefreq>daily</changefreq>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://rogeriomaciel.com.br/solucoes/automacao-vendas-concessionarias-goiania/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://rogeriomaciel.com.br/en/solutions/car-dealership-sales-automation-goiania/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://rogeriomaciel.com.br/en/solutions/car-dealership-sales-automation-goiania/" />
+    <lastmod>2026-11-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://rogeriomaciel.com.br/en/solutions/b2b-distribution-automation-aparecida/</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://rogeriomaciel.com.br/solucoes/automacao-distribuidoras-aparecida-de-goiania/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://rogeriomaciel.com.br/en/solutions/b2b-distribution-automation-aparecida/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://rogeriomaciel.com.br/en/solutions/b2b-distribution-automation-aparecida/" />
+    <lastmod>2026-11-15</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://rogeriomaciel.com.br/solucoes/automacao-distribuidoras-aparecida-de-goiania/</loc>
-    <lastmod>2026-11-14</lastmod>
-    <changefreq>daily</changefreq>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://rogeriomaciel.com.br/solucoes/automacao-distribuidoras-aparecida-de-goiania/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://rogeriomaciel.com.br/en/solutions/b2b-distribution-automation-aparecida/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://rogeriomaciel.com.br/en/solutions/b2b-distribution-automation-aparecida/" />
+    <lastmod>2026-11-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://rogeriomaciel.com.br/en/solutions/agribusiness-machinery-parts-whatsapp-rio-verde/</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://rogeriomaciel.com.br/solucoes/ia-agronegocio-rio-verde/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://rogeriomaciel.com.br/en/solutions/agribusiness-machinery-parts-whatsapp-rio-verde/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://rogeriomaciel.com.br/en/solutions/agribusiness-machinery-parts-whatsapp-rio-verde/" />
+    <lastmod>2026-11-15</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://rogeriomaciel.com.br/solucoes/ia-agronegocio-rio-verde/</loc>
-    <lastmod>2026-11-14</lastmod>
-    <changefreq>daily</changefreq>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://rogeriomaciel.com.br/solucoes/ia-agronegocio-rio-verde/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://rogeriomaciel.com.br/en/solutions/agribusiness-machinery-parts-whatsapp-rio-verde/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://rogeriomaciel.com.br/en/solutions/agribusiness-machinery-parts-whatsapp-rio-verde/" />
+    <lastmod>2026-11-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://rogeriomaciel.com.br/en/solutions/aesthetic-clinics-whatsapp-automation-goiania/</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://rogeriomaciel.com.br/solucoes/ia-whatsapp-centros-esteticos-goiania/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://rogeriomaciel.com.br/en/solutions/aesthetic-clinics-whatsapp-automation-goiania/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://rogeriomaciel.com.br/en/solutions/aesthetic-clinics-whatsapp-automation-goiania/" />
+    <lastmod>2026-11-15</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://rogeriomaciel.com.br/solucoes/ia-whatsapp-centros-esteticos-goiania/</loc>
-    <lastmod>2026-11-14</lastmod>
-    <changefreq>daily</changefreq>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://rogeriomaciel.com.br/solucoes/ia-whatsapp-centros-esteticos-goiania/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://rogeriomaciel.com.br/en/solutions/aesthetic-clinics-whatsapp-automation-goiania/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://rogeriomaciel.com.br/en/solutions/aesthetic-clinics-whatsapp-automation-goiania/" />
+    <lastmod>2026-11-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://rogeriomaciel.com.br/en/solutions/property-management-fee-automation-whatsapp/</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://rogeriomaciel.com.br/solucoes/automacao-cobranca-condominios-goiania/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://rogeriomaciel.com.br/en/solutions/property-management-fee-automation-whatsapp/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://rogeriomaciel.com.br/en/solutions/property-management-fee-automation-whatsapp/" />
+    <lastmod>2026-11-15</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://rogeriomaciel.com.br/solucoes/automacao-cobranca-condominios-goiania/</loc>
-    <lastmod>2026-11-14</lastmod>
-    <changefreq>daily</changefreq>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://rogeriomaciel.com.br/solucoes/automacao-cobranca-condominios-goiania/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://rogeriomaciel.com.br/en/solutions/property-management-fee-automation-whatsapp/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://rogeriomaciel.com.br/en/solutions/property-management-fee-automation-whatsapp/" />
+    <lastmod>2026-11-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://rogeriomaciel.com.br/en/solutions/accounting-bpo-tax-automation-whatsapp/</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://rogeriomaciel.com.br/solucoes/ia-atendimento-bpo-financeiro-contabilidades/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://rogeriomaciel.com.br/en/solutions/accounting-bpo-tax-automation-whatsapp/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://rogeriomaciel.com.br/en/solutions/accounting-bpo-tax-automation-whatsapp/" />
+    <lastmod>2026-11-15</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://rogeriomaciel.com.br/solucoes/ia-atendimento-bpo-financeiro-contabilidades/</loc>
-    <lastmod>2026-11-14</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://rogeriomaciel.com.br/en/solutions/zero-hallucination-whatsapp-ai/</loc>
-    <lastmod>2026-11-14</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://rogeriomaciel.com.br/en/solutions/avoid-whatsapp-meta-ban-ai/</loc>
-    <lastmod>2026-11-14</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://rogeriomaciel.com.br/en/solutions/ai-to-human-handoff-whatsapp/</loc>
-    <lastmod>2026-11-14</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://rogeriomaciel.com.br/en/solutions/automatic-lead-qualification-ai-whatsapp/</loc>
-    <lastmod>2026-11-14</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://rogeriomaciel.com.br/en/solutions/stripe-checkout-whatsapp-cart-recovery/</loc>
-    <lastmod>2026-11-14</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://rogeriomaciel.com.br/en/solutions/debt-collection-invoicing-automation-whatsapp/</loc>
-    <lastmod>2026-11-14</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://rogeriomaciel.com.br/en/solutions/speed-to-lead-sales-automation-whatsapp/</loc>
-    <lastmod>2026-11-14</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://rogeriomaciel.com.br/en/solutions/24-7-whatsapp-ai-customer-service/</loc>
-    <lastmod>2026-11-14</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://rogeriomaciel.com.br/en/solutions/autonomous-appointment-booking-whatsapp-ai/</loc>
-    <lastmod>2026-11-14</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://rogeriomaciel.com.br/en/solutions/whatsapp-sales-sla-audit-dashboard/</loc>
-    <lastmod>2026-11-14</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://rogeriomaciel.com.br/en/solutions/ai-whatsapp-medical-clinics/</loc>
-    <lastmod>2026-11-14</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://rogeriomaciel.com.br/en/solutions/whatsapp-sales-automation-car-dealerships/</loc>
-    <lastmod>2026-11-14</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://rogeriomaciel.com.br/en/solutions/ai-whatsapp-real-estate-qualification/</loc>
-    <lastmod>2026-11-14</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://rogeriomaciel.com.br/en/solutions/b2b-whatsapp-order-automation-wholesale/</loc>
-    <lastmod>2026-11-14</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://rogeriomaciel.com.br/en/solutions/ai-whatsapp-law-firms-case-intake/</loc>
-    <lastmod>2026-11-14</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://rogeriomaciel.com.br/en/solutions/whatsapp-automation-agribusiness-parts/</loc>
-    <lastmod>2026-11-14</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://rogeriomaciel.com.br/en/solutions/ai-whatsapp-auto-repair-shops/</loc>
-    <lastmod>2026-11-14</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://rogeriomaciel.com.br/en/solutions/student-enrollment-ai-whatsapp-schools/</loc>
-    <lastmod>2026-11-14</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://rogeriomaciel.com.br/en/solutions/ai-enterprise-consulting-goiania-brazil/</loc>
-    <lastmod>2026-11-14</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://rogeriomaciel.com.br/en/solutions/business-process-automation-goiania/</loc>
-    <lastmod>2026-11-14</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://rogeriomaciel.com.br/en/solutions/ai-whatsapp-clinics-bueno-goiania/</loc>
-    <lastmod>2026-11-14</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://rogeriomaciel.com.br/en/solutions/vip-whatsapp-automation-marista-goiania/</loc>
-    <lastmod>2026-11-14</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://rogeriomaciel.com.br/en/solutions/industrial-process-automation-daia-anapolis/</loc>
-    <lastmod>2026-11-14</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://rogeriomaciel.com.br/en/solutions/ai-consulting-agribusiness-rio-verde/</loc>
-    <lastmod>2026-11-14</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://rogeriomaciel.com.br/en/solutions/n8n-out-of-memory-oom-solution/</loc>
-    <lastmod>2026-11-14</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://rogeriomaciel.com.br/en/solutions/transpiling-n8n-to-fastify-microservices/</loc>
-    <lastmod>2026-11-14</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://rogeriomaciel.com.br/en/solutions/gitops-cicd-n8n-production/</loc>
-    <lastmod>2026-11-14</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://rogeriomaciel.com.br/en/solutions/verify-webhook-hmac-sha256-nodejs/</loc>
-    <lastmod>2026-11-14</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://rogeriomaciel.com.br/en/solutions/high-throughput-n8n-scaling/</loc>
-    <lastmod>2026-11-14</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://rogeriomaciel.com.br/en/solutions/fastify-microservices-architecture/</loc>
-    <lastmod>2026-11-14</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://rogeriomaciel.com.br/en/solutions/ai-medical-clinics-bueno-goiania/</loc>
-    <lastmod>2026-11-14</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://rogeriomaciel.com.br/en/solutions/luxury-real-estate-whatsapp-jardim-goias/</loc>
-    <lastmod>2026-11-14</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://rogeriomaciel.com.br/en/solutions/car-dealership-sales-automation-goiania/</loc>
-    <lastmod>2026-11-14</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://rogeriomaciel.com.br/en/solutions/b2b-distribution-automation-aparecida/</loc>
-    <lastmod>2026-11-14</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://rogeriomaciel.com.br/en/solutions/agribusiness-machinery-parts-whatsapp-rio-verde/</loc>
-    <lastmod>2026-11-14</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://rogeriomaciel.com.br/en/solutions/aesthetic-clinics-whatsapp-automation-goiania/</loc>
-    <lastmod>2026-11-14</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://rogeriomaciel.com.br/en/solutions/property-management-fee-automation-whatsapp/</loc>
-    <lastmod>2026-11-14</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://rogeriomaciel.com.br/en/solutions/accounting-bpo-tax-automation-whatsapp/</loc>
-    <lastmod>2026-11-14</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://rogeriomaciel.com.br/solucoes/ia-atendimento-bpo-financeiro-contabilidades/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://rogeriomaciel.com.br/en/solutions/accounting-bpo-tax-automation-whatsapp/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://rogeriomaciel.com.br/en/solutions/accounting-bpo-tax-automation-whatsapp/" />
+    <lastmod>2026-11-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
   </url>
 </urlset>

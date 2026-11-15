@@ -4,15 +4,15 @@ import En from './pages/En';
 import { Locale } from './config/i18n.content';
 
 export default function App() {
-  const [currentLocale, setCurrentLocale] = useState<Locale>('pt');
+  const [currentLocale, setCurrentLocale] = useState<Locale>('en');
 
   useEffect(() => {
     if (typeof window !== 'undefined') {
       const pathname = window.location.pathname.toLowerCase();
-      if (pathname.startsWith('/en')) {
-        setCurrentLocale('en');
-      } else {
+      if (pathname.startsWith('/pt') || pathname.startsWith('/solucoes')) {
         setCurrentLocale('pt');
+      } else {
+        setCurrentLocale('en');
       }
     }
   }, []);

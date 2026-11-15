@@ -1,4 +1,4 @@
-import { SolutionCluster } from '../data/solutions-clusters';
+import { SolutionCluster, solutionsClusters } from '../data/solutions-clusters';
 import { getEnSlug } from '../data/solutions-types';
 import { ArrowRightIcon, TerminalIcon } from '../components/Icons';
 
@@ -12,6 +12,15 @@ export function SolutionPage({
   const isEn = locale === 'en';
   const content = (isEn && solution.en) ? solution.en : solution;
   const enSlug = getEnSlug(solution);
+
+  const relatedSolutions = solutionsClusters
+    .filter((item) => item.slug !== solution.slug)
+    .sort((a, b) => {
+      const aMatch = a.category === solution.category ? 0 : 1;
+      const bMatch = b.category === solution.category ? 0 : 1;
+      return aMatch - bMatch;
+    })
+    .slice(0, 4);
 
   const whatsappUrl = `https://wa.me/5562996232227?text=${encodeURIComponent(content.whatsappPrompt)}`;
   const ptUrl = `/solucoes/${solution.slug}/`;
@@ -232,6 +241,37 @@ export function SolutionPage({
                 : 'Disponível para empresas em Goiânia/GO, todo o Brasil e contratos internacionais.'}
             </div>
           </section>
+
+          {/* Related Solutions (Internal Linking Mesh for SEO) */}
+          {relatedSolutions.length > 0 && (
+            <section className="space-y-6 pt-8 border-t border-white/[0.08]">
+              <h2 className="text-xl sm:text-2xl font-bold text-white tracking-tight">
+                {isEn ? 'Related Architectural Solutions' : 'Soluções & Arquiteturas Relacionadas'}
+              </h2>
+              <div className="grid sm:grid-cols-2 gap-4">
+                {relatedSolutions.map((rel) => {
+                  const relContent = isEn && rel.en ? rel.en : rel;
+                  const relHref = isEn
+                    ? `/en/solutions/${getEnSlug(rel)}/`
+                    : `/solucoes/${rel.slug}/`;
+                  return (
+                    <a
+                      key={rel.slug}
+                      href={relHref}
+                      className="group p-5 rounded-xl bg-white/[0.02] hover:bg-white/[0.04] border border-white/[0.08] hover:border-emerald-500/40 transition-all space-y-2"
+                    >
+                      <span className="text-[10px] font-mono uppercase tracking-wider text-emerald-400">
+                        {relContent.category || rel.category}
+                      </span>
+                      <h3 className="text-sm font-semibold text-white group-hover:text-emerald-300 transition-colors leading-snug">
+                        {relContent.title}
+                      </h3>
+                    </a>
+                  );
+                })}
+              </div>
+            </section>
+          )}
         </article>
       </main>
 
