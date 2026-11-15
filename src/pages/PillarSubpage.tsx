@@ -9,8 +9,15 @@ import { BioAuthority } from '../components/BioAuthority';
 import { SolutionsDirectory } from '../components/SolutionsDirectory';
 import { AuditCTA } from '../components/AuditCTA';
 import { FaqSection } from '../components/FaqSection';
+import { N8nTranspilerPlayground } from '../components/N8nTranspilerPlayground';
 
-export type PillarSectionType = 'architecture' | 'ai-systems' | 'cases' | 'about' | 'solutions';
+export type PillarSectionType =
+  | 'architecture'
+  | 'ai-systems'
+  | 'cases'
+  | 'about'
+  | 'solutions'
+  | 'n8n-to-fastify';
 
 export function PillarSubpage({
   section,
@@ -28,6 +35,7 @@ export function PillarSubpage({
     cases: isEn ? 'Live Deployments & Cases' : 'Sistemas Online & Cases',
     about: isEn ? 'Executive Timeline & Credentials' : 'Trajetória Executiva',
     solutions: isEn ? 'Engineering Solutions Catalog' : 'Catálogo de Soluções',
+    'n8n-to-fastify': 'n8n-to-fastify Playground',
   };
 
   return (
@@ -87,6 +95,13 @@ export function PillarSubpage({
         {section === 'solutions' && (
           <>
             <SolutionsDirectory locale={locale} />
+            <AuditCTA locale={locale} />
+          </>
+        )}
+
+        {section === 'n8n-to-fastify' && (
+          <>
+            <N8nTranspilerPlayground locale={locale} />
             <AuditCTA locale={locale} />
           </>
         )}

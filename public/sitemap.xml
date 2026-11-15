@@ -115,6 +115,24 @@
     <priority>0.9</priority>
   </url>
   <url>
+    <loc>https://rogeriomaciel.com.br/en/n8n-to-fastify/</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://rogeriomaciel.com.br/pt/n8n-to-fastify/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://rogeriomaciel.com.br/en/n8n-to-fastify/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://rogeriomaciel.com.br/en/n8n-to-fastify/" />
+    <lastmod>2026-11-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+  </url>
+  <url>
+    <loc>https://rogeriomaciel.com.br/pt/n8n-to-fastify/</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://rogeriomaciel.com.br/pt/n8n-to-fastify/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://rogeriomaciel.com.br/en/n8n-to-fastify/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://rogeriomaciel.com.br/en/n8n-to-fastify/" />
+    <lastmod>2026-11-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
     <loc>https://rogeriomaciel.com.br/en/solutions/zero-hallucination-whatsapp-ai/</loc>
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://rogeriomaciel.com.br/solucoes/ia-whatsapp-sem-alucinacao/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://rogeriomaciel.com.br/en/solutions/zero-hallucination-whatsapp-ai/" />

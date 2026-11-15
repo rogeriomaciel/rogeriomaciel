@@ -305,6 +305,15 @@ const pillarRoutes: PillarRouteConfig[] = [
     enDesc: 'Complete catalog of production engineering guides covering AI FSMs, n8n scaling, Fastify microservices & Meta Ads SLA.',
     ptDesc: 'Catálogo completo de guias de engenharia: IA determinística, escala n8n, microsserviços Fastify e atribuição Meta Ads.',
   },
+  {
+    section: 'n8n-to-fastify',
+    enPath: 'en/n8n-to-fastify',
+    ptPath: 'pt/n8n-to-fastify',
+    enTitle: 'n8n-to-fastify Playground — Compile n8n JSON to TypeScript',
+    ptTitle: 'Playground n8n-to-fastify — Compile JSON do n8n para TypeScript',
+    enDesc: 'Live client-side compiler that transpiles visual n8n workflows into 0.53ms bare-metal Fastify microservices. Zero data leaves your browser.',
+    ptDesc: 'Compilador ao vivo no navegador que converte fluxos visuais do n8n em microsserviços Fastify de 0.53ms com privacidade total.',
+  },
 ];
 
 function generatePillarHtml(route: PillarRouteConfig, locale: 'pt' | 'en'): string {
@@ -340,6 +349,107 @@ function generatePillarHtml(route: PillarRouteConfig, locale: 'pt' | 'en'): stri
     ],
   };
 
+  const playgroundScripts =
+    route.section === 'n8n-to-fastify'
+      ? `
+    <script src="/n8n-to-fastify-compiler.js"></script>
+    <script>
+      (function () {
+        var jsonInput = document.getElementById('n2f-json-input');
+        var tsOutput = document.getElementById('n2f-ts-output');
+        var statusEl = document.getElementById('n2f-status');
+        var outputLabel = document.getElementById('n2f-output-label');
+        if (!jsonInput || !tsOutput || !window.N8nToFastify) return;
+
+        var defaultSample = jsonInput.value;
+        var activeTab = 'workflow';
+        var lastResult = null;
+        var isEn = document.documentElement.lang === 'en';
+
+        function renderTab() {
+          if (!lastResult) return;
+          if (activeTab === 'workflow') {
+            tsOutput.textContent = lastResult.workflowCode;
+            if (outputLabel) outputLabel.textContent = isEn ? 'Output: Standalone TypeScript (workflow.ts)' : 'Saída: TypeScript Puro (workflow.ts)';
+          } else {
+            tsOutput.textContent = lastResult.routesCode;
+            if (outputLabel) outputLabel.textContent = isEn ? 'Output: Fastify Route Handler (routes/index.ts)' : 'Saída: Rotas Fastify (routes/index.ts)';
+          }
+        }
+
+        function compileNow() {
+          try {
+            var res = window.N8nToFastify.compileWorkflowJson(jsonInput.value);
+            lastResult = res;
+            if (statusEl) {
+              statusEl.textContent = '⚡ ' + (isEn ? 'Compiled ' + res.nodeCount + ' nodes in ' + res.elapsedMs + 'ms' : 'Compilado ' + res.nodeCount + ' nós em ' + res.elapsedMs + 'ms');
+              statusEl.className = 'text-xs font-mono text-emerald-400 ml-2';
+            }
+            renderTab();
+          } catch (err) {
+            if (statusEl) {
+              statusEl.textContent = '❌ ' + err.message;
+              statusEl.className = 'text-xs font-mono text-red-400 ml-2';
+            }
+          }
+        }
+
+        document.querySelectorAll('[data-n2f-tab]').forEach(function (btn) {
+          btn.addEventListener('click', function () {
+            document.querySelectorAll('[data-n2f-tab]').forEach(function (b) {
+              b.className = 'px-3 py-1.5 rounded-lg bg-transparent border border-white/[0.08] text-xs font-mono text-slate-400 hover:text-white cursor-pointer';
+            });
+            btn.className = 'px-3 py-1.5 rounded-lg bg-emerald-500/15 border border-emerald-500/40 text-xs font-mono text-emerald-300 cursor-pointer';
+            activeTab = btn.getAttribute('data-n2f-tab') || 'workflow';
+            renderTab();
+          });
+        });
+
+        var btnExample = document.getElementById('n2f-btn-example');
+        if (btnExample) {
+          btnExample.addEventListener('click', function () {
+            jsonInput.value = defaultSample;
+            compileNow();
+          });
+        }
+
+        var btnFormat = document.getElementById('n2f-btn-format');
+        if (btnFormat) {
+          btnFormat.addEventListener('click', function () {
+            try {
+              jsonInput.value = JSON.stringify(JSON.parse(jsonInput.value), null, 2);
+              compileNow();
+            } catch (e) {}
+          });
+        }
+
+        var btnCopy = document.getElementById('n2f-btn-copy');
+        if (btnCopy) {
+          btnCopy.addEventListener('click', function () {
+            navigator.clipboard.writeText(tsOutput.textContent || '');
+            var prev = btnCopy.textContent;
+            btnCopy.textContent = isEn ? '✓ Copied!' : '✓ Copiado!';
+            setTimeout(function () { btnCopy.textContent = prev; }, 1500);
+          });
+        }
+
+        var btnDownload = document.getElementById('n2f-btn-download');
+        if (btnDownload) {
+          btnDownload.addEventListener('click', function () {
+            var blob = new Blob([tsOutput.textContent || ''], { type: 'text/typescript' });
+            var a = document.createElement('a');
+            a.href = URL.createObjectURL(blob);
+            a.download = activeTab === 'workflow' ? 'workflow.ts' : 'routes.ts';
+            a.click();
+          });
+        }
+
+        jsonInput.addEventListener('input', compileNow);
+        compileNow();
+      })();
+    </script>`
+      : '';
+
   return `<!DOCTYPE html>
 <html lang="${isEn ? 'en' : 'pt-BR'}" class="dark scroll-smooth">
   <head>
@@ -371,7 +481,7 @@ function generatePillarHtml(route: PillarRouteConfig, locale: 'pt' | 'en'): stri
     ${criticalCss ? `<style id="critical-css">${criticalCss}</style>` : ''}
   </head>
   <body class="bg-[#07090E] text-slate-100 font-sans antialiased selection:bg-emerald-500 selection:text-slate-950">
-    <div id="root">${appHtml}</div>
+    <div id="root">${appHtml}</div>${playgroundScripts}
   </body>
 </html>`;
 }
