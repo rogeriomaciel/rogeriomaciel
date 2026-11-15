@@ -3,6 +3,7 @@ import { renderToString } from 'react-dom/server';
 import { solutionsClusters, SolutionCluster } from '../src/data/solutions-clusters';
 import { getEnSlug } from '../src/data/solutions-types';
 import { SolutionPage } from '../src/pages/SolutionPage';
+import { PillarSubpage, PillarSectionType } from '../src/pages/PillarSubpage';
 import * as fs from 'node:fs';
 import * as path from 'node:path';
 
@@ -248,6 +249,133 @@ function generateHtml(sol: SolutionCluster, locale: 'pt' | 'en' = 'pt'): string 
 </html>`;
 }
 
+interface PillarRouteConfig {
+  section: PillarSectionType;
+  enPath: string;
+  ptPath: string;
+  enTitle: string;
+  ptTitle: string;
+  enDesc: string;
+  ptDesc: string;
+}
+
+const pillarRoutes: PillarRouteConfig[] = [
+  {
+    section: 'architecture',
+    enPath: 'en/architecture',
+    ptPath: 'pt/arquitetura',
+    enTitle: 'n8n to Fastify 5ms Transpiler Architecture',
+    ptTitle: 'Arquitetura & Transpilador n8n para Fastify 5ms',
+    enDesc: 'How 126 n8n workflows were transpiled to Fastify/Bun microservices: -98% RAM (25MB), 5ms latency, Kahn DAG sort & GitOps.',
+    ptDesc: 'Como 126 workflows n8n foram transpilados para Fastify/Bun: -98% RAM (25MB), latência de 5ms, Kahn DAG e GitOps.',
+  },
+  {
+    section: 'ai-systems',
+    enPath: 'en/ai-systems',
+    ptPath: 'pt/ia-em-producao',
+    enTitle: 'Deterministic AI FSM & Concurrency Control',
+    ptTitle: 'IA Determinística, FSM & Controle de Concorrência',
+    enDesc: '73-workflow Cognitive FSM with @MODULE regex prompts, atomic queue locks, multimodal PDF pipeline & Stripe HMAC.',
+    ptDesc: 'Máquina de estados com 73 workflows, prompts @MODULE por Regex, trava atômica de fila, pipeline PDF e Stripe HMAC.',
+  },
+  {
+    section: 'cases',
+    enPath: 'en/cases',
+    ptPath: 'pt/cases',
+    enTitle: 'Live Production Systems & Revenue Cases',
+    ptTitle: 'Sistemas Online em Produção & Cases Reais',
+    enDesc: '6 live systems in production: CoreAuto OS, AdsWhats SLA Monitor, CORE Mission Control, InRoom 60s QR & Kadosh.',
+    ptDesc: '6 sistemas ao vivo em produção: CoreAuto OS, AdsWhats Monitor, CORE Mission Control, InRoom QR 60s e Kadosh.',
+  },
+  {
+    section: 'about',
+    enPath: 'en/about',
+    ptPath: 'pt/sobre',
+    enTitle: 'Executive Bio: UFPB, Neoway M&A & CTO',
+    ptTitle: 'Trajetória: UFPB CNPq, Neoway M&A & Ex-CTO',
+    enDesc: '20+ years of software architecture: UFPB/CNPq scholar, Neoway post-M&A Head of Digital Apps, Traffega CTO & Empretec.',
+    ptDesc: '20+ anos em engenharia: pesquisador CNPq UFPB, Head na Neoway pós-M&A, ex-CTO Traffega, NF-e SEFAZ e Empretec.',
+  },
+  {
+    section: 'solutions',
+    enPath: 'en/solutions',
+    ptPath: 'solucoes',
+    enTitle: 'Engineering & Automation Solutions Catalog',
+    ptTitle: 'Catálogo de Soluções & Arquiteturas Técnicas',
+    enDesc: 'Complete catalog of production engineering guides covering AI FSMs, n8n scaling, Fastify microservices & Meta Ads SLA.',
+    ptDesc: 'Catálogo completo de guias de engenharia: IA determinística, escala n8n, microsserviços Fastify e atribuição Meta Ads.',
+  },
+];
+
+function generatePillarHtml(route: PillarRouteConfig, locale: 'pt' | 'en'): string {
+  const isEn = locale === 'en';
+  const rawTitle = isEn ? route.enTitle : route.ptTitle;
+  const rawDesc = isEn ? route.enDesc : route.ptDesc;
+  const seoTitle = escapeHtml(buildSeoTitle(rawTitle));
+  const seoDesc = escapeHtml(buildSeoDescription(rawDesc));
+  const ptCanonicalUrl = `https://rogeriomaciel.com.br/${route.ptPath}/`;
+  const enCanonicalUrl = `https://rogeriomaciel.com.br/${route.enPath}/`;
+  const canonicalUrl = isEn ? enCanonicalUrl : ptCanonicalUrl;
+
+  const appHtml = renderToString(
+    React.createElement(PillarSubpage, { section: route.section, locale })
+  );
+
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      {
+        '@type': 'ListItem',
+        position: 1,
+        name: isEn ? 'Home' : 'Início',
+        item: isEn ? 'https://rogeriomaciel.com.br/en/' : 'https://rogeriomaciel.com.br/pt/',
+      },
+      {
+        '@type': 'ListItem',
+        position: 2,
+        name: rawTitle,
+        item: canonicalUrl,
+      },
+    ],
+  };
+
+  return `<!DOCTYPE html>
+<html lang="${isEn ? 'en' : 'pt-BR'}" class="dark scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="apple-touch-icon" href="/icons/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+    <meta name="theme-color" content="#07090E" />
+    <title>${seoTitle}</title>
+    <meta name="description" content="${seoDesc}" />
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+    <link rel="canonical" href="${canonicalUrl}" />
+    <link rel="alternate" hreflang="pt-BR" href="${ptCanonicalUrl}" />
+    <link rel="alternate" hreflang="en" href="${enCanonicalUrl}" />
+    <link rel="alternate" hreflang="x-default" href="${enCanonicalUrl}" />
+    <meta property="og:locale" content="${isEn ? 'en_US' : 'pt_BR'}" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="${seoTitle}" />
+    <meta property="og:description" content="${seoDesc}" />
+    <meta property="og:url" content="${canonicalUrl}" />
+    <meta property="og:image" content="https://rogeriomaciel.com.br/og-image.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="${seoTitle}" />
+    <meta name="twitter:description" content="${seoDesc}" />
+    <meta name="twitter:image" content="https://rogeriomaciel.com.br/og-image.jpg" />
+    <meta name="indexnow-key" content="61f53f62035a6493e50b0b59feca6748" />
+    <script type="application/ld+json">${JSON.stringify(breadcrumbSchema)}</script>
+    ${criticalCss ? `<style id="critical-css">${criticalCss}</style>` : ''}
+  </head>
+  <body class="bg-[#07090E] text-slate-100 font-sans antialiased selection:bg-emerald-500 selection:text-slate-950">
+    <div id="root">${appHtml}</div>
+  </body>
+</html>`;
+}
+
 async function runGenerate() {
   console.log('🚀 [Bilingual Mass Production Engine] Iniciando geração de páginas de soluções em Português e Inglês...\n');
 
@@ -257,6 +385,19 @@ async function runGenerate() {
   }
 
   const generatedUrls: string[] = [];
+
+  // 0. Gerar páginas de subpastas pilares (Architecture, AI Systems, Cases, About, Solutions Index)
+  for (const route of pillarRoutes) {
+    const enDir = path.join(distDir, route.enPath);
+    fs.mkdirSync(enDir, { recursive: true });
+    fs.writeFileSync(path.join(enDir, 'index.html'), generatePillarHtml(route, 'en'), 'utf-8');
+
+    const ptDir = path.join(distDir, route.ptPath);
+    fs.mkdirSync(ptDir, { recursive: true });
+    fs.writeFileSync(path.join(ptDir, 'index.html'), generatePillarHtml(route, 'pt'), 'utf-8');
+
+    console.log(`📂 [Pillar] /${route.enPath}/ & /${route.ptPath}/`);
+  }
 
   for (const sol of solutionsClusters) {
     const enSlug = getEnSlug(sol);
@@ -307,6 +448,28 @@ ${rootHreflangs}
     <priority>0.95</priority>
   </url>\n`;
 
+  for (const route of pillarRoutes) {
+    const ptUrl = `https://rogeriomaciel.com.br/${route.ptPath}/`;
+    const enUrl = `https://rogeriomaciel.com.br/${route.enPath}/`;
+    const pHreflangs = `    <xhtml:link rel="alternate" hreflang="pt-BR" href="${ptUrl}" />
+    <xhtml:link rel="alternate" hreflang="en" href="${enUrl}" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="${enUrl}" />`;
+    sitemapEntries += `  <url>
+    <loc>${enUrl}</loc>
+${pHreflangs}
+    <lastmod>${today}</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+  </url>
+  <url>
+    <loc>${ptUrl}</loc>
+${pHreflangs}
+    <lastmod>${today}</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>\n`;
+  }
+
   for (const sol of solutionsClusters) {
     const enSlug = getEnSlug(sol);
     const ptUrl = `https://rogeriomaciel.com.br/solucoes/${sol.slug}/`;
@@ -338,7 +501,7 @@ ${sitemapEntries}</urlset>\n`;
 
   fs.writeFileSync(sitemapPath, cleanSitemap, 'utf-8');
   fs.writeFileSync(path.join(distDir, 'sitemap.xml'), cleanSitemap, 'utf-8');
-  console.log(`\n📋 [Sitemap] Sitemap limpo regenerado com ${generatedUrls.length + 2} URLs HTML canônicas!`);
+  console.log(`\n📋 [Sitemap] Sitemap limpo regenerado com ${generatedUrls.length + pillarRoutes.length * 2 + 2} URLs HTML canônicas!`);
 
   // 4. Atualizar public/llms-full.txt com as soluções bilíngues
   if (fs.existsSync(llmsFullPath)) {

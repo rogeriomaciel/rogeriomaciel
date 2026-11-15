@@ -25,6 +25,96 @@
     <priority>0.95</priority>
   </url>
   <url>
+    <loc>https://rogeriomaciel.com.br/en/architecture/</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://rogeriomaciel.com.br/pt/arquitetura/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://rogeriomaciel.com.br/en/architecture/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://rogeriomaciel.com.br/en/architecture/" />
+    <lastmod>2026-11-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+  </url>
+  <url>
+    <loc>https://rogeriomaciel.com.br/pt/arquitetura/</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://rogeriomaciel.com.br/pt/arquitetura/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://rogeriomaciel.com.br/en/architecture/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://rogeriomaciel.com.br/en/architecture/" />
+    <lastmod>2026-11-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://rogeriomaciel.com.br/en/ai-systems/</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://rogeriomaciel.com.br/pt/ia-em-producao/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://rogeriomaciel.com.br/en/ai-systems/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://rogeriomaciel.com.br/en/ai-systems/" />
+    <lastmod>2026-11-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+  </url>
+  <url>
+    <loc>https://rogeriomaciel.com.br/pt/ia-em-producao/</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://rogeriomaciel.com.br/pt/ia-em-producao/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://rogeriomaciel.com.br/en/ai-systems/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://rogeriomaciel.com.br/en/ai-systems/" />
+    <lastmod>2026-11-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://rogeriomaciel.com.br/en/cases/</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://rogeriomaciel.com.br/pt/cases/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://rogeriomaciel.com.br/en/cases/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://rogeriomaciel.com.br/en/cases/" />
+    <lastmod>2026-11-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+  </url>
+  <url>
+    <loc>https://rogeriomaciel.com.br/pt/cases/</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://rogeriomaciel.com.br/pt/cases/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://rogeriomaciel.com.br/en/cases/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://rogeriomaciel.com.br/en/cases/" />
+    <lastmod>2026-11-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://rogeriomaciel.com.br/en/about/</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://rogeriomaciel.com.br/pt/sobre/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://rogeriomaciel.com.br/en/about/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://rogeriomaciel.com.br/en/about/" />
+    <lastmod>2026-11-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+  </url>
+  <url>
+    <loc>https://rogeriomaciel.com.br/pt/sobre/</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://rogeriomaciel.com.br/pt/sobre/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://rogeriomaciel.com.br/en/about/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://rogeriomaciel.com.br/en/about/" />
+    <lastmod>2026-11-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://rogeriomaciel.com.br/en/solutions/</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://rogeriomaciel.com.br/solucoes/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://rogeriomaciel.com.br/en/solutions/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://rogeriomaciel.com.br/en/solutions/" />
+    <lastmod>2026-11-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+  </url>
+  <url>
+    <loc>https://rogeriomaciel.com.br/solucoes/</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://rogeriomaciel.com.br/solucoes/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://rogeriomaciel.com.br/en/solutions/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://rogeriomaciel.com.br/en/solutions/" />
+    <lastmod>2026-11-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
     <loc>https://rogeriomaciel.com.br/en/solutions/zero-hallucination-whatsapp-ai/</loc>
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://rogeriomaciel.com.br/solucoes/ia-whatsapp-sem-alucinacao/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://rogeriomaciel.com.br/en/solutions/zero-hallucination-whatsapp-ai/" />

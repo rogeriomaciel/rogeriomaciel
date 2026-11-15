@@ -1,13 +1,6 @@
 import { Navbar } from '../components/Navbar';
 import { Hero } from '../components/Hero';
-import { ArchitectureBlueprints } from '../components/ArchitectureBlueprints';
-import { LiveDeploymentsShowcase } from '../components/LiveDeploymentsShowcase';
-import { GithubShowcase } from '../components/GithubShowcase';
-import { KadoshCaseTeardown } from '../components/KadoshCaseTeardown';
-import { SolutionsDirectory } from '../components/SolutionsDirectory';
-import { BioAuthority } from '../components/BioAuthority';
-import { AuditCTA } from '../components/AuditCTA';
-import { FaqSection } from '../components/FaqSection';
+import { HomeFiveSims } from '../components/HomeFiveSims';
 import { Footer } from '../components/Footer';
 
 export default function Pt() {
@@ -16,17 +9,9 @@ export default function Pt() {
       <Navbar locale="pt" />
       <main className="flex-grow">
         <Hero locale="pt" />
-        <ArchitectureBlueprints locale="pt" />
-        <LiveDeploymentsShowcase locale="pt" />
-        <GithubShowcase locale="pt" />
-        <KadoshCaseTeardown locale="pt" />
-        <SolutionsDirectory locale="pt" />
-        <BioAuthority locale="pt" />
-        <AuditCTA locale="pt" />
-        <FaqSection locale="pt" />
+        <HomeFiveSims locale="pt" />
       </main>
       <Footer locale="pt" />
     </div>
   );
 }
-

@@ -2,8 +2,14 @@ import { useState } from 'react';
 import { Locale } from '../config/i18n.content';
 import { CpuIcon, ActivityIcon, CheckCircle2Icon } from './Icons';
 
-export function ArchitectureBlueprints({ locale = 'pt' }: { locale?: Locale }) {
-  const [activeTab, setActiveTab] = useState<'transpiler' | 'attribution'>('transpiler');
+export function ArchitectureBlueprints({
+  locale = 'pt',
+  initialTab = 'transpiler',
+}: {
+  locale?: Locale;
+  initialTab?: 'transpiler' | 'attribution';
+}) {
+  const [activeTab, setActiveTab] = useState<'transpiler' | 'attribution'>(initialTab);
   const isEn = locale === 'en';
 
   return (

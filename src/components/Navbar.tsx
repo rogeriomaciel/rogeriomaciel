@@ -6,29 +6,37 @@ import { ThemeToggle } from './ThemeToggle';
 export function Navbar({ locale = 'pt' }: { locale?: Locale }) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const t = i18nContent[locale];
+  const isEn = locale === 'en';
 
-  const navLinks = [
-    { label: t.nav.pillars, href: '#pilares' },
-    { label: locale === 'en' ? 'Live Production' : 'Produção', href: '#producao' },
-    { label: t.nav.github, href: '#github' },
-    { label: t.nav.kadoshCase, href: '#kadosh-case' },
-    { label: locale === 'en' ? 'Solutions' : 'Soluções', href: '#solucoes' },
-    { label: t.nav.timeline, href: '#trajetoria' },
-    { label: t.nav.faq, href: '#faq' },
-  ];
+  const navLinks = isEn
+    ? [
+        { label: 'Architecture', href: '/en/architecture/' },
+        { label: 'AI Systems', href: '/en/ai-systems/' },
+        { label: 'Cases', href: '/en/cases/' },
+        { label: 'About', href: '/en/about/' },
+        { label: 'Catalog', href: '/en/solutions/' },
+      ]
+    : [
+        { label: 'Arquitetura', href: '/pt/arquitetura/' },
+        { label: 'IA em Produção', href: '/pt/ia-em-producao/' },
+        { label: 'Cases', href: '/pt/cases/' },
+        { label: 'Trajetória', href: '/pt/sobre/' },
+        { label: 'Catálogo', href: '/solucoes/' },
+      ];
 
-  const whatsappMsg =
-    locale === 'en'
-      ? 'Hello Rogério! I visited your architecture portal and would like to discuss platform engineering / advisory for my team.'
-      : 'Olá Rogério! Vi seu portal de engenharia e gostaria de conversar sobre consultoria de arquitetura / automação para a minha empresa.';
+  const primaryCtaHref = isEn
+    ? `mailto:${t.profile.email}?subject=${encodeURIComponent('Architecture / AI Engineering Inquiry')}`
+    : `https://wa.me/${t.profile.whatsappDigits}?text=${encodeURIComponent(
+        'Olá Rogério! Vi seu site e quero conversar sobre arquitetura / automação para a minha empresa.'
+      )}`;
 
-  const whatsappUrl = `https://wa.me/${t.profile.whatsappDigits}?text=${encodeURIComponent(whatsappMsg)}`;
+  const primaryCtaLabel = isEn ? 'Get in Touch' : 'Falar no WhatsApp';
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 glass-nav transition-all duration-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
         {/* LOGO / BRAND */}
-        <a href="#top" className="flex items-center gap-3 group focus:outline-none">
+        <a href={isEn ? '/en/' : '/pt/'} className="flex items-center gap-3 group focus:outline-none">
           <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-emerald-500 to-teal-700 flex items-center justify-center font-bold text-slate-950 font-mono shadow-[0_0_20px_rgba(16,185,129,0.3)] group-hover:scale-105 transition-transform">
             RM
           </div>
@@ -100,12 +108,12 @@ export function Navbar({ locale = 'pt' }: { locale?: Locale }) {
 
           {/* Primary CTA */}
           <a
-            href={whatsappUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hidden sm:inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-emerald-500 hover:bg-emerald-400 text-slate-950 text-xs font-bold font-mono tracking-wider transition-all duration-200 shadow-[0_0_20px_rgba(16,185,129,0.25)] hover:shadow-[0_0_30px_rgba(16,185,129,0.4)] active:scale-[0.98]"
+            href={primaryCtaHref}
+            target={isEn ? undefined : '_blank'}
+            rel={isEn ? undefined : 'noopener noreferrer'}
+            className="hidden sm:inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-emerald-500 hover:bg-emerald-400 text-slate-950 text-xs font-bold font-mono tracking-wider transition-all duration-200 active:scale-[0.98]"
           >
-            <span>{t.nav.consultCta}</span>
+            <span>{primaryCtaLabel}</span>
             <ArrowRightIcon className="w-3.5 h-3.5 text-slate-950" />
           </a>
 
@@ -157,13 +165,13 @@ export function Navbar({ locale = 'pt' }: { locale?: Locale }) {
           ))}
           <div className="pt-2">
             <a
-              href={whatsappUrl}
-              target="_blank"
-              rel="noopener noreferrer"
+              href={primaryCtaHref}
+              target={isEn ? undefined : '_blank'}
+              rel={isEn ? undefined : 'noopener noreferrer'}
               onClick={() => setMobileMenuOpen(false)}
               className="w-full inline-flex items-center justify-center gap-2 px-4 py-3 rounded-lg bg-emerald-500 text-slate-950 text-sm font-bold font-mono"
             >
-              <span>{t.nav.consultCta}</span>
+              <span>{primaryCtaLabel}</span>
               <ArrowRightIcon className="w-4 h-4 text-slate-950" />
             </a>
           </div>
