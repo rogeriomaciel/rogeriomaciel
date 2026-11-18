@@ -37,9 +37,13 @@ export function Navbar({ locale = 'pt' }: { locale?: Locale }) {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
         {/* LOGO / BRAND */}
         <a href={isEn ? '/en/' : '/pt/'} className="flex items-center gap-3 group focus:outline-none">
-          <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-emerald-500 to-teal-700 flex items-center justify-center font-bold text-slate-950 font-mono shadow-[0_0_20px_rgba(16,185,129,0.3)] group-hover:scale-105 transition-transform">
-            RM
-          </div>
+          <img
+            src="/icons/icon-192.png?v=2"
+            alt={t.profile.shortName}
+            width={40}
+            height={40}
+            className="w-10 h-10 rounded-full object-cover shadow-[0_0_20px_rgba(16,185,129,0.3)] group-hover:scale-105 transition-transform"
+          />
           <div>
             <div className="text-sm font-bold text-slate-100 group-hover:text-emerald-400 transition-colors tracking-tight flex items-center gap-2">
               <span>{t.profile.shortName}</span>

@@ -1,5 +1,5 @@
 // Rogério Maciel — Lightweight Progressive Web App Service Worker
-const CACHE_NAME = 'rm-pwa-v1';
+const CACHE_NAME = 'rm-pwa-v2';
 const OFFLINE_URL = '/';
 
 self.addEventListener('install', (event) => {
@@ -7,7 +7,7 @@ self.addEventListener('install', (event) => {
     caches.open(CACHE_NAME).then((cache) => {
       return cache.addAll([
         '/',
-        '/favicon.svg',
+        '/icons/favicon-48.png?v=2',
         '/site.webmanifest',
         '/icons/icon-192.png',
         '/icons/icon-512.png'
