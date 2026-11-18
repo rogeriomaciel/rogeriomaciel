@@ -220,7 +220,7 @@ function generateHtml(sol: SolutionCluster, locale: 'pt' | 'en' = 'pt'): string 
         window.dataLayer.push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
         var g = document.createElement('script');
         g.async = true;
-        g.src = 'https://www.googletagmanager.com/gtag/js?id=GTM-WNXV9S4X';
+        g.src = 'https://www.googletagmanager.com/gtm.js?id=GTM-WNXV9S4X';
         document.head.appendChild(g);
       }
       if (document.readyState === 'complete') {
