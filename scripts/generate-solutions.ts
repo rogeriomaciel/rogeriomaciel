@@ -176,13 +176,13 @@ function generateHtml(sol: SolutionCluster, locale: 'pt' | 'en' = 'pt'): string 
     <meta property="og:description" content="${seoDesc}" />
     <meta property="og:url" content="${canonicalUrl}" />
     <meta property="og:site_name" content="Rogério Maciel — Software Architecture &amp; Automation" />
-    <meta property="og:image" content="https://rogeriomaciel.com.br/og-image.jpg" />
+    <meta property="og:image" content="https://rogeriomaciel.com.br/og-image.jpg?v=2" />
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="${seoTitle}" />
     <meta name="twitter:description" content="${seoDesc}" />
-    <meta name="twitter:image" content="https://rogeriomaciel.com.br/og-image.jpg" />
+    <meta name="twitter:image" content="https://rogeriomaciel.com.br/og-image.jpg?v=2" />
 
     <!-- IndexNow Verification -->
     <meta name="indexnow-key" content="61f53f62035a6493e50b0b59feca6748" />
@@ -471,11 +471,11 @@ function generatePillarHtml(route: PillarRouteConfig, locale: 'pt' | 'en'): stri
     <meta property="og:title" content="${seoTitle}" />
     <meta property="og:description" content="${seoDesc}" />
     <meta property="og:url" content="${canonicalUrl}" />
-    <meta property="og:image" content="https://rogeriomaciel.com.br/og-image.jpg" />
+    <meta property="og:image" content="https://rogeriomaciel.com.br/og-image.jpg?v=2" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="${seoTitle}" />
     <meta name="twitter:description" content="${seoDesc}" />
-    <meta name="twitter:image" content="https://rogeriomaciel.com.br/og-image.jpg" />
+    <meta name="twitter:image" content="https://rogeriomaciel.com.br/og-image.jpg?v=2" />
     <meta name="indexnow-key" content="61f53f62035a6493e50b0b59feca6748" />
     <script type="application/ld+json">${JSON.stringify(breadcrumbSchema)}</script>
     ${criticalCss ? `<style id="critical-css">${criticalCss}</style>` : ''}
