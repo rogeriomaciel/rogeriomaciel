@@ -2638,5 +2638,65 @@ export const solutionsClusters: SolutionCluster[] = [
         }
       ]
     }
+  },
+  {
+    "slug": "n8n-to-fastify-v0-2-0-security-hardening-nodes",
+    "category": "Engenharia de Plataforma",
+    "title": "n8n-to-fastify v0.2.0: Expansão de Nós, Blindagem Anti-Zip-Bomb e 308 Asserções",
+    "metaDescription": "Novidades da release v0.2.0 do compilador n8n-to-fastify: roteamento por item, RabbitMQ, S3, anti-Zip-Bomb, prototype-pollution guards e 67 testes.",
+    "keywords": [
+      "n8n to fastify v0.2.0",
+      "anti zip bomb nodejs",
+      "prototype pollution guard",
+      "compilar n8n typescript",
+      "seguranca microsservicos fastify"
+    ],
+    "fastAnswer": "A release v0.2.0 do n8n-to-fastify marca a transição de compilador de fluxos simples para runtime endurecido de produção: traz roteamento determinístico por item (IF/Switch/Merge), RabbitMQ com ack pós-sucesso, downloads S3, multipart HTTP, proteção anti-Zip-Bomb e anti-Zip-Slip na descompressão e validação em 67 testes (308 asserções).",
+    "deepTension": "Em produção real, o perigo não está no caminho feliz de um webhook JSON simples, mas em arquivos ZIP maliciosos, loops de polling infinitos, poluição de protótipo em campos dinâmicos e erros internos vazando pela borda HTTP.",
+    "antiPitch": "Não basta compilar rápido — código gerado precisa nascer com travas de segurança e limites explícitos de recurso.",
+    "authorityProof": "Publicada em v0.2.0 no GitHub com suíte completa passando 67 arquivos/casos (0 falhas, 308 asserções em 22 arquivos de teste), além de playground client-side auditável sem minificação.",
+    "contrastPrejudice": "Enquanto geradores frágeis ignoram edge cases de segurança, a v0.2.0 impõe limites estritos em descompressão, polling (N8N_TO_FASTIFY_POLL_MAX_ATTEMPTS) e redação de erros com errorId.",
+    "ctaLabel": "Explorar a v0.2.0 ou conversar sobre migração",
+    "whatsappPrompt": "Olá Rogério, vi os detalhes da release v0.2.0 do n8n-to-fastify e quero conversar sobre migração de workflows.",
+    "faq": [
+      {
+        "question": "Quais proteções de segurança entraram na v0.2.0?",
+        "answer": "Redação automática de HTTP 500 com correlation errorId, limites anti-Zip-Bomb (máximo de entradas, tamanho e taxa de compressão), validação anti-Zip-Slip e travas contra prototype pollution no Edit Fields JSON Output e $node Proxy."
+      },
+      {
+        "question": "Como a release v0.2.0 é validada?",
+        "answer": "Com suíte automatizada de 67 testes passando (0 falhas) e 308 asserções distribuídas em 22 arquivos de teste."
+      }
+    ],
+    "en": {
+      "slug": "n8n-to-fastify-v0-2-0-production-nodes-security",
+      "category": "Platform Engineering",
+      "title": "n8n-to-fastify v0.2.0: Production Node Expansion, Anti-Zip-Bomb & 308 Assertions",
+      "metaDescription": "Inside n8n-to-fastify v0.2.0: per-item IF/Switch/Merge routing, RabbitMQ, S3, HTTP multipart, anti-Zip-Bomb security hardening, and 67 passing tests.",
+      "keywords": [
+        "n8n to fastify v0.2.0",
+        "n8n compiler typescript",
+        "anti zip bomb nodejs",
+        "prototype pollution guard",
+        "fastify microservice security"
+      ],
+      "fastAnswer": "n8n-to-fastify v0.2.0 moves compiled workflows into hardened production territory: per-item IF/Switch/Merge routing, RabbitMQ post-success ack, S3 binary downloads, HTTP multipart FormData, bounded polling loops, and security hardening (anti-Zip-Bomb, anti-Zip-Slip, prototype-pollution guards, and redacted HTTP 500 errorId responses), verified by 67 tests and 308 assertions.",
+      "deepTension": "Production failures rarely happen on simple JSON webhooks—they happen on malformed ZIP archives, unbounded polling loops, prototype pollution in dynamic field mappers, and uncaught error leaks.",
+      "antiPitch": "Speed without safety boundaries creates fragile services. Generated TypeScript code must ship with explicit resource caps and security guards by default.",
+      "authorityProof": "Released as v0.2.0 on GitHub with 67 passing tests (0 failures, 308 assertions across 22 test files) plus an unminified, auditable browser playground compiler.",
+      "contrastPrejudice": "Unlike naive code generators, v0.2.0 enforces strict decompression limits, bounded polling via N8N_TO_FASTIFY_POLL_MAX_ATTEMPTS, and compile-time --strict checks.",
+      "ctaLabel": "Discuss n8n-to-fastify Migration",
+      "whatsappPrompt": "Hi Rogério, I read about n8n-to-fastify v0.2.0 and would like to discuss migrating our production workflows.",
+      "faq": [
+        {
+          "question": "What security hardening shipped in n8n-to-fastify v0.2.0?",
+          "answer": "Redacted HTTP 500 responses with correlation errorId, anti-Zip-Bomb limits and anti-Zip-Slip path validation in Compression, plus prototype-pollution guards in Edit Fields JSON Output and legacy $node Proxy."
+        },
+        {
+          "question": "How is the v0.2.0 compiler verified?",
+          "answer": "Every release runs the full test suite with 67 passing tests (0 failures) and 308 assertions across 22 test files."
+        }
+      ]
+    }
   }
 ];
