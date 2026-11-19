@@ -37,11 +37,10 @@ export function ArchitectureBlueprints({
             <button
               type="button"
               onClick={() => setActiveTab('transpiler')}
-              className={`inline-flex items-center gap-2 px-4 py-2.5 rounded-lg text-xs font-mono font-semibold transition-all ${
-                activeTab === 'transpiler'
-                  ? 'bg-emerald-500 text-slate-950 shadow-sm'
-                  : 'text-slate-300 hover:text-white'
-              }`}
+              className={`inline-flex items-center gap-2 px-4 py-2.5 rounded-lg text-xs font-mono font-semibold transition-all ${activeTab === 'transpiler'
+                ? 'bg-emerald-500 text-slate-950 shadow-sm'
+                : 'text-slate-300 hover:text-white'
+                }`}
             >
               <CpuIcon className="w-4 h-4" />
               <span>{isEn ? 'n8n → Fastify Transpiler' : 'Transpilador n8n → Fastify'}</span>
@@ -49,11 +48,10 @@ export function ArchitectureBlueprints({
             <button
               type="button"
               onClick={() => setActiveTab('attribution')}
-              className={`inline-flex items-center gap-2 px-4 py-2.5 rounded-lg text-xs font-mono font-semibold transition-all ${
-                activeTab === 'attribution'
-                  ? 'bg-emerald-500 text-slate-950 shadow-sm'
-                  : 'text-slate-300 hover:text-white'
-              }`}
+              className={`inline-flex items-center gap-2 px-4 py-2.5 rounded-lg text-xs font-mono font-semibold transition-all ${activeTab === 'attribution'
+                ? 'bg-emerald-500 text-slate-950 shadow-sm'
+                : 'text-slate-300 hover:text-white'
+                }`}
             >
               <ActivityIcon className="w-4 h-4" />
               <span>{isEn ? 'CTWA Attribution & AI FSM' : 'Atribuição CTWA & FSM de IA'}</span>
